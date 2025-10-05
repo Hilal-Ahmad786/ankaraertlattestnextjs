@@ -13,6 +13,7 @@ import { siteConfig } from '@/config/site';
 import CustomerCarePopup from '@/components/ui/CustomerCarePopup';
 
 
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {

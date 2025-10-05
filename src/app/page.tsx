@@ -6,6 +6,8 @@ import ContactCTA from '@/components/sections/ContactCTA';
 import TrustBadges from '@/components/sections/TrustBadges';
 import ServicesComparison from '@/components/sections/ServicesComparison';
 import CoverageArea from '@/components/sections/CoverageArea';
+import UrgentCTABanner from '@/components/sections/UrgentCTABanner';
+import TrustSignals from '@/components/sections/TrustSignals';
 
 
 export const metadata: Metadata = {
@@ -77,12 +79,14 @@ export default function HomePage() {
         subtitle="Hasarlı | Kazalı | Pert | Hurda Araç Alımında #1"
         highlight="30 Dakikada Anında Teklif"
       />
+      <UrgentCTABanner/>
 <TrustBadges /> 
       <WhyUs
         title="Neden Ankara PERT?"
         subtitle="30 Dakikada Teklif • Ücretsiz Ekspertiz • Ücretsiz Çekici • 7/24 Destek"
         items={whyUsItems}
       />
+      <TrustSignals/>
 <ServicesComparison />
       <ProcessTimeline
         title="Araç Alım Satımı Sürecimiz — 4 Adımda Tamam!"
