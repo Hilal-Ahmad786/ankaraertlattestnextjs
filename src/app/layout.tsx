@@ -4,14 +4,14 @@ import { Suspense } from 'react';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import FloatingButtons from '@/components/layout/FloatingButtons';
 import GoogleTagManager from '@/components/analytics/GoogleTagManager';
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
 import ConversionTracking from '@/components/analytics/ConversionTracking';
 import BotProtection from '@/components/analytics/BotProtection';
 import { siteConfig } from '@/config/site';
 import CustomerCarePopup from '@/components/ui/CustomerCarePopup';
-import LiveChatWidget from '@/components/ui/LiveChatWidget';
+import FloatingButtons from '@/components/layout/FloatingButtons';
+
 
 
 
@@ -106,9 +106,8 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
-        <LiveChatWidget/>
+        <FloatingButtons />
         <CustomerCarePopup />
-
       </body>
     </html>
   );
