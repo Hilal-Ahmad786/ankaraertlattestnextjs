@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-10-05T02:21:50.699Z",
+  "summary": {
+    "totalFiles": 36,
+    "validFiles": 30,
+    "missingFiles": 4,
+    "emptyFiles": 2,
+    "missingDirs": 2,
+    "missingImages": 6
+  },
+  "details": {
+    "missingDirectories": [
+      "public/images",
+      "public/favicon"
+    ],
+    "missingFiles": [
+      "SETUP_GUIDE.md",
+      "CUSTOMIZATION_GUIDE.md",
+      "FILE_CHECKLIST.md",
+      "PROJECT_SUMMARY.md"
+    ],
+    "emptyOrIncompleteFiles": [
+      "next.config.js",
+      "src/components/analytics/GoogleTagManager.tsx"
+    ]
+  }
+}

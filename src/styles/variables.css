@@ -1,0 +1,109 @@
+/* 
+  DESIGN PHILOSOPHY: "Trust Through Simplicity"
+  
+  Principles:
+  1. AUTHENTICITY - Real gradients, real shadows, honest design
+  2. CLARITY - Clear hierarchy, readable text, obvious actions
+  3. WARMTH - Friendly colors, welcoming spaces, human touch
+  4. CONFIDENCE - Bold typography, strong CTAs, decisive layout
+*/
+
+:root {
+    /* Primary Palette - Trustworthy & Professional */
+    --color-trust-dark: #0f172a;      /* Deep navy - trust & stability */
+    --color-trust: #1e40af;            /* Royal blue - reliability */
+    --color-trust-light: #3b82f6;      /* Bright blue - approachable */
+    
+    /* Accent Palette - Energy & Action */
+    --color-action: #f97316;           /* Vibrant orange - urgency */
+    --color-action-hover: #ea580c;     /* Darker orange - interaction */
+    --color-action-light: #fb923c;     /* Light orange - highlights */
+    
+    /* Success - WhatsApp Green */
+    --color-success: #16a34a;
+    --color-success-hover: #15803d;
+    
+    /* Neutrals - Clean & Modern */
+    --color-bg: #ffffff;
+    --color-bg-alt: #f8fafc;
+    --color-bg-dark: #0f172a;
+    --color-text: #1e293b;
+    --color-text-light: #64748b;
+    --color-border: #e2e8f0;
+    
+    /* Spacing System - 8px base */
+    --space-1: 0.25rem;   /* 4px */
+    --space-2: 0.5rem;    /* 8px */
+    --space-3: 0.75rem;   /* 12px */
+    --space-4: 1rem;      /* 16px */
+    --space-5: 1.5rem;    /* 24px */
+    --space-6: 2rem;      /* 32px */
+    --space-8: 3rem;      /* 48px */
+    --space-10: 4rem;     /* 64px */
+    --space-12: 6rem;     /* 96px */
+    
+    /* Typography Scale - Perfect Fourth (1.333) */
+    --text-xs: 0.75rem;      /* 12px */
+    --text-sm: 0.875rem;     /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-lg: 1.125rem;     /* 18px */
+    --text-xl: 1.25rem;      /* 20px */
+    --text-2xl: 1.5rem;      /* 24px */
+    --text-3xl: 1.875rem;    /* 30px */
+    --text-4xl: 2.25rem;     /* 36px */
+    --text-5xl: 3rem;        /* 48px */
+    --text-6xl: 3.75rem;     /* 60px */
+    
+    /* Border Radius - Soft but not too round */
+    --radius-sm: 0.375rem;   /* 6px */
+    --radius-md: 0.5rem;     /* 8px */
+    --radius-lg: 0.75rem;    /* 12px */
+    --radius-xl: 1rem;       /* 16px */
+    --radius-2xl: 1.5rem;    /* 24px */
+    --radius-full: 9999px;
+    
+    /* Shadows - Realistic depth */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    
+    /* Transitions - Natural easing */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Z-index Scale */
+    --z-base: 0;
+    --z-dropdown: 100;
+    --z-sticky: 400;
+    --z-fixed: 500;
+    --z-modal: 600;
+    --z-popover: 700;
+    --z-tooltip: 800;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Selection color */
+  ::selection {
+    background-color: var(--color-action-light);
+    color: white;
+  }
+  
+  /* Focus visible - accessibility */
+  :focus-visible {
+    outline: 3px solid var(--color-action-light);
+    outline-offset: 2px;
+  }
+  
+  /* Remove focus for mouse users */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
