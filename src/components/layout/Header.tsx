@@ -132,16 +132,16 @@ export default function Header() {
               <div className="border-t pt-3">
                 <p className="px-3 text-sm font-bold text-gray-500 mb-2">HİZMETLER</p>
                 {siteConfig.services.map((service) => (
-                  <Link
-                    key={service.slug}
-                    href={`/${service.slug}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="py-2 px-3 hover:bg-gray-50 rounded block"
-                  >
-                    <i className={`${service.icon} text-orange-500 mr-2`}></i>
-                    {service.title}
-                  </Link>
-                ))}
+  <Link
+    key={service.slug}
+    href={`/${service.slug}`}
+    onClick={() => setIsMenuOpen(false)}
+    className="py-2 px-3 hover:bg-gray-50 rounded block"
+  >
+    <i className={`fas ${service.icon} text-orange-500 mr-2`}></i>
+    {service.title}
+  </Link>
+))}
               </div>
 
               <Link href="/genel-bilgiler" onClick={() => setIsMenuOpen(false)} className="py-2 px-3 hover:bg-gray-50 rounded font-medium">
