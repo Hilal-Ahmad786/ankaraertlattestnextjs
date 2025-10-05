@@ -1,13 +1,15 @@
 'use client';
 
-import { useState } from 'react';
 import { siteConfig } from '@/config/site';
 import { trackPhoneClick, trackWhatsAppClick } from '@/lib/gtm';
 import { trackPhoneConversion, trackWhatsAppConversion } from '@/lib/analytics';
 
-export default function FloatingButtons() {
-  const [showChat, setShowChat] = useState(false);
+interface FloatingButtonsProps {
+  isPopupOpen: boolean;
+  setIsPopupOpen: (value: boolean) => void;
+}
 
+export default function FloatingButtons({ isPopupOpen, setIsPopupOpen }: FloatingButtonsProps) {
   const handlePhoneClick = () => {
     trackPhoneClick();
     trackPhoneConversion();
@@ -22,13 +24,13 @@ export default function FloatingButtons() {
     <>
       {/* Desktop Layout - Bottom Right Stack */}
       <div className="hidden md:block">
-        {/* Chat Button - Shows popup (CustomerCarePopup handles this) */}
+        {/* Chat Button - Shows popup */}
         <button
-          onClick={() => setShowChat(!showChat)}
+          onClick={() => setIsPopupOpen(!isPopupOpen)}
           className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full shadow-2xl hover:scale-110 transition-all z-40 flex items-center justify-center group"
           aria-label="Canlı Destek"
         >
-          {showChat ? (
+          {isPopupOpen ? (
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -67,7 +69,7 @@ export default function FloatingButtons() {
           </span>
         </a>
 
-        {/* Phone Button - With extra pulse effect */}
+        {/* Phone Button */}
         <a
           href={`tel:${siteConfig.phone}`}
           onClick={handlePhoneClick}
@@ -94,7 +96,7 @@ export default function FloatingButtons() {
         <div className="flex items-stretch justify-between max-w-md mx-auto">
           {/* Chat Button */}
           <button
-            onClick={() => setShowChat(!showChat)}
+            onClick={() => setIsPopupOpen(!isPopupOpen)}
             className="flex-1 flex flex-col items-center justify-center py-3 px-2 active:bg-gray-100 transition-colors border-r border-gray-100"
           >
             <div className="relative mb-1">
@@ -150,7 +152,6 @@ export default function FloatingButtons() {
           padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
         }
 
-        /* Prevent content jump when mobile bar appears */
         html {
           scroll-padding-bottom: 80px;
         }

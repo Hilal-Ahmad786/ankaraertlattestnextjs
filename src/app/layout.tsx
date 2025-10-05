@@ -11,6 +11,8 @@ import ConversionTracking from '@/components/analytics/ConversionTracking';
 import BotProtection from '@/components/analytics/BotProtection';
 import { siteConfig } from '@/config/site';
 import CustomerCarePopup from '@/components/ui/CustomerCarePopup';
+import LiveChatWidget from '@/components/ui/LiveChatWidget';
+
 
 
 
@@ -104,7 +106,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
-        <FloatingButtons />
+        <LiveChatWidget/>
         <CustomerCarePopup />
 
       </body>
