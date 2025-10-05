@@ -1,12 +1,13 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
 import { trackPageView } from '@/lib/analytics';
 import { analyticsConfig } from '@/config/analytics';
 
-export default function GoogleAnalytics() {
+// Separate component for the part that uses useSearchParams
+function AnalyticsTracker() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -16,6 +17,10 @@ export default function GoogleAnalytics() {
     }
   }, [pathname, searchParams]);
 
+  return null;
+}
+
+export default function GoogleAnalytics() {
   if (!analyticsConfig.ga.enabled) {
     return null;
   }
@@ -40,6 +45,10 @@ export default function GoogleAnalytics() {
           `,
         }}
       />
+      {/* Wrap the tracker in Suspense */}
+      <Suspense fallback={null}>
+        <AnalyticsTracker />
+      </Suspense>
     </>
   );
 }

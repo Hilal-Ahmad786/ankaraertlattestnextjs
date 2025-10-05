@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Suspense } from 'react';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -89,10 +90,13 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <GoogleTagManager />
-        <GoogleAnalytics />
-        <ConversionTracking />
-        <BotProtection />
+        {/* Wrap all analytics in Suspense */}
+        <Suspense fallback={null}>
+          <GoogleTagManager />
+          <GoogleAnalytics />
+          <ConversionTracking />
+          <BotProtection />
+        </Suspense>
         
         <Header />
         <main>{children}</main>
