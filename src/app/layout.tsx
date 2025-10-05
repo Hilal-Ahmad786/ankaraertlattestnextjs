@@ -10,6 +10,8 @@ import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
 import ConversionTracking from '@/components/analytics/ConversionTracking';
 import BotProtection from '@/components/analytics/BotProtection';
 import { siteConfig } from '@/config/site';
+import CustomerCarePopup from '@/components/ui/CustomerCarePopup';
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -102,6 +104,8 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <FloatingButtons />
+        <CustomerCarePopup />
+
       </body>
     </html>
   );
