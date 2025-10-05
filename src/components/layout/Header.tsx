@@ -88,7 +88,7 @@ export default function Header() {
           </nav>
 
           {/* Buttons - Right (20% width on desktop) */}
-          <div className="hidden lg:flex items-center gap-2 lg:w-1/5 justify-end">
+          <div className="hidden lg:flex items-center gap-2  justify-end">
             <a
               href={`https://wa.me/${siteConfig.whatsapp}`}
               target="_blank"
@@ -171,7 +171,7 @@ export default function Header() {
                   onClick={handlePhoneClick}
                   className="flex-1 bg-orange-500 text-white py-3 rounded-lg font-bold text-center hover:bg-orange-600 transition"
                 >
-                  <i className="fas fa-phone-alt mr-2"></i>ARAA
+                  <i className="fas fa-phone-alt mr-2"></i>ARA
                 </a>
               </div>
             </div>

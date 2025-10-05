@@ -27,32 +27,48 @@ export default function HeroBanner({
   };
 
   return (
-    <section className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-800 to-orange-600">
+    <section className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-800 to-orange-600 overflow-hidden">
+      {/* Animated background pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
+      </div>
+
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-black/40"></div>
       
-      <div className="relative z-10 container mx-auto px-4 text-white text-center max-w-4xl">
-        <p className="text-orange-400 uppercase tracking-widest font-bold text-sm mb-4">
+      <div className="relative z-10 container mx-auto px-4 text-white text-center max-w-4xl py-20">
+        {/* Tagline */}
+        <p className="text-orange-400 uppercase tracking-widest font-bold text-sm mb-6 animate-fade-in">
           {tagline}
         </p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+
+        {/* Main Title */}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-slide-up">
           {title}
         </h1>
+
+        {/* Highlight Box - MODERN STYLE */}
         {highlight && (
-          <div className="mb-4">
-            <span className="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg font-bold text-xl shadow-lg">
+          <div className="mb-6 animate-scale-in">
+            <span className="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-2xl font-bold text-xl md:text-2xl shadow-2xl border-2 border-orange-400/30 hover:scale-105 transition-transform duration-300 backdrop-blur-sm">
               {highlight}
             </span>
           </div>
         )}
-        <h2 className="text-2xl md:text-3xl mb-8">
+
+        {/* Subtitle */}
+        <h2 className="text-xl md:text-2xl lg:text-3xl mb-10 text-gray-100 animate-fade-in">
           {subtitle}
         </h2>
-        <div className="flex justify-center gap-4 flex-wrap">
+
+        {/* CTA Buttons */}
+        <div className="flex justify-center gap-4 flex-wrap animate-slide-up">
           <a
             href={`tel:${siteConfig.phone}`}
             onClick={handlePhoneClick}
-            className="bg-white text-orange-600 border-2 border-white px-8 py-4 rounded-lg font-bold hover:bg-orange-500 hover:text-white transition shadow-lg text-lg"
+            className="bg-white text-orange-600 border-2 border-white px-8 py-4 rounded-xl font-bold hover:bg-orange-500 hover:text-white hover:border-orange-400 transition-all duration-300 shadow-2xl text-lg hover:scale-105 hover:shadow-orange-500/50"
           >
             <i className="fas fa-phone-alt mr-2"></i> Hemen Teklif Al
           </a>
@@ -61,12 +77,77 @@ export default function HeroBanner({
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsAppClick}
-            className="bg-green-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-green-600 transition shadow-lg text-lg"
+            className="bg-green-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-600 transition-all duration-300 shadow-2xl text-lg border-2 border-transparent hover:border-green-300 hover:scale-105 hover:shadow-green-500/50"
           >
             <i className="fab fa-whatsapp mr-2"></i> WhatsApp
           </a>
         </div>
+
+        {/* Trust Indicators */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-white/20">
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">15+</div>
+            <div className="text-sm text-gray-300">Yıllık Tecrübe</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">7/24</div>
+            <div className="text-sm text-gray-300">Hızlı Destek</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">%100</div>
+            <div className="text-sm text-gray-300">Güvenli İşlem</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">5000+</div>
+            <div className="text-sm text-gray-300">Mutlu Müşteri</div>
+          </div>
+        </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes slide-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes scale-in {
+          from {
+            opacity: 0;
+            transform: scale(0.9);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fade-in 0.8s ease-out;
+        }
+
+        .animate-slide-up {
+          animation: slide-up 0.8s ease-out;
+        }
+
+        .animate-scale-in {
+          animation: scale-in 0.6s ease-out;
+        }
+      `}</style>
     </section>
   );
 }

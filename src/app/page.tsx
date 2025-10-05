@@ -7,6 +7,7 @@ import TrustBadges from '@/components/sections/TrustBadges';
 import ServicesComparison from '@/components/sections/ServicesComparison';
 import CoverageArea from '@/components/sections/CoverageArea';
 
+
 export const metadata: Metadata = {
   title: 'Ankara PERT - Kazalı, Hasarlı, Pert & Hurda Araç Alımı',
   description:

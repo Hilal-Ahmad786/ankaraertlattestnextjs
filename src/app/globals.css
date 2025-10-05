@@ -56,7 +56,6 @@ a:hover {
   color: var(--main-orange);
 }
 
-/* Remove focus outline for mouse users, keep for keyboard users */
 :focus:not(:focus-visible) {
   outline: none;
 }
@@ -66,19 +65,16 @@ a:hover {
   outline-offset: 2px;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Image optimization */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Remove default button styles */
 button {
   font-family: inherit;
   cursor: pointer;
@@ -126,7 +122,6 @@ button {
   color: var(--color-trust-dark);
 }
 
-
 .text-primary {
   color: var(--main-blue);
 }
@@ -171,7 +166,6 @@ button {
   border-radius: var(--border-radius-lg);
 }
 
-/* Loading state */
 .loading {
   opacity: 0.6;
   pointer-events: none;
@@ -186,4 +180,280 @@ button {
   footer {
     display: none !important;
   }
+}
+
+/* ===== MODERN BUTTON STYLES ===== */
+
+/* Orange Buttons */
+.btn-orange,
+button.bg-orange-600,
+a.bg-orange-600 {
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 16px 32px;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  box-shadow: 0 8px 24px rgba(234, 88, 12, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-orange::before,
+button.bg-orange-600::before,
+a.bg-orange-600::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-orange:hover::before,
+button.bg-orange-600:hover::before,
+a.bg-orange-600:hover::before {
+  left: 100%;
+}
+
+.btn-orange:hover,
+button.bg-orange-600:hover,
+a.bg-orange-600:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(234, 88, 12, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Green WhatsApp Buttons */
+.btn-whatsapp,
+button.bg-green-500,
+a.bg-green-500 {
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 16px 32px;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-whatsapp::before,
+button.bg-green-500::before,
+a.bg-green-500::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-whatsapp:hover::before,
+button.bg-green-500:hover::before,
+a.bg-green-500:hover::before {
+  left: 100%;
+}
+
+.btn-whatsapp:hover,
+button.bg-green-500:hover,
+a.bg-green-500:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(34, 197, 94, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* White Button with Orange Border */
+.btn-white-orange,
+button.bg-white.text-orange-600,
+a.bg-white.text-orange-600 {
+  background: white;
+  border: 2px solid #f97316;
+  border-radius: 16px;
+  padding: 16px 32px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #f97316;
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-white-orange::before,
+button.bg-white.text-orange-600::before,
+a.bg-white.text-orange-600::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn-white-orange:hover::before,
+button.bg-white.text-orange-600:hover::before,
+a.bg-white.text-orange-600:hover::before {
+  width: 100%;
+}
+
+.btn-white-orange:hover,
+button.bg-white.text-orange-600:hover,
+a.bg-white.text-orange-600:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(249, 115, 22, 0.25);
+}
+
+/* ===== HEADER BUTTONS - OVERRIDE ===== */
+
+header a.bg-green-500,
+header button.bg-green-500 {
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%) !important;
+  border: 2px solid transparent !important;
+  border-radius: 12px !important;
+  padding: 10px 16px !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.25) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+header a.bg-green-500::before,
+header button.bg-green-500::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent) !important;
+  transition: left 0.5s !important;
+  z-index: 0 !important;
+}
+
+header a.bg-green-500:hover::before,
+header button.bg-green-500:hover::before {
+  left: 100% !important;
+}
+
+header a.bg-green-500:hover,
+header button.bg-green-500:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.35) !important;
+  background: linear-gradient(135deg, #15803d 0%, #16a34a 100%) !important;
+}
+
+header a.bg-green-500 i,
+header a.bg-green-500 span,
+header button.bg-green-500 i,
+header button.bg-green-500 span {
+  position: relative !important;
+  z-index: 10 !important;
+  color: white !important;
+}
+
+header a.bg-orange-500,
+header button.bg-orange-500 {
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%) !important;
+  border: 2px solid transparent !important;
+  border-radius: 12px !important;
+  padding: 10px 16px !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+header a.bg-orange-500::before,
+header button.bg-orange-500::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent) !important;
+  transition: left 0.5s !important;
+  z-index: 0 !important;
+}
+
+header a.bg-orange-500:hover::before,
+header button.bg-orange-500:hover::before {
+  left: 100% !important;
+}
+
+header a.bg-orange-500:hover,
+header button.bg-orange-500:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.35) !important;
+  background: linear-gradient(135deg, #c2410c 0%, #ea580c 100%) !important;
+}
+
+header a.bg-orange-500 i,
+header a.bg-orange-500 span,
+header button.bg-orange-500 i,
+header button.bg-orange-500 span {
+  position: relative !important;
+  z-index: 10 !important;
+  color: white !important;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  header a.bg-green-500,
+  header a.bg-orange-500 {
+    padding: 12px 20px !important;
+    font-size: 16px !important;
+    border-radius: 10px !important;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  header a.bg-green-500,
+  header a.bg-orange-500 {
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+  }
+}
+
+@keyframes headerPulse {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+header a[style*="animation"] {
+  animation: headerPulse 2s infinite !important;
 }
