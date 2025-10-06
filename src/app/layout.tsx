@@ -11,7 +11,7 @@ import BotProtection from '@/components/analytics/BotProtection';
 import { siteConfig } from '@/config/site';
 import CustomerCarePopup from '@/components/ui/CustomerCarePopup';
 import FloatingButtons from '@/components/layout/FloatingButtons';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 
@@ -108,6 +108,7 @@ export default function RootLayout({
         <Footer />
         <FloatingButtons />
         <CustomerCarePopup />
+        <SpeedInsights/>
       </body>
     </html>
   );
