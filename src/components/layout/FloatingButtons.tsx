@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react';
 import { trackCTAClick, trackWhatsAppClick, trackPhoneClick } from '@/lib/gtm';
 
 const siteConfig = {
-  phone: '+905346925795',
-  phoneDisplay: '0 (534) 692 57 95',
-  whatsapp: '905346925795',
+  phone: '+905369298606',
+  phoneDisplay: '0 (536) 929 86 06',
+  whatsapp: '905369298606',
 };
 
 export default function UnifiedFloatingButtons() {
