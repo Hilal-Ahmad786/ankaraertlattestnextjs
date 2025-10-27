@@ -18,7 +18,7 @@ export default function CustomerCarePopup() {
         setIsVisible(true);
         setTimeout(() => setIsOpen(true), 100);
         sessionStorage.setItem('popupShown', 'true');
-      }, 3000);
+      }, 7000);
 
       return () => clearTimeout(timer);
     }
