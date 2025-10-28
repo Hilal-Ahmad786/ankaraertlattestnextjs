@@ -2,7 +2,7 @@ export const siteConfig = {
     name: 'Ankara PERT',
     description: 'Kazalı, Hasarlı, Pert ve Hurda Araç Alımında Türkiye\'nin En Güvenilir Merkezi',
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://ankarapert.com.tr',
-    phone: process.env.NEXT_PUBLIC_PHONE || '+05369298606',
+    phone: process.env.NEXT_PUBLIC_PHONE || '05369298606',
     phoneDisplay: '0 (536) 929 86 06',
     whatsapp: process.env.NEXT_PUBLIC_WHATSAPP || '05369298606',
     email: process.env.NEXT_PUBLIC_EMAIL || 'info@ankarapert.com.tr',
