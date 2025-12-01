@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import PageHero from '@/components/sections/PageHero';
 import CallToActionBanner from '@/components/sections/CallToActionBanner';
 import { siteConfig } from '@/config/site';
+import TrackedPhoneLink from '@/components/ui/TrackedPhoneLink';
 
 export const metadata: Metadata = {
   title: 'Hakkımızda | Ankara PERT',
@@ -22,20 +23,20 @@ export default function HakkimizdaPage() {
           <div className="prose max-w-none">
             <h2 className="text-3xl font-bold text-primary mb-6">Biz Kimiz?</h2>
             <p className="text-lg leading-relaxed mb-6">
-              <strong>Ankara PERT</strong>, yıllardır Türkiye genelinde kazalı, hasarlı, pert ve hurda araç alımı konusunda 
-              güvenilir hizmet veren lider firmadır. Müşteri memnuniyetini ön planda tutarak, adil fiyatlandırma ve hızlı 
+              <strong>Ankara PERT</strong>, yıllardır Türkiye genelinde kazalı, hasarlı, pert ve hurda araç alımı konusunda
+              güvenilir hizmet veren lider firmadır. Müşteri memnuniyetini ön planda tutarak, adil fiyatlandırma ve hızlı
               işlem prensipleriyle sektörde öncü konumdayız.
             </p>
 
             <h3 className="text-2xl font-bold text-primary mb-4">Misyonumuz</h3>
             <p className="text-lg leading-relaxed mb-6">
-              Araç sahiplerine en yüksek değeri sunarak, hızlı ve güvenilir bir şekilde kazalı, hasarlı, pert ve hurda 
+              Araç sahiplerine en yüksek değeri sunarak, hızlı ve güvenilir bir şekilde kazalı, hasarlı, pert ve hurda
               araçlarını nakde çevirmelerine yardımcı olmak. Tüm süreçleri şeffaf, yasal ve müşteri odaklı yönetmek.
             </p>
 
             <h3 className="text-2xl font-bold text-primary mb-4">Vizyonumuz</h3>
             <p className="text-lg leading-relaxed mb-6">
-              Türkiye'nin her köşesinde, araç alım satımında ilk tercih edilen, en güvenilir ve profesyonel hizmet 
+              Türkiye'nin her köşesinde, araç alım satımında ilk tercih edilen, en güvenilir ve profesyonel hizmet
               sağlayıcısı olmak.
             </p>
 
@@ -85,9 +86,12 @@ export default function HakkimizdaPage() {
               </p>
               <p className="text-lg">
                 Aracınızın değerini öğrenmek ve en iyi teklifi almak için{' '}
-                <a href={`tel:${siteConfig.phone}`} className="text-orange-500 font-bold hover:underline">
+                <TrackedPhoneLink
+                  href={`tel:${siteConfig.phone}`}
+                  className="text-orange-500 font-bold hover:underline"
+                >
                   {siteConfig.phoneDisplay}
-                </a>{' '}
+                </TrackedPhoneLink>{' '}
                 numaralı telefondan bizi arayabilirsiniz.
               </p>
             </div>

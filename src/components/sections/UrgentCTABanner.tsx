@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { siteConfig } from '@/config/site';
-import { trackCTAClick } from '@/lib/gtm';
+import { trackCTAClick, trackPhoneClick } from '@/lib/gtm';
 
 export default function UrgentCTABanner() {
   const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
@@ -13,9 +13,9 @@ export default function UrgentCTABanner() {
       const now = new Date();
       const tomorrow = new Date(now);
       tomorrow.setHours(24, 0, 0, 0);
-      
+
       const diff = tomorrow.getTime() - now.getTime();
-      
+
       return {
         hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((diff / 1000 / 60) % 60),
@@ -33,6 +33,7 @@ export default function UrgentCTABanner() {
   }, []);
 
   const handleClick = () => {
+    trackPhoneClick();
     trackCTAClick('Urgent Banner CTA', 'urgent-banner');
   };
 
@@ -83,7 +84,7 @@ export default function UrgentCTABanner() {
               className="bg-white text-red-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all shadow-lg hover:scale-105 whitespace-nowrap flex items-center gap-2"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
               Hemen Ara
             </a>

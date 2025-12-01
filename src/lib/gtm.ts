@@ -25,6 +25,7 @@ export const pushGTMEvent = (event: GTMEvent) => {
 };
 
 // Conversion tracking events
+// Conversion tracking events
 export const trackPhoneClick = () => {
   pushGTMEvent({
     event: 'phone_click',

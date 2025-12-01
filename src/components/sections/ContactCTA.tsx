@@ -1,10 +1,11 @@
 'use client';
 
 import { siteConfig } from '@/config/site';
-import { trackCTAClick } from '@/lib/gtm';
+import { trackCTAClick, trackWhatsAppClick } from '@/lib/gtm';
 
 export default function ContactCTA() {
   const handleWhatsAppClick = () => {
+    trackWhatsAppClick();
     trackCTAClick('WhatsApp CTA', 'contact-section');
   };
 

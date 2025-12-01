@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { siteConfig } from '@/config/site';
+import { trackPhoneClick, trackWhatsAppClick, trackFormSubmit } from '@/lib/gtm';
 
 export default function LiveChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +33,12 @@ export default function LiveChatWidget() {
     <>
       {/* Chat Button */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => {
+          if (!isOpen) {
+            trackFormSubmit('live_chat_open');
+          }
+          setIsOpen(!isOpen);
+        }}
         className="fixed bottom-24 right-6 md:bottom-6 md:right-24 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full shadow-2xl hover:scale-110 transition-all z-50 flex items-center justify-center group"
         aria-label="Canlı Destek"
       >
@@ -45,7 +51,7 @@ export default function LiveChatWidget() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
           </svg>
         )}
-        
+
         {/* Online Status Badge */}
         {isOnline && (
           <span className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 border-2 border-white rounded-full animate-pulse"></span>
@@ -83,13 +89,13 @@ export default function LiveChatWidget() {
             {/* Welcome Message */}
             <div className="bg-white rounded-lg p-4 shadow-sm mb-4">
               <p className="text-gray-800 mb-2">
-                {isOnline 
+                {isOnline
                   ? '👋 Merhaba! Size nasıl yardımcı olabiliriz?'
                   : '📝 Mesaj bırakın, en kısa sürede dönüş yapalım.'
                 }
               </p>
               <p className="text-gray-600 text-sm">
-                {isOnline 
+                {isOnline
                   ? 'Ortalama yanıt süresi: 2-3 dakika'
                   : 'Çalışma saatleri: 09:00 - 22:00'
                 }
@@ -99,13 +105,14 @@ export default function LiveChatWidget() {
             {/* Quick Action Buttons */}
             <div className="space-y-2">
               <p className="text-sm font-semibold text-gray-700 mb-3">Hızlı Seçenekler:</p>
-              
+
               {quickMessages.map((item, index) => (
                 <a
                   key={index}
                   href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(item.message)}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick()}
                   className="block bg-white hover:bg-blue-50 p-3 rounded-lg shadow-sm border border-gray-200 hover:border-blue-300 transition-all"
                 >
                   <div className="flex items-center gap-3">
@@ -118,11 +125,12 @@ export default function LiveChatWidget() {
               {/* Direct Call Option */}
               <a
                 href={`tel:${siteConfig.phone}`}
+                onClick={() => trackPhoneClick()}
                 className="block bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white p-4 rounded-lg shadow-lg transition-all text-center font-bold"
               >
                 <div className="flex items-center justify-center gap-2">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
                   <span>Hemen Ara: {siteConfig.phoneDisplay}</span>
                 </div>

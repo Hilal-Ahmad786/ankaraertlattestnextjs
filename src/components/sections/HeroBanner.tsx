@@ -1,7 +1,7 @@
 'use client';
 
 import { siteConfig } from '@/config/site';
-import { trackCTAClick } from '@/lib/gtm';
+import { trackCTAClick, trackPhoneClick, trackWhatsAppClick } from '@/lib/gtm';
 
 interface HeroBannerProps {
   variant?: 'default' | 'kazali' | 'hasarli' | 'pert' | 'hurda';
@@ -19,10 +19,12 @@ export default function HeroBanner({
   highlight,
 }: HeroBannerProps) {
   const handlePhoneClick = () => {
+    trackPhoneClick();
     trackCTAClick('Hemen Teklif Al', 'hero');
   };
 
   const handleWhatsAppClick = () => {
+    trackWhatsAppClick();
     trackCTAClick('WhatsApp', 'hero');
   };
 
@@ -45,7 +47,7 @@ export default function HeroBanner({
   return (
     <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('${getBackgroundImage()}')`,
@@ -57,7 +59,7 @@ export default function HeroBanner({
 
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-black/30"></div>
-      
+
       <div className="relative z-10 container mx-auto px-4 text-white text-center max-w-4xl py-20">
         {/* Tagline */}
         <p className="text-orange-400 uppercase tracking-widest font-bold text-sm mb-6 animate-fade-in">
