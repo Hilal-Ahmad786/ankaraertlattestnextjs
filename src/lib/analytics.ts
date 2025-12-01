@@ -1,21 +1,36 @@
+// src/lib/analytics.ts
 import { analyticsConfig } from '@/config/analytics';
 
-// Google Analytics 4
-export const initGA = () => {
-  if (analyticsConfig.ga.enabled && typeof window !== 'undefined') {
-    window.gtag('config', analyticsConfig.ga.id, {
-      page_path: window.location.pathname,
+// Type declarations
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+    fbq: (...args: any[]) => void;
+    dataLayer: any[];
+  }
+}
+
+// Helper to safely push to DataLayer
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const pushToDataLayer = (event: string, data: any = {}) => {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event,
+      ...data,
     });
   }
 };
 
+// Google Analytics 4 (Handled by GTM now)
+export const initGA = () => {
+  // Logic moved to GTM
+};
+
 // Track page views
 export const trackPageView = (url: string) => {
-  if (analyticsConfig.ga.enabled && typeof window !== 'undefined') {
-    window.gtag('config', analyticsConfig.ga.id, {
-      page_path: url,
-    });
-  }
+  // GTM handles basic page views automatically.
+  // We push this just in case you want to trigger specific virtual pageviews in GTM.
+  pushToDataLayer('page_view', { page_path: url });
 };
 
 // Track events
@@ -25,58 +40,52 @@ export const trackEvent = (
   label?: string,
   value?: number
 ) => {
-  if (analyticsConfig.ga.enabled && typeof window !== 'undefined') {
-    window.gtag('event', action, {
-      event_category: category,
-      event_label: label,
-      value: value,
-    });
-  }
+  pushToDataLayer(action, {
+    event_category: category,
+    event_label: label,
+    value: value,
+  });
 };
 
-// Google Ads Conversion Tracking
-export const trackConversion = (conversionLabel: string) => {
-  if (analyticsConfig.googleAds.enabled && typeof window !== 'undefined') {
-    window.gtag('event', 'conversion', {
-      send_to: `${analyticsConfig.googleAds.conversionId}/${conversionLabel}`,
-    });
-  }
-};
-
+// Conversions - Updated to use GTM Events
 export const trackPhoneConversion = () => {
-  trackConversion(analyticsConfig.googleAds.conversionLabels.phone);
-  trackEvent('phone_click', 'engagement', 'phone_button');
+  console.log('📞 Phone click tracked');
+  pushToDataLayer('phone_click', {
+    event_category: 'engagement',
+    event_label: 'phone_button',
+    conversion_type: 'phone'
+  });
 };
 
 export const trackWhatsAppConversion = () => {
-  trackConversion(analyticsConfig.googleAds.conversionLabels.whatsapp);
-  trackEvent('whatsapp_click', 'engagement', 'whatsapp_button');
+  console.log('💬 WhatsApp click tracked');
+  pushToDataLayer('whatsapp_click', {
+    event_category: 'engagement',
+    event_label: 'whatsapp_button',
+    conversion_type: 'whatsapp'
+  });
 };
 
 export const trackFormConversion = () => {
-  trackConversion(analyticsConfig.googleAds.conversionLabels.form);
-  trackEvent('form_submit', 'engagement', 'contact_form');
+  console.log('📝 Form submit tracked');
+  pushToDataLayer('form_submit', {
+    event_category: 'engagement',
+    event_label: 'contact_form',
+    conversion_type: 'form'
+  });
 };
 
-// Facebook Pixel
+// Facebook Pixel (Keep manual if you haven't moved this to GTM yet)
 export const initFBPixel = () => {
-  if (analyticsConfig.facebook.enabled && typeof window !== 'undefined') {
+  if (analyticsConfig.facebook.enabled && typeof window !== 'undefined' && window.fbq) {
     window.fbq('init', analyticsConfig.facebook.pixelId);
     window.fbq('track', 'PageView');
   }
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const trackFBEvent = (eventName: string, data?: any) => {
-  if (analyticsConfig.facebook.enabled && typeof window !== 'undefined') {
+  if (analyticsConfig.facebook.enabled && typeof window !== 'undefined' && window.fbq) {
     window.fbq('track', eventName, data);
   }
 };
-
-// Type declarations for global objects
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-    fbq: (...args: any[]) => void;
-    dataLayer: any[];
-  }
-}

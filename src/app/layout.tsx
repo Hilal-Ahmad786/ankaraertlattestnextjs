@@ -1,3 +1,4 @@
+// src/app/layout.tsx
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Suspense } from 'react';
@@ -5,16 +6,12 @@ import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import GoogleTagManager from '@/components/analytics/GoogleTagManager';
-import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
-import ConversionTracking from '@/components/analytics/ConversionTracking';
+// Removed: GoogleAnalytics & ConversionTracking (Handled by GTM)
 import BotProtection from '@/components/analytics/BotProtection';
 import { siteConfig } from '@/config/site';
 import CustomerCarePopup from '@/components/ui/CustomerCarePopup';
 import FloatingButtons from '@/components/layout/FloatingButtons';
 import { SpeedInsights } from "@vercel/speed-insights/next"
-
-
-
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -95,24 +92,19 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        {/* Wrap all analytics in Suspense */}
+        {/* Analytics managed by GTM */}
         <Suspense fallback={null}>
           <GoogleTagManager />
-          <GoogleAnalytics />
-          <ConversionTracking />
           <BotProtection />
         </Suspense>
-        
+
         <Header />
         <main>{children}</main>
         <Footer />
         <FloatingButtons />
         <CustomerCarePopup />
-        <SpeedInsights/>
+        <SpeedInsights />
       </body>
     </html>
   );
 }
-
-
-
