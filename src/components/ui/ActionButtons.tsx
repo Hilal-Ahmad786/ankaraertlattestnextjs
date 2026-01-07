@@ -12,8 +12,8 @@ interface ActionButtonsProps {
 }
 
 export default function ActionButtons({
-  phoneNumber = '05369298606',
-  whatsappNumber = '905369298606',
+  phoneNumber = '05539465206',
+  whatsappNumber = '905539465206',
   whatsappMessage = 'Merhaba, aracım hakkında bilgi almak istiyorum.',
   className = ''
 }: ActionButtonsProps) {

@@ -1,0 +1,795 @@
+[
+    {
+        "id": "34",
+        "slug": "istanbul",
+        "name": "İstanbul",
+        "region": "Marmara",
+        "plateCode": "34",
+        "isPopular": true,
+        "heroImage": "/images/headers/istanbul-header.jpg",
+        "metaTitle": "İstanbul Hasarlı ve Pert Araç Alımı | Ankara Pert",
+        "metaDescription": "İstanbul genelinde kazalı, hasarlı, pert ve hurda araçlarınızı yerinde ve değerinde nakit olarak alıyoruz. İstanbul araç alım satım hizmetleri.",
+        "heroTitle": "İstanbul Hasarlı Araç Alımı",
+        "heroSubtitle": "İstanbul ve çevresinde aracınızı değerinde nakit olarak satmak için hemen bize ulaşın.",
+        "content": "İstanbul'un tüm ilçelerinde hasarlı, kazalı, pert ve hurda araç alım hizmeti sunuyoruz. Aracınızın durumu ne olursa olsun, uzman ekibimizle yerinde ekspertiz yaparak en iyi fiyat teklifini sunuyoruz. Çekici hizmetimizle aracınızı bulunduğunuz yerden teslim alıyor, noterde anında nakit veya havale ile ödemenizi gerçekleştiriyoruz.",
+        "districts": [
+            "Kadıköy",
+            "Beşiktaş",
+            "Üsküdar",
+            "Maltepe",
+            "Kartal",
+            "Pendik",
+            "Beyoğlu",
+            "Şişli",
+            "Fatih",
+            "Bakırköy",
+            "Bahçelievler",
+            "Ümraniye"
+        ],
+        "advantages": [
+            "İstanbul İçi Ücretsiz Çekici",
+            "Yerinde Nakit Ödeme",
+            "Anında Noter Satışı",
+            "Aynı Gün İşlem Garantisi",
+            "Resmi ve Güvenilir Hizmet"
+        ]
+    },
+    {
+        "id": "06",
+        "slug": "ankara",
+        "name": "Ankara",
+        "region": "İç Anadolu",
+        "plateCode": "06",
+        "isPopular": true,
+        "heroImage": "/images/headers/ankara-header.jpg",
+        "metaTitle": "Ankara Kazalı ve Pert Araç Alımı | Ankara Pert",
+        "metaDescription": "Ankara'da hasarlı, pert, kazalı araç alım satım merkezi. Aracınızı değerinde satmak için hemen teklif alın. Ücretsiz çekici hizmeti.",
+        "heroTitle": "Ankara Pert Araç Alımı",
+        "heroSubtitle": "Başkent Ankara'da güvenilir ve hızlı hasarlı araç alım satım noktası.",
+        "content": "Ankara merkezli firmamız, şehrin her noktasından kazalı ve hasarlı araç alımı yapmaktadır. Çankaya'dan Etimesgut'a, Keçiören'den Mamak'a kadar geniş bir hizmet ağına sahibiz. Aracınız pert kayıtlı dahi olsa bizim için değerlidir.",
+        "districts": [
+            "Çankaya",
+            "Keçiören",
+            "Yenimahalle",
+            "Mamak",
+            "Etimesgut",
+            "Sincan",
+            "Altındağ",
+            "Balgat",
+            "Çayyolu"
+        ],
+        "advantages": [
+            "Ankara Merkezli Kurumsal Firma",
+            "Hızlı Ekspertiz",
+            "Değerinde Fiyat Teklifi",
+            "Ücretsiz Evrak Takibi"
+        ]
+    },
+    {
+        "id": "35",
+        "slug": "izmir",
+        "name": "İzmir",
+        "region": "Ege",
+        "plateCode": "35",
+        "isPopular": true,
+        "heroImage": "/images/headers/izmir-header.jpg",
+        "metaTitle": "İzmir Hasarlı Araç Alımı ve Satışı",
+        "metaDescription": "İzmir bölgesinde hasarlı araçlarınızı en iyi fiyata satmak ister misiniz? Profesyonel ekibimizle hizmetinizdeyiz.",
+        "heroTitle": "İzmir Kazalı Araç Alımı",
+        "heroSubtitle": "Ege'nin incisi İzmir'de araçlarınızı değerinde değerlendiriyoruz.",
+        "content": "İzmir ve Ege bölgesinde hasarlı araç alımında öncü firmayız. Aracınızın hasar durumu ne olursa olsun, fotoğraflarınızı WhatsApp üzerinden bize gönderin, dakikalar içinde fiyat teklifimizi iletelim.",
+        "districts": [
+            "Konak",
+            "Karşıyaka",
+            "Bornova",
+            "Buca",
+            "Çiğli",
+            "Gaziemir",
+            "Balçova",
+            "Narlıdere"
+        ],
+        "advantages": [
+            "Ege Bölgesi Geneli Hizmet",
+            "WhatsApp İle Hızlı Teklif",
+            "Güvenli Ödeme Yöntemleri",
+            "Profesyonel Yaklaşım"
+        ]
+    },
+    {
+        "id": "16",
+        "slug": "bursa",
+        "name": "Bursa",
+        "region": "Marmara",
+        "plateCode": "16",
+        "isPopular": true,
+        "heroImage": "/images/headers/bursa-header.jpg",
+        "metaTitle": "Bursa Hasarlı Araç Alımı | En İyi Fiyat Garantisi",
+        "metaDescription": "Bursa'da kazalı, pert ve hasarlı araçlarınızı adresinizden teslim alıyoruz. Hemen arayın, teklifimizi sunalım.",
+        "heroTitle": "Bursa Hasarlı Araç Alımı",
+        "heroSubtitle": "Bursa genelinde anında nakit ödeme ile araç alımı.",
+        "content": "Otomotiv şehri Bursa'da hasarlı araçlarınızı ekonomiye geri kazandırıyoruz. Nilüfer, Osmangazi, Yıldırım başta olmak üzere tüm ilçelerden araç alımı yapmaktayız.",
+        "districts": [
+            "Osmangazi",
+            "Nilüfer",
+            "Yıldırım",
+            "Mudanya",
+            "Kestel",
+            "Gürsu"
+        ],
+        "advantages": [
+            "Adresten Teslim Alma",
+            "Nakit Ödeme İmkanı",
+            "Hızlı Çözüm Ortaklığı"
+        ]
+    },
+    {
+        "id": "07",
+        "slug": "antalya",
+        "name": "Antalya",
+        "region": "Akdeniz",
+        "plateCode": "07",
+        "isPopular": true,
+        "heroImage": "/images/headers/antalya-header.jpg",
+        "metaTitle": "Antalya Pert ve Hasarlı Araç Alanlar",
+        "metaDescription": "Antalya genelinde kazalı, arızalı veya pert araçlarınızı satmak mı istiyorsunuz? Hemen bizi arayın.",
+        "heroTitle": "Antalya Kazalı Araç Alımı",
+        "heroSubtitle": "Turizmin başkenti Antalya'da hasarlı araçlarınızı ekonomiye kazandırıyoruz.",
+        "content": "Antalya'da tatil tadında bir araç satış deneyimi yaşayın. Hasarlı aracınızla uğraşmayın, bize satarak nakite çevirin. Muratpaşa, Kepez, Konyaaltı ve diğer tüm ilçelerden alım yapmaktayız.",
+        "districts": [
+            "Muratpaşa",
+            "Kepez",
+            "Konyaaltı",
+            "Alanya",
+            "Manavgat",
+            "Serik"
+        ],
+        "advantages": [
+            "Turistik Bölge Hizmet Ağı",
+            "Hızlı ve Güvenilir",
+            "Otel Konforunda Hizmet"
+        ]
+    },
+    {
+        "id": "01",
+        "slug": "adana",
+        "name": "Adana",
+        "region": "Akdeniz",
+        "plateCode": "01",
+        "isPopular": true,
+        "heroImage": "/images/headers/adana-header.jpg",
+        "metaTitle": "Adana Kazalı, Hasarlı ve Pert Araç Alımı",
+        "metaDescription": "Adana ve çevre illerde hasarlı araçlarınızı en iyi fiyat garantisiyle alıyoruz. Adana hasarlı oto alım satım.",
+        "heroTitle": "Adana Hasarlı Araç Alımı",
+        "heroSubtitle": "Çukurova'nın her noktasından aracınızı değerinde nakit alıyoruz.",
+        "content": "Adana merkezli olarak tüm Akdeniz bölgesinde hasarlı araç alım hizmeti veriyoruz. Sıcağın ve samimiyetin şehri Adana'da güvenilir ticaretin adresiyiz. Seyhan, Çukurova, Yüreğir ve Sarıçam başta olmak üzere her yerden aracınızı teslim alabiliriz.",
+        "districts": [
+            "Seyhan",
+            "Çukurova",
+            "Yüreğir",
+            "Sarıçam",
+            "Ceyhan",
+            "Kozan"
+        ],
+        "advantages": [
+            "Bölgeyi Bilen Uzman Ekip",
+            "Aynı Gün Noter İşlemi",
+            "Yüksek Fiyat Garantisi"
+        ]
+    },
+    {
+        "id": "42",
+        "slug": "konya",
+        "name": "Konya",
+        "region": "İç Anadolu",
+        "plateCode": "42",
+        "isPopular": true,
+        "heroImage": "/images/headers/konya-header.jpg",
+        "metaTitle": "Konya Hasarlı, Kazalı ve Pert Araç Alımı",
+        "metaDescription": "Konya genelinde hasarlı araçlarınızı değerinde nakit alıyoruz. Hemen teklif alın.",
+        "heroTitle": "Konya Hasarlı Araç Alımı",
+        "heroSubtitle": "Mevlana şehri Konya'da güvenilir araç alım satım.",
+        "content": "Konya'nın geniş coğrafyasında her noktaya ulaşıyoruz. Selçuklu, Meram, Karatay ve diğer ilçelerden hasarlı araçlarınızı yerinde inceliyor, değerinde satın alıyoruz.",
+        "districts": [
+            "Selçuklu",
+            "Meram",
+            "Karatay",
+            "Ereğli",
+            "Akşehir"
+        ],
+        "advantages": [
+            "Konya Geneli Yaygın Ağ",
+            "Nakliye Bizden",
+            "Güvenli Ticaret"
+        ]
+    },
+    {
+        "id": "27",
+        "slug": "gaziantep",
+        "name": "Gaziantep",
+        "region": "Güneydoğu Anadolu",
+        "plateCode": "27",
+        "isPopular": true,
+        "heroImage": "/images/headers/gaziantep-header.jpg",
+        "metaTitle": "Gaziantep Hasarlı ve Pert Araç Alımı",
+        "metaDescription": "Gaziantep bölgesinde hasarlı, kazalı araç alımı yapmaktayız. En iyi fiyat garantisi.",
+        "heroTitle": "Gaziantep Kazalı Araç Alımı",
+        "heroSubtitle": "Sanayi ve gastronomi şehri Gaziantep'te hızlı araç satışı.",
+        "content": "Gaziantep'te hasarlı oto alım satım işlemleriniz için profesyonel çözüm ortağınızız. Şehitkamil ve Şahinbey başta olmak üzere tüm ilçelere hizmet veriyoruz.",
+        "districts": [
+            "Şehitkamil",
+            "Şahinbey",
+            "Nizip",
+            "Oğuzeli"
+        ],
+        "advantages": [
+            "Güneydoğu Bölge Merkezi",
+            "Hızlı Servis",
+            "Anında Ödeme"
+        ]
+    },
+    {
+        "id": "63",
+        "slug": "sanliurfa",
+        "name": "Şanlıurfa",
+        "region": "Güneydoğu Anadolu",
+        "plateCode": "63",
+        "isPopular": true,
+        "heroImage": "/images/headers/sanliurfa-header.jpg",
+        "metaTitle": "Şanlıurfa Hasarlı Araç Alım Satım",
+        "metaDescription": "Urfa'da hasarlı aracınızı satmak mı istiyorsunuz? Bize ulaşın, değerinde alalım.",
+        "heroTitle": "Şanlıurfa Pert Araç Alımı",
+        "heroSubtitle": "Peygamberler şehri Şanlıurfa'da güven dolu ticaret.",
+        "content": "Şanlıurfa genelinde kazalı ve pert araçlarınızı değerlendiriyoruz. Haliliye, Eyyübiye, Karaköprü ve diğer ilçelerden araç alımı yapıyoruz.",
+        "districts": [
+            "Haliliye",
+            "Eyyübiye",
+            "Karaköprü",
+            "Siverek",
+            "Viranşehir"
+        ],
+        "advantages": [
+            "Geniş Hizmet Alanı",
+            "Dürüst Ticaret",
+            "Yerinde İnceleme"
+        ]
+    },
+    {
+        "id": "41",
+        "slug": "kocaeli",
+        "name": "Kocaeli",
+        "region": "Marmara",
+        "plateCode": "41",
+        "isPopular": true,
+        "heroImage": "/images/headers/kocaeli-header.jpg",
+        "metaTitle": "Kocaeli İzmit Hasarlı Araç Alımı",
+        "metaDescription": "Kocaeli ve çevresinde hasarlı, kazalı araçlarınızı değerinde alıyoruz.",
+        "heroTitle": "Kocaeli Hasarlı Araç Alımı",
+        "heroSubtitle": "Sanayinin kalbi Kocaeli'de araçlarınıza değer katıyoruz.",
+        "content": "İzmit, Gebze, Darıca ve Kocaeli'nin tüm ilçelerinde hasarlı araç alımı hizmetimiz mevcuttur. Sanayi bölgelerine yakınlığımızla hızlı aksiyon alıyoruz.",
+        "districts": [
+            "İzmit",
+            "Gebze",
+            "Darıca",
+            "Gölcük",
+            "Körfez",
+            "Derince"
+        ],
+        "advantages": [
+            "Sanayi Bölgesi Avantajı",
+            "Hızlı Çekici",
+            "Nakit Alım"
+        ]
+    },
+    {
+        "id": "33",
+        "slug": "mersin",
+        "name": "Mersin",
+        "region": "Akdeniz",
+        "plateCode": "33",
+        "isPopular": true,
+        "heroImage": "/images/headers/mersin-header.jpg",
+        "metaTitle": "Mersin Hasarlı ve Kazalı Araç Alanlar",
+        "metaDescription": "Mersin'de hasarlı oto alımı yapıyoruz. Aracınızın hasarı ne olursa olsun bizi arayın.",
+        "heroTitle": "Mersin Hasarlı Araç Alımı",
+        "heroSubtitle": "Akdeniz'in liman kenti Mersin'de güvenilir araç alımı.",
+        "content": "Mersin merkez ve ilçelerinde hasarlı araçlarınızı yerinde inceliyor, en iyi fiyatı sunuyoruz. Mezitli, Yenişehir, Tarsus ve diğer bölgelerde hizmetinizdeyiz.",
+        "districts": [
+            "Akdeniz",
+            "Mezitli",
+            "Yenişehir",
+            "Toroslar",
+            "Tarsus",
+            "Erdemli"
+        ],
+        "advantages": [
+            "Liman Kenti Lojistik Ağı",
+            "Hızlı İşlem",
+            "Güvenilir Kadro"
+        ]
+    },
+    {
+        "id": "21",
+        "slug": "diyarbakir",
+        "name": "Diyarbakır",
+        "region": "Güneydoğu Anadolu",
+        "plateCode": "21",
+        "isPopular": true,
+        "heroImage": "/images/headers/diyarbakir-header.jpg",
+        "metaTitle": "Diyarbakır Hasarlı Araç Alım Merkezi",
+        "metaDescription": "Diyarbakır genelinde kazalı ve pert araç alımı. Hemen fiyat alın.",
+        "heroTitle": "Diyarbakır Hasarlı Araç Alımı",
+        "heroSubtitle": "Diyarbakır'da aracınızı değerinde nakit satmak için doğru yerdesiniz.",
+        "content": "Diyarbakır'ın tüm ilçelerinden hasarlı, kazalı ve hurda araç alımı yapmaktayız. Kayapınar, Bağlar, Yenişehir bölgelerinde aktif hizmet veriyoruz.",
+        "districts": [
+            "Bağlar",
+            "Kayapınar",
+            "Sur",
+            "Yenişehir",
+            "Ergani"
+        ],
+        "advantages": [
+            "Bölgesel Güç",
+            "Hızlı Ulaşım",
+            "Nakit Ödeme"
+        ]
+    },
+    {
+        "id": "31",
+        "slug": "hatay",
+        "name": "Hatay",
+        "region": "Akdeniz",
+        "plateCode": "31",
+        "isPopular": false,
+        "heroImage": "/images/headers/hatay-header.jpg",
+        "metaTitle": "Hatay Hasarlı ve Pert Oto Alımı",
+        "metaDescription": "Hatay ve ilçelerinde hasarlı araçlarınızı değerinde alıyoruz. Antakya, İskenderun araç alımı.",
+        "heroTitle": "Hatay Hasarlı Araç Alımı",
+        "heroSubtitle": "Hatay'da hasarlı araçlarınızı ekonomiye kazandırıyoruz.",
+        "content": "Hatay genelinde, Antakya ve İskenderun başta olmak üzere kazalı araç alımı yapıyoruz. Deprem bölgesindeki özel durumları göz önünde bulundurarak hızlı ve kolaylaştırıcı çözümler sunuyoruz.",
+        "districts": [
+            "Antakya",
+            "İskenderun",
+            "Defne",
+            "Dörtyol",
+            "Samandağ"
+        ],
+        "advantages": [
+            "Bölgeye Özel Hassasiyet",
+            "Hızlı Destek",
+            "Kolay Satış"
+        ]
+    },
+    {
+        "id": "45",
+        "slug": "manisa",
+        "name": "Manisa",
+        "region": "Ege",
+        "plateCode": "45",
+        "isPopular": false,
+        "heroImage": "/images/headers/manisa-header.jpg",
+        "metaTitle": "Manisa Hasarlı Araç Alımı",
+        "metaDescription": "Manisa ve çevre ilçelerde kazalı, pert araç alımı yapıyoruz.",
+        "heroTitle": "Manisa Hasarlı Araç Alımı",
+        "heroSubtitle": "Ege'nin sanayi şehri Manisa'da araçlarınıza talibiz.",
+        "content": "Manisa merkez, Yunusemre, Şehzadeler ve Akhisar gibi ilçelerden hasarlı araçlarınızı alıyoruz. İzmir'e yakınlığımızla birlikte hızlı servis imkanı sunuyoruz.",
+        "districts": [
+            "Yunusemre",
+            "Şehzadeler",
+            "Akhisar",
+            "Turgutlu",
+            "Salihli"
+        ],
+        "advantages": [
+            "Hızlı Ekspertiz",
+            "Sanayi Bölgesi Ağı",
+            "Güvenilir Alıcı"
+        ]
+    },
+    {
+        "id": "38",
+        "slug": "kayseri",
+        "name": "Kayseri",
+        "region": "İç Anadolu",
+        "plateCode": "38",
+        "isPopular": false,
+        "heroImage": "/images/headers/kayseri-header.jpg",
+        "metaTitle": "Kayseri Pert ve Hasarlı Araç Alımı",
+        "metaDescription": "Kayseri'de hasarlı aracınızı satmak için en doğru adres. Değerinde nakit alım.",
+        "heroTitle": "Kayseri Hasarlı Araç Alımı",
+        "heroSubtitle": "Erciyes'in eteklerinde güvenilir araç ticareti.",
+        "content": "Kayseri'nin ticari ahlakına uygun, dürüst ve şeffaf hasarlı araç alımı yapıyoruz. Melikgazi, Kocasinan, Talas bölgelerinde her zaman hizmetinizdeyiz.",
+        "districts": [
+            "Melikgazi",
+            "Kocasinan",
+            "Talas",
+            "Develi"
+        ],
+        "advantages": [
+            "Kayseri Ticaret Geleneği",
+            "Hızlı Sonuç",
+            "Nakit İşlem"
+        ]
+    },
+    {
+        "id": "55",
+        "slug": "samsun",
+        "name": "Samsun",
+        "region": "Karadeniz",
+        "plateCode": "55",
+        "isPopular": false,
+        "heroImage": "/images/headers/samsun-header.jpg",
+        "metaTitle": "Samsun Hasarlı Araç Alım Satım",
+        "metaDescription": "Karadeniz'in başkenti Samsun'da hasarlı araçlarınızı alıyoruz.",
+        "heroTitle": "Samsun Hasarlı Araç Alımı",
+        "heroSubtitle": "Karadeniz bölgesinde hasarlı araçlar için güvenilir çözüm.",
+        "content": "Samsun ve çevre illerde kazalı, pert araç alımı yapmaktayız. İlkadım, Atakum, Canik gibi merkezi ilçelerden ve tüm bölgeden araç topluyoruz.",
+        "districts": [
+            "İlkadım",
+            "Atakum",
+            "Canik",
+            "Çarşamba",
+            "Bafra"
+        ],
+        "advantages": [
+            "Karadeniz Bölge Ağı",
+            "Hızlı Ulaşım",
+            "Değerinde Alım"
+        ]
+    },
+    {
+        "id": "10",
+        "slug": "balikesir",
+        "name": "Balıkesir",
+        "region": "Marmara",
+        "plateCode": "10",
+        "isPopular": false,
+        "heroImage": "/images/headers/balikesir-header.jpg",
+        "metaTitle": "Balıkesir Hasarlı Oto Alımı",
+        "metaDescription": "Balıkesir genelinde kazalı ve arızalı araçlarınızı nakit alıyoruz.",
+        "heroTitle": "Balıkesir Hasarlı Araç Alımı",
+        "heroSubtitle": "Marmara ve Ege'nin kesişim noktasında hizmetinizdeyiz.",
+        "content": "Balıkesir merkez, Altıeylül, Karesi ve Bandırma, Edremit gibi büyük ilçelerden hasarlı araç alımı yapıyoruz. Tatil beldelerinden de araç alımımız mevcuttur.",
+        "districts": [
+            "Altıeylül",
+            "Karesi",
+            "Bandırma",
+            "Edremit",
+            "Gönen"
+        ],
+        "advantages": [
+            "Geniş Coğrafi Kapsam",
+            "Hızlı Transfer",
+            "Nakit Olanak"
+        ]
+    },
+    {
+        "id": "46",
+        "slug": "kahramanmaras",
+        "name": "Kahramanmaraş",
+        "region": "Akdeniz",
+        "plateCode": "46",
+        "isPopular": false,
+        "heroImage": "/images/headers/kahramanmaras-header.jpg",
+        "metaTitle": "Kahramanmaraş Hasarlı Araç Alımı",
+        "metaDescription": "Maraş'ta hasarlı, kazalı oto alım satım hizmetleri.",
+        "heroTitle": "Kahramanmaraş Hasarlı Araç Alımı",
+        "heroSubtitle": "Kahraman şehrimizde araçlarınızı değerinde alıyoruz.",
+        "content": "Kahramanmaraş Onikişubat ve Dulkadiroğlu ilçeleri başta olmak üzere tüm bölgeden hasarlı araç alımı yapıyoruz. Hızlı ekspertiz ve adresten alım hizmetimiz vardır.",
+        "districts": [
+            "Onikişubat",
+            "Dulkadiroğlu",
+            "Elbistan",
+            "Afşin"
+        ],
+        "advantages": [
+            "Bölgesel Tecrübe",
+            "Hızlı Hizmet",
+            "Kolay İşlem"
+        ]
+    },
+    {
+        "id": "65",
+        "slug": "van",
+        "name": "Van",
+        "region": "Doğu Anadolu",
+        "plateCode": "65",
+        "isPopular": false,
+        "heroImage": "/images/headers/van-header.jpg",
+        "metaTitle": "Van Hasarlı Araç Alımı",
+        "metaDescription": "Van bölgesinde kazalı araçlarınızı en iyi fiyata satabilirsiniz.",
+        "heroTitle": "Van Hasarlı Araç Alımı",
+        "heroSubtitle": "Doğunun incisi Van'da güvenilir araç alım noktası.",
+        "content": "Van merkez İpekyolu, Tuşba ve Edremit ilçelerinden hasarlı, kazalı ve pert araçlarınızı alıyoruz. Bölge şartlarına uygun hızlı çözümler sunuyoruz.",
+        "districts": [
+            "İpekyolu",
+            "Tuşba",
+            "Edremit",
+            "Erciş"
+        ],
+        "advantages": [
+            "Doğu Anadolu Ağı",
+            "Hızlı Ulaşım",
+            "Güvenilir Ödeme"
+        ]
+    },
+    {
+        "id": "09",
+        "slug": "aydin",
+        "name": "Aydın",
+        "region": "Ege",
+        "plateCode": "09",
+        "isPopular": false,
+        "heroImage": "/images/headers/aydin-header.jpg",
+        "metaTitle": "Aydın Hasarlı Araç Alımı",
+        "metaDescription": "Aydın genelinde hasarlı, kazalı araç alım satımı yapıyoruz.",
+        "heroTitle": "Aydın Hasarlı Araç Alımı",
+        "heroSubtitle": "Efeler diyarı Aydın'da araçlarınıza değer veriyoruz.",
+        "content": "Aydın Efeler, Nazilli, Söke, Kuşadası ve Didim bölgelerinden hasarlı araç alımı yapmaktayız. Turistik bölgeler dahil her yerden araç teslim alıyoruz.",
+        "districts": [
+            "Efeler",
+            "Nazilli",
+            "Söke",
+            "Kuşadası",
+            "Didim"
+        ],
+        "advantages": [
+            "Turistik Bölge Servisi",
+            "Hızlı Çekici",
+            "Nakit Ödeme"
+        ]
+    },
+    {
+        "id": "59",
+        "slug": "tekirdag",
+        "name": "Tekirdağ",
+        "region": "Marmara",
+        "plateCode": "59",
+        "isPopular": false,
+        "heroImage": "/images/headers/tekirdag-header.jpg",
+        "metaTitle": "Tekirdağ Hasarlı Araç Alımı",
+        "metaDescription": "Tekirdağ ve Çorlu bölgesinde hasarlı araç alımı.",
+        "heroTitle": "Tekirdağ Hasarlı Araç Alımı",
+        "heroSubtitle": "Trakya'nın merkezi Tekirdağ'da hızlı araç satışı.",
+        "content": "Tekirdağ Süleymanpaşa, Çorlu ve Çerkezköy sanayi bölgelerinden hasarlı araçlarınızı alıyoruz. Trakya bölgesinde aktif olarak çalışmaktayız.",
+        "districts": [
+            "Süleymanpaşa",
+            "Çorlu",
+            "Çerkezköy",
+            "Kapaklı",
+            "Ergene"
+        ],
+        "advantages": [
+            "Trakya Bölge Ağı",
+            "Sanayi Bölgesi Hızı",
+            "Güvenilir Alım"
+        ]
+    },
+    {
+        "id": "54",
+        "slug": "sakarya",
+        "name": "Sakarya",
+        "region": "Marmara",
+        "plateCode": "54",
+        "isPopular": false,
+        "heroImage": "/images/headers/sakarya-header.jpg",
+        "metaTitle": "Sakarya Hasarlı Araç Alımı",
+        "metaDescription": "Sakarya Adapazarı bölgesinde hasarlı araç alanlar.",
+        "heroTitle": "Sakarya Hasarlı Araç Alımı",
+        "heroSubtitle": "Sakarya'da hasarlı otomotiv çözümleri.",
+        "content": "Sakarya Adapazarı, Serdivan ve diğer ilçelerden hasarlı araç, pert araç alımı yapıyoruz. Hızlı ekspertiz ve nakit ödeme garantisi.",
+        "districts": [
+            "Adapazarı",
+            "Serdivan",
+            "Erenler",
+            "Hendek",
+            "Akyazı"
+        ],
+        "advantages": [
+            "Hızlı Ekspertiz",
+            "Yerinde Ödeme",
+            "Sorunsuz Devir"
+        ]
+    },
+    {
+        "id": "20",
+        "slug": "denizli",
+        "name": "Denizli",
+        "region": "Ege",
+        "plateCode": "20",
+        "isPopular": false,
+        "heroImage": "/images/headers/denizli-header.jpg",
+        "metaTitle": "Denizli Hasarlı Araç Alımı",
+        "metaDescription": "Denizli'de hasarlı ve kazalı araçlarınızı değerinde satmak için bize ulaşın.",
+        "heroTitle": "Denizli Hasarlı Araç Alımı",
+        "heroSubtitle": "Horozlar şehri Denizli'de güvenilir araç alım satımı.",
+        "content": "Denizli Pamukkale ve Merkezefendi ilçeleri başta olmak üzere tüm bölgeden hasarlı araçlarınızı alıyoruz. Tekstil ve sanayi kenti Denizli'de hızlı çözümler.",
+        "districts": [
+            "Pamukkale",
+            "Merkezefendi",
+            "Çivril",
+            "Acıpayam"
+        ],
+        "advantages": [
+            "Denizli Geneli Hizmet",
+            "Hızlı Değerleme",
+            "Nakit Alım"
+        ]
+    },
+    {
+        "id": "48",
+        "slug": "mugla",
+        "name": "Muğla",
+        "region": "Ege",
+        "plateCode": "48",
+        "isPopular": false,
+        "heroImage": "/images/headers/mugla-header.jpg",
+        "metaTitle": "Muğla Hasarlı Araç Alımı | Bodrum Fethiye Marmaris",
+        "metaDescription": "Muğla genelinde ve tatil beldelerinde hasarlı araç alımı yapıyoruz.",
+        "heroTitle": "Muğla Hasarlı Araç Alımı",
+        "heroSubtitle": "Ege ve Akdeniz'in buluştuğu Muğla'da hizmetinizdeyiz.",
+        "content": "Muğla Menteşe, Bodrum, Fethiye, Marmaris ve Milas gibi tüm ilçelerden araç alımı yapıyoruz. Yaz kış demeden hizmet veriyoruz.",
+        "districts": [
+            "Menteşe",
+            "Bodrum",
+            "Fethiye",
+            "Marmaris",
+            "Milas"
+        ],
+        "advantages": [
+            "Tüm Kıyı Şeridi Hizmeti",
+            "Yaz Kış Aktif",
+            "Hızlı Çözüm"
+        ]
+    },
+    {
+        "id": "26",
+        "slug": "eskisehir",
+        "name": "Eskişehir",
+        "region": "İç Anadolu",
+        "plateCode": "26",
+        "isPopular": false,
+        "heroImage": "/images/headers/eskisehir-header.jpg",
+        "metaTitle": "Eskişehir Hasarlı Araç Alımı",
+        "metaDescription": "Eskişehir'de kazalı ve pert araçlarınızı değerinde alıyoruz.",
+        "heroTitle": "Eskişehir Hasarlı Araç Alımı",
+        "heroSubtitle": "Öğrenci ve kültür şehri Eskişehir'de araçlarınıza talibiz.",
+        "content": "Eskişehir Odunpazarı ve Tepebaşı merkez ilçelerinden hasarlı araç alımı yapmaktayız. Hızlı, güvenilir ve şeffaf hizmet anlayışımızla yanınızdayız.",
+        "districts": [
+            "Odunpazarı",
+            "Tepebaşı",
+            "Sivrihisar",
+            "Çifteler"
+        ],
+        "advantages": [
+            "Merkezi Konum",
+            "Hızlı İşlem",
+            "Güvenilirlik"
+        ]
+    },
+    {
+        "id": "47",
+        "slug": "mardin",
+        "name": "Mardin",
+        "region": "Güneydoğu Anadolu",
+        "plateCode": "47",
+        "isPopular": false,
+        "heroImage": "/images/headers/mardin-header.jpg",
+        "metaTitle": "Mardin Hasarlı Araç Alımı",
+        "metaDescription": "Mardin'de hasarlı oto alım satım hizmeti.",
+        "heroTitle": "Mardin Hasarlı Araç Alımı",
+        "heroSubtitle": "Tarihi ve kültürel zenginliğimiz Mardin'de hizmet veriyoruz.",
+        "content": "Mardin Artuklu, Kızıltepe, Midyat ve Nusaybin ilçelerinden hasarlı araçlarınızı değerinde alıyoruz. Bölge şartlarına uygun araç alım süreçleri yürütüyoruz.",
+        "districts": [
+            "Artuklu",
+            "Kızıltepe",
+            "Midyat",
+            "Nusaybin"
+        ],
+        "advantages": [
+            "Bölge Uzmanlığı",
+            "Hızlı Değerlendirme",
+            "Nakit Ödeme"
+        ]
+    },
+    {
+        "id": "61",
+        "slug": "trabzon",
+        "name": "Trabzon",
+        "region": "Karadeniz",
+        "plateCode": "61",
+        "isPopular": false,
+        "heroImage": "/images/headers/trabzon-header.jpg",
+        "metaTitle": "Trabzon Hasarlı Araç Alımı",
+        "metaDescription": "Trabzon ve Karadeniz bölgesinde hasarlı araçlarınızı alıyoruz.",
+        "heroTitle": "Trabzon Hasarlı Araç Alımı",
+        "heroSubtitle": "Karadeniz'in hırçın dalgaları gibi hızlı araç alımı.",
+        "content": "Trabzon Ortahisar, Akçaabat ve diğer ilçelerden kazalı, pert araç alımı yapıyoruz. Karadeniz sahil yolu üzerindeki tüm noktalara ulaşıyoruz.",
+        "districts": [
+            "Ortahisar",
+            "Akçaabat",
+            "Araklı",
+            "Of",
+            "Yomra"
+        ],
+        "advantages": [
+            "Karadeniz Uzmanlığı",
+            "Hızlı Transfer",
+            "Güvenli Alım"
+        ]
+    },
+    {
+        "id": "44",
+        "slug": "malatya",
+        "name": "Malatya",
+        "region": "Doğu Anadolu",
+        "plateCode": "44",
+        "isPopular": false,
+        "heroImage": "/images/headers/malatya-header.jpg",
+        "metaTitle": "Malatya Hasarlı Araç Alımı",
+        "metaDescription": "Malatya'da hasarlı ve kazalı araç alım satımı.",
+        "heroTitle": "Malatya Hasarlı Araç Alımı",
+        "heroSubtitle": "Kayısı diyarı Malatya'da araçlarınıza değer veriyoruz.",
+        "content": "Malatya Battalgazi ve Yeşilyurt merkez ilçeleri başta olmak üzere tüm bölgeden hasarlı araç alımı yapıyoruz.",
+        "districts": [
+            "Battalgazi",
+            "Yeşilyurt",
+            "Doğanşehir",
+            "Akçadağ"
+        ],
+        "advantages": [
+            "Yerinde Hizmet",
+            "Hızlı Ödeme",
+            "Güvenilir Firma"
+        ]
+    },
+    {
+        "id": "52",
+        "slug": "ordu",
+        "name": "Ordu",
+        "region": "Karadeniz",
+        "plateCode": "52",
+        "isPopular": false,
+        "heroImage": "/images/headers/ordu-header.jpg",
+        "metaTitle": "Ordu Hasarlı Araç Alımı",
+        "metaDescription": "Ordu genelinde kazalı ve pert araçlarınızı alıyoruz.",
+        "heroTitle": "Ordu Hasarlı Araç Alımı",
+        "heroSubtitle": "Yeşil ile mavinin buluştuğu Ordu'da araç alımı.",
+        "content": "Ordu Altınordu, Fatsa ve Ünye ilçelerinden hasarlı, kazalı araç alımı yapıyoruz. Karadeniz'in her noktasına hizmet götürüyoruz.",
+        "districts": [
+            "Altınordu",
+            "Fatsa",
+            "Ünye",
+            "Perşembe"
+        ],
+        "advantages": [
+            "Sahil Hattı Hizmeti",
+            "Hızlı Çözüm",
+            "Değerinde Fiyat"
+        ]
+    },
+    {
+        "id": "25",
+        "slug": "erzurum",
+        "name": "Erzurum",
+        "region": "Doğu Anadolu",
+        "plateCode": "25",
+        "isPopular": false,
+        "heroImage": "/images/headers/erzurum-header.jpg",
+        "metaTitle": "Erzurum Hasarlı Araç Alımı",
+        "metaDescription": "Erzurum'da kazalı ve pert araç alım satım.",
+        "heroTitle": "Erzurum Hasarlı Araç Alımı",
+        "heroSubtitle": "Dadaş diyarı Erzurum'da güvenilir araç alımı.",
+        "content": "Erzurum Yakutiye, Palandöken ve Aziziye merkez ilçelerinden hasarlı araçlarınızı kış şartlarına aldırmadan alıyoruz.",
+        "districts": [
+            "Yakutiye",
+            "Palandöken",
+            "Aziziye",
+            "Horasan"
+        ],
+        "advantages": [
+            "Zorlu Şartlarda Hizmet",
+            "Güvenilir Esnaf",
+            "Nakit Alım"
+        ]
+    }
+]

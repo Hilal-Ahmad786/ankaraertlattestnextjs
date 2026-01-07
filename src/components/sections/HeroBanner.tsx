@@ -9,6 +9,7 @@ interface HeroBannerProps {
   title: string;
   subtitle: string;
   highlight?: string;
+  backgroundImage?: string; // New prop for custom background
 }
 
 export default function HeroBanner({
@@ -17,6 +18,7 @@ export default function HeroBanner({
   title,
   subtitle,
   highlight,
+  backgroundImage,
 }: HeroBannerProps) {
   const handlePhoneClick = () => {
     trackPhoneClick();
@@ -28,8 +30,10 @@ export default function HeroBanner({
     trackCTAClick('WhatsApp', 'hero');
   };
 
-  // Map variant to background image
+  // Map variant to background image (fallback if no custom image provided)
   const getBackgroundImage = () => {
+    if (backgroundImage) return backgroundImage;
+
     switch (variant) {
       case 'kazali':
         return '/kazali.webp';
