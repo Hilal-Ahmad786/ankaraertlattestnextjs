@@ -62,9 +62,9 @@ export const metadata: Metadata = {
     images: ['/banner.webp'],
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
+    icon: '/favicon-v2.ico',
+    shortcut: '/favicon-v2.ico',
+    apple: '/favicon-v2.ico',
   },
   robots: {
     index: true,
