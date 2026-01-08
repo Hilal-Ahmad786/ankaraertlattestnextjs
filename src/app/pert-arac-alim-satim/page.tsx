@@ -72,6 +72,7 @@ export default function PertAracPage() {
         title="Pert Araç Alımı"
         subtitle="Kasko Çıkışlı En Yüksek Fiyat"
         highlight="Tek Aramayla Teklif Alın"
+        backgroundImage="/images/backgrounds/pert-arac-hero.png"
       />
 
       <section className="intro-keyword px-4 py-12 bg-light">
@@ -79,8 +80,8 @@ export default function PertAracPage() {
           <p className="text-lg leading-relaxed mb-6">
             <strong className="text-primary">Pert araç alan</strong> konusunda uzmanız.{' '}
             <strong className="text-orange-500">Pert aracımı satmak istiyorum</strong>{' '}
-            diyorsanız doğru yerdesiniz. <strong className="text-primary">Pert araç alan 
-            firmalar</strong> arasında en yüksek fiyat garantisi veriyoruz. Kasko çıkışlı 
+            diyorsanız doğru yerdesiniz. <strong className="text-primary">Pert araç alan
+              firmalar</strong> arasında en yüksek fiyat garantisi veriyoruz. Kasko çıkışlı
             araçlar için özel değerleme!
           </p>
         </div>

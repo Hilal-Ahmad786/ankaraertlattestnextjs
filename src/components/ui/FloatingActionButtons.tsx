@@ -4,6 +4,8 @@
 import React, { useState, useEffect } from 'react';
 import { trackPhoneClick, trackWhatsAppClick } from '@/lib/gtm';
 
+import { siteConfig } from '@/config/site';
+
 interface FloatingActionButtonsProps {
   phoneNumber?: string;
   whatsappNumber?: string;
@@ -11,8 +13,8 @@ interface FloatingActionButtonsProps {
 }
 
 export default function FloatingActionButtons({
-  phoneNumber = '05539465206',
-  whatsappNumber = '905539465206',
+  phoneNumber = siteConfig.phone,
+  whatsappNumber = siteConfig.whatsapp,
   whatsappMessage = 'Merhaba, aracım hakkında bilgi almak istiyorum.',
 }: FloatingActionButtonsProps) {
   const [isVisible, setIsVisible] = useState(false);

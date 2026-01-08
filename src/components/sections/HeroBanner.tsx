@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import { siteConfig } from '@/config/site';
 import { trackCTAClick, trackPhoneClick, trackWhatsAppClick } from '@/lib/gtm';
 
@@ -51,12 +53,16 @@ export default function HeroBanner({
   return (
     <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('${getBackgroundImage()}')`,
-        }}
-      />
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src={getBackgroundImage()}
+          alt={title}
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-purple-800/70 to-orange-600/60"></div>

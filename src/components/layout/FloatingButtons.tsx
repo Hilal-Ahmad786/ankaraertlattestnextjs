@@ -3,11 +3,7 @@
 import { useState, useEffect } from 'react';
 import { trackCTAClick, trackWhatsAppClick, trackPhoneClick, trackFormSubmit } from '@/lib/gtm';
 
-const siteConfig = {
-  phone: '+905539465206',
-  phoneDisplay: '0 (553) 946 52 06',
-  whatsapp: '905539465206',
-};
+import { siteConfig } from '@/config/site';
 
 export default function UnifiedFloatingButtons() {
   const [isChatOpen, setIsChatOpen] = useState(false);

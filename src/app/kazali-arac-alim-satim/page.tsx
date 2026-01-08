@@ -81,6 +81,7 @@ export default function KazaliAracPage() {
         title="Kazalı Araç Alan"
         subtitle="Hasarlı • Pert • Hurda Araç Alımında #1"
         highlight="30 Dakikada Nakit Teklif"
+        backgroundImage="/images/backgrounds/kazali-arac-hero.png"
       />
 
       {/* Intro Section */}

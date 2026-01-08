@@ -23,6 +23,8 @@ export async function generateStaticParams() {
     }));
 }
 
+import { siteConfig } from '@/config/site';
+
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
     const cities: City[] = citiesData as City[];
     const city = cities.find((c) => c.slug === params.slug);
@@ -56,7 +58,7 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
         '@type': 'LocalBusiness',
         name: 'Ankara Pert',
         image: 'https://ankarapert.com.tr/logo.png',
-        telephone: '05557512220',
+        telephone: siteConfig.phone,
         address: {
             '@type': 'PostalAddress',
             addressLocality: city.name,

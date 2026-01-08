@@ -72,6 +72,7 @@ export default function HurdaAracPage() {
         title="Hurda Araç Alımı"
         subtitle="Çevre Dostu Geri Dönüşüm"
         highlight="En İyi Fiyat Garantisi"
+        backgroundImage="/images/backgrounds/hurda-arac-hero.png"
       />
 
       <section className="intro-keyword px-4 py-12 bg-light">
@@ -80,7 +81,7 @@ export default function HurdaAracPage() {
             <strong className="text-primary">Hurda araç alan</strong> resmi firmayız.{' '}
             <strong className="text-orange-500">Hurda aracımı satmak istiyorum</strong>{' '}
             diyorsanız, çevre dostu ve yasal süreçlerimizle hizmetinizdeyiz.{' '}
-            <strong className="text-primary">Hurda araç alan yerler</strong> arasında 
+            <strong className="text-primary">Hurda araç alan yerler</strong> arasında
             en iyi fiyatı garantiliyoruz. Ücretsiz çekici, anında ödeme!
           </p>
         </div>

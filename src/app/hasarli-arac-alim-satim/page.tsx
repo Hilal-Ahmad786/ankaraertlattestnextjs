@@ -72,15 +72,16 @@ export default function HasarliAracPage() {
         title="Hasarlı Araç Alımı"
         subtitle="En Yüksek Fiyat Garantisi"
         highlight="Hemen Arayın, Teklif Alın"
+        backgroundImage="/images/backgrounds/hasarli-arac-hero.png"
       />
 
       <section className="intro-keyword px-4 py-12 bg-light">
         <div className="container mx-auto text-center max-w-4xl">
           <p className="text-lg leading-relaxed mb-6">
-            <strong className="text-primary">Hasarlı araç alan firmalar</strong> arasında 
-            en güvenilir çözümü sunuyoruz. <strong className="text-orange-500">Hasarlı aracımı 
-            satmak istiyorum</strong> diyorsanız, tek bir telefonla başlayın.{' '}
-            <strong className="text-primary">Hasarlı araç alan yerler</strong> arasında en 
+            <strong className="text-primary">Hasarlı araç alan firmalar</strong> arasında
+            en güvenilir çözümü sunuyoruz. <strong className="text-orange-500">Hasarlı aracımı
+              satmak istiyorum</strong> diyorsanız, tek bir telefonla başlayın.{' '}
+            <strong className="text-primary">Hasarlı araç alan yerler</strong> arasında en
             yüksek fiyatı garantiliyoruz. Ücretsiz ekspertiz, hızlı işlem, anında ödeme!
           </p>
         </div>
