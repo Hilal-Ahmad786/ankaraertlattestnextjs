@@ -61,6 +61,11 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: ['/banner.webp'],
   },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   robots: {
     index: true,
     follow: true,
