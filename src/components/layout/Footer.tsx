@@ -15,8 +15,11 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-white font-bold text-xl mb-4 flex items-center gap-2">
-              <i className="fas fa-car-crash text-orange-500"></i>
-              Ankara PERT
+              <img
+                src="/images/logo-trimmed.png"
+                alt="Ankara Pert Logo"
+                className="h-12 w-auto object-contain brightness-0 invert"
+              />
             </h3>
             <p className="text-sm mb-4">
               Kazalı, hasarlı, pert ve hurda araç alımında Türkiye'nın en güvenilir adresi.

@@ -26,9 +26,12 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-3">
           {/* Logo - Left (20% width on desktop) */}
-          <Link href="/" className="flex items-center gap-2 text-blue-700 font-bold text-xl lg:w-1/5">
-            <i className="fas fa-car-crash text-2xl text-orange-500"></i>
-            <span className="hidden sm:inline whitespace-nowrap">Ankara PERT</span>
+          <Link href="/" className="flex items-center lg:w-1/5">
+            <img
+              src="/images/logo-trimmed.png"
+              alt="Ankara Pert Logo"
+              className="h-12 md:h-14 w-auto object-contain"
+            />
           </Link>
 
           {/* Navigation - Center (60% width on desktop) */}
