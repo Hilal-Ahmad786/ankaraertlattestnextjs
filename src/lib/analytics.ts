@@ -1,10 +1,11 @@
 // src/lib/analytics.ts
 import { analyticsConfig } from '@/config/analytics';
+import { trackPhoneClick, trackWhatsAppClick } from '@/lib/gtm';
 
 // Type declarations
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag?: (...args: any[]) => void;
     fbq: (...args: any[]) => void;
     dataLayer: any[];
   }
@@ -47,27 +48,19 @@ export const trackEvent = (
   });
 };
 
-// Conversions - Updated to use GTM Events
+// Conversions - Updated to use the new unified GTM/Tracking delegates
 export const trackPhoneConversion = () => {
-  console.log('📞 Phone click tracked');
-  pushToDataLayer('phone_click', {
-    event_category: 'engagement',
-    event_label: 'phone_button',
-    conversion_type: 'phone'
-  });
+  console.log('📞 Phone click tracked via analytics.ts (deprecated, use gtm.ts instead)');
+  trackPhoneClick('legacy_analytics');
 };
 
 export const trackWhatsAppConversion = () => {
-  console.log('💬 WhatsApp click tracked');
-  pushToDataLayer('whatsapp_click', {
-    event_category: 'engagement',
-    event_label: 'whatsapp_button',
-    conversion_type: 'whatsapp'
-  });
+  console.log('💬 WhatsApp click tracked via analytics.ts (deprecated, use gtm.ts instead)');
+  trackWhatsAppClick('legacy_analytics');
 };
 
 export const trackFormConversion = () => {
-  console.log('📝 Form submit tracked');
+  console.log('📝 Form submit tracked via analytics.ts (deprecated)');
   pushToDataLayer('form_submit', {
     event_category: 'engagement',
     event_label: 'contact_form',

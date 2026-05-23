@@ -9,14 +9,14 @@ export const analyticsConfig = {
     enabled: true,
   },
   googleAds: {
-    // We leave these empty because GTM handles the IDs internally.
-    conversionId: '',
+    // Kept here for reference, but primary tracking goes through GTM dataLayer
+    conversionId: process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || '',
     conversionLabels: {
-      phone: '',
-      whatsapp: '',
-      form: '',
+      phone: process.env.NEXT_PUBLIC_GOOGLE_ADS_PHONE_CONVERSION_LABEL || '',
+      whatsapp: process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_CONVERSION_LABEL || '',
+      form: process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_CONVERSION_LABEL || '',
     },
-    enabled: false, // <--- EXPLICITLY DISABLED. GTM does the work.
+    enabled: !!process.env.NEXT_PUBLIC_GOOGLE_ADS_ID, // Useful if direct gtag is needed fallback
   },
   facebook: {
     pixelId: process.env.NEXT_PUBLIC_FB_PIXEL_ID || '',

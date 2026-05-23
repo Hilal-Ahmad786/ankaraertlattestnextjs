@@ -1,5 +1,6 @@
 import TagManager from 'react-gtm-module';
 import { analyticsConfig } from '@/config/analytics';
+import { trackPhoneClick as newTrackPhoneClick, trackWhatsAppClick as newTrackWhatsAppClick, trackLeadFormSubmit } from './tracking';
 
 export const initGTM = () => {
   if (analyticsConfig.gtm.enabled && typeof window !== 'undefined') {
@@ -24,27 +25,18 @@ export const pushGTMEvent = (event: GTMEvent) => {
   }
 };
 
-// Conversion tracking events
-// Conversion tracking events
-export const trackPhoneClick = () => {
-  pushGTMEvent({
-    event: 'phone_click',
-    event_category: 'engagement',
-    event_label: 'phone_button',
-    value: 1,
-  });
+// Conversion tracking events (Delegated to new unified tracking.ts)
+export const trackPhoneClick = (location: string = 'unknown') => {
+  newTrackPhoneClick(location, 'Phone', typeof window !== 'undefined' ? window.location.pathname : '');
 };
 
-export const trackWhatsAppClick = () => {
-  pushGTMEvent({
-    event: 'whatsapp_click',
-    event_category: 'engagement',
-    event_label: 'whatsapp_button',
-    value: 1,
-  });
+export const trackWhatsAppClick = (location: string = 'unknown') => {
+  newTrackWhatsAppClick(location, 'WhatsApp', typeof window !== 'undefined' ? window.location.pathname : '');
 };
 
 export const trackFormSubmit = (formName: string) => {
+  // Keeping old signature for backward compatibility, but we don't have form data here.
+  // Real forms should use trackLeadFormSubmit from tracking.ts directly.
   pushGTMEvent({
     event: 'form_submit',
     event_category: 'engagement',
