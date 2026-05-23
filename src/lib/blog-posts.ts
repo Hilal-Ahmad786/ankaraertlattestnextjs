@@ -1,4 +1,6 @@
 // lib/blog-posts.ts
+import { siteConfig } from '../config/site';
+
 export interface BlogPost {
     title: string;
     subtitle: string;
@@ -83,7 +85,7 @@ export interface BlogPost {
           <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
             <p class="font-semibold text-blue-800 mb-2">📞 Hemen Teklif Alın</p>
             <p class="text-blue-700">
-              Kazalı aracınız için en yüksek teklifi almak ister misiniz? Hemen bizi arayın: <strong>0 (536) 929 86 06</strong>
+              Kazalı aracınız için en yüksek teklifi almak ister misiniz? Hemen bizi arayın: <strong>${siteConfig.phoneDisplay}</strong>
             </p>
           </div>
         </div>
@@ -147,7 +149,7 @@ export interface BlogPost {
           <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
             <p class="font-semibold text-blue-800 mb-2">📞 Pert Aracınız İçin Teklif Alın</p>
             <p class="text-blue-700">
-              Pert raporlu aracınız için anında değerlendirme: <strong>0 (536) 929 86 06</strong>
+              Pert raporlu aracınız için anında değerlendirme: <strong>${siteConfig.phoneDisplay}</strong>
             </p>
           </div>
         </div>
@@ -246,7 +248,7 @@ export interface BlogPost {
           <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
             <p class="font-semibold text-blue-800 mb-2">📞 Hemen Başlayın</p>
             <p class="text-blue-700">
-              Hurda aracınız için en yüksek fiyatı almak ve sorunsuz bir süreç için: <strong>0 (536) 929 86 06</strong>
+              Hurda aracınız için en yüksek fiyatı almak ve sorunsuz bir süreç için: <strong>${siteConfig.phoneDisplay}</strong>
             </p>
           </div>
         </div>
