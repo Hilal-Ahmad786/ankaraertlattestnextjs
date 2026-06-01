@@ -8,7 +8,23 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
     title: 'Hizmet Bölgelerimiz | Ankara Pert',
-    description: 'Türkiye genelinde hizmet verdiğimiz şehirler. İstanbul, Ankara, İzmir ve diğer illerde hasarlı araç alımı yapıyoruz.',
+    description: 'Türkiye\'nin 81 ilinde hasarlı, kazalı, pert ve hurda araç alımı yapıyoruz. İstanbul, Ankara, İzmir ve tüm şehirlerde 7/24 hizmet.',
+    alternates: {
+        canonical: 'https://ankarapert.com.tr/sehirler',
+    },
+    openGraph: {
+        title: 'Hizmet Bölgelerimiz | Ankara Pert',
+        description: 'Türkiye\'nin 81 ilinde hasarlı, kazalı, pert ve hurda araç alımı yapıyoruz.',
+        url: 'https://ankarapert.com.tr/sehirler',
+        locale: 'tr_TR',
+        type: 'website',
+        siteName: 'Ankara PERT',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Hizmet Bölgelerimiz | Ankara Pert',
+        description: 'Türkiye\'nin 81 ilinde hasarlı, kazalı, pert ve hurda araç alımı yapıyoruz.',
+    },
 };
 
 export default function CitiesListingPage() {

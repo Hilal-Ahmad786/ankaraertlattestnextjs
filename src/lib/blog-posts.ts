@@ -6,6 +6,7 @@ export interface BlogPost {
     subtitle: string;
     category: string;
     date: string;
+    datePublished: string; // ISO 8601 format, e.g. "2025-01-15"
     author: string;
     content: string;
   }
@@ -16,6 +17,7 @@ export interface BlogPost {
       subtitle: 'En iyi fiyatı almak için bilmeniz gerekenler',
       category: 'Kazalı Araç',
       date: '15 Ocak 2025',
+      datePublished: '2025-01-15',
       author: 'Ankara PERT',
       content: `
         <div class="prose max-w-none">
@@ -96,6 +98,7 @@ export interface BlogPost {
       subtitle: 'Pert belgesi hakkında bilmeniz gereken her şey',
       category: 'Pert Araç',
       date: '10 Ocak 2025',
+      datePublished: '2025-01-10',
       author: 'Ankara PERT Ekibi',
       content: `
         <div class="prose max-w-none">
@@ -160,6 +163,7 @@ export interface BlogPost {
       subtitle: 'Hurda aracınızı nasıl teslim edersiniz?',
       category: 'Hurda Araç',
       date: '5 Ocak 2025',
+      datePublished: '2025-01-05',
       author: 'Ankara PERT Ekibi',
       content: `
         <div class="prose max-w-none">

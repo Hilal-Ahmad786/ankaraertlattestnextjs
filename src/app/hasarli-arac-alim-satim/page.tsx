@@ -7,16 +7,48 @@ import Testimonials from '@/components/sections/Testimonials';
 import FAQ from '@/components/sections/FAQ';
 import { getTestimonialsByService } from '@/data/testimonials';
 import { getFAQByCategory } from '@/data/faq';
+import { serviceSchema, breadcrumbSchema } from '@/lib/schema';
+
+const BASE_URL = 'https://ankarapert.com.tr';
+const PAGE_URL = `${BASE_URL}/hasarli-arac-alim-satim`;
 
 export const metadata: Metadata = {
   title: 'Hasarlı Araç Alan | Anında Nakit Ödeme • Ankara PERT',
   description: 'Hasarlı araç alan güvenilir firma. Ücretsiz ekspertiz, en yüksek fiyat garantisi, 7/24 hizmet.',
   keywords: ['hasarlı araç alan', 'hasarlı araç alan yerler', 'hasarlı araç alan firmalar'],
+  alternates: {
+    canonical: PAGE_URL,
+  },
+  openGraph: {
+    title: 'Hasarlı Araç Alan | Anında Nakit Ödeme • Ankara PERT',
+    description: 'Hasarlı araç alan güvenilir firma. Ücretsiz ekspertiz, en yüksek fiyat garantisi, 7/24 hizmet.',
+    url: PAGE_URL,
+    locale: 'tr_TR',
+    type: 'website',
+    siteName: 'Ankara PERT',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Hasarlı Araç Alan | Anında Nakit Ödeme • Ankara PERT',
+    description: 'Hasarlı araç alan güvenilir firma. Ücretsiz ekspertiz, en yüksek fiyat garantisi, 7/24 hizmet.',
+  },
 };
 
 export default function HasarliAracPage() {
   const testimonials = getTestimonialsByService('hasarli');
   const faqs = getFAQByCategory('hasarli');
+
+  const serviceJsonLd = serviceSchema({
+    name: 'Hasarlı Araç Alımı',
+    description:
+      'Türkiye genelinde hasarlı araç alıyoruz. Mekanik veya kaporta hasarı ne olursa olsun, anında nakit teklif.',
+    url: '/hasarli-arac-alim-satim',
+  });
+
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: 'Ana Sayfa', url: BASE_URL },
+    { name: 'Hasarlı Araç Alımı', url: PAGE_URL },
+  ]);
 
   const whyUsItems = [
     {
@@ -66,6 +98,15 @@ export default function HasarliAracPage() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <HeroBanner
         variant="hasarli"
         tagline="Hasarlı Araç Alan Güvenilir Merkez"
@@ -107,6 +148,27 @@ export default function HasarliAracPage() {
       )}
 
       <FAQ title="Sık Sorulan Sorular" items={faqs} />
+
+      {/* Internal links to related city pages */}
+      <section className="py-10 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+            Şehrinizde Hasarlı Araç Satmak İster Misiniz?
+          </h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {['istanbul', 'ankara', 'izmir', 'bursa', 'antalya', 'adana', 'konya', 'gaziantep', 'kayseri', 'mersin'].map((slug) => (
+              <a
+                key={slug}
+                href={`/sehirler/${slug}`}
+                className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-orange-500 hover:text-orange-600 transition capitalize"
+              >
+                <i className="fas fa-map-marker-alt text-orange-400 mr-2"></i>
+                {slug.charAt(0).toUpperCase() + slug.slice(1)}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <ContactCTA />
     </div>

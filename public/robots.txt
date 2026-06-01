@@ -1,19 +1,12 @@
 # robots.txt for Ankara PERT
+# https://ankarapert.com.tr
 
+# === SEARCH ENGINES ===
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /test-tracking/
 
-# Sitemaps
-Sitemap: https://ankarapert.com.tr/sitemap.xml
-
-# Crawl-delay (optional, adjust as needed)
-# Crawl-delay: 1
-
-# Disallow admin or private pages (if any)
-# Disallow: /admin/
-# Disallow: /api/
-
-# Allow all major search engines
 User-agent: Googlebot
 Allow: /
 
@@ -26,8 +19,50 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-User-agent: Baiduspider
-Allow: /
-
 User-agent: YandexBot
 Allow: /
+
+# === AI CRAWLERS — explicitly allowed ===
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google AI (Gemini, AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Amazon / Alexa
+User-agent: Amazonbot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+# Common AI training crawlers
+User-agent: CCBot
+Allow: /
+
+User-agent: omgili
+Allow: /
+
+# === SITEMAP ===
+Sitemap: https://ankarapert.com.tr/sitemap.xml
+
+# === AI CONTEXT ===
+# llms.txt: https://ankarapert.com.tr/llms.txt

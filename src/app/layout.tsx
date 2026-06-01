@@ -6,17 +6,19 @@ import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import GoogleTagManager from '@/components/analytics/GoogleTagManager';
-// Removed: GoogleAnalytics & ConversionTracking (Handled by GTM)
 import BotProtection from '@/components/analytics/BotProtection';
 import { siteConfig } from '@/config/site';
 import CustomerCarePopup from '@/components/ui/CustomerCarePopup';
 import FloatingButtons from '@/components/layout/FloatingButtons';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { organizationSchema, webSiteSchema, localBusinessSchema } from '@/lib/schema';
 
 const inter = Inter({ subsets: ['latin'] });
 
+const BASE_URL = 'https://ankarapert.com.tr';
+
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(BASE_URL),
   title: {
     default: 'Ankara PERT - Kazalı, Hasarlı, Pert & Hurda Araç Alımı',
     template: '%s | Ankara PERT',
@@ -30,10 +32,15 @@ export const metadata: Metadata = {
     'ankara pert',
     'kazalı araç alım satım',
     'hasarlı araç alım satım',
+    'kazalı araç satmak istiyorum',
+    'pert araç fiyatları',
   ],
   authors: [{ name: 'Ankara PERT Grup' }],
   creator: 'Ankara PERT',
   publisher: 'Ankara PERT',
+  alternates: {
+    canonical: BASE_URL,
+  },
   formatDetection: {
     telephone: true,
     email: true,
@@ -42,24 +49,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
-    url: siteConfig.url,
+    url: BASE_URL,
     siteName: siteConfig.name,
     title: 'Ankara PERT - Kazalı, Hasarlı, Pert & Hurda Araç Alımı',
     description: siteConfig.description,
-    images: [
-      {
-        url: '/banner.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Ankara PERT',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Ankara PERT - Kazalı, Hasarlı, Pert & Hurda Araç Alımı',
     description: siteConfig.description,
-    images: ['/banner.webp'],
+    site: '@ankarapert',
   },
   icons: {
     icon: '/favicon-v2.ico',
@@ -78,7 +77,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
   },
 };
 
@@ -87,6 +86,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const orgJsonLd = organizationSchema();
+  const websiteJsonLd = webSiteSchema();
+  const localBizJsonLd = localBusinessSchema();
+
   return (
     <html lang="tr">
       <head>
@@ -97,7 +100,20 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        {/* Analytics managed by GTM */}
+        {/* Sitewide structured data — Organization, WebSite, LocalBusiness */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizJsonLd) }}
+        />
+
         <Suspense fallback={null}>
           <GoogleTagManager />
           <BotProtection />

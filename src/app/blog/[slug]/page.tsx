@@ -4,54 +4,87 @@ import { notFound } from 'next/navigation';
 import PageHero from '@/components/sections/PageHero';
 import CallToActionBanner from '@/components/sections/CallToActionBanner';
 import { getBlogPost, getAllBlogSlugs } from '@/lib/blog-posts';
+import { articleSchema, breadcrumbSchema } from '@/lib/schema';
 
-// Generate static params for all blog posts
+const BASE_URL = 'https://ankarapert.com.tr';
+
 export function generateStaticParams() {
-  return getAllBlogSlugs().map((slug) => ({
-    slug,
-  }));
+  return getAllBlogSlugs().map((slug) => ({ slug }));
 }
 
-// Generate metadata for SEO
-export async function generateMetadata({ 
-  params 
-}: { 
-  params: { slug: string } 
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
 }): Promise<Metadata> {
   const post = getBlogPost(params.slug);
-  
+
   if (!post) {
     return { title: 'Blog Yazısı Bulunamadı' };
   }
 
+  const url = `${BASE_URL}/blog/${params.slug}`;
+
   return {
     title: `${post.title} | Ankara PERT`,
     description: post.subtitle,
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
       title: post.title,
       description: post.subtitle,
       type: 'article',
-      publishedTime: post.date,
+      url,
+      publishedTime: post.datePublished,
       authors: [post.author],
+      locale: 'tr_TR',
+      siteName: 'Ankara PERT',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.subtitle,
     },
   };
 }
 
-export default function BlogPost({ 
-  params 
-}: { 
-  params: { slug: string } 
-}) {
+export default function BlogPost({ params }: { params: { slug: string } }) {
   const post = getBlogPost(params.slug);
 
   if (!post) {
     notFound();
   }
 
+  const postUrl = `${BASE_URL}/blog/${params.slug}`;
+
+  const articleJsonLd = articleSchema({
+    title: post.title,
+    description: post.subtitle,
+    slug: params.slug,
+    datePublished: post.datePublished,
+    author: post.author,
+  });
+
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: 'Ana Sayfa', url: BASE_URL },
+    { name: 'Blog', url: `${BASE_URL}/blog` },
+    { name: post.title, url: postUrl },
+  ]);
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <PageHero title={post.title} subtitle={post.subtitle} />
-      
+
       <article className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Article metadata */}
@@ -66,7 +99,7 @@ export default function BlogPost({
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              {post.date}
+              <time dateTime={post.datePublished}>{post.date}</time>
             </span>
             <span className="inline-flex items-center">
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,8 +109,8 @@ export default function BlogPost({
             </span>
           </div>
 
-          {/* Article content - rendered as HTML */}
-          <div 
+          {/* Article content */}
+          <div
             className="prose prose-lg max-w-none
               prose-headings:font-bold prose-headings:text-gray-900
               prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
@@ -89,6 +122,25 @@ export default function BlogPost({
               prose-img:rounded-lg"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+
+          {/* Internal links to related services */}
+          <div className="mt-12 p-6 bg-orange-50 rounded-xl border border-orange-200">
+            <h3 className="font-bold text-gray-900 mb-4">İlgili Hizmetlerimiz</h3>
+            <div className="flex flex-wrap gap-3">
+              <a href="/kazali-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-lg px-4 py-2 hover:bg-orange-500 hover:text-white transition">
+                <i className="fas fa-car-crash mr-2"></i>Kazalı Araç Alımı
+              </a>
+              <a href="/hasarli-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-lg px-4 py-2 hover:bg-orange-500 hover:text-white transition">
+                <i className="fas fa-tools mr-2"></i>Hasarlı Araç Alımı
+              </a>
+              <a href="/pert-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-lg px-4 py-2 hover:bg-orange-500 hover:text-white transition">
+                <i className="fas fa-exclamation-triangle mr-2"></i>Pert Araç Alımı
+              </a>
+              <a href="/hurda-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-lg px-4 py-2 hover:bg-orange-500 hover:text-white transition">
+                <i className="fas fa-recycle mr-2"></i>Hurda Araç Alımı
+              </a>
+            </div>
+          </div>
         </div>
       </article>
 

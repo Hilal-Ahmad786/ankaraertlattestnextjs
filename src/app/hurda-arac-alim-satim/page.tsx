@@ -7,16 +7,48 @@ import Testimonials from '@/components/sections/Testimonials';
 import FAQ from '@/components/sections/FAQ';
 import { getTestimonialsByService } from '@/data/testimonials';
 import { getFAQByCategory } from '@/data/faq';
+import { serviceSchema, breadcrumbSchema } from '@/lib/schema';
+
+const BASE_URL = 'https://ankarapert.com.tr';
+const PAGE_URL = `${BASE_URL}/hurda-arac-alim-satim`;
 
 export const metadata: Metadata = {
   title: 'Hurda Araç Alan | Resmi Belgeli En İyi Fiyat • Ankara PERT',
   description: 'Hurda araç alan resmi belgeli firma. Çevre dostu, yasal süreçlerle hurda araç alımı.',
   keywords: ['hurda araç alan', 'hurda araç alan yerler', 'hurda araç alan firmalar'],
+  alternates: {
+    canonical: PAGE_URL,
+  },
+  openGraph: {
+    title: 'Hurda Araç Alan | Resmi Belgeli En İyi Fiyat • Ankara PERT',
+    description: 'Hurda araç alan resmi belgeli firma. Çevre dostu, yasal süreçlerle hurda araç alımı.',
+    url: PAGE_URL,
+    locale: 'tr_TR',
+    type: 'website',
+    siteName: 'Ankara PERT',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Hurda Araç Alan | Resmi Belgeli En İyi Fiyat • Ankara PERT',
+    description: 'Hurda araç alan resmi belgeli firma. Çevre dostu, yasal süreçlerle hurda araç alımı.',
+  },
 };
 
 export default function HurdaAracPage() {
   const testimonials = getTestimonialsByService('hurda');
   const faqs = getFAQByCategory('hurda');
+
+  const serviceJsonLd = serviceSchema({
+    name: 'Hurda Araç Alımı',
+    description:
+      'Ekonomik ömrünü tamamlamış araçları resmi belgeli olarak alıyoruz. Ücretsiz çekici, anında ödeme.',
+    url: '/hurda-arac-alim-satim',
+  });
+
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: 'Ana Sayfa', url: BASE_URL },
+    { name: 'Hurda Araç Alımı', url: PAGE_URL },
+  ]);
 
   const whyUsItems = [
     {
@@ -66,6 +98,15 @@ export default function HurdaAracPage() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <HeroBanner
         variant="hurda"
         tagline="Hurda Araç Alan Resmi Belgeli Firma"
@@ -107,6 +148,27 @@ export default function HurdaAracPage() {
       )}
 
       <FAQ title="Hurda Araç SSS" items={faqs} />
+
+      {/* Internal links to related city pages */}
+      <section className="py-10 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+            Şehrinizde Hurda Araç Satmak İster Misiniz?
+          </h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {['istanbul', 'ankara', 'izmir', 'bursa', 'antalya', 'adana', 'konya', 'gaziantep', 'kayseri', 'mersin'].map((slug) => (
+              <a
+                key={slug}
+                href={`/sehirler/${slug}`}
+                className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-orange-500 hover:text-orange-600 transition capitalize"
+              >
+                <i className="fas fa-map-marker-alt text-orange-400 mr-2"></i>
+                {slug.charAt(0).toUpperCase() + slug.slice(1)}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <ContactCTA />
     </div>

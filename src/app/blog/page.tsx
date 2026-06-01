@@ -8,6 +8,22 @@ import { blogPosts, getAllBlogSlugs } from '@/lib/blog-posts';
 export const metadata: Metadata = {
   title: 'Blog | Ankara PERT - Kazalı, Hurda ve Pert Araç Rehberi',
   description: 'Kazalı araç, pert raporu ve hurda araç hakkında bilmeniz gereken her şey. Uzman tavsiyeleri ve rehberler.',
+  alternates: {
+    canonical: 'https://ankarapert.com.tr/blog',
+  },
+  openGraph: {
+    title: 'Blog | Ankara PERT - Kazalı, Hurda ve Pert Araç Rehberi',
+    description: 'Kazalı araç, pert raporu ve hurda araç hakkında bilmeniz gereken her şey.',
+    url: 'https://ankarapert.com.tr/blog',
+    locale: 'tr_TR',
+    type: 'website',
+    siteName: 'Ankara PERT',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog | Ankara PERT - Kazalı, Hurda ve Pert Araç Rehberi',
+    description: 'Kazalı araç, pert raporu ve hurda araç hakkında bilmeniz gereken her şey.',
+  },
 };
 
 export default function BlogPage() {

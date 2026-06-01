@@ -13,12 +13,21 @@ export const metadata: Metadata = {
   title: 'Ankara PERT - Kazalı, Hasarlı, Pert & Hurda Araç Alımı',
   description:
     'Türkiye\'nin En Güvenilir Araç Alım Merkezi. 30 dakikada nakit teklif, ücretsiz ekspertiz, 7/24 hizmet.',
+  alternates: {
+    canonical: 'https://ankarapert.com.tr',
+  },
   openGraph: {
     title: 'Ankara PERT - Kazalı, Hasarlı, Pert & Hurda Araç Alımı',
     description:
       'Türkiye\'nin En Güvenilir Araç Alım Merkezi. 30 dakikada nakit teklif, ücretsiz ekspertiz, 7/24 hizmet.',
     url: 'https://ankarapert.com.tr',
-    images: ['/banner.webp'],
+    locale: 'tr_TR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ankara PERT - Kazalı, Hasarlı, Pert & Hurda Araç Alımı',
+    description: 'Türkiye\'nin En Güvenilir Araç Alım Merkezi. 30 dakikada nakit teklif, ücretsiz ekspertiz, 7/24 hizmet.',
   },
 };
 

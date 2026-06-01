@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { siteConfig } from '@/config/site';
 import { trackPhoneClick, trackWhatsAppClick } from '@/lib/gtm';
@@ -15,9 +16,11 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-white font-bold text-xl mb-4 flex items-center gap-2">
-              <img
+              <Image
                 src="/images/logo-trimmed.png"
                 alt="Ankara Pert Logo"
+                width={140}
+                height={48}
                 className="h-12 w-auto object-contain brightness-0 invert"
               />
             </h3>

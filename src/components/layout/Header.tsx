@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { siteConfig } from '@/config/site';
 import { trackCTAClick, trackPhoneClick, trackWhatsAppClick } from '@/lib/gtm';
@@ -27,10 +28,13 @@ export default function Header() {
         <div className="flex items-center justify-between py-3">
           {/* Logo - Left (20% width on desktop) */}
           <Link href="/" className="flex items-center lg:w-1/5">
-            <img
+            <Image
               src="/images/logo-trimmed.png"
               alt="Ankara Pert Logo"
+              width={160}
+              height={56}
               className="h-12 md:h-14 w-auto object-contain"
+              priority
             />
           </Link>
 

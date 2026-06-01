@@ -3,7 +3,12 @@ import HeroBanner from '@/components/sections/HeroBanner';
 import WhyUs from '@/components/sections/WhyUs';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
 import ContactCTA from '@/components/sections/ContactCTA';
-import { getServiceBySlug } from '@/data/services';
+import { serviceSchema, breadcrumbSchema, faqPageSchema } from '@/lib/schema';
+import { getFAQByCategory } from '@/data/faq';
+import FAQ from '@/components/sections/FAQ';
+
+const BASE_URL = 'https://ankarapert.com.tr';
+const PAGE_URL = `${BASE_URL}/kazali-arac-alim-satim`;
 
 export const metadata: Metadata = {
   title: 'Kazalı Araç Alan | 30 Dakikada Nakit Teklif • Ankara PERT',
@@ -16,16 +21,39 @@ export const metadata: Metadata = {
     'kazalı aracımı satmak istiyorum',
     'kazalı oto alım satım',
   ],
+  alternates: {
+    canonical: PAGE_URL,
+  },
   openGraph: {
     title: 'Kazalı Araç Alan | 30 Dakikada Nakit Teklif • Ankara PERT',
     description:
       'Türkiye genelinde kazalı araç alan, ücretsiz ekspertiz yapan ve anında nakit ödeyen firma.',
-    images: ['/kazali.webp'],
+    url: PAGE_URL,
+    locale: 'tr_TR',
+    type: 'website',
+    siteName: 'Ankara PERT',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kazalı Araç Alan | 30 Dakikada Nakit Teklif • Ankara PERT',
+    description: 'Türkiye genelinde kazalı araç alan, ücretsiz ekspertiz yapan ve anında nakit ödeyen firma.',
   },
 };
 
 export default function KazaliAracPage() {
-  const service = getServiceBySlug('kazali-arac-alim-satim');
+  const faqs = getFAQByCategory('kazali');
+
+  const serviceJsonLd = serviceSchema({
+    name: 'Kazalı Araç Alımı',
+    description:
+      'Türkiye genelinde kazalı araç alıyoruz. Ücretsiz ekspertiz, 30 dakikada nakit teklif, ücretsiz çekici hizmeti.',
+    url: '/kazali-arac-alim-satim',
+  });
+
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: 'Ana Sayfa', url: BASE_URL },
+    { name: 'Kazalı Araç Alımı', url: PAGE_URL },
+  ]);
 
   const whyUsItems = [
     {
@@ -75,6 +103,15 @@ export default function KazaliAracPage() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <HeroBanner
         variant="kazali"
         tagline="Türkiye'de Kazalı Araç Alan Güvenilir Merkez"
@@ -84,7 +121,6 @@ export default function KazaliAracPage() {
         backgroundImage="/images/backgrounds/kazali-arac-hero.png"
       />
 
-      {/* Intro Section */}
       <section className="intro-keyword px-4 py-12 bg-light">
         <div className="container mx-auto text-center max-w-4xl">
           <p className="text-lg leading-relaxed mb-6">
@@ -109,6 +145,29 @@ export default function KazaliAracPage() {
         subtitle="Başvurudan nakit ödemeye kadar tüm aşamalar burada."
         steps={processSteps}
       />
+
+      <FAQ title="Kazalı Araç Hakkında Sorular" items={faqs} />
+
+      {/* Internal links to related city pages */}
+      <section className="py-10 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+            Şehrinizde Kazalı Araç Satmak İster Misiniz?
+          </h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {['istanbul', 'ankara', 'izmir', 'bursa', 'antalya', 'adana', 'konya', 'gaziantep', 'kayseri', 'mersin'].map((slug) => (
+              <a
+                key={slug}
+                href={`/sehirler/${slug}`}
+                className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-orange-500 hover:text-orange-600 transition capitalize"
+              >
+                <i className="fas fa-map-marker-alt text-orange-400 mr-2"></i>
+                {slug.charAt(0).toUpperCase() + slug.slice(1)}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <ContactCTA />
     </div>
