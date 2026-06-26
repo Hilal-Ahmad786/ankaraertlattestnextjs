@@ -138,31 +138,36 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col items-center gap-4 text-sm text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-sm text-center md:text-left">
             <p className="text-gray-400">
               © {currentYear} Ankara PERT. Tüm hakları saklıdır.
             </p>
 
             {/* Developer Credit */}
-            <a
-              href="https://paksoft.com.tr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[13.5px] transition-colors hover:border-orange-500/40 hover:bg-white/10"
-            >
-              <span className="text-white/60">Geliştiren</span>
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="h-[17px] w-[17px] -rotate-12 text-orange-500"
-                aria-hidden="true"
+            <div className="flex justify-center">
+              <a
+                href="https://paksoft.com.tr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[13.5px] transition-colors hover:border-orange-500/40 hover:bg-white/10"
               >
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.85 0 3.58-.5 5.08-1.38-.7.13-1.42.21-2.16.21-5.52 0-10-4.48-10-10S9.42 2.83 14.92 2.83c.74 0 1.46.08 2.16.21C15.58 2.5 13.85 2 12 2z" />
-              </svg>
-              <span className="font-extrabold tracking-wide text-white group-hover:text-orange-500">
-                PakSoft
-              </span>
-            </a>
+                <span className="text-white/60">Geliştiren</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-[17px] w-[17px] -rotate-12 text-orange-500"
+                  aria-hidden="true"
+                >
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.85 0 3.58-.5 5.08-1.38-.7.13-1.42.21-2.16.21-5.52 0-10-4.48-10-10S9.42 2.83 14.92 2.83c.74 0 1.46.08 2.16.21C15.58 2.5 13.85 2 12 2z" />
+                </svg>
+                <span className="font-extrabold tracking-wide text-white group-hover:text-orange-500">
+                  PakSoft
+                </span>
+              </a>
+            </div>
+
+            {/* Spacer keeps the credit truly centered on desktop */}
+            <div className="hidden md:block" aria-hidden="true"></div>
           </div>
         </div>
       </div>
