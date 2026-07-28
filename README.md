@@ -97,8 +97,8 @@ NEXT_PUBLIC_ADS_FORM_CONVERSION_LABEL=XXXXX
 NEXT_PUBLIC_FB_PIXEL_ID=
 
 # Contact Information
-NEXT_PUBLIC_PHONE=+905369298606
-NEXT_PUBLIC_WHATSAPP=905369298606
+NEXT_PUBLIC_PHONE=+905016679820
+NEXT_PUBLIC_WHATSAPP=905016679820
 NEXT_PUBLIC_EMAIL=info@ankarapert.com.tr
 
 # Social Media
@@ -257,8 +257,8 @@ Edit `src/config/site.ts`:
 ```typescript
 export const siteConfig = {
   name: 'Ankara PERT',
-  phone: '+905369298606',
-  whatsapp: '905369298606',
+  phone: '+905016679820',
+  whatsapp: '905016679820',
   email: 'info@ankarapert.com.tr',
   // ... more config
 };
@@ -353,7 +353,7 @@ export default function NewServicePage() {
 
 For questions about this project:
 - Email: info@ankarapert.com.tr
-- Phone: 0 (536) 929 86 06
+- Phone: 0 (501) 667 98 20
 
 ## 📄 License
 
