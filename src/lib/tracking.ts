@@ -1,4 +1,5 @@
 import { analyticsConfig } from '@/config/analytics';
+import { beaconClick } from '@/lib/click-beacon';
 
 declare global {
   interface Window {
@@ -32,6 +33,9 @@ const pushToGtag = (command: string, action: string, params?: Record<string, any
  * Note: We DO NOT send the business phone number as user_data.
  */
 export const trackPhoneClick = (location: string, buttonText: string = 'Phone', pagePath: string = '') => {
+  // First-party record (own Postgres — powers /admin/clicks)
+  beaconClick('phone_click', location);
+
   const eventData = {
     event: 'phone_click',
     event_category: 'engagement',
@@ -57,6 +61,9 @@ export const trackPhoneClick = (location: string, buttonText: string = 'Phone', 
  * Note: We DO NOT send the business phone number as user_data.
  */
 export const trackWhatsAppClick = (location: string, buttonText: string = 'WhatsApp', pagePath: string = '') => {
+  // First-party record (own Postgres — powers /admin/clicks)
+  beaconClick('whatsapp_click', location);
+
   const eventData = {
     event: 'whatsapp_click',
     event_category: 'engagement',

@@ -123,7 +123,18 @@ export default function HurdaAracPage() {
             <strong className="text-orange-500">Hurda aracımı satmak istiyorum</strong>{' '}
             diyorsanız, çevre dostu ve yasal süreçlerimizle hizmetinizdeyiz.{' '}
             <strong className="text-primary">Hurda araç alan yerler</strong> arasında
-            en iyi fiyatı garantiliyoruz. Ücretsiz çekici, anında ödeme!
+            en iyi fiyatı garantiliyoruz. Ücretsiz çekici, anında ödeme! Hurdaya
+            ayrılmamış hasarlı aracınız varsa{' '}
+            <a
+              href="https://hasarliaracalan.com/"
+              target="_blank"
+              rel="noopener"
+              title="Hasarlı Araç Alan"
+              className="font-semibold text-primary underline decoration-primary/30 hover:decoration-primary transition"
+            >
+              hasarlı araç alan
+            </a>{' '}
+            birimimiz de değerinde satın alıyor.
           </p>
         </div>
       </section>

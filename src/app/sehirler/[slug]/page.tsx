@@ -159,6 +159,24 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
 
       <TrustBadges />
 
+      <section className="container mx-auto px-4 pt-10 relative z-20">
+        <p className="text-lg leading-relaxed text-center text-gray-700 max-w-4xl mx-auto">
+          {city.name} ve çevresinde kazalı, pert veya hasar kayıtlı aracınızı
+          değerinde satmak için 30 dakikada nakit teklif veriyoruz. Türkiye
+          genelinde{' '}
+          <a
+            href="https://hasarliaracalan.com/"
+            target="_blank"
+            rel="noopener"
+            title="Hasarlı Araç Alan"
+            className="font-semibold text-primary underline decoration-primary/30 hover:decoration-primary transition"
+          >
+            hasarlı araç alan
+          </a>{' '}
+          uzman ekibimiz aynı gün ödeme ve ücretsiz çekici hizmeti sunuyor.
+        </p>
+      </section>
+
       <div className="container mx-auto px-4 py-12 relative z-20">
         <div className="mb-12">
           <CityStats cityName={city.name} />

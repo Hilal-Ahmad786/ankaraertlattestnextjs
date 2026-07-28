@@ -123,7 +123,17 @@ export default function PertAracPage() {
             <strong className="text-orange-500">Pert aracımı satmak istiyorum</strong>{' '}
             diyorsanız doğru yerdesiniz. <strong className="text-primary">Pert araç alan
               firmalar</strong> arasında en yüksek fiyat garantisi veriyoruz. Kasko çıkışlı
-            araçlar için özel değerleme!
+            araçlar için özel değerleme! Pert kaydı olan aracınız için{' '}
+            <a
+              href="https://hasarliaracalan.com/"
+              target="_blank"
+              rel="noopener"
+              title="Hasarlı Araç Alan"
+              className="font-semibold text-primary underline decoration-primary/30 hover:decoration-primary transition"
+            >
+              hasarlı araç alım
+            </a>{' '}
+            uzmanlarımızdan dakikalar içinde teklif alın.
           </p>
         </div>
       </section>
