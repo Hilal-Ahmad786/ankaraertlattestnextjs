@@ -41,7 +41,17 @@ export default function HakkimizdaPage() {
             <p className="text-lg leading-relaxed mb-6">
               <strong>Ankara PERT</strong>, yıllardır Türkiye genelinde kazalı, hasarlı, pert ve hurda araç alımı konusunda
               güvenilir hizmet veren lider firmadır. Müşteri memnuniyetini ön planda tutarak, adil fiyatlandırma ve hızlı
-              işlem prensipleriyle sektörde öncü konumdayız.
+              işlem prensipleriyle sektörde öncü konumdayız. Türkiye genelindeki operasyonlarımızı{' '}
+              <a
+                href="https://hasarliaracalan.com/"
+                target="_blank"
+                rel="noopener"
+                title="Hasarlı Araç Alan"
+                className="font-semibold text-primary underline decoration-primary/30 hover:decoration-primary transition"
+              >
+                Hasarlı Araç Alan
+              </a>{' '}
+              markamızla da sürdürüyor, her bölgede aynı kalitede hizmet veriyoruz.
             </p>
 
             <h3 className="text-2xl font-bold text-primary mb-4">Misyonumuz</h3>

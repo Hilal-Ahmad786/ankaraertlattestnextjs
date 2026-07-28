@@ -80,6 +80,21 @@ export default function GenelBilgilerPage() {
           <div className="prose max-w-none mb-12">
             <h2 className="text-3xl font-bold text-primary mb-6">Nasıl Çalışıyoruz?</h2>
 
+            <p className="text-lg leading-relaxed mb-8">
+              Kazalı, pert veya hurda aracınızı satmak dört basit adımdan oluşur.
+              Türkiye genelinde{' '}
+              <a
+                href="https://hasarliaracalan.com/"
+                target="_blank"
+                rel="noopener"
+                title="Hasarlı Araç Alan"
+                className="font-semibold text-primary underline decoration-primary/30 hover:decoration-primary transition"
+              >
+                hasarlı araç alımı
+              </a>{' '}
+              yapan ekibimiz tüm süreci sizin adınıza yönetir.
+            </p>
+
             <div className="bg-gray-50 p-6 rounded-lg mb-8">
               <h3 className="text-2xl font-bold text-primary mb-4">1. İletişim</h3>
               <p className="text-lg">

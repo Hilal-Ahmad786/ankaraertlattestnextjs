@@ -88,7 +88,26 @@ export default function HomePage() {
         highlight="30 Dakikada Anında Teklif"
       />
       <UrgentCTABanner/>
-<TrustBadges /> 
+<TrustBadges />
+      <section className="intro-keyword px-4 py-12 bg-light">
+        <div className="container mx-auto text-center max-w-4xl">
+          <p className="text-lg leading-relaxed">
+            <strong className="text-primary">Ankara PERT</strong> olarak Türkiye
+            genelinde kazalı, pert ve hurda araçlarınızı yerinde değerlendiriyoruz.{' '}
+            <a
+              href="https://hasarliaracalan.com/"
+              target="_blank"
+              rel="noopener"
+              title="Hasarlı Araç Alan"
+              className="font-semibold text-primary underline decoration-primary/30 hover:decoration-primary transition"
+            >
+              Hasarlı araç alan
+            </a>{' '}
+            uzman ekibimizle 30 dakikada nakit teklif, ücretsiz ekspertiz ve çekici
+            hizmeti sunuyoruz.
+          </p>
+        </div>
+      </section>
       <WhyUs
         title="Neden Ankara PERT?"
         subtitle="30 Dakikada Teklif • Ücretsiz Ekspertiz • Ücretsiz Çekici • 7/24 Destek"

@@ -53,7 +53,17 @@ export default function CitiesListingPage() {
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">Hizmet Bölgelerimiz</h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                        Türkiye'nin dört bir yanında hasarlı, kazalı ve pert araçlarınızı yerinde ve değerinde alıyoruz.
+                        Türkiye'nin dört bir yanında{' '}
+                        <a
+                            href="https://hasarliaracalan.com/"
+                            target="_blank"
+                            rel="noopener"
+                            title="Hasarlı Araç Alan"
+                            className="font-semibold text-white underline decoration-white/40 hover:decoration-white transition"
+                        >
+                            hasarlı araç alan
+                        </a>{' '}
+                        ekibimizle kazalı ve pert araçlarınızı yerinde ve değerinde alıyoruz.
                     </p>
                 </div>
             </section>
