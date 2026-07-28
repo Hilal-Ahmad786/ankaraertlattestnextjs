@@ -7,6 +7,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import GoogleTagManager from '@/components/analytics/GoogleTagManager';
 import BotProtection from '@/components/analytics/BotProtection';
+import PageViewTracker from '@/components/analytics/PageViewTracker';
 import { siteConfig } from '@/config/site';
 import CustomerCarePopup from '@/components/ui/CustomerCarePopup';
 import FloatingButtons from '@/components/layout/FloatingButtons';
@@ -117,6 +118,7 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <GoogleTagManager />
           <BotProtection />
+          <PageViewTracker />
         </Suspense>
 
         <Header />

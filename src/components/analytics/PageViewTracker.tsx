@@ -17,6 +17,9 @@ export default function PageViewTracker() {
   const isFirstLoad = useRef(true);
 
   useEffect(() => {
+    // Don't count our own admin-panel visits as site traffic
+    if (pathname?.startsWith('/admin')) return;
+
     beaconClick('page_view');
 
     if (isFirstLoad.current) {

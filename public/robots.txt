@@ -5,6 +5,7 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /admin/
 Disallow: /test-tracking/
 
 User-agent: Googlebot
