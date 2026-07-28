@@ -124,6 +124,17 @@ export default function HasarliAracPage() {
               satmak istiyorum</strong> diyorsanız, tek bir telefonla başlayın.{' '}
             <strong className="text-primary">Hasarlı araç alan yerler</strong> arasında en
             yüksek fiyatı garantiliyoruz. Ücretsiz ekspertiz, hızlı işlem, anında ödeme!
+            Türkiye genelinde{' '}
+            <a
+              href="https://hasarliaracalan.com/"
+              target="_blank"
+              rel="noopener"
+              title="Hasarlı Araç Alan"
+              className="font-semibold text-orange-600 underline hover:text-orange-700 transition"
+            >
+              hasarlı araç alan
+            </a>{' '}
+            uzman ekibimizle aracınıza en yüksek değeri veriyoruz.
           </p>
         </div>
       </section>

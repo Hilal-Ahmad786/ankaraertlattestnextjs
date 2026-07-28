@@ -81,7 +81,7 @@ export interface BlogPost {
   
           <h2>Sonuç</h2>
           <p>
-            Kazalı aracınızı satmak stresli bir süreç olabilir, ancak doğru bilgi ve güvenilir bir partner ile sorunsuz ilerleyebilir. Ankara PERT olarak, sürecin her adımında yanınızdayız.
+            Kazalı aracınızı satmak stresli bir süreç olabilir, ancak doğru bilgi ve güvenilir bir partner ile sorunsuz ilerleyebilir. Ankara PERT olarak, sürecin her adımında yanınızdayız. Farklı bölgelerde hizmet veren kardeş firmamız <a href="https://hasarliaracalan.com/" target="_blank" rel="noopener noreferrer">Hasarlı Araç Alan</a> üzerinden de bilgi alabilirsiniz.
           </p>
   
           <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
