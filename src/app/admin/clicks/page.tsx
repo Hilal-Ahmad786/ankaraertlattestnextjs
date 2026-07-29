@@ -114,7 +114,12 @@ export default async function AdminClicksPage({
 
   const [byName, agg, ipGroups, rows, visitAgg] = await Promise.all([
     db
-      .select({ name: clickEvents.name, c: sql<number>`count(*)::int` })
+      .select({
+        name: clickEvents.name,
+        c: sql<number>`count(*)::int`,
+        ips: sql<number>`count(distinct ${clickEvents.ipHash})::int`,
+        sessions: sql<number>`count(distinct ${clickEvents.sessionId})::int`,
+      })
       .from(clickEvents)
       .where(baseWhere)
       .groupBy(clickEvents.name),
@@ -146,9 +151,10 @@ export default async function AdminClicksPage({
   const visitVisitors = Number(visitAgg[0]?.visitors ?? 0);
   const visitIps = Number(visitAgg[0]?.ips ?? 0);
 
-  const counts: Record<string, number> = {};
-  for (const ev of EVENTS) counts[ev] = 0;
-  for (const r of byName) counts[r.name] = Number(r.c);
+  const counts: Record<string, { total: number; ips: number; sessions: number }> = {};
+  for (const ev of EVENTS) counts[ev] = { total: 0, ips: 0, sessions: 0 };
+  for (const r of byName)
+    counts[r.name] = { total: Number(r.c), ips: Number(r.ips), sessions: Number(r.sessions) };
 
   const total = Number(agg[0]?.total ?? 0);
   const uniqueIps = Number(agg[0]?.uniqueIps ?? 0);
@@ -241,10 +247,29 @@ export default async function AdminClicksPage({
         {EVENTS.map((ev) => (
           <div key={ev} className="rounded-2xl border border-gray-200 bg-white p-5">
             <p className="text-sm text-gray-600">{LABELS[ev]}</p>
-            <p className="mt-1 text-3xl font-bold text-gray-900">{counts[ev]}</p>
+            <div className="mt-1 flex items-baseline gap-2">
+              <p className="text-3xl font-bold text-gray-900">{counts[ev].total}</p>
+              <p className="text-sm text-gray-400">tıklama</p>
+            </div>
+            <div className="mt-3 flex gap-4 border-t border-gray-100 pt-3">
+              <div>
+                <p className="text-xl font-bold text-emerald-700">{counts[ev].ips}</p>
+                <p className="text-xs text-gray-500">farklı kişi (IP)</p>
+              </div>
+              <div>
+                <p className="text-xl font-bold text-gray-700">{counts[ev].sessions}</p>
+                <p className="text-xs text-gray-500">farklı oturum</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>
+      <p className="mt-3 text-xs text-gray-600">
+        <strong>Tıklama</strong> her butona basışı sayar (aynı kişi 5 kez tıklarsa 5).{" "}
+        <strong>Farklı kişi (IP)</strong> aynı dönemde kaç ayrı IP&apos;den tıklama geldiğini
+        gösterir — gerçek kişi sayısına en yakın ölçüdür. <strong>Farklı oturum</strong> ayrı
+        tarayıcı/cihaz sayısıdır; aynı Wi-Fi&apos;ı paylaşan iki kişi tek IP ama iki oturum görünür.
+      </p>
 
       {/* IP signal */}
       <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
