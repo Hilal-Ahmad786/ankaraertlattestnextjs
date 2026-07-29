@@ -112,7 +112,7 @@ export default async function AdminClicksPage({
     lt(clickEvents.occurredAt, range.to),
   );
 
-  const [byName, agg, ipGroups, rows, visitAgg] = await Promise.all([
+  const [byName, agg, ipGroups, rows, visitAgg, personRows] = await Promise.all([
     db
       .select({
         name: clickEvents.name,
@@ -150,6 +150,23 @@ export default async function AdminClicksPage({
       })
       .from(clickEvents)
       .where(visitWhere),
+    // One row per person (IP) per button — first/last click time for matching
+    // against the real phone call log
+    db
+      .select({
+        ip: clickEvents.ipHash,
+        name: clickEvents.name,
+        c: sql<number>`count(*)::int`,
+        first: sql<string>`min(${clickEvents.occurredAt})`,
+        last: sql<string>`max(${clickEvents.occurredAt})`,
+        firstLoc: sql<string | null>`(array_agg(${clickEvents.location} order by ${clickEvents.occurredAt}))[1]`,
+        firstPage: sql<string | null>`(array_agg(${clickEvents.pageUrl} order by ${clickEvents.occurredAt}))[1]`,
+      })
+      .from(clickEvents)
+      .where(and(baseWhere, isNotNull(clickEvents.ipHash)))
+      .groupBy(clickEvents.ipHash, clickEvents.name)
+      .orderBy(desc(sql`min(${clickEvents.occurredAt})`))
+      .limit(100),
   ]);
 
   const visits = Number(visitAgg[0]?.visits ?? 0);
@@ -331,6 +348,81 @@ export default async function AdminClicksPage({
         gri görünür. Aynı numara = aynı kişi/cihaz. IP&apos;ler gizlilik için geri döndürülemez
         şekilde özetlenir (ham IP saklanmaz).
       </p>
+
+      {/* Per-person clicks — for matching against the real phone call log */}
+      <div className="mt-6 overflow-hidden rounded-2xl border-2 border-emerald-600 bg-white">
+        <div className="border-b border-gray-200 bg-emerald-50 px-5 py-4">
+          <h2 className="font-semibold text-emerald-900">Kişi Bazında Tıklamalar</h2>
+          <p className="mt-1 text-xs text-emerald-800/80">
+            Her kişi (IP) ve buton için tek satır. Telefondaki gerçek arama kayıtlarıyla
+            karşılaştırmak için &quot;İlk Tıklama&quot; saatini kullanın — kişinin size ilk
+            ulaşmaya çalıştığı andır.
+          </p>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-sm">
+            <thead className="bg-gray-50 text-gray-600">
+              <tr>
+                <th className="px-5 py-3 font-medium">Kişi</th>
+                <th className="px-5 py-3 font-medium">Buton</th>
+                <th className="px-5 py-3 font-medium">İlk Tıklama</th>
+                <th className="px-5 py-3 font-medium">Son Tıklama</th>
+                <th className="px-5 py-3 font-medium">Adet</th>
+                <th className="px-5 py-3 font-medium">Yer</th>
+                <th className="px-5 py-3 font-medium">Sayfa</th>
+              </tr>
+            </thead>
+            <tbody>
+              {personRows.length === 0 ? (
+                <tr>
+                  <td colSpan={7} className="px-5 py-8 text-center text-gray-400">
+                    Bu aralıkta tıklama kaydı yok.
+                  </td>
+                </tr>
+              ) : (
+                personRows.map((g) => {
+                  const info = g.ip ? ipInfo.get(g.ip) : undefined;
+                  const firstAt = new Date(g.first);
+                  const lastAt = new Date(g.last);
+                  const repeated = Number(g.c) > 1;
+                  return (
+                    <tr key={`${g.ip}-${g.name}`} className="border-t border-gray-200">
+                      <td className="px-5 py-3">
+                        {info ? (
+                          <span
+                            className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border px-2 py-0.5 text-xs font-semibold text-gray-900"
+                            style={{
+                              borderColor: info.color ?? "#d1d5db",
+                              backgroundColor: info.color ? `${info.color}14` : "#f3f4f6",
+                            }}
+                          >
+                            <span
+                              className="h-2.5 w-2.5 flex-shrink-0 rounded-full"
+                              style={{ backgroundColor: info.color ?? IP_GRAY }}
+                              aria-hidden="true"
+                            />
+                            {info.label}
+                          </span>
+                        ) : (
+                          <span className="text-xs text-gray-400">IP yok</span>
+                        )}
+                      </td>
+                      <td className="px-5 py-3 text-gray-900">{LABELS[g.name] ?? g.name}</td>
+                      <td className="px-5 py-3 font-semibold text-gray-900">{dateFmt.format(firstAt)}</td>
+                      <td className="px-5 py-3 text-gray-600">
+                        {repeated ? dateFmt.format(lastAt) : "—"}
+                      </td>
+                      <td className="px-5 py-3 text-gray-900">{g.c}</td>
+                      <td className="px-5 py-3 text-gray-600">{g.firstLoc ?? "—"}</td>
+                      <td className="px-5 py-3 text-gray-600">{g.firstPage ?? "—"}</td>
+                    </tr>
+                  );
+                })
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
 
       {/* Recent clicks table */}
       <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200 bg-white">
