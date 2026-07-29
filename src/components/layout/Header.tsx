@@ -5,20 +5,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { siteConfig } from '@/config/site';
 import { trackCTAClick, trackPhoneClick, trackWhatsAppClick } from '@/lib/gtm';
-import { trackPhoneConversion, trackWhatsAppConversion } from '@/lib/analytics';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handlePhoneClick = () => {
-    trackPhoneClick();
-    trackPhoneConversion();
+    trackPhoneClick('header');
     trackCTAClick('Header Phone', 'header');
   };
 
   const handleWhatsAppClick = () => {
-    trackWhatsAppClick();
-    trackWhatsAppConversion();
+    trackWhatsAppClick('header');
     trackCTAClick('Header WhatsApp', 'header');
   };
 

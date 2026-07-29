@@ -34,12 +34,12 @@ export default function FloatingActionButtons({
   }, []);
 
   const handleCall = () => {
-    trackPhoneClick();
+    trackPhoneClick('floating_buttons');
     window.location.href = `tel:${phoneNumber}`;
   };
 
   const handleWhatsApp = () => {
-    trackWhatsAppClick();
+    trackWhatsAppClick('floating_buttons');
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');

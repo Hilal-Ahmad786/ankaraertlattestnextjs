@@ -64,9 +64,20 @@ function storedAttribution(): Attribution {
   }
 }
 
+// Guards against double-recording when two tracking paths fire on one click
+// (e.g. a new + legacy handler on the same button). A real user cannot
+// produce two identical conversions within a second.
+const recentBeacons = new Map<string, number>();
+const DEDUPE_WINDOW_MS = 1000;
+
 export function beaconClick(event: string, location?: string): void {
   if (typeof window === 'undefined' || typeof navigator === 'undefined') return;
   try {
+    const dedupeKey = `${event}|${window.location.pathname}`;
+    const now = Date.now();
+    const last = recentBeacons.get(dedupeKey);
+    if (last !== undefined && now - last < DEDUPE_WINDOW_MS) return;
+    recentBeacons.set(dedupeKey, now);
     const attr = storedAttribution();
     const payload = JSON.stringify({
       event,

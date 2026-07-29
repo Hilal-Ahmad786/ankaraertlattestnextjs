@@ -112,7 +112,7 @@ export default function Footer() {
                 <div>
                   <a
                     href={`tel:${siteConfig.phone}`}
-                    onClick={() => trackPhoneClick()}
+                    onClick={() => trackPhoneClick('footer')}
                     className="text-sm hover:text-orange-500 transition block"
                   >
                     {siteConfig.phoneDisplay}
@@ -127,7 +127,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm hover:text-orange-500 transition block"
-                    onClick={() => trackWhatsAppClick()}
+                    onClick={() => trackWhatsAppClick('footer')}
                   >
                     WhatsApp
                   </a>

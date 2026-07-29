@@ -33,7 +33,7 @@ export default function UrgentCTABanner() {
   }, []);
 
   const handleClick = () => {
-    trackPhoneClick();
+    trackPhoneClick('urgent_banner');
     trackCTAClick('Urgent Banner CTA', 'urgent-banner');
   };
 

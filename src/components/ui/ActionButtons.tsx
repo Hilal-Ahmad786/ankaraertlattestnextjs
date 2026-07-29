@@ -20,12 +20,12 @@ export default function ActionButtons({
   className = ''
 }: ActionButtonsProps) {
   const handleCall = () => {
-    trackPhoneClick();
+    trackPhoneClick('action_buttons');
     window.location.href = `tel:${phoneNumber}`;
   };
 
   const handleWhatsApp = () => {
-    trackWhatsAppClick();
+    trackWhatsAppClick('action_buttons');
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');

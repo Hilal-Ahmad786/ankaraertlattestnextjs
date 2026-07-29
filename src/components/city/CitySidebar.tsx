@@ -12,12 +12,12 @@ interface CitySidebarProps {
 
 export default function CitySidebar({ city, nearbyCities }: CitySidebarProps) {
     const handlePhoneClick = () => {
-        trackPhoneClick();
+        trackPhoneClick('city_sidebar');
         trackCTAClick('Sidebar Phone', 'city-sidebar');
     };
 
     const handleWhatsAppClick = () => {
-        trackWhatsAppClick();
+        trackWhatsAppClick('city_sidebar');
         trackCTAClick('Sidebar WhatsApp', 'city-sidebar');
     };
 

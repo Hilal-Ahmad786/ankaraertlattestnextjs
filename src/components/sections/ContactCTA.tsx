@@ -5,7 +5,7 @@ import { trackCTAClick, trackWhatsAppClick } from '@/lib/gtm';
 
 export default function ContactCTA() {
   const handleWhatsAppClick = () => {
-    trackWhatsAppClick();
+    trackWhatsAppClick('contact_cta');
     trackCTAClick('WhatsApp CTA', 'contact-section');
   };
 

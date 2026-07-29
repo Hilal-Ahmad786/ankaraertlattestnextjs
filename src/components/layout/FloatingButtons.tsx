@@ -6,12 +6,12 @@ import { siteConfig } from '@/config/site';
 
 export default function UnifiedFloatingButtons() {
   const handlePhoneClick = () => {
-    trackPhoneClick();
+    trackPhoneClick('floating_buttons');
     trackCTAClick('Floating Phone', 'floating-buttons');
   };
 
   const handleWhatsAppClick = () => {
-    trackWhatsAppClick();
+    trackWhatsAppClick('floating_buttons');
     trackCTAClick('Floating WhatsApp', 'floating-buttons');
   };
 

@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { trackPhoneClick, trackWhatsAppClick } from '@/lib/gtm';
-import { trackPhoneConversion, trackWhatsAppConversion } from '@/lib/analytics';
 
 export default function TrackingTestPage() {
   const [events, setEvents] = useState<string[]>([]);
@@ -12,14 +11,12 @@ export default function TrackingTestPage() {
   };
 
   const testPhoneTracking = () => {
-    trackPhoneClick();
-    trackPhoneConversion();
+    trackPhoneClick('test_page');
     addEvent('✅ Phone tracking fired');
   };
 
   const testWhatsAppTracking = () => {
-    trackWhatsAppClick();
-    trackWhatsAppConversion();
+    trackWhatsAppClick('test_page');
     addEvent('✅ WhatsApp tracking fired');
   };
 

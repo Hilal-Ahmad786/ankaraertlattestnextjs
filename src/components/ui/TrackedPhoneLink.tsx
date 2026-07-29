@@ -13,7 +13,7 @@ export default function TrackedPhoneLink({ href, className, children }: TrackedP
         <a
             href={href}
             className={className}
-            onClick={() => trackPhoneClick()}
+            onClick={() => trackPhoneClick('phone_link')}
         >
             {children}
         </a>

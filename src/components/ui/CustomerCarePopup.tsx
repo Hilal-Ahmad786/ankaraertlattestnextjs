@@ -30,13 +30,13 @@ export default function CustomerCarePopup() {
   };
 
   const handleWhatsAppClick = () => {
-    trackWhatsAppClick();
+    trackWhatsAppClick('care_popup');
     trackCTAClick('Popup WhatsApp', 'popup');
     handleClose();
   };
 
   const handlePhoneClick = () => {
-    trackPhoneClick();
+    trackPhoneClick('care_popup');
     trackCTAClick('Popup Call', 'popup');
     handleClose();
   };

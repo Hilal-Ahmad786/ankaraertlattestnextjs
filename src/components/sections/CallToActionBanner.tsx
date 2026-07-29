@@ -17,12 +17,12 @@ export default function CallToActionBanner({
   showWhatsApp = true,
 }: CallToActionBannerProps) {
   const handlePhoneClick = () => {
-    trackPhoneClick();
+    trackPhoneClick('cta_banner');
     trackCTAClick('CTA Banner Phone', 'cta-banner');
   };
 
   const handleWhatsAppClick = () => {
-    trackWhatsAppClick();
+    trackWhatsAppClick('cta_banner');
     trackCTAClick('CTA Banner WhatsApp', 'cta-banner');
   };
 

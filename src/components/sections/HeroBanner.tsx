@@ -23,12 +23,12 @@ export default function HeroBanner({
   backgroundImage,
 }: HeroBannerProps) {
   const handlePhoneClick = () => {
-    trackPhoneClick();
+    trackPhoneClick('hero');
     trackCTAClick('Hemen Teklif Al', 'hero');
   };
 
   const handleWhatsAppClick = () => {
-    trackWhatsAppClick();
+    trackWhatsAppClick('hero');
     trackCTAClick('WhatsApp', 'hero');
   };
 
