@@ -131,7 +131,12 @@ export default async function AdminClicksPage({
       .from(clickEvents)
       .where(baseWhere),
     db
-      .select({ ip: clickEvents.ipHash, c: sql<number>`count(*)::int` })
+      .select({
+        ip: clickEvents.ipHash,
+        c: sql<number>`count(*)::int`,
+        phone: sql<number>`count(*) filter (where ${clickEvents.name} = 'phone_click')::int`,
+        wa: sql<number>`count(*) filter (where ${clickEvents.name} = 'whatsapp_click')::int`,
+      })
       .from(clickEvents)
       .where(and(baseWhere, isNotNull(clickEvents.ipHash)))
       .groupBy(clickEvents.ipHash)
@@ -159,6 +164,11 @@ export default async function AdminClicksPage({
   const total = Number(agg[0]?.total ?? 0);
   const uniqueIps = Number(agg[0]?.uniqueIps ?? 0);
   const repeatIps = ipGroups.filter((g) => Number(g.c) > 1).length;
+
+  // Channel overlap: a person who clicked BOTH buttons counts once overall
+  const bothChannels = ipGroups.filter((g) => Number(g.phone) > 0 && Number(g.wa) > 0).length;
+  const onlyPhone = ipGroups.filter((g) => Number(g.phone) > 0 && Number(g.wa) === 0).length;
+  const onlyWa = ipGroups.filter((g) => Number(g.phone) === 0 && Number(g.wa) > 0).length;
 
   // Map each distinct IP hash to a stable label/color/count (busiest = #1).
   // Only the 6 busiest get a color — no cycling, so no two IPs ever share one.
@@ -277,15 +287,43 @@ export default async function AdminClicksPage({
           <p className="text-sm text-gray-600">Toplam tıklama</p>
           <p className="mt-1 text-3xl font-bold text-gray-900">{total}</p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-5">
-          <p className="text-sm text-gray-600">Farklı IP</p>
-          <p className="mt-1 text-3xl font-bold text-gray-900">{uniqueIps}</p>
+        <div className="rounded-2xl border-2 border-emerald-600 bg-emerald-50 p-5">
+          <p className="text-sm font-semibold text-emerald-800">Ulaşan farklı kişi</p>
+          <p className="mt-1 text-3xl font-bold text-emerald-700">{uniqueIps}</p>
+          <p className="mt-1 text-xs text-emerald-800/70">
+            iki butonu da kullanan tek sayılır
+          </p>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5">
           <p className="text-sm text-gray-600">Tekrar eden IP</p>
           <p className="mt-1 text-3xl font-bold text-gray-900">{repeatIps}</p>
         </div>
       </div>
+
+      {/* Channel preference of unique contacts */}
+      <h2 className="mt-8 text-lg font-bold text-gray-900">Kanal Tercihi (kişi bazında)</h2>
+      <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="rounded-2xl border border-gray-200 bg-white p-5 text-center">
+          <p className="text-sm text-gray-600">Sadece Telefon</p>
+          <p className="mt-1 text-3xl font-bold text-gray-900">{onlyPhone}</p>
+          <p className="mt-1 text-xs text-gray-400">kişi yalnızca aradı</p>
+        </div>
+        <div className="rounded-2xl border border-gray-200 bg-white p-5 text-center">
+          <p className="text-sm text-gray-600">Sadece WhatsApp</p>
+          <p className="mt-1 text-3xl font-bold text-gray-900">{onlyWa}</p>
+          <p className="mt-1 text-xs text-gray-400">kişi yalnızca WhatsApp kullandı</p>
+        </div>
+        <div className="rounded-2xl border border-gray-200 bg-white p-5 text-center">
+          <p className="text-sm text-gray-600">Her İkisi</p>
+          <p className="mt-1 text-3xl font-bold text-gray-900">{bothChannels}</p>
+          <p className="mt-1 text-xs text-gray-400">kişi hem aradı hem yazdı</p>
+        </div>
+      </div>
+      <p className="mt-3 text-xs text-gray-600">
+        Kişi bazında (IP) sayılır: aynı kişi hem Telefon hem WhatsApp&apos;a tıklarsa
+        &quot;Ulaşan farklı kişi&quot; içinde bir kez, burada &quot;Her İkisi&quot; altında görünür.
+        Sadece Telefon + Sadece WhatsApp + Her İkisi = Ulaşan farklı kişi.
+      </p>
 
       <p className="mt-4 text-xs text-gray-400">
         Her farklı IP&apos;ye kalıcı bir numara verilir (IP #1 = en çok tıklayan). Kesin ayırt edici
