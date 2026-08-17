@@ -42,15 +42,7 @@ export default function HakkimizdaPage() {
               <strong>Ankara PERT</strong>, yıllardır Türkiye genelinde kazalı, hasarlı, pert ve hurda araç alımı konusunda
               güvenilir hizmet veren lider firmadır. Müşteri memnuniyetini ön planda tutarak, adil fiyatlandırma ve hızlı
               işlem prensipleriyle sektörde öncü konumdayız. Türkiye genelindeki operasyonlarımızı{' '}
-              <a
-                href="https://hasarliaracalan.com/"
-                target="_blank"
-                rel="noopener"
-                title="Hasarlı Araç Alan"
-                className="font-semibold text-primary underline decoration-primary/30 hover:decoration-primary transition"
-              >
-                Hasarlı Araç Alan
-              </a>{' '}
+              Hasarlı Araç Alan{' '}
               markamızla da sürdürüyor, her bölgede aynı kalitede hizmet veriyoruz.
             </p>
 
@@ -130,20 +122,20 @@ export default function HakkimizdaPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-orange-500 mb-2">15+</div>
-              <div className="text-gray-700">Yıllık Tecrübe</div>
+              <div className="text-3xl font-bold text-orange-500 mb-2">Ücretsiz</div>
+              <div className="text-gray-700">Ekspertiz ve Değerlendirme</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-orange-500 mb-2">50K+</div>
-              <div className="text-gray-700">Mutlu Müşteri</div>
+              <div className="text-3xl font-bold text-orange-500 mb-2">Ücretsiz</div>
+              <div className="text-gray-700">Çekici ile Yerinden Alım</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-orange-500 mb-2">24/7</div>
-              <div className="text-gray-700">Destek Hizmeti</div>
+              <div className="text-3xl font-bold text-orange-500 mb-2">24/7</div>
+              <div className="text-gray-700">Telefon ve WhatsApp Hattı</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-orange-500 mb-2">%100</div>
-              <div className="text-gray-700">Müşteri Memnuniyeti</div>
+              <div className="text-3xl font-bold text-orange-500 mb-2">Noterde</div>
+              <div className="text-gray-700">Devirle Eş Zamanlı Ödeme</div>
             </div>
           </div>
         </div>

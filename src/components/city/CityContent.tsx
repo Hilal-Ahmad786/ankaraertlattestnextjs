@@ -1,5 +1,3 @@
-'use client';
-
 interface CityContentProps {
     content: string;
     cityName: string;

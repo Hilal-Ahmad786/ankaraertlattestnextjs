@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { faqPageSchema } from '@/lib/schema';
 
 interface CityFAQsProps {
     cityName: string;
@@ -20,7 +21,7 @@ export default function CityFAQs({ cityName }: CityFAQsProps) {
         },
         {
             question: `${cityName} dışından da araç alımı yapıyor musunuz?`,
-            answer: `Evet, ${cityName} merkezli operasyonumuzun yanı sıra çevre illerden ve Türkiye'nin 81 ilinden araç alımı yapmaktayız.`
+            answer: `Evet, ${cityName} merkezli operasyonumuzun yanı sıra çevre illerden ve Türkiye genelinden araç alımı yapmaktayız.`
         },
         {
             question: `${cityName} noterlerinde satış işlemi ne kadar sürer?`,
@@ -38,6 +39,11 @@ export default function CityFAQs({ cityName }: CityFAQsProps) {
 
     return (
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            {/* Emitted regardless of accordion state so crawlers read every Q&A. */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema(faqs)) }}
+            />
             <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
                 <i className="fas fa-question-circle text-orange-500"></i>
                 {cityName} Hasarlı Araç Alımı SSS

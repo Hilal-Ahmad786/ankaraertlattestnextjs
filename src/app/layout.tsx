@@ -2,6 +2,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Suspense } from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -14,7 +15,8 @@ import FloatingButtons from '@/components/layout/FloatingButtons';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { organizationSchema, webSiteSchema, localBusinessSchema } from '@/lib/schema';
 
-const inter = Inter({ subsets: ['latin'] });
+// latin-ext covers Turkish characters (ş, ğ, İ, ı, ç, ö, ü)
+const inter = Inter({ subsets: ['latin', 'latin-ext'], display: 'swap' });
 
 const BASE_URL = 'https://ankarapert.com.tr';
 
@@ -93,13 +95,6 @@ export default function RootLayout({
 
   return (
     <html lang="tr">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body className={inter.className}>
         {/* Sitewide structured data — Organization, WebSite, LocalBusiness */}
         <script

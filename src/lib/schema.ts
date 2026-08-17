@@ -87,12 +87,17 @@ export function localBusinessSchema(cityName?: string, citySlug?: string) {
     areaServed: cityName
       ? { '@type': 'City', name: cityName }
       : { '@type': 'Country', name: 'Türkiye' },
+    // Service-area business: vehicles are collected from the seller's location,
+    // so no storefront address is claimed. Add streetAddress/geo here only when
+    // a real, verifiable branch address exists — a stub address is worse than
+    // none, and Google rejects LocalBusiness entities with invented locations.
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'TR',
       ...(cityName ? { addressLocality: cityName } : {}),
     },
-    hasMap: `https://www.google.com/maps/search/Ankara+Pert`,
+    // City entities are branches of the one organization, not separate firms.
+    ...(cityName ? { parentOrganization: { '@id': ORG_ID } } : {}),
     knowsAbout: [
       'Kazalı araç alımı',
       'Hasarlı araç alımı',

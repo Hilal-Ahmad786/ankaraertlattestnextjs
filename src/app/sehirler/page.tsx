@@ -8,13 +8,13 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
     title: 'Hizmet Bölgelerimiz | Ankara Pert',
-    description: 'Türkiye\'nin 81 ilinde hasarlı, kazalı, pert ve hurda araç alımı yapıyoruz. İstanbul, Ankara, İzmir ve tüm şehirlerde 7/24 hizmet.',
+    description: 'Türkiye geneli hasarlı, kazalı, pert ve hurda araç alımı. 30 ilde ayrıntılı hizmet sayfamız var; listede olmayan illerden de başvuru kabul ediyoruz.',
     alternates: {
         canonical: 'https://ankarapert.com.tr/sehirler',
     },
     openGraph: {
         title: 'Hizmet Bölgelerimiz | Ankara Pert',
-        description: 'Türkiye\'nin 81 ilinde hasarlı, kazalı, pert ve hurda araç alımı yapıyoruz.',
+        description: 'Türkiye geneli hasarlı, kazalı, pert ve hurda araç alımı yapıyoruz.',
         url: 'https://ankarapert.com.tr/sehirler',
         locale: 'tr_TR',
         type: 'website',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Hizmet Bölgelerimiz | Ankara Pert',
-        description: 'Türkiye\'nin 81 ilinde hasarlı, kazalı, pert ve hurda araç alımı yapıyoruz.',
+        description: 'Türkiye geneli hasarlı, kazalı, pert ve hurda araç alımı yapıyoruz.',
     },
 };
 
@@ -54,15 +54,7 @@ export default function CitiesListingPage() {
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">Hizmet Bölgelerimiz</h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                         Türkiye'nin dört bir yanında{' '}
-                        <a
-                            href="https://hasarliaracalan.com/"
-                            target="_blank"
-                            rel="noopener"
-                            title="Hasarlı Araç Alan"
-                            className="font-semibold text-white underline decoration-white/40 hover:decoration-white transition"
-                        >
-                            hasarlı araç alan
-                        </a>{' '}
+                        hasarlı araç alan{' '}
                         ekibimizle kazalı ve pert araçlarınızı yerinde ve değerinde alıyoruz.
                     </p>
                 </div>

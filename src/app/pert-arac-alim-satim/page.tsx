@@ -3,9 +3,7 @@ import HeroBanner from '@/components/sections/HeroBanner';
 import WhyUs from '@/components/sections/WhyUs';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
 import ContactCTA from '@/components/sections/ContactCTA';
-import Testimonials from '@/components/sections/Testimonials';
 import FAQ from '@/components/sections/FAQ';
-import { getTestimonialsByService } from '@/data/testimonials';
 import { getFAQByCategory } from '@/data/faq';
 import { serviceSchema, breadcrumbSchema } from '@/lib/schema';
 
@@ -35,7 +33,6 @@ export const metadata: Metadata = {
 };
 
 export default function PertAracPage() {
-  const testimonials = getTestimonialsByService('pert');
   const faqs = getFAQByCategory('pert');
 
   const serviceJsonLd = serviceSchema({
@@ -124,15 +121,7 @@ export default function PertAracPage() {
             diyorsanız doğru yerdesiniz. <strong className="text-primary">Pert araç alan
               firmalar</strong> arasında en yüksek fiyat garantisi veriyoruz. Kasko çıkışlı
             araçlar için özel değerleme! Pert kaydı olan aracınız için{' '}
-            <a
-              href="https://hasarliaracalan.com/"
-              target="_blank"
-              rel="noopener"
-              title="Hasarlı Araç Alan"
-              className="font-semibold text-primary underline decoration-primary/30 hover:decoration-primary transition"
-            >
-              hasarlı araç alım
-            </a>{' '}
+            hasarlı araç alım{' '}
             uzmanlarımızdan dakikalar içinde teklif alın.
           </p>
         </div>
@@ -149,13 +138,6 @@ export default function PertAracPage() {
         subtitle="4 basit adımda pert aracınızı satın"
         steps={processSteps}
       />
-
-      {testimonials.length > 0 && (
-        <Testimonials
-          title="Pert Araç Satan Müşterilerimiz"
-          items={testimonials}
-        />
-      )}
 
       <FAQ title="Pert Araç Hakkında Sorular" items={faqs} />
 

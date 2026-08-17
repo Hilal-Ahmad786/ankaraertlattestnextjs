@@ -115,23 +115,23 @@ export default function HeroBanner({
           </a>
         </div>
 
-        {/* Trust Indicators */}
+        {/* Service commitments — deliberately not invented customer counts. */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-white/20">
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">15+</div>
-            <div className="text-sm text-gray-300">Yıllık Tecrübe</div>
+            <div className="text-2xl md:text-3xl font-bold text-orange-400 mb-2">Ücretsiz</div>
+            <div className="text-sm text-gray-300">Ekspertiz ve Değerlendirme</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">7/24</div>
-            <div className="text-sm text-gray-300">Hızlı Destek</div>
+            <div className="text-2xl md:text-3xl font-bold text-orange-400 mb-2">Ücretsiz</div>
+            <div className="text-sm text-gray-300">Çekici ile Yerinden Alım</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">%100</div>
-            <div className="text-sm text-gray-300">Güvenli İşlem</div>
+            <div className="text-2xl md:text-3xl font-bold text-orange-400 mb-2">Noterde</div>
+            <div className="text-sm text-gray-300">Devirle Eş Zamanlı Ödeme</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">5000+</div>
-            <div className="text-sm text-gray-300">Mutlu Müşteri</div>
+            <div className="text-2xl md:text-3xl font-bold text-orange-400 mb-2">7/24</div>
+            <div className="text-sm text-gray-300">Telefon ve WhatsApp</div>
           </div>
         </div>
       </div>

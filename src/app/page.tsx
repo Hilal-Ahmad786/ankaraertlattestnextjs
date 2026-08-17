@@ -94,15 +94,7 @@ export default function HomePage() {
           <p className="text-lg leading-relaxed">
             <strong className="text-primary">Ankara PERT</strong> olarak Türkiye
             genelinde kazalı, pert ve hurda araçlarınızı yerinde değerlendiriyoruz.{' '}
-            <a
-              href="https://hasarliaracalan.com/"
-              target="_blank"
-              rel="noopener"
-              title="Hasarlı Araç Alan"
-              className="font-semibold text-primary underline decoration-primary/30 hover:decoration-primary transition"
-            >
-              Hasarlı araç alan
-            </a>{' '}
+            Hasarlı araç alan{' '}
             uzman ekibimizle 30 dakikada nakit teklif, ücretsiz ekspertiz ve çekici
             hizmeti sunuyoruz.
           </p>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { FAQItem } from '@/data/faq';
+import { faqPageSchema } from '@/lib/schema';
 
 interface FAQProps {
   title?: string;
@@ -20,18 +21,7 @@ export default function FAQ({
 
   // JSON-LD is always present regardless of accordion state.
   // This ensures AI crawlers and Googlebot read all Q&A even without JS.
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: items.map((item) => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer,
-      },
-    })),
-  };
+  const faqJsonLd = faqPageSchema(items);
 
   return (
     <section

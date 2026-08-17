@@ -3,9 +3,7 @@ import HeroBanner from '@/components/sections/HeroBanner';
 import WhyUs from '@/components/sections/WhyUs';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
 import ContactCTA from '@/components/sections/ContactCTA';
-import Testimonials from '@/components/sections/Testimonials';
 import FAQ from '@/components/sections/FAQ';
-import { getTestimonialsByService } from '@/data/testimonials';
 import { getFAQByCategory } from '@/data/faq';
 import { serviceSchema, breadcrumbSchema } from '@/lib/schema';
 
@@ -35,7 +33,6 @@ export const metadata: Metadata = {
 };
 
 export default function HurdaAracPage() {
-  const testimonials = getTestimonialsByService('hurda');
   const faqs = getFAQByCategory('hurda');
 
   const serviceJsonLd = serviceSchema({
@@ -125,15 +122,7 @@ export default function HurdaAracPage() {
             <strong className="text-primary">Hurda araç alan yerler</strong> arasında
             en iyi fiyatı garantiliyoruz. Ücretsiz çekici, anında ödeme! Hurdaya
             ayrılmamış hasarlı aracınız varsa{' '}
-            <a
-              href="https://hasarliaracalan.com/"
-              target="_blank"
-              rel="noopener"
-              title="Hasarlı Araç Alan"
-              className="font-semibold text-primary underline decoration-primary/30 hover:decoration-primary transition"
-            >
-              hasarlı araç alan
-            </a>{' '}
+            hasarlı araç alan{' '}
             birimimiz de değerinde satın alıyor.
           </p>
         </div>
@@ -150,13 +139,6 @@ export default function HurdaAracPage() {
         subtitle="Basit adımlarla hurda aracınızı değerlendirin"
         steps={processSteps}
       />
-
-      {testimonials.length > 0 && (
-        <Testimonials
-          title="Hurda Araç Satan Müşterilerimiz"
-          items={testimonials}
-        />
-      )}
 
       <FAQ title="Hurda Araç SSS" items={faqs} />
 

@@ -83,15 +83,7 @@ export default function GenelBilgilerPage() {
             <p className="text-lg leading-relaxed mb-8">
               Kazalı, pert veya hurda aracınızı satmak dört basit adımdan oluşur.
               Türkiye genelinde{' '}
-              <a
-                href="https://hasarliaracalan.com/"
-                target="_blank"
-                rel="noopener"
-                title="Hasarlı Araç Alan"
-                className="font-semibold text-primary underline decoration-primary/30 hover:decoration-primary transition"
-              >
-                hasarlı araç alımı
-              </a>{' '}
+              hasarlı araç alımı{' '}
               yapan ekibimiz tüm süreci sizin adınıza yönetir.
             </p>
 

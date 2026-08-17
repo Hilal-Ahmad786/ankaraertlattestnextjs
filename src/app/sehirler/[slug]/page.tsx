@@ -8,8 +8,7 @@ import CitySidebar from '@/components/city/CitySidebar';
 import CityDistricts from '@/components/city/CityDistricts';
 import CityFAQs from '@/components/city/CityFAQs';
 import CityStats from '@/components/city/CityStats';
-import CityRecentPurchases from '@/components/city/CityRecentPurchases';
-import CityTestimonials from '@/components/city/CityTestimonials';
+import CityVehicleTypes from '@/components/city/CityVehicleTypes';
 import TrustBadges from '@/components/sections/TrustBadges';
 import UrgentCTABanner from '@/components/sections/UrgentCTABanner';
 import WhyUs from '@/components/sections/WhyUs';
@@ -164,15 +163,7 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
           {city.name} ve çevresinde kazalı, pert veya hasar kayıtlı aracınızı
           değerinde satmak için 30 dakikada nakit teklif veriyoruz. Türkiye
           genelinde{' '}
-          <a
-            href="https://hasarliaracalan.com/"
-            target="_blank"
-            rel="noopener"
-            title="Hasarlı Araç Alan"
-            className="font-semibold text-primary underline decoration-primary/30 hover:decoration-primary transition"
-          >
-            hasarlı araç alan
-          </a>{' '}
+          hasarlı araç alan{' '}
           uzman ekibimiz aynı gün ödeme ve ücretsiz çekici hizmeti sunuyor.
         </p>
       </section>
@@ -186,7 +177,7 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
           <div className="lg:col-span-2 space-y-8">
             <CityContent content={city.content} cityName={city.name} />
             <CityDistricts city={city} />
-            <CityRecentPurchases city={city} />
+            <CityVehicleTypes city={city} />
             <CityFAQs cityName={city.name} />
           </div>
 
@@ -204,7 +195,6 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
         />
       </div>
 
-      <CityTestimonials cityName={city.name} />
       <UrgentCTABanner />
 
       <WhyUs

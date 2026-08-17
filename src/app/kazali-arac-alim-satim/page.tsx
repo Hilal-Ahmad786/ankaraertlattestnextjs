@@ -131,15 +131,7 @@ export default function KazaliAracPage() {
             <strong className="text-orange-500">30 dakikada nakit teklif</strong> garantisiyle
             "<em>Kazalı aracımı satmak istiyorum</em>" diyen herkesi hemen yönlendiriyoruz.
             Türkiye'nin her bölgesinde{' '}
-            <a
-              href="https://hasarliaracalan.com/"
-              target="_blank"
-              rel="noopener"
-              title="Hasarlı Araç Alan"
-              className="font-semibold text-primary underline decoration-primary/30 hover:decoration-primary transition"
-            >
-              hasarlı araç alan
-            </a>{' '}
+            hasarlı araç alan{' '}
             ekibimizle aynı gün ödeme yapıyoruz.
           </p>
         </div>

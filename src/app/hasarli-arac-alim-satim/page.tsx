@@ -3,9 +3,7 @@ import HeroBanner from '@/components/sections/HeroBanner';
 import WhyUs from '@/components/sections/WhyUs';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
 import ContactCTA from '@/components/sections/ContactCTA';
-import Testimonials from '@/components/sections/Testimonials';
 import FAQ from '@/components/sections/FAQ';
-import { getTestimonialsByService } from '@/data/testimonials';
 import { getFAQByCategory } from '@/data/faq';
 import { serviceSchema, breadcrumbSchema } from '@/lib/schema';
 
@@ -35,7 +33,6 @@ export const metadata: Metadata = {
 };
 
 export default function HasarliAracPage() {
-  const testimonials = getTestimonialsByService('hasarli');
   const faqs = getFAQByCategory('hasarli');
 
   const serviceJsonLd = serviceSchema({
@@ -125,15 +122,7 @@ export default function HasarliAracPage() {
             <strong className="text-primary">Hasarlı araç alan yerler</strong> arasında en
             yüksek fiyatı garantiliyoruz. Ücretsiz ekspertiz, hızlı işlem, anında ödeme!
             Türkiye genelinde{' '}
-            <a
-              href="https://hasarliaracalan.com/"
-              target="_blank"
-              rel="noopener"
-              title="Hasarlı Araç Alan"
-              className="font-semibold text-orange-600 underline hover:text-orange-700 transition"
-            >
-              hasarlı araç alan
-            </a>{' '}
+            hasarlı araç alan{' '}
             uzman ekibimizle aracınıza en yüksek değeri veriyoruz.
           </p>
         </div>
@@ -150,13 +139,6 @@ export default function HasarliAracPage() {
         subtitle="4 adımda hasarlı aracınızı nakde çevirin"
         steps={processSteps}
       />
-
-      {testimonials.length > 0 && (
-        <Testimonials
-          title="Hasarlı Araç Satan Müşterilerimiz"
-          items={testimonials}
-        />
-      )}
 
       <FAQ title="Sık Sorulan Sorular" items={faqs} />
 

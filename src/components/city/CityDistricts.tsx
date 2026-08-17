@@ -1,5 +1,3 @@
-'use client';
-
 import { City } from '@/types';
 
 interface CityDistrictsProps {

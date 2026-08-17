@@ -145,7 +145,7 @@ export default function Header() {
                 <div className="bg-orange-50 p-4 border-t border-orange-100 flex items-center justify-between">
                   <div>
                     <p className="font-bold text-gray-800 text-sm">Aracınızı hemen satmak mı istiyorsunuz?</p>
-                    <p className="text-gray-500 text-xs mt-0.5">81 ilde hizmet veriyoruz.</p>
+                    <p className="text-gray-500 text-xs mt-0.5">Türkiye geneli hizmet veriyoruz.</p>
                   </div>
                   <Link
                     href="/sehirler"
