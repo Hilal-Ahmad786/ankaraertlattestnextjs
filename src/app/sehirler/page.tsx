@@ -10,12 +10,12 @@ export const metadata: Metadata = {
     title: 'Hizmet Bölgelerimiz | Ankara Pert',
     description: 'Türkiye geneli hasarlı, kazalı, pert ve hurda araç alımı. 30 ilde ayrıntılı hizmet sayfamız var; listede olmayan illerden de başvuru kabul ediyoruz.',
     alternates: {
-        canonical: 'https://ankarapert.com.tr/sehirler',
+        canonical: 'https://www.ankarapert.com.tr/sehirler',
     },
     openGraph: {
         title: 'Hizmet Bölgelerimiz | Ankara Pert',
         description: 'Türkiye geneli hasarlı, kazalı, pert ve hurda araç alımı yapıyoruz.',
-        url: 'https://ankarapert.com.tr/sehirler',
+        url: 'https://www.ankarapert.com.tr/sehirler',
         locale: 'tr_TR',
         type: 'website',
         siteName: 'Ankara PERT',

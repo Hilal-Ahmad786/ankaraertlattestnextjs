@@ -19,7 +19,7 @@ import { siteConfig } from '@/config/site';
 import { services } from '@/data/services';
 import { getCityContent } from '@/data/city-content';
 
-const BASE_URL = 'https://ankarapert.com.tr';
+const BASE_URL = 'https://www.ankarapert.com.tr';
 
 export async function generateStaticParams() {
   const cities: City[] = citiesData as City[];

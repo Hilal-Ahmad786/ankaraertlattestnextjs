@@ -1,5 +1,5 @@
 # robots.txt for Ankara PERT
-# https://ankarapert.com.tr
+# https://www.ankarapert.com.tr
 
 # === SEARCH ENGINES ===
 User-agent: *
@@ -63,7 +63,7 @@ User-agent: omgili
 Allow: /
 
 # === SITEMAP ===
-Sitemap: https://ankarapert.com.tr/sitemap.xml
+Sitemap: https://www.ankarapert.com.tr/sitemap.xml
 
 # === AI CONTEXT ===
-# llms.txt: https://ankarapert.com.tr/llms.txt
+# llms.txt: https://www.ankarapert.com.tr/llms.txt

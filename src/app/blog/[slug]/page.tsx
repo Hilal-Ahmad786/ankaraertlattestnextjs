@@ -6,7 +6,7 @@ import CallToActionBanner from '@/components/sections/CallToActionBanner';
 import { getBlogPost, getAllBlogSlugs } from '@/lib/blog-posts';
 import { articleSchema, breadcrumbSchema } from '@/lib/schema';
 
-const BASE_URL = 'https://ankarapert.com.tr';
+const BASE_URL = 'https://www.ankarapert.com.tr';
 
 export function generateStaticParams() {
   return getAllBlogSlugs().map((slug) => ({ slug }));

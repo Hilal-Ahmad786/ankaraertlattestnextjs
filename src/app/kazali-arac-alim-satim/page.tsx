@@ -7,7 +7,7 @@ import { serviceSchema, breadcrumbSchema, faqPageSchema } from '@/lib/schema';
 import { getFAQByCategory } from '@/data/faq';
 import FAQ from '@/components/sections/FAQ';
 
-const BASE_URL = 'https://ankarapert.com.tr';
+const BASE_URL = 'https://www.ankarapert.com.tr';
 const PAGE_URL = `${BASE_URL}/kazali-arac-alim-satim`;
 
 export const metadata: Metadata = {

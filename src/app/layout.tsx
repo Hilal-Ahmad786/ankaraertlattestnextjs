@@ -18,7 +18,7 @@ import { organizationSchema, webSiteSchema, localBusinessSchema } from '@/lib/sc
 // latin-ext covers Turkish characters (ş, ğ, İ, ı, ç, ö, ü)
 const inter = Inter({ subsets: ['latin', 'latin-ext'], display: 'swap' });
 
-const BASE_URL = 'https://ankarapert.com.tr';
+const BASE_URL = 'https://www.ankarapert.com.tr';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -100,7 +100,7 @@ export default function RootLayout({
           rel="alternate"
           type="application/rss+xml"
           title="Ankara PERT Blog"
-          href="https://ankarapert.com.tr/rss.xml"
+          href="https://www.ankarapert.com.tr/rss.xml"
         />
       </head>
       <body className={inter.className}>

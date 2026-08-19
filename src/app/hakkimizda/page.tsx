@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: 'Hakkımızda | Ankara PERT',
   description: 'Ankara PERT - Türkiye\'nin en güvenilir kazalı, hasarlı, pert ve hurda araç alım merkezi. 15+ yıllık tecrübe, 50.000+ mutlu müşteri.',
   alternates: {
-    canonical: 'https://ankarapert.com.tr/hakkimizda',
+    canonical: 'https://www.ankarapert.com.tr/hakkimizda',
   },
   openGraph: {
     title: 'Hakkımızda | Ankara PERT',
     description: 'Türkiye\'nin en güvenilir kazalı, hasarlı, pert ve hurda araç alım merkezi.',
-    url: 'https://ankarapert.com.tr/hakkimizda',
+    url: 'https://www.ankarapert.com.tr/hakkimizda',
     locale: 'tr_TR',
     type: 'website',
     siteName: 'Ankara PERT',

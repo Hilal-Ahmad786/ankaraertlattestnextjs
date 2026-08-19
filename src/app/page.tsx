@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   description:
     'Türkiye\'nin En Güvenilir Araç Alım Merkezi. 30 dakikada nakit teklif, ücretsiz ekspertiz, 7/24 hizmet.',
   alternates: {
-    canonical: 'https://ankarapert.com.tr',
+    canonical: 'https://www.ankarapert.com.tr',
   },
   openGraph: {
     title: 'Ankara PERT - Kazalı, Hasarlı, Pert & Hurda Araç Alımı',
     description:
       'Türkiye\'nin En Güvenilir Araç Alım Merkezi. 30 dakikada nakit teklif, ücretsiz ekspertiz, 7/24 hizmet.',
-    url: 'https://ankarapert.com.tr',
+    url: 'https://www.ankarapert.com.tr',
     locale: 'tr_TR',
     type: 'website',
   },

@@ -1,6 +1,6 @@
 import { blogPosts } from '@/lib/blog-posts';
 
-const BASE_URL = 'https://ankarapert.com.tr';
+const BASE_URL = 'https://www.ankarapert.com.tr';
 
 export const revalidate = 3600;
 

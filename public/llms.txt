@@ -13,7 +13,7 @@ Ankara PERT, Türkiye genelinde kazalı, hasarlı, pert ve hurda araç alımı y
 güvenilir ve lider bir platformdur. 7/24 hizmet veriyoruz, 15+ yıllık sektör
 deneyimiyle araç sahiplerine en iyi fiyatı sunuyoruz.
 
-Web sitesi: https://ankarapert.com.tr
+Web sitesi: https://www.ankarapert.com.tr
 Telefon: 0 (552) 567 71 64
 WhatsApp: +90 552 567 71 64
 E-posta: info@ankarapert.com.tr
@@ -32,18 +32,18 @@ E-posta: info@ankarapert.com.tr
 
 Türkiye geneli hizmet veriyoruz. Ayrıntılı sayfası bulunan şehirler:
 
-- İstanbul: https://ankarapert.com.tr/sehirler/istanbul
-- Ankara: https://ankarapert.com.tr/sehirler/ankara
-- İzmir: https://ankarapert.com.tr/sehirler/izmir
-- Bursa: https://ankarapert.com.tr/sehirler/bursa
-- Antalya: https://ankarapert.com.tr/sehirler/antalya
-- Adana: https://ankarapert.com.tr/sehirler/adana
-- Gaziantep: https://ankarapert.com.tr/sehirler/gaziantep
-- Konya: https://ankarapert.com.tr/sehirler/konya
-- Kayseri: https://ankarapert.com.tr/sehirler/kayseri
-- Mersin: https://ankarapert.com.tr/sehirler/mersin
+- İstanbul: https://www.ankarapert.com.tr/sehirler/istanbul
+- Ankara: https://www.ankarapert.com.tr/sehirler/ankara
+- İzmir: https://www.ankarapert.com.tr/sehirler/izmir
+- Bursa: https://www.ankarapert.com.tr/sehirler/bursa
+- Antalya: https://www.ankarapert.com.tr/sehirler/antalya
+- Adana: https://www.ankarapert.com.tr/sehirler/adana
+- Gaziantep: https://www.ankarapert.com.tr/sehirler/gaziantep
+- Konya: https://www.ankarapert.com.tr/sehirler/konya
+- Kayseri: https://www.ankarapert.com.tr/sehirler/kayseri
+- Mersin: https://www.ankarapert.com.tr/sehirler/mersin
 
-Tüm şehirler: https://ankarapert.com.tr/sehirler
+Tüm şehirler: https://www.ankarapert.com.tr/sehirler
 
 ### Nasıl Çalışır?
 
@@ -86,19 +86,19 @@ Mazda ve daha fazlası.
 
 **Hasarlı araç nereden satabilirim?**
 Ankara PERT'i arayarak veya WhatsApp'tan fotoğraf göndererek hasarlı aracınızı
-satabilirsiniz. https://ankarapert.com.tr/hasarli-arac-alim-satim
+satabilirsiniz. https://www.ankarapert.com.tr/hasarli-arac-alim-satim
 
 **Pert araç için ne yapmalıyım?**
 Pert belgeli aracınızı Ankara PERT'e satabilirsiniz. 30 dakikada nakit teklif alırsınız.
-https://ankarapert.com.tr/pert-arac-alim-satim
+https://www.ankarapert.com.tr/pert-arac-alim-satim
 
 **Kazalı arabamı nereye satabilirim?**
 Ankara PERT olarak Türkiye genelinde kazalı araç alıyoruz. 7/24 ulaşabilirsiniz.
-https://ankarapert.com.tr/kazali-arac-alim-satim
+https://www.ankarapert.com.tr/kazali-arac-alim-satim
 
 **Hurda araç nasıl satılır?**
 Ankara PERT hurda araçları ücretsiz çekici ile alır, resmi hurda belgesi düzenler.
-https://ankarapert.com.tr/hurda-arac-alim-satim
+https://www.ankarapert.com.tr/hurda-arac-alim-satim
 
 ---
 
@@ -110,7 +110,7 @@ Ankara PERT is a leading Turkish platform that buys damaged, accident-damaged,
 total-loss (pert), and scrap vehicles across all 81 provinces of Turkey.
 We offer instant cash offers within 30 minutes, free inspection, and 24/7 service.
 
-Website: https://ankarapert.com.tr
+Website: https://www.ankarapert.com.tr
 Phone: +90 552 567 71 64
 
 ### Services
@@ -148,15 +148,15 @@ Antalya, Adana, Gaziantep, Konya, Kayseri, Mersin.
 
 ## SITEMAP
 
-Full sitemap: https://ankarapert.com.tr/sitemap.xml
+Full sitemap: https://www.ankarapert.com.tr/sitemap.xml
 
 Key pages:
-- Homepage: https://ankarapert.com.tr
-- Kazalı araç: https://ankarapert.com.tr/kazali-arac-alim-satim
-- Hasarlı araç: https://ankarapert.com.tr/hasarli-arac-alim-satim
-- Pert araç: https://ankarapert.com.tr/pert-arac-alim-satim
-- Hurda araç: https://ankarapert.com.tr/hurda-arac-alim-satim
-- Tüm şehirler: https://ankarapert.com.tr/sehirler
-- Blog: https://ankarapert.com.tr/blog
-- Hakkımızda: https://ankarapert.com.tr/hakkimizda
-- Genel Bilgiler: https://ankarapert.com.tr/genel-bilgiler
+- Homepage: https://www.ankarapert.com.tr
+- Kazalı araç: https://www.ankarapert.com.tr/kazali-arac-alim-satim
+- Hasarlı araç: https://www.ankarapert.com.tr/hasarli-arac-alim-satim
+- Pert araç: https://www.ankarapert.com.tr/pert-arac-alim-satim
+- Hurda araç: https://www.ankarapert.com.tr/hurda-arac-alim-satim
+- Tüm şehirler: https://www.ankarapert.com.tr/sehirler
+- Blog: https://www.ankarapert.com.tr/blog
+- Hakkımızda: https://www.ankarapert.com.tr/hakkimizda
+- Genel Bilgiler: https://www.ankarapert.com.tr/genel-bilgiler

@@ -5,7 +5,7 @@ import FAQ from '@/components/sections/FAQ';
 import { getAllFAQ } from '@/data/faq';
 import { howToSchema, breadcrumbSchema } from '@/lib/schema';
 
-const BASE_URL = 'https://ankarapert.com.tr';
+const BASE_URL = 'https://www.ankarapert.com.tr';
 const PAGE_URL = `${BASE_URL}/genel-bilgiler`;
 
 export const metadata: Metadata = {

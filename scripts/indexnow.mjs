@@ -6,7 +6,7 @@
  * Usage:  node scripts/indexnow.mjs                 (every sitemap URL)
  *         node scripts/indexnow.mjs /sehirler/ankara (specific paths)
  */
-const HOST = "ankarapert.com.tr";
+const HOST = "www.ankarapert.com.tr";
 const KEY = "ac948db823fe48ccad96f5fbb7e0cc5e";
 const BASE = `https://${HOST}`;
 

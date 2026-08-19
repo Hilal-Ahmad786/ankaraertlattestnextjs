@@ -3,7 +3,7 @@ import { getAllBlogSlugs, blogPosts } from '@/lib/blog-posts';
 import citiesData from '@/data/cities.json';
 import { City } from '@/types';
 
-const BASE_URL = 'https://ankarapert.com.tr';
+const BASE_URL = 'https://www.ankarapert.com.tr';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const cities: City[] = citiesData as City[];

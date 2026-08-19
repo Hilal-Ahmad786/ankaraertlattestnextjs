@@ -7,7 +7,7 @@ import FAQ from '@/components/sections/FAQ';
 import { getFAQByCategory } from '@/data/faq';
 import { serviceSchema, breadcrumbSchema } from '@/lib/schema';
 
-const BASE_URL = 'https://ankarapert.com.tr';
+const BASE_URL = 'https://www.ankarapert.com.tr';
 const PAGE_URL = `${BASE_URL}/hasarli-arac-alim-satim`;
 
 export const metadata: Metadata = {
