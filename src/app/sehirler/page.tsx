@@ -48,7 +48,7 @@ export default function CitiesListingPage() {
     return (
         <div className="min-h-screen bg-gray-50 pb-20">
             {/* Hero Section */}
-            <section className="text-white py-24 relative overflow-hidden">
+            <section className="text-white py-14 sm:py-20 lg:py-24 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#131A1E] via-[#2A3136] to-[#FC6704] opacity-95 z-0"></div>
                 <div className="absolute inset-0 bg-black/20 z-0"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">

@@ -95,7 +95,7 @@ export default function HeroBanner({
 
       <div className="relative z-10 container mx-auto px-2 sm:px-4 text-center max-w-4xl py-6 md:py-8">
         {/* Tagline */}
-        <p className="mx-auto mb-4 inline-flex max-w-full rounded-full border border-white/80 bg-[rgba(255,255,255,0.78)] px-4 py-2 text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider text-accent-ink shadow-glass-sm backdrop-blur-2xl animate-fade-in">
+        <p className="mx-auto mb-4 inline-flex max-w-full rounded-full border border-white/80 bg-[rgba(255,255,255,0.78)] px-4 py-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-accent-ink shadow-glass-sm backdrop-blur-2xl animate-fade-in">
           {tagline}
         </p>
 

@@ -85,7 +85,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
       <PageHero title={post.title} subtitle={post.subtitle} />
 
-      <article className="py-20 bg-white">
+      <article className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Article metadata */}
           <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-8 pb-8 border-b">

@@ -12,7 +12,7 @@ interface WhyUsItem {
   
   export default function WhyUs({ title, subtitle, items }: WhyUsProps) {
     return (
-      <section id="neden-biz" className="why-us-section py-20 bg-white">
+      <section id="neden-biz" className="why-us-section py-12 sm:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4">
           <header className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">

@@ -197,7 +197,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden rounded-full border border-white/80 bg-white/85 p-2 shadow-sm"
+            className="lg:hidden flex items-center justify-center min-w-[44px] min-h-[44px] rounded-full border border-white/80 bg-white/85 shadow-sm"
             aria-label="Menu"
           >
             <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'} text-2xl text-gray-800`}></i>

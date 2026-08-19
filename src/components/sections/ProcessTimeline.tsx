@@ -16,7 +16,7 @@ interface ProcessStep {
     steps,
   }: ProcessTimelineProps) {
     return (
-      <section id="surec" className="process-timeline py-20 bg-light">
+      <section id="surec" className="process-timeline py-12 sm:py-16 lg:py-20 bg-light">
         <div className="container mx-auto px-4">
           <header className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">

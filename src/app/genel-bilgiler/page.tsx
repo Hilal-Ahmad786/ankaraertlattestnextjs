@@ -75,7 +75,7 @@ export default function GenelBilgilerPage() {
         subtitle="Araç alım satımı hakkında merak ettikleriniz"
       />
 
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose max-w-none mb-12">
             <h2 className="text-3xl font-bold text-primary mb-6">Nasıl Çalışıyoruz?</h2>

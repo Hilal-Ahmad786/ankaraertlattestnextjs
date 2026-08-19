@@ -25,7 +25,7 @@ export default function FAQ({
 
   return (
     <section
-      className="sales-guide-section py-20 bg-white"
+      className="sales-guide-section py-12 sm:py-16 lg:py-20 bg-white"
       itemScope
       itemType="https://schema.org/FAQPage"
     >

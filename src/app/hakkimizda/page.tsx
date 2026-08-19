@@ -34,7 +34,7 @@ export default function HakkimizdaPage() {
       />
 
       {/* About Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 sm:py-14 lg:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose max-w-none">
             <h2 className="text-3xl font-bold text-primary mb-6">Biz Kimiz?</h2>
@@ -118,7 +118,7 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="rounded-3xl border border-white/70 bg-white/45 p-6 shadow-glass backdrop-blur-2xl">

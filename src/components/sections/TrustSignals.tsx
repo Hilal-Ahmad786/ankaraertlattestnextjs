@@ -19,7 +19,7 @@ export default function TrustSignals() {
   }, []);
 
   return (
-    <section className="py-16 bg-gradient-to-r from-gray-50 to-accent-tint">
+    <section className="py-10 sm:py-14 lg:py-16 bg-gradient-to-r from-gray-50 to-accent-tint">
       <div className="container mx-auto px-4">
         {/* Main Trust Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">

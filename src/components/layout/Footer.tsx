@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-10 sm:py-14 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
@@ -56,7 +56,7 @@ export default function Footer() {
                 <li key={service.slug}>
                   <Link
                     href={`/${service.slug}`}
-                    className="text-sm hover:text-orange-500 transition flex items-center gap-2"
+                    className="text-sm hover:text-orange-500 transition inline-flex items-center gap-2 min-h-[40px] sm:min-h-0 sm:py-0"
                   >
                     <i className={`fas ${service.icon} text-orange-500`}></i>
                     {service.title}
@@ -78,14 +78,14 @@ export default function Footer() {
                   <li key={city.slug}>
                     <Link
                       href={`/sehirler/${city.slug}`}
-                      className="text-sm hover:text-orange-500 transition"
+                      className="text-sm hover:text-orange-500 transition inline-flex items-center min-h-[40px] sm:min-h-0"
                     >
                       {city.name} Hasarlı Araç Alımı
                     </Link>
                   </li>
                 ))}
               <li>
-                <Link href="/sehirler" className="text-sm text-orange-500 hover:text-orange-400 transition font-medium">
+                <Link href="/sehirler" className="text-sm text-orange-500 hover:text-orange-400 transition font-medium inline-flex items-center min-h-[40px] sm:min-h-0">
                   Tüm Şehirler →
                 </Link>
               </li>
@@ -97,22 +97,22 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Hızlı Linkler</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-sm hover:text-orange-500 transition">
+                <Link href="/" className="text-sm hover:text-orange-500 transition inline-flex items-center min-h-[40px] sm:min-h-0">
                   Ana Sayfa
                 </Link>
               </li>
               <li>
-                <Link href="/hakkimizda" className="text-sm hover:text-orange-500 transition">
+                <Link href="/hakkimizda" className="text-sm hover:text-orange-500 transition inline-flex items-center min-h-[40px] sm:min-h-0">
                   Hakkımızda
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-sm hover:text-orange-500 transition">
+                <Link href="/blog" className="text-sm hover:text-orange-500 transition inline-flex items-center min-h-[40px] sm:min-h-0">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/genel-bilgiler" className="text-sm hover:text-orange-500 transition">
+                <Link href="/genel-bilgiler" className="text-sm hover:text-orange-500 transition inline-flex items-center min-h-[40px] sm:min-h-0">
                   Genel Bilgiler
                 </Link>
               </li>
@@ -122,7 +122,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener"
                   title="Hasarlı Araç Alan - Hasarlı Araç Alım Satım"
-                  className="text-sm hover:text-orange-500 transition"
+                  className="text-sm hover:text-orange-500 transition inline-flex items-center min-h-[40px] sm:min-h-0"
                 >
                   Hasarlı Araç Alan
                 </a>
@@ -140,7 +140,7 @@ export default function Footer() {
                   <a
                     href={`tel:${siteConfig.phone}`}
                     onClick={() => trackPhoneClick('footer')}
-                    className="text-sm hover:text-orange-500 transition block"
+                    className="text-sm hover:text-orange-500 transition flex items-center min-h-[40px] sm:min-h-0"
                   >
                     {siteConfig.phoneDisplay}
                   </a>
@@ -153,7 +153,7 @@ export default function Footer() {
                     href={`https://wa.me/${siteConfig.whatsapp}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm hover:text-orange-500 transition block"
+                    className="text-sm hover:text-orange-500 transition flex items-center min-h-[40px] sm:min-h-0"
                     onClick={() => trackWhatsAppClick('footer')}
                   >
                     WhatsApp
@@ -163,7 +163,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <i className="fas fa-envelope text-orange-500 mt-1"></i>
                 <div>
-                  <a href={`mailto:${siteConfig.email}`} className="text-sm hover:text-orange-500 transition block">
+                  <a href={`mailto:${siteConfig.email}`} className="text-sm hover:text-orange-500 transition flex items-center min-h-[40px] sm:min-h-0">
                     {siteConfig.email}
                   </a>
                 </div>

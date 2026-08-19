@@ -27,7 +27,7 @@ export default function CallToActionBanner({
   };
 
   return (
-    <section className="relative py-20 text-white text-center overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-20 text-white text-center overflow-hidden">
       {/* Decorative overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#131A1E] via-[#2A3136] to-[#FC6704]"></div>
       <div className="absolute inset-0 bg-black/20"></div>

@@ -10,7 +10,7 @@ export default function ContactCTA() {
   };
 
   return (
-    <section className="py-20 contact-cta text-center text-white">
+    <section className="py-12 sm:py-16 lg:py-20 contact-cta text-center text-white">
       <div className="container mx-auto px-4">
         <div className="rounded-[2rem] border border-white/10 bg-gradient-to-r from-[#131A1E] to-[#131A1E] px-6 py-14 shadow-2xl">
         <p className="text-orange-500 font-semibold mb-2 tracking-wide">

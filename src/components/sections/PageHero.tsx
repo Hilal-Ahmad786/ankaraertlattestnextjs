@@ -5,7 +5,7 @@ interface PageHeroProps {
   
   export default function PageHero({ title, subtitle }: PageHeroProps) {
     return (
-      <section className="relative text-white py-24 overflow-hidden">
+      <section className="relative text-white py-14 sm:py-20 lg:py-24 overflow-hidden">
         {/* Soft overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#131A1E] via-[#2A3136] to-[#FC6704]"></div>
         <div className="absolute inset-0 bg-black/25"></div>

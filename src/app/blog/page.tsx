@@ -40,7 +40,7 @@ export default function BlogPage() {
         subtitle="Kazalı, hurda ve pert araçlar hakkında bilmeniz gereken her şey"
       />
       
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 sm:py-14 lg:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
