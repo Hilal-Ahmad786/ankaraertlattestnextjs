@@ -50,7 +50,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Hizmetlerimiz</h4>
+            <h3 className="text-white font-semibold mb-4">Hizmetlerimiz</h3>
             <ul className="space-y-2">
               {siteConfig.services.map((service) => (
                 <li key={service.slug}>
@@ -69,7 +69,7 @@ export default function Footer() {
           {/* Popular cities — city pages previously had no footer link at all,
               so their only inbound links were the header mega-menu. */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Hizmet Bölgeleri</h4>
+            <h3 className="text-white font-semibold mb-4">Hizmet Bölgeleri</h3>
             <ul className="space-y-2">
               {citiesData
                 .filter((c: { isPopular?: boolean }) => c.isPopular)
@@ -94,7 +94,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Hızlı Linkler</h4>
+            <h3 className="text-white font-semibold mb-4">Hızlı Linkler</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-sm hover:text-orange-500 transition">
@@ -132,7 +132,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-semibold mb-4">İletişim</h4>
+            <h3 className="text-white font-semibold mb-4">İletişim</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <i className="fas fa-phone text-orange-500 mt-1"></i>

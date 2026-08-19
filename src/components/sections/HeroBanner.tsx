@@ -117,24 +117,27 @@ export default function HeroBanner({
           </a>
         </div>
 
-        {/* Service commitments — deliberately not invented customer counts. */}
+        {/* Service commitments — owner-confirmed, deliberately not invented
+            customer counts. Each carries an icon so the promise reads at a
+            glance rather than as a wall of text. */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-white/20">
-          <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-orange-400 mb-2">Ücretsiz</div>
-            <div className="text-sm text-gray-300">Ekspertiz ve Değerlendirme</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-orange-400 mb-2">Ücretsiz</div>
-            <div className="text-sm text-gray-300">Çekici ile Yerinden Alım</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-orange-400 mb-2">Noterde</div>
-            <div className="text-sm text-gray-300">Devirle Eş Zamanlı Ödeme</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-orange-400 mb-2">7/24</div>
-            <div className="text-sm text-gray-300">Telefon ve WhatsApp</div>
-          </div>
+          {[
+            { icon: 'fas fa-search-dollar', value: 'Ücretsiz', label: 'Ekspertiz ve Değerlendirme' },
+            { icon: 'fas fa-truck-pickup', value: 'Ücretsiz', label: 'Çekici ile Yerinden Alım' },
+            { icon: 'fas fa-file-signature', value: 'Ücretsiz', label: 'Noter Masrafı Bize Ait' },
+            { icon: 'fas fa-money-bill-wave', value: 'Aynı Gün', label: 'Anlaşmada Nakit Ödeme' },
+          ].map((item) => (
+            <div key={item.label} className="text-center">
+              <span
+                className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-orange-500/15 text-orange-400 ring-1 ring-orange-400/30"
+                aria-hidden="true"
+              >
+                <i className={`${item.icon} text-xl`}></i>
+              </span>
+              <div className="text-2xl md:text-3xl font-bold text-orange-400 mb-2">{item.value}</div>
+              <div className="text-sm text-gray-300">{item.label}</div>
+            </div>
+          ))}
         </div>
       </div>
 

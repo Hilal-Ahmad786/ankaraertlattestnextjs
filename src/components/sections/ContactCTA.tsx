@@ -12,9 +12,9 @@ export default function ContactCTA() {
   return (
     <section className="py-16 contact-cta text-center text-white bg-gradient-to-r from-[#111c2f] to-[#3b5360]">
       <div className="container mx-auto px-4">
-        <h5 className="text-orange-500 font-semibold mb-2 tracking-wide">
+        <p className="text-orange-500 font-semibold mb-2 tracking-wide">
           7 / 24 BİZE ULAŞIN... FARKI KEŞFEDİN...
-        </h5>
+        </p>
         <h2 className="text-4xl md:text-5xl font-bold mb-2">BİZE ULAŞIN</h2>
         {/* Not a heading: this is a phone number. It was an <h1>, which gave
             every page a second H1 competing with the real one. */}

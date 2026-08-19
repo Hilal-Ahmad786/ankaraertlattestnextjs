@@ -95,6 +95,14 @@ export default function RootLayout({
 
   return (
     <html lang="tr">
+      <head>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Ankara PERT Blog"
+          href="https://ankarapert.com.tr/rss.xml"
+        />
+      </head>
       <body className={inter.className}>
         {/* Sitewide structured data — Organization, WebSite, LocalBusiness */}
         <script

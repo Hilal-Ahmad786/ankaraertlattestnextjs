@@ -104,7 +104,7 @@ export default function CustomerCarePopup() {
             </div>
 
             <div className="text-center mb-4">
-              <h4 className="text-lg font-bold text-gray-900 mb-0.5">Ankara PERT Ekibi</h4>
+              <p className="text-lg font-bold text-gray-900 mb-0.5">Ankara PERT Ekibi</p>
               <p className="text-gray-600 text-sm">Müşteri Hizmetleri</p>
             </div>
 

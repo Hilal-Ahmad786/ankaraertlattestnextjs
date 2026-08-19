@@ -31,7 +31,7 @@ export default function TrustBadges() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-500 text-white rounded-full mb-3 shadow-lg">
                   <i className={`${badge.icon} text-2xl`}></i>
                 </div>
-                <h3 className="font-bold text-gray-800 mb-1">{badge.title}</h3>
+                <p className="font-bold text-gray-800 mb-1">{badge.title}</p>
                 <p className="text-sm text-gray-600">{badge.description}</p>
               </div>
             ))}
