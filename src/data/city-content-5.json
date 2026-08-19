@@ -1,0 +1,192 @@
+{
+  "cities": {
+    "tekirdag": {
+      "metaTitle": "Tekirdağ Hasarlı, Kazalı ve Pert Araç Alımı | Ankara Pert",
+      "metaDescription": "Çorlu, Çerkezköy ve Ergene'nin sanayi trafiğinde hasar gören araçlar için Tekirdağ genelinde ücretsiz ekspertiz ve çekiciyle güvenle doğrudan alım yapıyoruz.",
+      "heroTitle": "Tekirdağ Hasarlı ve Pert Araç Alımı",
+      "heroSubtitle": "Çorlu ve Çerkezköy'ün yoğun sanayi trafiğinden kıyı ilçelerine kadar Tekirdağ genelinde hasarlı araçları doğrudan satın alıyoruz.",
+      "intro": "Tekirdağ'da hasarlı araç piyasasını belirleyen en önemli unsurlardan biri, İstanbul'a yakın sanayi koridoru ile yoğun yük ve servis trafiğinin aynı bölgede buluşmasıdır. Çorlu, Çerkezköy, Kapaklı ve Ergene çevresinde ticari araçlar ile çalışan otomobiller daha görünürken, Süleymanpaşa tarafında şehir içi ve kıyı kullanımı öne çıkar. Ankara PERT, aracın hasarını, çalışır durumunu ve kalan parça değerini birlikte değerlendirir; uygun araçlarda ücretsiz ekspertiz ve ücretsiz çekici sağlayarak noter devriyle eş zamanlı ödeme yapar.",
+      "body": [
+        "Tekirdağ'ın doğusunda Çorlu, Çerkezköy, Kapaklı ve Ergene; üretim tesisleri, organize sanayi bölgeleri ve şehirler arası yük hareketi nedeniyle araç kullanımının yoğun olduğu bir hat oluşturur. Bu yapı, özellikle hafif ticari araçlarda, şirket araçlarında ve günlük uzun mesafe yapan otomobillerde farklı hasar profilleri ortaya çıkarabilir. Bir aracın değeri yalnızca kaporta hasarına bakılarak belirlenmez; motor, şanzıman, elektronik ekipman, yürüyen aksam ve yeniden kullanılabilir gövde parçaları da hesaba katılır. Sanayi çevresindeki parça ve servis talebi bazı araçlarda kalan değeri destekleyebilir. Bu nedenle pert kayıtlı veya ağır hasarlı bir otomobilin Tekirdağ'daki gerçek satış değeri, yalnızca hurda ağırlığı üzerinden değerlendirilmemelidir.",
+        "Tekirdağ'ın yerleşimleri birbirinden farklı lojistik koşullara sahiptir. Süleymanpaşa kıyı hattında bulunurken Çorlu ve Ergene daha çok ana ulaşım ve sanayi akslarıyla ilişkilidir; Çerkezköy ve Kapaklı ise ilin kuzeydoğusundaki yoğun üretim bölgesini oluşturur. Hareket edemeyen bir aracın satışı sırasında bulunduğu nokta, çekici planlamasının önemli parçasıdır. Ankara PERT önce araç bilgileri ve fotoğraflar üzerinden ön değerlendirme yapar; gerekli durumda yerinde ekspertiz organize eder. Anlaşma sağlandığında ücretsiz çekici hizmetiyle aracın taşınması planlanır ve satış noter üzerinden tamamlanır. Ödeme, devir işlemiyle eş zamanlı gerçekleştirilir; böylece araç sahibinin ayrıca alıcı veya taşıma çözümü araması gerekmez."
+      ],
+      "localPoints": [
+        "Çorlu sanayi trafiğine uygun araç değerlendirmesi",
+        "Çerkezköy ve Kapaklı için çekici planlaması",
+        "Ergene üretim hattında ticari araç odağı",
+        "Süleymanpaşa kıyı bölgesine yerinde hizmet"
+      ],
+      "districtNotes": {
+        "Süleymanpaşa": "Süleymanpaşa, Tekirdağ'ın kıyıdaki idari ve ticari merkezidir. Şehir içi kullanım ile kıyı güzergâhlarının birleşmesi nedeniyle burada otomobil ağırlığı yüksektir; hareket etmeyen araçlarda konuma göre çekici planlaması yapılır.",
+        "Çorlu": "Çorlu, yoğun sanayi, depolama ve şehirler arası hareket nedeniyle Tekirdağ'ın en aktif araç bölgelerinden biridir. Ticari araçlar ve yüksek kilometreli otomobiller değerlendirilirken mekanik durum kadar kullanılabilir parça değeri de önem taşır.",
+        "Çerkezköy": "Çerkezköy, organize sanayi yapısı ve yoğun çalışan nüfusu nedeniyle servis, filo ve ticari araç hareketinin güçlü olduğu bir ilçedir. Hasarlı araçlarda motor, şanzıman ve ekipman değeri gövde hasarından ayrı incelenir.",
+        "Kapaklı": "Kapaklı, Çerkezköy sanayi havzasıyla bütünleşen hızlı büyüyen bir yerleşimdir. Günlük işe gidiş geliş ve ticari kullanımın yoğunluğu, farklı kilometre ve hasar seviyelerindeki araçların piyasaya çıkmasına neden olabilir.",
+        "Ergene": "Ergene, sanayi tesisleri ve Çorlu bağlantılı ulaşım ağıyla ticari araç kullanımının belirgin olduğu bir ilçedir. Kaza veya mekanik arıza sonrası çalışmayan araçlarda ekspertizle birlikte uygun çekici güzergâhı planlanır."
+      },
+      "faqs": [
+        {
+          "question": "Tekirdağ'da pert araç satarken hangi resmi belgeler gerekir?",
+          "answer": "Pert veya hasarlı araç satışında noter devri için aracın ve araç sahibinin yasal satışa uygun belgeleri gerekir. Evrak durumu aracın kayıt şekline göre değişebileceği için işlem öncesinde kontrol edilir. Ankara PERT araç bilgilerini aldıktan sonra gerekli süreci açıklar; anlaşma sağlanırsa ekspertiz ve çekici hizmeti için ayrıca ücret talep edilmez, ödeme noter devriyle eş zamanlı yapılır."
+        },
+        {
+          "question": "Çorlu ve Çerkezköy'den çalışmayan hasarlı araç alıyor musunuz?",
+          "answer": "Evet, Çorlu ve Çerkezköy'de hareket etmeyen hasarlı veya arızalı araçlar değerlendirilebilir. Önce aracın fotoğrafları, modeli, hasar durumu ve bulunduğu konum incelenir. Uygun bulunması ve fiyat üzerinde anlaşılması halinde yerinde ekspertiz ile çekici planlaması yapılır. Ücretsiz çekici hizmeti sayesinde araç sahibinin ayrıca taşıma firması bulması gerekmez; devir noter üzerinden tamamlanır."
+        },
+        {
+          "question": "Tekirdağ'da hasarlı aracın satış fiyatını hangi unsurlar belirler?",
+          "answer": "Fiyatı aracın marka ve modeli, yaşı, hasarın yeri, mekanik durumu ve kullanılabilir parçaları birlikte belirler. Tekirdağ'daki sanayi ve parça talebi de bazı araçların kalan değerini etkileyebilir. Özellikle motor, şanzıman, elektronik parçalar ve sağlam gövde elemanları ayrıca değerlendirilir. Bu nedenle teklif yalnızca aracın hurda ağırlığına veya hasar kaydındaki tutara göre oluşturulmaz."
+        }
+      ]
+    },
+    "sakarya": {
+      "metaTitle": "Sakarya Hasarlı, Kazalı ve Pert Araç Alımı | Ankara Pert",
+      "metaDescription": "TEM ve D-100 bağlantılarıyla yoğun araç trafiğine sahip Sakarya'da kazalı, pert ve arızalı araçlara ücretsiz ekspertiz ve çekiciyle doğrudan teklif veriyoruz.",
+      "heroTitle": "Sakarya Hasarlı ve Pert Araç Alımı",
+      "heroSubtitle": "TEM, D-100 ve sanayi bağlantılarının kesiştiği Sakarya'da kazalı, pert ve motor arızalı araçları doğrudan satın alıyoruz.",
+      "intro": "Sakarya, İstanbul ile Ankara arasındaki ana ulaşım koridoruna yakınlığı, sanayi üretimi ve çevre ilçelere dağılan yol ağı nedeniyle hareketli bir araç piyasasına sahiptir. Adapazarı, Serdivan ve Erenler şehir içi kullanımda öne çıkarken Hendek ile Akyazı ana karayolu bağlantıları açısından farklı bir profile sahiptir. Hasarlı bir aracın değeri belirlenirken gövde hasarının yanında mekanik parçalar, elektronik donanım ve yeniden kullanılabilir aksam da değerlendirilir. Ankara PERT uygun araçlarda ücretsiz ekspertiz ve çekici sağlayarak noter devriyle eş zamanlı ödeme yapar.",
+      "body": [
+        "Sakarya'nın otomotiv ve yan sanayi üretimiyle bağlantısı, hasarlı araçların değerlendirilmesinde önemli bir yerel avantaj yaratır. Adapazarı çevresindeki servis ve parça ağı ile kentin sanayi altyapısı, özellikle onarılabilir veya parça değeri güçlü araçlarda farklı alıcı kanallarının oluşmasına katkı sağlar. Bununla birlikte İstanbul-Ankara yönündeki TEM ve D-100 bağlantıları, şehir içi kullanımın yanında yoğun transit hareket de üretir. Uzun yol yapan otomobiller, hafif ticari araçlar ve şirket araçlarında yüksek kilometre, mekanik aşınma veya kaza hasarı birlikte görülebilir. Bu nedenle Sakarya'da teklif oluştururken sadece kaportanın görüntüsüne değil, aracın motoruna, şanzımanına, yürüyen aksamına ve sağlam kalan parçalarına da bakmak gerekir.",
+        "İlçeler arasındaki kullanım biçimi de satış sürecini etkiler. Serdivan ve Adapazarı'nda günlük şehir trafiği belirginken Erenler sanayi ve ulaşım bağlantılarıyla öne çıkar; Hendek ile Akyazı ise doğu-batı karayolu hareketine daha yakındır. Kaza sonrası yürümeyen veya motor arızası nedeniyle bulunduğu yerde kalan araçlarda çekici organizasyonu bu coğrafi dağılıma göre yapılır. Ankara PERT araç sahibinden temel bilgiler ve güncel fotoğraflar aldıktan sonra ön değerlendirme yapar. Teklif kabul edilirse yerinde ekspertiz planlanabilir, taşıma ücretsiz çekiciyle gerçekleştirilir ve noter satışı tamamlanır. Ödeme devirle eş zamanlı yapıldığı için satışın temel adımları tek süreçte yürütülür. Böylece süreç kolaylaşır."
+      ],
+      "localPoints": [
+        "TEM ve D-100 hattına lojistik erişim",
+        "Sakarya sanayisinde güçlü parça değerlendirme imkânı",
+        "Hendek ve Akyazı için çekici planlaması",
+        "Merkez ilçelerde yoğun araç piyasası"
+      ],
+      "districtNotes": {
+        "Adapazarı": "Adapazarı, Sakarya'nın ticari ve idari merkezidir; şehir içi otomobil kullanımı ile çevre ilçelerden gelen araç hareketi burada birleşir. Hasarlı araçlarda servis erişimi ve parça değeri birlikte değerlendirilir.",
+        "Serdivan": "Serdivan, konut, üniversite ve ticaret alanlarının iç içe geçtiği yoğun bir günlük araç trafiğine sahiptir. Otomobillerde düşük hız çarpışmaları kadar mekanik arızalar da değerlendirme konusu olabilir.",
+        "Erenler": "Erenler, Adapazarı merkezine yakınlığı ve sanayi-ulaşım bağlantılarıyla ticari araçların da görüldüğü bir bölgedir. Çalışmayan araçlarda bulunduğu sanayi sitesi veya mahalleye göre çekici erişimi ve ekspertiz planı hazırlanır.",
+        "Hendek": "Hendek, doğu-batı ulaşım koridoruna yakınlığı ve sanayi alanlarıyla hem transit hem ticari araç hareketi taşır. Ağır hasarlı araçlarda karayolu konumu, ekspertiz ve çekici organizasyonunu doğrudan etkiler.",
+        "Akyazı": "Akyazı, ana yol bağlantıları yanında geniş kırsal alanlara sahip olduğundan otomobil ve hafif ticari araç kullanımı birlikte görülür. Merkez dışındaki araçlarda konum bilgisi çekici planlamasında özellikle önemlidir."
+      },
+      "faqs": [
+        {
+          "question": "Sakarya'da pert kayıtlı bir araç doğrudan satılabilir mi?",
+          "answer": "Evet, yasal olarak devre uygun pert kayıtlı araçlar doğrudan değerlendirilebilir ve satın alınabilir. Önce aracın kayıt durumu, hasarı, modeli ve mevcut parçaları incelenir. Teklif bu bilgiler üzerinden hazırlanır; anlaşma sağlandığında gerekli noter süreci planlanır. Ankara PERT uygun araçlarda ücretsiz ekspertiz ve çekici sunar, ödeme ise noter devriyle eş zamanlı olarak gerçekleştirilir."
+        },
+        {
+          "question": "Hendek veya Akyazı'daki hasarlı araca çekici gönderiyor musunuz?",
+          "answer": "Evet, satın alma konusunda anlaşma sağlanan araçlar için Hendek ve Akyazı dahil Sakarya'nın hizmet verilen noktalarına çekici planlanabilir. Aracın tam konumu, hareket edip etmediği ve erişim koşulları önceden değerlendirilir. Uygun araçlarda çekici hizmeti ücretsizdir. Böylece kaza sonrası yolda kalan veya mekanik arıza nedeniyle kullanılamayan aracın taşınmasını satıcının ayrıca organize etmesi gerekmez."
+        },
+        {
+          "question": "Sakarya'da hasarlı araç değerini yerel sanayi etkiler mi?",
+          "answer": "Evet, güçlü servis ve parça piyasası bazı hasarlı araçların kalan değerini olumlu etkileyebilir. Ancak bu tek başına fiyatı belirlemez. Aracın marka-modeli, yaşı, motor ve şanzıman durumu, hava yastıkları, elektronik parçaları, yürüyen aksamı ve sağlam gövde elemanları birlikte incelenir. Bu bütüncül değerlendirme, yalnızca hasar kaydı tutarına bakmaktan daha sağlıklı bir teklif oluşturur."
+        }
+      ]
+    },
+    "denizli": {
+      "metaTitle": "Denizli Hasarlı, Kazalı ve Pert Araç Alımı | Ankara Pert",
+      "metaDescription": "Tekstil ve sanayi trafiğinin yoğun olduğu Denizli'de kazalı, pert ve arızalı araçları ücretsiz ekspertiz, çekici ve noter devriyle güvenle doğrudan alıyoruz.",
+      "heroTitle": "Denizli Hasarlı ve Pert Araç Alımı",
+      "heroSubtitle": "Tekstil üretimi, şehirler arası yollar ve geniş ilçe ağıyla Denizli'de hasarlı araçları durumuna göre doğrudan değerlendiriyoruz.",
+      "intro": "Denizli'de araç kullanımı yalnızca şehir merkezindeki otomobillerden oluşmaz; tekstil ve sanayi üretimi, çevre ilçelerle ticaret ve Ege ile İç Anadolu arasındaki karayolu hareketi ticari araçları da önemli hale getirir. Pamukkale ve Merkezefendi merkez pazarı oluştururken Çivril ve Acıpayam gibi ilçelerde mesafeler ve kırsal kullanım daha belirgindir. Hasarlı aracın değeri bu kullanım geçmişiyle birlikte mekanik durum, sağlam parçalar ve gövde hasarı üzerinden hesaplanır. Ankara PERT, uygun araçlarda ücretsiz ekspertiz ve ücretsiz çekiciyle noter devrini organize eder.",
+      "body": [
+        "Denizli'nin tekstil ağırlıklı üretim yapısı, kentte servis araçları, hafif ticari modeller ve düzenli şehirler arası çalışan araçların yaygınlaşmasına katkı sağlar. Bu araçlarda kazaya bağlı gövde hasarı kadar yüksek kilometreye bağlı motor, şanzıman veya yürüyen aksam sorunları da satış kararını etkileyebilir. Hasarlı araç değerlemesinde yalnızca onarım maliyetine bakmak yanıltıcı olabilir; çünkü çalışır durumdaki mekanik parçalar, elektronik bileşenler, jantlar, kapılar ve diğer sağlam aksam ayrı bir ekonomik değer taşır. Denizli'deki sanayi ve yedek parça erişimi de bazı modellerde bu kalan değerin değerlendirilmesini kolaylaştırabilir. Bu nedenle pert veya arızalı araç için teklif hazırlanırken aracın tamamı parça ve kullanım potansiyeliyle birlikte ele alınır.",
+        "Denizli'nin ilçeleri arasındaki mesafe ve yol yapısı, hareket etmeyen araçların teslim sürecini doğrudan etkiler. Pamukkale ve Merkezefendi'deki araçlara şehir merkezinden erişim daha kolayken Çivril kuzeyde, Acıpayam ise güney yönündeki geniş bir coğrafyada yer alır. Bu nedenle çekici planı aracın yalnızca il adına değil, açık konumuna göre yapılmalıdır. Ankara PERT önce fotoğraf, ruhsat bilgileri ve hasarın genel durumunu inceler; gerekli görülürse yerinde ekspertiz organize eder. Satışta anlaşma sağlandığında ücretsiz çekici devreye girer. Noter işlemi tamamlanırken ödeme eş zamanlı yapılır ve araç sahibinin arızalı veya kazalı aracı başka bir noktaya götürmesi beklenmez."
+      ],
+      "localPoints": [
+        "Tekstil sanayisine bağlı ticari araç hareketi",
+        "Merkezden uzak ilçelere çekici planlaması",
+        "Parça ve sanayi erişimiyle kapsamlı değerleme",
+        "Ege iç kesim yollarına lojistik bağlantı"
+      ],
+      "districtNotes": {
+        "Pamukkale": "Pamukkale, yerleşim alanlarıyla turizm hareketinin birleştiği geniş bir ilçedir. Günlük otomobil trafiği yanında ziyaretçi yoğunluğu da araç kullanımını artırır; hasarlı araçlarda konum ve kullanılabilir parça durumu birlikte değerlendirilir.",
+        "Merkezefendi": "Merkezefendi, Denizli'nin yoğun konut, ticaret ve sanayi bağlantılarını barındıran merkez ilçelerindendir. Şehir içi kullanılan otomobiller ile ticari araçların hasar profili farklı olduğundan ekspertizde kullanım tipi de dikkate alınır.",
+        "Çivril": "Çivril, Denizli merkezinden daha uzak ve tarımsal kullanımın belirgin olduğu ilçelerden biridir. Pikap ve hafif ticari araçlarda çalışma koşulları önem kazanırken çekici planlamasında aracın köy veya yol konumu dikkate alınır.",
+        "Acıpayam": "Acıpayam, Denizli'nin güneyindeki geniş kırsal alanı ve karayolu bağlantılarıyla farklı araç kullanımına sahiptir. Merkez dışındaki kazalı veya arızalı araçlarda açık konum alınarak ekspertiz ve taşıma süreci planlanır."
+      },
+      "faqs": [
+        {
+          "question": "Denizli'de motor arızalı bir araç satın alıyor musunuz?",
+          "answer": "Evet, motor arızalı araçlar hasar ve genel durumları değerlendirilerek satın alınabilir. Motorun tamamen çalışmaması aracın değersiz olduğu anlamına gelmez; şanzıman, elektronik parçalar, gövde elemanları ve diğer sağlam aksam da teklife dahil edilir. Araç hareket etmiyorsa anlaşma sonrasında ücretsiz çekici planlanabilir. Satış noter üzerinden tamamlanır ve ödeme devir işlemiyle eş zamanlı yapılır."
+        },
+        {
+          "question": "Çivril ve Acıpayam'daki hasarlı araçlara hizmet veriliyor mu?",
+          "answer": "Evet, Çivril ve Acıpayam gibi Denizli merkezine uzak ilçelerdeki araçlar da değerlendirilebilir. Ön değerlendirme sırasında aracın tam konumu, hasar seviyesi ve hareket kabiliyeti alınır. Bu bilgiler ekspertiz ve çekici planının doğru yapılmasını sağlar. Satın alma konusunda anlaşma oluştuğunda uygun araç için ücretsiz çekici organize edilir; satıcının aracı Denizli merkeze getirmesi gerekmez."
+        },
+        {
+          "question": "Denizli'de pert aracın kalan parça değeri nasıl hesaplanır?",
+          "answer": "Parça değeri aracın sağlam ve yeniden kullanılabilir bileşenlerinin durumuna göre hesaplanır. Motor, şanzıman, elektronik kontrol üniteleri, farlar, kapılar, jantlar ve iç donanım gibi parçalar tek tek değer oluşturabilir. Modelin piyasadaki parça talebi de önemlidir. Bu nedenle Denizli'deki bir pert araç yalnızca metal ağırlığıyla değil, kurtarılabilir parçaların toplam ekonomik potansiyeliyle birlikte değerlendirilir."
+        }
+      ]
+    },
+    "mugla": {
+      "metaTitle": "Muğla'da Hasarlı, Kazalı ve Pert Araç Alımı | Ankara Pert",
+      "metaDescription": "Bodrum, Fethiye, Marmaris ve Milas dahil Muğla'da kazalı, pert ve arızalı araçları ücretsiz ekspertiz ve çekiciyle güvenle bulunduğu yerden satın alıyoruz.",
+      "heroTitle": "Muğla Hasarlı ve Pert Araç Alımı",
+      "heroSubtitle": "Turizm sezonu, uzun kıyı yolları ve dağlık güzergâhların şekillendirdiği Muğla'da hasarlı araçları bulunduğu yerde değerlendiriyoruz.",
+      "intro": "Muğla'da hasarlı araç alımı, ilin geniş ve parçalı coğrafyası nedeniyle büyükşehir merkezlerinden farklı işler. Bodrum, Marmaris ve Fethiye gibi turizm merkezlerinde sezonluk trafik ve kiralık araç hareketi artarken Milas önemli bir ulaşım bağlantısıdır; Menteşe ise idari merkezdir. Kıyı yolları, virajlı güzergâhlar ve ilçeler arası mesafeler çekici planlamasını önemli hale getirir. Ankara PERT araç bilgilerini uzaktan ön değerlendirmeye alır, uygun araçlarda ücretsiz ekspertiz ve çekici sağlar; satış noter üzerinden tamamlanırken ödeme devirle eş zamanlı yapılır.",
+      "body": [
+        "Muğla'nın otomobil piyasasında turizm belirleyici bir etkendir. Yaz aylarında Bodrum, Marmaris ve Fethiye yönündeki trafik belirgin şekilde artar; yerli ziyaretçilerin araçları, kiralama filoları ve turizm işletmelerine bağlı ticari araçlar aynı yol ağını paylaşır. Bunun yanında Milas, Bodrum bağlantısı ve çevre yolları nedeniyle farklı araç gruplarının kesiştiği bir noktadır. Hasarlı bir araç değerlendirilirken kazanın büyüklüğü kadar aracın kilometresi, mekanik durumu ve sağlam kalan parçaları da önemlidir. Kıyı bölgelerinde uzun süre kullanılan araçlarda dış ortam etkileri de ekspertiz sırasında kontrol edilebilir. Bu çeşitlilik nedeniyle Muğla'da tek tip fiyatlama yerine aracın modeline, kullanım geçmişine ve parça potansiyeline göre ayrı değerlendirme yapılması gerekir.",
+        "Muğla'da satışın lojistik tarafı da fiyat kadar önemlidir. Menteşe ile Bodrum, Fethiye ve Marmaris arasında uzun mesafeler bulunur; bazı güzergâhlarda dağlık ve virajlı yol yapısı vardır. Hareket etmeyen aracın tatil beldesinde, kırsal mahallede veya ana yol üzerinde bulunması çekici organizasyonunu değiştirir. Ankara PERT bu nedenle araç sahibinden açık konum ve güncel fotoğrafları ister, ardından ekspertiz ve taşıma sürecini aracın bulunduğu noktaya göre planlar. Satın alma konusunda anlaşma sağlanırsa uygun araç ücretsiz çekiciyle teslim alınır. Devir noter aracılığıyla gerçekleştirilir ve ödeme işlemle eş zamanlı yapılır; böylece satıcının aracı başka bir ilçeye taşıması gerekmez."
+      ],
+      "localPoints": [
+        "Turizm sezonuna göre değişen araç yoğunluğu",
+        "Kıyı ilçelerinde özel çekici güzergâh planı",
+        "Bodrum ve Milas arasında güçlü bağlantı",
+        "Fethiye-Marmaris hattında uzun mesafe lojistiği"
+      ],
+      "districtNotes": {
+        "Menteşe": "Menteşe, Muğla'nın idari merkezi ve iç kesim bağlantılarının düğüm noktasıdır. Şehir içi araçlarla çevre ilçelere giden otomobiller burada buluşur; hasarlı araçlarda merkez ve kırsal konum çekici planını değiştirir.",
+        "Bodrum": "Bodrum'da yaz sezonuyla birlikte otomobil, kiralık araç ve turizm işletmelerine bağlı araç trafiği belirgin biçimde artar. Yoğun dönemlerde hasarlı aracın bulunduğu mahalle ve erişim koşulları çekici organizasyonunda önem kazanır.",
+        "Fethiye": "Fethiye, turizm hareketi ile çevre yerleşimlere uzanan karayolu ağının birlikte çalıştığı bir ilçedir. Kiralık ve şahsi otomobillerin yanında ticari araçlar da görülür; ekspertizde kullanım geçmişi ayrıca değerlendirilir.",
+        "Marmaris": "Marmaris'in kıyı ve turizm odaklı yapısı, özellikle sezon içinde araç yoğunluğunu artırır. Virajlı çevre yollarında kaza sonrası hareket edemeyen araçlarda güvenli çekici erişimi ve açık konum bilgisi önemlidir.",
+        "Milas": "Milas, Bodrum yönü ile Muğla'nın diğer kesimleri arasında önemli bir karayolu bağlantısıdır. İlçedeki ticari, kırsal ve turizm bağlantılı araç çeşitliliği nedeniyle hasarlı araç değerlemesi model ve kullanım tipine göre yapılır."
+      },
+      "faqs": [
+        {
+          "question": "Bodrum ve Marmaris'ten hasarlı araç satın alıyor musunuz?",
+          "answer": "Evet, Bodrum ve Marmaris'teki hasarlı, pert veya motor arızalı araçlar değerlendirilebilir. Önce aracın fotoğrafları, temel bilgileri ve bulunduğu açık konum alınır. İlçeler arası mesafe ve yol koşulları dikkate alınarak ekspertiz ile çekici planı hazırlanır. Satın alma konusunda anlaşma sağlanan uygun araçlar ücretsiz çekiciyle teslim alınabilir ve noter devrinde ödeme eş zamanlı gerçekleştirilir."
+        },
+        {
+          "question": "Muğla'da kiralık filo aracı hasarlıysa doğrudan satılabilir mi?",
+          "answer": "Evet, yasal satış yetkisi bulunan kişi veya şirket tarafından sunulan hasarlı filo araçları değerlendirilebilir. Teklif hazırlanırken aracın kilometresi, hasar geçmişi, mekanik durumu ve sağlam parçaları birlikte incelenir. Turizm bölgelerinde yoğun kullanılan araçlarda kullanım geçmişi özellikle önemlidir. Evrak ve yetki durumu uygun olduğunda satış noter üzerinden yürütülür; uygun araçta ekspertiz ve çekici için ayrıca ücret alınmaz."
+        },
+        {
+          "question": "Fethiye'deki çalışmayan hasarlı araç için çekici hizmeti ücretli mi?",
+          "answer": "Hayır, satın alma konusunda anlaşma sağlanan uygun araçlarda çekici hizmeti ücretsizdir. Fethiye'nin geniş yerleşim alanı nedeniyle önce aracın tam konumu ve erişim koşulları değerlendirilir. Araç ana yol üzerinde, mahallede veya daha uzak bir noktada olabilir; buna göre taşıma organizasyonu yapılır. Satıcının aracı başka bir ilçeye götürmesine gerek kalmadan noter devri ve ödeme süreci planlanır."
+        }
+      ]
+    },
+    "eskisehir": {
+      "metaTitle": "Eskişehir Hasarlı, Kazalı ve Pert Araç Alımı | Ankara Pert",
+      "metaDescription": "Odunpazarı ve Tepebaşı başta olmak üzere Eskişehir'de kazalı, pert ve arızalı araçları ücretsiz ekspertiz ve çekiciyle güvenle doğrudan satın alıyoruz.",
+      "heroTitle": "Eskişehir Hasarlı ve Pert Araç Alımı",
+      "heroSubtitle": "Yoğun merkez trafiği, öğrenci nüfusu ve Ankara-Bursa bağlantılarıyla Eskişehir'de hasarlı araçları gerçek durumuna göre değerlendiriyoruz.",
+      "intro": "Eskişehir'de araç piyasası, kompakt şehir merkezi ile çevre ilçelerin uzun yol kullanımını aynı anda barındırır. Odunpazarı ve Tepebaşı'nda günlük otomobil trafiği, üniversite ve iş hayatı öne çıkarken Sivrihisar ile Çifteler'de daha uzun mesafeli ve kırsal kullanım görülür. Ankara, Bursa ve İç Anadolu bağlantıları da şehirler arası araç hareketini artırır. Ankara PERT hasarlı, pert ve motor arızalı araçları mekanik durum ve kalan parça değeriyle birlikte inceler; uygun araçlarda ücretsiz ekspertiz, ücretsiz çekici ve noter devriyle eş zamanlı ödeme sunar.",
+      "body": [
+        "Eskişehir'in merkezinde tramvay ve toplu taşıma güçlü olsa da Odunpazarı ile Tepebaşı'nın genişleyen yerleşim alanları önemli bir otomobil trafiği üretir. Üniversiteler ve genç nüfus, ikinci el araç dolaşımını canlı tutarken sanayi bölgeleri ticari araç ve servis kullanımını da artırır. Hasarlı bir otomobilin değeri bu pazarda yalnızca kaporta onarım masrafıyla ölçülmez. Motor, şanzıman, elektronik sistemler, hava yastıkları, iç donanım ve sağlam gövde parçaları ayrı ayrı değer taşır. Modelin yerel parça talebi güçlü olduğunda ağır hasarlı bir araçta dahi ekonomik karşılık oluşabilir. Bu yüzden ekspertizde görünen hasarla birlikte aracın çalışır durumu ve kullanılabilir parçalarının tamamı değerlendirilir.",
+        "Eskişehir'in merkez dışındaki ilçeleri ise farklı lojistik koşullar oluşturur. Sivrihisar, Ankara yönündeki ana karayolu üzerinde bulunması nedeniyle transit araç hareketiyle ilişkilidir; Çifteler tarafında kırsal kullanım ve ilçe yolları daha belirgindir. Kaza veya motor arızası sonrasında araç yürümüyorsa bulunduğu nokta çekici planlamasının temel girdisidir. Ankara PERT araç sahibinden fotoğraf, model, hasar bilgisi ve konum aldıktan sonra ön değerlendirme yapar. Teklif kabul edildiğinde gerektiğinde yerinde ekspertiz düzenlenir; uygun araç ücretsiz çekiciyle alınır. Satış noter üzerinden tamamlanır ve ödeme devirle eş zamanlı gerçekleştirilir. Böylece merkezde veya uzak ilçede bulunan araç için ayrı bir taşıma süreci aranmaz."
+      ],
+      "localPoints": [
+        "Ankara-Bursa hattında güçlü karayolu bağlantısı",
+        "Merkezde canlı ikinci el araç dolaşımı",
+        "Sivrihisar için transit araç değerlendirme avantajı",
+        "Çifteler yönünde kırsal çekici planlaması"
+      ],
+      "districtNotes": {
+        "Odunpazarı": "Odunpazarı, Eskişehir'in yoğun konut, ticaret ve tarihi merkez alanlarını bir arada barındırır. Şehir içi otomobil trafiğinde kaza hasarlı araçlar görülürken sanayi bağlantıları parça ve servis değerlendirmesine katkı sağlar.",
+        "Tepebaşı": "Tepebaşı, üniversiteler, yeni yerleşimler ve ticari bölgeler nedeniyle genç ve hareketli bir araç parkına sahiptir. İkinci el otomobillerde hasar kadar kilometre, mekanik durum ve elektronik ekipman da fiyatı etkiler.",
+        "Sivrihisar": "Sivrihisar, Ankara-Eskişehir yönündeki ana yol bağlantısıyla transit araç hareketine açık bir ilçedir. Şehir dışından geçerken hasar gören araçlarda uzaktan bilgi paylaşımı ve konuma göre çekici organizasyonu özellikle önem kazanır.",
+        "Çifteler": "Çifteler, Eskişehir merkezinden uzakta ve kırsal kullanımın daha belirgin olduğu bir ilçedir. Otomobil yanında hafif ticari araçlar da değerlendirilir; çalışmayan araçlarda mahalle veya yol konumu taşıma planını belirler."
+      },
+      "faqs": [
+        {
+          "question": "Eskişehir'de kazalı araç için uzaktan teklif alınabilir mi?",
+          "answer": "Evet, ilk değerlendirme için aracın fotoğrafları ve temel bilgileri uzaktan paylaşılabilir. Marka-model, yıl, hasarın hangi bölgelerde olduğu, aracın çalışıp çalışmadığı ve bulunduğu konum teklif hazırlanmasına yardımcı olur. Nihai süreçte gerekli görülürse yerinde ekspertiz yapılır. Anlaşma sağlanan uygun araç ücretsiz çekiciyle alınabilir; noter devri tamamlanırken ödeme de eş zamanlı gerçekleştirilir."
+        },
+        {
+          "question": "Sivrihisar'da yolda kalan hasarlı aracı satın alıyor musunuz?",
+          "answer": "Evet, Sivrihisar'da kaza veya mekanik arıza nedeniyle hareket edemeyen araçlar değerlendirmeye alınabilir. Özellikle şehirler arası yol üzerindeki araçlarda güvenli konum ve aracın erişilebilirliği önce kontrol edilir. Fotoğraflar ve araç bilgileri üzerinden teklif süreci başlatılır. Satın alma konusunda anlaşılırsa uygun araç için ücretsiz çekici organize edilir ve satış işlemi noter devriyle tamamlanır."
+        },
+        {
+          "question": "Eskişehir'de pert aracın güncel satış fiyatı nasıl belirleniyor?",
+          "answer": "Pert aracın fiyatı marka-model, yaş, hasar seviyesi, mekanik durum ve kullanılabilir parçalar birlikte incelenerek belirlenir. Motor, şanzıman, elektronik sistemler, gövde elemanları ve iç donanım araçtan araca farklı ekonomik değer oluşturabilir. Eskişehir'deki servis ve parça talebi de bazı modeller için etkili olabilir. Bu nedenle teklif sadece eksper hasar tutarına veya aracın metal ağırlığına dayanmaz."
+        }
+      ]
+    }
+  }
+}

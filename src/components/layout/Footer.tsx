@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { siteConfig } from '@/config/site';
+import citiesData from '@/data/cities.json';
 import { trackPhoneClick, trackWhatsAppClick } from '@/lib/gtm';
 
 export default function Footer() {
@@ -12,7 +13,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-gray-300">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
             <h3 className="text-white font-bold text-xl mb-4 flex items-center gap-2">
@@ -62,6 +63,32 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Popular cities — city pages previously had no footer link at all,
+              so their only inbound links were the header mega-menu. */}
+          <div>
+            <h4 className="text-white font-semibold mb-4">Hizmet Bölgeleri</h4>
+            <ul className="space-y-2">
+              {citiesData
+                .filter((c: { isPopular?: boolean }) => c.isPopular)
+                .slice(0, 12)
+                .map((city: { slug: string; name: string }) => (
+                  <li key={city.slug}>
+                    <Link
+                      href={`/sehirler/${city.slug}`}
+                      className="text-sm hover:text-orange-500 transition"
+                    >
+                      {city.name} Hasarlı Araç Alımı
+                    </Link>
+                  </li>
+                ))}
+              <li>
+                <Link href="/sehirler" className="text-sm text-orange-500 hover:text-orange-400 transition font-medium">
+                  Tüm Şehirler →
+                </Link>
+              </li>
             </ul>
           </div>
 

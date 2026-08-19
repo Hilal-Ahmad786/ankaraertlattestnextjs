@@ -5,12 +5,17 @@ import { faqPageSchema } from '@/lib/schema';
 
 interface CityFAQsProps {
     cityName: string;
+    /**
+     * Hand-written per-city questions. Without these all 30 city pages
+     * rendered — and marked up — the same five Q&As.
+     */
+    faqs?: { question: string; answer: string }[];
 }
 
-export default function CityFAQs({ cityName }: CityFAQsProps) {
+export default function CityFAQs({ cityName, faqs: customFaqs }: CityFAQsProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-    const faqs = [
+    const defaultFaqs = [
         {
             question: `${cityName} ilinde hangi araçları satın alıyorsunuz?`,
             answer: `Ankara Pert olarak ${cityName} genelinde marka ve model fark etmeksizin her türlü hasarlı, kazalı, pert, hurda ve motor arızalı aracı değerinde satın alıyoruz.`
@@ -32,6 +37,8 @@ export default function CityFAQs({ cityName }: CityFAQsProps) {
             answer: `Evet, ${cityName} sınırları içerisindeki araçlarınızı kendi çekicilerimizle ücretsiz olarak teslim alıyoruz. Sizden ek bir nakliye ücreti talep etmiyoruz.`
         }
     ];
+
+    const faqs = customFaqs?.length ? customFaqs : defaultFaqs;
 
     const toggleFAQ = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);

@@ -1,0 +1,210 @@
+{
+  "cities": {
+    "istanbul": {
+      "metaTitle": "İstanbul Hasarlı, Kazalı ve Pert Araç Alımı | Ankara Pert",
+      "metaDescription": "İstanbul'un iki yakasında hasarlı, kazalı ve pert araç alımı; yoğun trafik ve köprü geçişleri gözetilerek ücretsiz çekici ve ekspertiz desteği sunulur.",
+      "heroTitle": "İstanbul'da Hasarlı Araç Alımı İçin Doğrudan Alıcı",
+      "heroSubtitle": "İki yakaya yayılan yoğun ulaşım ağı nedeniyle İstanbul'da hasarlı araç satışında konum, çekici erişimi ve devir planı önemlidir.",
+      "intro": "İstanbul'da hasarlı araç piyasası, şehrin iki yakaya yayılması, yoğun trafik ve geniş servis-parça ağı nedeniyle diğer illerden farklı işler. Aracın yalnızca kaporta hasarı değil; bulunduğu ilçe, yürür durumda olup olmaması ve çekiciyle hangi güzergâhtan alınacağı da süreci etkiler. Ankara PERT, İstanbul'daki kazalı, pert, hurda ve motor arızalı araçları doğrudan satın alır. Ücretsiz ekspertiz ve çekici desteği sağlanır; satış noter devriyle tamamlanır ve ödeme devirle eş zamanlı yapılır.",
+      "body": [
+        "İstanbul'da Avrupa ve Anadolu yakaları arasındaki geçişler, araç teslim alma planının önemli bir parçasıdır. TEM bağlantıları, Kuzey Marmara Otoyolu ve ana arterler şehirler arası hareketi kolaylaştırsa da gün içindeki trafik yoğunluğu çekici güzergâhının önceden planlanmasını gerektirir. Pendik, Kartal ve Maltepe gibi doğu aksındaki bir araç ile Beyoğlu, Şişli veya Bakırköy'deki bir aracın lojistik koşulları aynı değildir. Ağır hasarlı ya da hareket edemeyen araçlarda konum bilgisi ve fotoğraflar üzerinden ilk değerlendirme yapılması, ardından uygun çekici organizasyonunun kurulması süreci sadeleştirir. Böylece satıcının aracı başka bir noktaya taşıması gerekmeden ekspertiz ve devir adımları planlanabilir.",
+        "İstanbul'un büyük araç parkı ve yaygın otomotiv servisleri, hasarlı bir aracın kalan değerini belirlerken parça talebini de önemli hale getirir. Motor, şanzıman, elektronik üniteler, kaporta parçaları ve yürüyen aksam kullanılabilir durumdaysa, araç yalnızca hurda metal ağırlığı üzerinden değerlendirilmez. Özellikle sanayi ve servis kümelerine erişimin güçlü olduğu bölgelerde sökülebilir parçaların ekonomik karşılığı daha görünür olabilir. Ankara PERT bu nedenle aracın marka-modeli, hasar türü, mekanik durumu ve kullanılabilir parçalarını birlikte inceler. Teklif kabul edildiğinde ücretsiz çekici organize edilir; mülkiyet devri noterde gerçekleştirilir ve ödeme noter devriyle aynı anda tamamlanır. Bu yaklaşım, onarılamayan araçlarda dahi sağlam bileşenlerin değerinin gözden kaçmasını önlemeye yardımcı olur."
+      ],
+      "localPoints": [
+        "İki yakaya uygun çekici güzergâh planlaması",
+        "Yoğun trafikte konuma göre teslim organizasyonu",
+        "Geniş servis ağı parça değerini destekler",
+        "Otoyol bağlantıları şehirler arası sevki kolaylaştırır"
+      ],
+      "districtNotes": {
+        "Kadıköy": "Kadıköy'de yoğun merkez trafiği ve dar sokaklı mahalleler, hareket edemeyen araçlarda çekici erişimini önemli kılar. Konum ve araç durumu önceden değerlendirilerek teslim güzergâhı buna göre planlanır.",
+        "Beşiktaş": "Beşiktaş'ta ana arter yoğunluğu, eğimli sokaklar ve merkezi konum çekici operasyonunu saat ve güzergâh açısından dikkatli planlamayı gerektirir. Hasarlı araç bulunduğu yerden alınabilecek şekilde organizasyon yapılır.",
+        "Üsküdar": "Üsküdar'da sahil hattı ile iç mahalleler arasında yol yapısı değişir. Özellikle çalışmayan araçlarda açık konum bilgisi, çekicinin uygun erişim noktasını belirlemek ve teslimi düzenlemek için kullanılır.",
+        "Maltepe": "Maltepe'nin sahil yolu, D-100 bağlantısı ve yerleşim yoğunluğu farklı erişim seçenekleri oluşturur. Hasarlı aracın bulunduğu mahalleye göre çekici rotası belirlenerek gereksiz araç taşıma ihtiyacı azaltılır.",
+        "Kartal": "Kartal'da D-100 ve sahil aksına yakın bölgeler ile iç kesimlerin erişim koşulları farklıdır. Pert veya ağır hasarlı araçlarda teslim noktası önceden belirlenerek çekici organizasyonu buna göre yapılır.",
+        "Pendik": "Pendik, Anadolu yakasının doğu çıkışına ve otoyol bağlantılarına yakın konumuyla şehir dışı sevki açısından avantajlıdır. İlçe içindeki hasarlı araçlarda konum, trafik ve aracın yürür durumu birlikte değerlendirilir.",
+        "Beyoğlu": "Beyoğlu'nun yoğun ve yer yer dar sokak dokusu, çekiciyle araç almada erişimi başlı başına bir planlama konusu yapar. Araç fotoğraflarıyla birlikte açık konum paylaşılması uygun teslim yöntemini belirlemeyi kolaylaştırır.",
+        "Şişli": "Şişli'de iş merkezleri, ana arterler ve yoğun günlük trafik nedeniyle hasarlı aracın bulunduğu nokta önem taşır. Çekici erişimi için araç konumu değerlendirilir ve teslim buna uygun bir güzergâhla planlanır.",
+        "Fatih": "Fatih'te tarihi yarımadanın sıkışık yol dokusu ve yoğun trafik, hareket edemeyen araçlarda lojistiği etkiler. Aracın bulunduğu sokak ve çekici erişimi değerlendirilerek ücretsiz teslim alma süreci organize edilir.",
+        "Bakırköy": "Bakırköy'de sahil yolu, E-5 bağlantıları ve yoğun yerleşim alanları farklı çekici seçenekleri sunar. Kazalı aracın konumu ve mekanik durumu öğrenildikten sonra teslim süreci uygun rota üzerinden planlanır.",
+        "Bahçelievler": "Bahçelievler'in E-5'e yakınlığı şehir içi erişimi kolaylaştırırken yoğun mahalle trafiği teslim noktasını önemli hale getirir. Yürümeyen araçlarda çekici yaklaşımına uygun konum bilgisiyle operasyon planlanır. Bu sayede teslim sırasında gereksiz güzergâh değişiklikleri azaltılır.",
+        "Ümraniye": "Ümraniye'nin TEM ve çevre bağlantılarına yakın sanayi-ticaret dokusu, hasarlı araçların değerlendirilmesi ve taşınması açısından elverişlidir. Araç konumu ile hasar durumu birlikte incelenerek çekici planı oluşturulur."
+      },
+      "faqs": [
+        {
+          "question": "İstanbul'un iki yakasından da hasarlı araç alıyor musunuz?",
+          "answer": "Evet, İstanbul'un hem Avrupa hem Anadolu yakasından hasarlı araç satın alıyoruz. Aracın bulunduğu ilçe, hasar seviyesi ve hareket edip edemediği öğrenildikten sonra ücretsiz ekspertiz ve çekici süreci planlanır. Teklif üzerinde anlaşılması halinde satış noter devriyle tamamlanır; ödeme devir işlemiyle eş zamanlı gerçekleştirilir. Süreç boyunca satıcıya uygulanacak adımlar açık şekilde aktarılır."
+        },
+        {
+          "question": "İstanbul'da çalışmayan araç için çekici hizmeti ücretli mi?",
+          "answer": "Hayır, satın alma konusunda anlaşmaya varılan araç için çekici hizmeti ücretsizdir. İstanbul'da trafik, dar sokaklar ve iki yaka arasındaki geçişler nedeniyle aracın açık konumu önceden alınır. Böylece uygun çekici ve güzergâh planlanabilir; satıcının aracı servise veya başka bir teslim noktasına götürmesi gerekmez. Çekici planı aracın erişilebilir olduğu noktaya göre netleştirilir."
+        },
+        {
+          "question": "İstanbul'da pert aracın gerçek satış fiyatı nasıl belirleniyor?",
+          "answer": "Pert aracın değeri yalnızca hasar kaydı veya metal ağırlığına göre belirlenmez. Marka-model, model yılı, motor ve şanzıman durumu, elektronik parçalar, kaporta aksamı, yürüyen sistem ve kullanılabilir parçalar birlikte değerlendirilir. İstanbul'daki geniş servis ve parça piyasası da aracın kalan ekonomik değerinin analizinde dikkate alınabilir. Bu nedenle aynı hasar kaydına sahip iki araç farklı teklifler alabilir."
+        }
+      ]
+    },
+    "ankara": {
+      "metaTitle": "Ankara Hasarlı, Kazalı ve Pert Araç Alımı | Ankara Pert",
+      "metaDescription": "Ankara'da kış koşulları, çevre yolu ve sanayi bölgeleri dikkate alınarak hasarlı, pert ve motor arızalı araçlara ücretsiz ekspertiz ve çekici hizmeti.",
+      "heroTitle": "Ankara'da Hasarlı Araç Alımında Yerel ve Doğrudan Çözüm",
+      "heroSubtitle": "Merkezimizin Ankara'da olması, ekspertizden çekici organizasyonuna kadar hasarlı araç satış sürecini yerel koşullara göre yürütmemizi sağlar.",
+      "intro": "Ankara'da hasarlı araç değerlendirmesinde geniş şehir yapısı, çevre yolu bağlantıları, kışın düşük sıcaklık ve buzlanma ihtimali ile güçlü sanayi ağı birlikte önem taşır. OSTİM başta olmak üzere otomotiv servis ve yedek parça faaliyetlerinin yoğunluğu, ağır hasarlı araçların kullanılabilir parçalarını da ekonomik açıdan anlamlı kılabilir. Ankara PERT merkezinin şehirde bulunması sayesinde kazalı, pert, hurda ve motor arızalı araçlar ücretsiz ekspertizle değerlendirilir; anlaşma halinde ücretsiz çekici, noter devri ve devirle eş zamanlı ödeme süreci uygulanır.",
+      "body": [
+        "Ankara'nın Çankaya, Keçiören, Mamak ve Yenimahalle gibi yoğun merkez ilçeleri ile Etimesgut ve Sincan yönündeki genişleyen yerleşim akslarında araç teslim koşulları farklılaşır. Çevre yolu şehir içindeki uzak noktalar arasında önemli bir bağlantı sağlarken, kış aylarında sıcaklığın sıfırın altına düşebilmesi buzlanma kaynaklı kaza ve alt takım hasarlarını daha önemli hale getirir. Hareket edemeyen bir araç için bulunduğu sokak, kapalı otopark durumu veya ana yola erişim bilgisi çekici planında dikkate alınır. Firma merkezinin Ankara'da olması, ekspertiz ve devir sürecinin şehirdeki mevcut operasyon ağı üzerinden doğrudan yönetilmesine imkân verir. Özellikle kış döneminde araç konumu ve yol erişimi operasyon öncesinde ayrıca kontrol edilir.",
+        "Ankara'nın otomotiv bakım ve parça ekosistemi hasarlı araç değerlemesinde ikinci önemli unsurdur. OSTİM'de yedek parça, servis ve otomotiv yan sanayi alanlarında çok sayıda işletmenin bulunması, kullanılabilir mekanik ve elektronik parçaların piyasa karşılığının oluşmasına katkı sağlar. Bu nedenle ağır hasarlı bir otomobil, hafif ticari araç veya motor arızalı araç değerlendirilirken yalnızca dış görünüşe bakılmaz. Motor, şanzıman, ECU, kaporta aksamı, yürüyen parçalar ve aracın genel hasar yapısı birlikte ele alınır. Teklif kabul edildiğinde araç ücretsiz çekiciyle teslim alınır; noter devri yapılır ve ödeme mülkiyet devriyle eş zamanlı şekilde tamamlanır. Böylece onarım dışı kalan araçların sağlam bileşenleri de teklif içinde karşılık bulabilir."
+      ],
+      "localPoints": [
+        "Ankara merkezli doğrudan araç satın alma",
+        "OSTİM parça ve servis ekosistemi avantajı",
+        "Çevre yoluyla ilçeler arası lojistik bağlantı",
+        "Kış koşullarına uygun çekici planlaması"
+      ],
+      "districtNotes": {
+        "Çankaya": "Çankaya'nın yoğun merkez bölgeleri, iş alanları ve eğimli bazı mahalleleri çekici erişimini konuma göre değiştirebilir. Hasarlı aracın açık konumu alınarak ücretsiz ekspertiz ve teslim planı buna göre oluşturulur.",
+        "Keçiören": "Keçiören'in yoğun konut dokusu ve eğimli yerleşim yapısı, çalışmayan araçların çekiciyle alınmasında sokak erişimini önemli kılar. Araç konumu önceden değerlendirilerek uygun teslim noktası ve güzergâh belirlenir.",
+        "Yenimahalle": "Yenimahalle'nin OSTİM ve İvedik sanayi bölgelerine yakınlığı, otomotiv servis ve parça piyasasına erişim açısından belirgin bir avantajdır. Hasarlı araçta kullanılabilir parçalar da toplam değerleme içinde ayrıca dikkate alınır.",
+        "Mamak": "Mamak'ın geniş yerleşim alanı ve Ankara'nın doğu çıkışlarına bağlantısı, araç tesliminde konuma göre farklı güzergâhlar oluşturur. Yürümeyen araçlar için çekici erişimi önceden planlanarak satış süreci düzenlenir.",
+        "Etimesgut": "Etimesgut'ta geniş bulvarlar, çevre yolu bağlantıları ve yoğun konut bölgeleri hasarlı araç taşımada farklı seçenekler sunar. Araç hareket etmiyorsa bulunduğu noktaya uygun çekici organizasyonu satış öncesinde planlanır.",
+        "Sincan": "Sincan'ın sanayi alanları ve Ankara'nın batı ulaşım koridoruna yakınlığı, ticari ve binek araç hareketliliğini artırır. Hasarlı aracın mekanik durumu ve kullanılabilir parçaları ekspertiz sırasında birlikte değerlendirilir.",
+        "Altındağ": "Altındağ'da eski yerleşim dokusu ile ana ulaşım aksları yan yana bulunur. Dar veya eğimli sokaklardaki çalışmayan araçlarda çekici erişimi kontrol edilerek teslim süreci uygun noktadan organize edilir.",
+        "Balgat": "Balgat'ın Konya Yolu ve merkezi iş alanlarına yakınlığı, şehir içi araç hareketini yoğunlaştırır. Kazalı veya motor arızalı araçlarda konum ve trafik koşulları göz önüne alınarak ekspertiz ve çekici planı yapılır.",
+        "Çayyolu": "Çayyolu'nun Eskişehir Yolu aksında gelişen geniş yerleşim yapısı, merkezden farklı teslim koşulları oluşturur. Hasarlı araçlar konum bilgisi üzerinden değerlendirilir ve gerekiyorsa ücretsiz çekici erişimi önceden planlanır."
+      },
+      "faqs": [
+        {
+          "question": "Ankara'da hasarlı araç ekspertizi için ücret alıyor musunuz?",
+          "answer": "Hayır, Ankara'da satın alma amacıyla yaptığımız hasarlı araç ekspertizi ücretsizdir. Aracın fotoğrafları, marka-model bilgisi, hasar durumu ve bulunduğu konum üzerinden ön değerlendirme yapılabilir. Gerekli inceleme tamamlandıktan sonra teklif sunulur; kabul halinde çekici, noter devri ve ödeme adımları planlanır. Değerlendirmede doğrulanamayan rakam veya yapay fiyat garantisi kullanılmaz."
+        },
+        {
+          "question": "Ankara'da motor arızalı araçları da satın alıyor musunuz?",
+          "answer": "Evet, motor arızalı araçlar da satın alma kapsamımızdadır. Motorun tamamen çalışmaması, hararet veya mekanik arıza bulunması tek başına aracın değersiz olduğu anlamına gelmez. Şanzıman, elektronik sistemler, kaporta ve kullanılabilir diğer parçalarla birlikte genel durum değerlendirilerek araca bütüncül bir teklif hazırlanır. Araç yürümüyor olsa bile kullanılabilir parçalar değer taşımaya devam edebilir."
+        },
+        {
+          "question": "Ankara'da ücretsiz çekici hizmetiniz hangi ilçelerde geçerli oluyor?",
+          "answer": "Satın alma konusunda anlaşmaya varılan araçlar için listelenen Ankara ilçelerinde ücretsiz çekici hizmeti organize edilir. Çankaya, Keçiören, Yenimahalle, Mamak, Etimesgut, Sincan, Altındağ, Balgat ve Çayyolu gibi farklı noktalarda aracın bulunduğu adres ve erişim koşulları alınarak uygun çekici planlaması yapılır. Satın alma gerçekleşirse çekici için ayrıca ücret talep edilmez."
+        }
+      ]
+    },
+    "izmir": {
+      "metaTitle": "İzmir'de Hasarlı, Kazalı ve Pert Araç Alımı | Ankara Pert",
+      "metaDescription": "İzmir'in kıyı iklimi, liman ve sanayi bağlantıları gözetilerek hasarlı, pert ve motor arızalı araçlar ücretsiz ekspertiz ve çekiciyle doğrudan satın alınır.",
+      "heroTitle": "İzmir'de Hasarlı Araç Alımında Kıyıya Özgü Değerleme",
+      "heroSubtitle": "Kıyı iklimi, liman-sanayi bağlantıları ve geniş çevre yolu ağı İzmir'de hasarlı araç değerini ve lojistiğini birlikte etkiler.",
+      "intro": "İzmir'de hasarlı araç piyasası kıyı iklimi, liman ve sanayi hareketliliği ile şehir içindeki çevre yolu bağlantılarından etkilenir. Deniz etkisine açık bölgelerde uzun süre kullanılan araçlarda korozyon kontrolü önem kazanırken, Bornova, Çiğli ve Gaziemir gibi ulaşım-sanayi akslarında parça ve servis erişimi değerlemeyi destekleyebilir. Ankara PERT, İzmir'deki kazalı, pert, hurda ve motor arızalı araçları doğrudan satın alır. Ücretsiz ekspertiz sonrasında teklif kabul edilirse çekici ücretsiz organize edilir; noter devriyle birlikte ödeme tamamlanır.",
+      "body": [
+        "İzmir'in kent yapısı körfez çevresine yayıldığı için Konak, Karşıyaka, Balçova ve Narlıdere'deki araçların teslim güzergâhları birbirinden farklıdır. Çevre yolu ve ana bağlantılar ilçeler arası taşımayı kolaylaştırırken, yoğun saatlerde çekici operasyonu için aracın tam konumu önem kazanır. Kıyıya yakın bölgelerde nem ve tuzlu hava, özellikle eski veya uzun süre açıkta kalan araçlarda metal aksamın korozyon durumunun incelenmesini gerekli kılabilir. Bu nedenle hasarlı araç değerlendirilirken yalnızca kazanın görünen kaporta etkisine değil, şasi, mekanik parçalar, elektrik-elektronik sistemler ve aracın genel korunma durumuna da bakılır. Böylece teklif aracın gerçek kalan değerine göre şekillenir. Uzun süre bekleyen araçlarda nem kaynaklı izler de ekspertiz sırasında ayrıca kontrol edilebilir.",
+        "İzmir aynı zamanda liman, sanayi ve şehirler arası otoyol bağlantılarının kesiştiği güçlü bir ulaşım merkezidir. Aliağa yönündeki sanayi koridoru, İstanbul-İzmir otoyolu ve Aydın yönü bağlantıları araç ve ticari taşıt hareketliliğini destekler. Bu hareketlilik, binek araçların yanında hafif ticari araçların da hasarlı araç piyasasında sık değerlendirilmesine yol açabilir. Kullanılabilir motor, şanzıman, elektronik modül, kaporta ve yürüyen aksam parçaları aracın ekonomik değerinin bir bölümünü koruyabilir. Teklif üzerinde anlaşılması halinde Ankara PERT aracı bulunduğu yerden ücretsiz çekiciyle teslim alır, noter devrini gerçekleştirir ve ödemeyi devir işlemiyle eş zamanlı yapar. Bu yapı, hasarlı araçların parça ve lojistik açısından çok yönlü değerlendirilmesini destekler."
+      ],
+      "localPoints": [
+        "Kıyı koşullarında korozyon odaklı değerlendirme",
+        "Çevre yolu ilçeler arası erişimi kolaylaştırır",
+        "Liman ve sanayi hareketliliği araç çeşitliliği",
+        "Otoyol bağlantıları şehir dışı sevki destekler"
+      ],
+      "districtNotes": {
+        "Konak": "Konak'ın yoğun merkez trafiği, sahil hattı ve dar sokaklı bölgeleri çekici erişimini konuma göre değiştirir. Çalışmayan araçlarda tam adres ve yol durumu alınarak teslim organizasyonu buna göre yapılır.",
+        "Karşıyaka": "Karşıyaka'da sahil kesimi ile çevre yoluna çıkan iç mahallelerin ulaşım yapısı farklıdır. Kıyıya yakın araçlarda korozyon izleri, hasar değerlendirmesinde kaporta ve alt aksamla birlikte ayrıca kontrol edilir.",
+        "Bornova": "Bornova'nın çevre yolu bağlantıları ve sanayi-servis alanlarına yakınlığı, hasarlı araçların taşınması ve parça değerinin değerlendirilmesi açısından avantaj sağlar. Araç mekanik ve gövde durumu birlikte incelenir.",
+        "Buca": "Buca'nın yoğun konut dokusu ve ana yollara bağlanan farklı mahalleleri çekici rotasını etkileyebilir. Yürümeyen araçlarda sokak erişimi önceden değerlendirilerek uygun ücretsiz çekici organizasyonu oluşturulur. Böylece aracın bulunduğu yerden güvenli biçimde alınması hedeflenir.",
+        "Çiğli": "Çiğli'de sanayi alanları, çevre yolu bağlantıları ve kuzey İzmir ulaşım koridoru araç hareketliliğini artırır. Hasarlı binek veya ticari araçlarda kullanılabilir mekanik parçalar toplam değer içinde dikkate alınır.",
+        "Gaziemir": "Gaziemir'in havalimanı, çevre yolu ve güney yönündeki karayolu bağlantılarına yakınlığı lojistik açıdan elverişlidir. Hasarlı aracın konumu ve hareket durumu alınarak çekici ve teslim planı buna göre hazırlanır.",
+        "Balçova": "Balçova'da sahil aksı ile çevre yoluna bağlantı imkânı hasarlı araç taşımada alternatif güzergâhlar sunar. Deniz etkisine yakın araçlarda kaporta ve alt aksamın genel durumu değerleme sırasında gözden geçirilir.",
+        "Narlıdere": "Narlıdere'nin kıyı boyunca uzanan yerleşimi ve batı yönü bağlantıları, çekici planında konumu belirleyici hale getirir. Hasarlı aracın erişim noktası, mekanik durumu ve korozyon belirtileri birlikte değerlendirilir."
+      },
+      "faqs": [
+        {
+          "question": "İzmir'de deniz etkisi hasarlı araç değerlemesini değiştirir mi?",
+          "answer": "Evet, özellikle kıyıya yakın bölgelerde uzun süre kullanılan veya açıkta bekleyen araçlarda korozyon durumu değerlemeyi etkileyebilir. Ancak bu tek başına fiyatı belirlemez. Hasarın seviyesi, şasi, motor, şanzıman, elektronik sistemler, kaporta parçaları ve aracın genel kondisyonu birlikte incelenerek kalan ekonomik değer hesaplanır. Aracın kullanım yeri ve bekleme süresi de göz önünde bulundurulabilir."
+        },
+        {
+          "question": "İzmir'de ağır hasarlı araç için çekici sağlıyor musunuz?",
+          "answer": "Evet, satın alma konusunda anlaşmaya varılan ağır hasarlı araç için ücretsiz çekici organize edilir. Aracın Konak, Karşıyaka, Bornova veya diğer hizmet verilen ilçelerden hangisinde bulunduğu, yol erişimi ve hareket edip etmediği öğrenilir. Bu bilgiler uygun çekici ve güzergâhı belirlemek için kullanılır. Satıcıdan ayrıca çekici ücreti talep edilmez."
+        },
+        {
+          "question": "İzmir'de ticari hasarlı araçları da satın alıyor musunuz?",
+          "answer": "Evet, uygun durumdaki hasarlı hafif ticari araçlar da değerlendirme kapsamındadır. İzmir'in liman, sanayi ve şehirler arası ulaşım hareketliliği nedeniyle ticari araçlarda kullanım biçimi ve mekanik durum özellikle önemlidir. Motor, şanzıman, gövde, yürüyen aksam ve kullanılabilir parçalar birlikte incelenerek teklif oluşturulur. Araç çalışmıyorsa teslim için ücretsiz çekici de organize edilebilir."
+        }
+      ]
+    },
+    "bursa": {
+      "metaTitle": "Bursa'da Hasarlı, Kazalı ve Pert Araç Alımı | Ankara Pert",
+      "metaDescription": "Bursa'nın güçlü otomotiv ve yan sanayi yapısı dikkate alınarak hasarlı, kazalı ve pert araçlar ücretsiz ekspertiz ve çekici desteğiyle güvenle satın alınır.",
+      "heroTitle": "Bursa'da Hasarlı Araç Değerinde Otomotiv Sanayisi Etkisi",
+      "heroSubtitle": "Otomotiv üretimi ve yan sanayinin güçlü olduğu Bursa'da kullanılabilir parçalar, ağır hasarlı araçların kalan değerinde önemli rol oynayabilir.",
+      "intro": "Bursa'da hasarlı araç değerlendirmesini farklılaştıran başlıca unsur, şehrin güçlü otomotiv üretimi ve yan sanayi ekosistemidir. Servis, yedek parça ve üretim kabiliyetinin yoğun olduğu bir pazarda ağır hasarlı aracın kullanılabilir parçaları ekonomik değerini koruyabilir. Buna şehir içi yoğunluk, Mudanya sahil hattı ve Uludağ çevresindeki değişken kış koşulları da eklenir. Ankara PERT, Bursa'da kazalı, pert, hurda ve motor arızalı araçları ücretsiz ekspertizle değerlendirir; anlaşma halinde ücretsiz çekici, noter devri ve devirle eş zamanlı ödeme sağlar.",
+      "body": [
+        "Bursa'nın Osmangazi, Nilüfer ve Yıldırım çevresindeki yoğun kent trafiği ile Kestel ve Gürsu yönündeki sanayi-ulaşım aksları, hasarlı araçların teslim planını etkiler. İstanbul-İzmir otoyolu ve ana karayolu bağlantıları şehirler arası sevki kolaylaştırırken, şehir içindeki konum yine çekici rotasının belirlenmesinde önemlidir. Mudanya gibi kıyı ilçelerinde deniz etkisiyle oluşabilecek korozyon belirtileri, yüksek kesimlere çıkan güzergâhlarda ise kış koşullarının yaratabileceği alt takım veya çarpışma hasarları değerlendirmeye dahil edilebilir. Aracın bulunduğu yer, hareket durumu ve hasar fotoğrafları üzerinden uygun ekspertiz ve teslim yöntemi belirlenir. Bursa'nın dağ ile ova arasında değişen yol yapısı, özellikle kış döneminde çekici erişimi ve güvenli taşıma açısından önceden değerlendirilir.",
+        "Bursa'daki otomotiv ve yan sanayi kümelenmesi, hasarlı bir aracın yalnızca onarım maliyeti açısından değil parça değeri açısından da incelenmesini anlamlı kılar. Motor, şanzıman, elektronik kontrol birimleri, kaporta parçaları, farlar ve yürüyen aksam kullanılabilir durumdaysa aracın kalan değeri artabilir. Özellikle onarımı ekonomik olmayan pert veya ağır hasarlı araçlarda bu parçaların piyasa karşılığı önem taşır. Ankara PERT değerlendirmeyi marka-model, model yılı, hasar yapısı ve kullanılabilir bileşenleri birlikte ele alarak yapar. Teklif kabul edildiğinde ücretsiz çekici organize edilir; araç noter devriyle satın alınır ve ödeme devirle aynı anda gerçekleştirilir. Bu yöntem, otomotiv altyapısının sağladığı parça potansiyelinin teklif içinde daha gerçekçi değerlendirilmesine yardımcı olur."
+      ],
+      "localPoints": [
+        "Otomotiv yan sanayisi parça değerini destekler",
+        "Otoyol ağı şehir dışı sevki kolaylaştırır",
+        "Sanayi akslarına güçlü servis erişimi bulunur",
+        "Kıyı ve kış koşulları birlikte değerlendirilir"
+      ],
+      "districtNotes": {
+        "Osmangazi": "Osmangazi'nin merkezi konumu, yoğun trafik ve farklı sanayi-servis bölgelerine erişimi hasarlı araç değerlemesini çeşitlendirir. Araç konumu ile mekanik durumu alınarak ekspertiz ve ücretsiz çekici planı oluşturulur.",
+        "Nilüfer": "Nilüfer, organize sanayi alanları ve ana ulaşım bağlantılarına yakınlığıyla otomotiv servis-parça ekosisteminin güçlü hissedildiği ilçelerdendir. Hasarlı araçta kullanılabilir bileşenler toplam değerleme içinde ayrıca dikkate alınır.",
+        "Yıldırım": "Yıldırım'ın yoğun yerleşim yapısı ve doğu yönündeki ana yol bağlantıları, çalışmayan araçlarda çekici güzergâhını önemli kılar. Sokak erişimi ve araç konumu önceden değerlendirilerek teslim planlanır.",
+        "Mudanya": "Mudanya'da deniz etkisine açık kullanım, özellikle yaşı yüksek araçlarda korozyon kontrolünü önemli hale getirebilir. Hasarlı araç değerlendirilirken kaporta, alt aksam ve mekanik bileşenlerin genel durumu birlikte incelenir.",
+        "Kestel": "Kestel'in Bursa'nın doğu sanayi ve karayolu aksında yer alması, ticari ve binek araç hareketliliğini artırır. Hasarlı araçlarda mekanik parçalar ve kullanılabilir gövde bileşenleri de değerlemeye dahil edilir.",
+        "Gürsu": "Gürsu'nun doğu Bursa ulaşım koridoruna ve sanayi bölgelerine yakınlığı, çekiciyle teslim ve parça piyasasına erişim açısından avantaj sağlayabilir. Araç hasarı bütün bileşenleriyle birlikte değerlendirilir. Teslim güzergâhı da aracın bulunduğu noktaya göre planlanır."
+      },
+      "faqs": [
+        {
+          "question": "Bursa'da pert araçların parça değeri neden özellikle önemlidir?",
+          "answer": "Bursa'nın güçlü otomotiv ve yan sanayi yapısı nedeniyle kullanılabilir parçaların ekonomik karşılığı hasarlı araç değerlemesinde önemli olabilir. Motor, şanzıman, elektronik üniteler, kaporta ve yürüyen aksam sağlam kaldıysa araç yalnızca hurda ağırlığı üzerinden değerlendirilmez. Hasar yapısı ile parça durumu birlikte incelenerek teklif oluşturulur. Bu yaklaşım özellikle onarımı ekonomik olmayan araçlarda daha belirgin hale gelir."
+        },
+        {
+          "question": "Bursa'da çalışmayan araç için ücretsiz çekici var mı?",
+          "answer": "Evet, satın alma konusunda anlaşmaya varılan çalışmayan araç için ücretsiz çekici hizmeti sağlanır. Aracın Osmangazi, Nilüfer, Yıldırım, Mudanya, Kestel veya Gürsu'daki konumu ve yol erişimi önceden alınır. Buna göre uygun çekici organizasyonu hazırlanır ve satıcının ayrıca taşıma yaptırması gerekmez. Noter devri ve ödeme de teslim süreciyle koordineli yürütülür."
+        },
+        {
+          "question": "Bursa'da motor arızalı araçlar hangi temel kriterlerle değerlendiriliyor?",
+          "answer": "Motor arızalı araçlarda yalnızca motorun onarım maliyetine bakılmaz. Şanzıman, elektronik sistemler, kaporta, şasi, yürüyen aksam ve kullanılabilir diğer parçalar da kontrol edilir. Bursa'daki güçlü servis ve parça ekosistemi nedeniyle sağlam bileşenler kalan değere katkı sağlayabilir; teklif aracın bütün durumu üzerinden hazırlanır. Motor tamamen çalışmasa bile diğer sağlam bileşenler ekonomik değer taşıyabilir."
+        }
+      ]
+    },
+    "antalya": {
+      "metaTitle": "Antalya Hasarlı, Kazalı ve Pert Araç Alımı | Ankara Pert",
+      "metaDescription": "Antalya'da turizm trafiği, kıyı koşulları ve D400 hattı dikkate alınarak hasarlı, pert ve arızalı araçlar ücretsiz ekspertiz ve çekiciyle satın alınır.",
+      "heroTitle": "Antalya'da Hasarlı Araç Alımında Turizm ve Kıyı Etkisi",
+      "heroSubtitle": "Yoğun turizm hareketliliği, sıcak kıyı iklimi ve D400 koridoru Antalya'da hasarlı araçların kullanım geçmişini ve lojistiğini farklılaştırır.",
+      "intro": "Antalya'da hasarlı araç piyasası yıl boyunca turizm hareketliliği, uzun kıyı şeridi, sıcak iklim ve doğu ilçelerini birbirine bağlayan D400 koridorundan etkilenir. Kiralama ve ticari kullanımın yaygın olduğu turizm bölgelerinde kilometre ve kullanım yoğunluğu önem kazanırken, kıyıya yakın araçlarda korozyon; yüksek sıcaklıklarda ise soğutma sistemi ve motor durumu ayrıca incelenebilir. Ankara PERT, kazalı, pert, hurda ve motor arızalı araçları ücretsiz ekspertizle değerlendirir; anlaşma halinde ücretsiz çekici, noter devri ve eş zamanlı ödeme sağlar.",
+      "body": [
+        "Antalya merkezde Muratpaşa, Kepez ve Konyaaltı birbirine yakın görünse de trafik yapısı ve çekici erişimi farklı olabilir. Alanya, Manavgat ve Serik yönünde ise mesafe uzar ve D400 üzerindeki yoğunluk teslim planlamasını daha önemli hale getirir. Özellikle turizm sezonunda artan araç hareketliliği, kazalı veya yolda kalan aracın bulunduğu konuma uygun bir lojistik plan gerektirir. Bu yüzden değerlendirme sırasında yalnızca hasar fotoğrafları değil, aracın bulunduğu nokta, yürür durumda olup olmadığı ve çekicinin erişebileceği alan da dikkate alınır. Teklif kabul edildiğinde satıcının aracı başka bir şehre veya servise taşıması gerekmeden ücretsiz çekici organizasyonu yapılabilir.",
+        "Antalya'nın sıcak yazları ve deniz etkisi, araçların mekanik ve gövde durumunu değerlendirirken farklı kontrol başlıkları doğurur. Uzun süre sıcak koşullarda çalışan araçlarda soğutma sistemi, hararet geçmişi ve motor arızaları; sahile yakın kullanımda ise metal parçalardaki korozyon belirtileri önem taşıyabilir. Turizm ve kiralama kaynaklı yoğun kullanım görmüş araçlarda kilometre, bakım geçmişi ve yürüyen aksam da ayrıca değerlendirilir. Ankara PERT hasarlı aracın marka-modelini, mekanik durumunu, kaporta ve elektronik bileşenlerini birlikte inceler. Kullanılabilir parçalar kalan değeri destekleyebilir. Anlaşma sonrasında noter devri yapılır ve ödeme mülkiyet devriyle eş zamanlı olarak tamamlanır. Böylece sıcak iklim veya yoğun kullanım kaynaklı mekanik etkiler de teklif değerlendirmesinde gözden kaçmaz."
+      ],
+      "localPoints": [
+        "D400 hattına göre çekici rotası planlama",
+        "Turizm kaynaklı yoğun kullanım ayrı değerlendirilir",
+        "Kıyı araçlarında korozyon kontrolü önemlidir",
+        "Sıcak iklimde motor sistemi dikkatle incelenir"
+      ],
+      "districtNotes": {
+        "Muratpaşa": "Muratpaşa'nın yoğun kent trafiği, turizm tesisleri ve sahil bağlantıları araç kullanımını çeşitlendirir. Hasarlı araçta konum, kullanım geçmişi ve kıyı koşullarının oluşturabileceği korozyon belirtileri birlikte değerlendirilir.",
+        "Kepez": "Kepez'in geniş yerleşim ve sanayi-servis alanları, merkez içindeki araç hareketliliğini artırır. Motor arızalı veya kazalı araçlarda mekanik durum incelenir; hareket etmeyen araç için uygun çekici erişimi planlanır.",
+        "Konyaaltı": "Konyaaltı'nın kıyı boyunca uzanan yapısı nedeniyle deniz etkisine açık araçlarda metal aksam ve alt gövde kontrolü önem kazanabilir. Hasar ve korozyon durumu birlikte ele alınarak değerleme yapılır.",
+        "Alanya": "Alanya'nın Antalya merkeze uzaklığı ve D400 bağlantısı, hasarlı araç tesliminde lojistik planlamayı öne çıkarır. Turizm kaynaklı yoğun kullanım geçmişi bulunan araçlarda kilometre, mekanik durum ve yürüyen aksam birlikte değerlendirilir.",
+        "Manavgat": "Manavgat, D400 üzerindeki konumu ve güçlü turizm hareketliliği nedeniyle binek ve ticari araç kullanımının yoğun olduğu bir aksdır. Hasarlı araçlarda kullanım biçimi ile mekanik ve gövde durumu birlikte incelenir.",
+        "Serik": "Serik'in Antalya-Manavgat ulaşım koridorundaki konumu ve turizm bölgelerine yakınlığı araç trafiğini artırır. Kazalı veya motor arızalı araçlarda konum bilgisi alınarak ekspertiz ve ücretsiz çekici süreci buna göre planlanır."
+      },
+      "faqs": [
+        {
+          "question": "Antalya'da Alanya ilçesinden hasarlı araç satın alıyor musunuz?",
+          "answer": "Evet, Alanya hizmet verdiğimiz Antalya ilçeleri arasındadır. Merkeze olan mesafe ve D400 güzergâhındaki trafik nedeniyle aracın açık konumu, hareket durumu ve hasar bilgileri önceden alınır. Teklif üzerinde anlaşma sağlanırsa ücretsiz çekici organize edilir; satış noter devriyle ve ödeme devirle eş zamanlı olarak tamamlanır. Satıcının aracı Antalya merkeze getirmesi gerekmez."
+        },
+        {
+          "question": "Antalya sıcağı motor arızalı araç değerlendirmesini etkiler mi?",
+          "answer": "Evet, yüksek sıcaklıkta kullanılan araçlarda soğutma sistemi, hararet geçmişi ve motorun mevcut durumu değerlemenin önemli parçaları olabilir. Ancak teklif yalnızca motor arızasına göre verilmez. Şanzıman, elektronik sistemler, kaporta, yürüyen aksam ve kullanılabilir diğer parçalar da birlikte değerlendirilerek aracın kalan değeri belirlenir. Özellikle soğutma sistemi arızaları ekspertizde ayrıca dikkatle incelenebilir."
+        },
+        {
+          "question": "Antalya'da kıyıdaki hasarlı araçlarda korozyona da bakıyor musunuz?",
+          "answer": "Evet, deniz etkisine açık bölgelerde kullanılan araçlarda korozyon belirtileri genel ekspertizin bir parçası olarak değerlendirilir. Özellikle alt gövde, metal bağlantılar ve kaporta durumu hasarla birlikte incelenebilir. Korozyon tek başına aracın değerini belirlemez; mekanik durum, hasar seviyesi ve kullanılabilir parçalarla birlikte ele alınır. Araç çalışmıyorsa ücretsiz çekici seçeneği de satış sürecine dahil edilir."
+        }
+      ]
+    }
+  }
+}

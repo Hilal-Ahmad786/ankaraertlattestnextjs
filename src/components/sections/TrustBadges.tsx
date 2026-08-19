@@ -11,9 +11,9 @@ export default function TrustBadges() {
         description: 'Sektörde uzman ekip',
       },
       {
-        icon: 'fas fa-users',
-        title: '50K+ Müşteri',
-        description: 'Mutlu müşteri portföyü',
+        icon: 'fas fa-truck-pickup',
+        title: 'Çekici ve Noter Masrafı Bize Ait',
+        description: 'Aracınız bulunduğu yerden alınır',
       },
       {
         icon: 'fas fa-hand-holding-usd',

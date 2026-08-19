@@ -61,7 +61,7 @@ export default function HasarliAracPage() {
     {
       icon: 'fas fa-tachometer-alt',
       title: 'Hızlı Süreç',
-      description: '24 saat içinde tüm işlemler tamamlanır.',
+      description: 'Anlaşma sağlandığında ödeme aynı gün yapılır.',
     },
     {
       icon: 'fas fa-phone-volume',

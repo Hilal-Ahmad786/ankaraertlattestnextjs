@@ -16,9 +16,11 @@ export default function ContactCTA() {
           7 / 24 BİZE ULAŞIN... FARKI KEŞFEDİN...
         </h5>
         <h2 className="text-4xl md:text-5xl font-bold mb-2">BİZE ULAŞIN</h2>
-        <h1 className="text-5xl md:text-6xl font-bold text-red-500 mb-6">
+        {/* Not a heading: this is a phone number. It was an <h1>, which gave
+            every page a second H1 competing with the real one. */}
+        <p className="text-5xl md:text-6xl font-bold text-red-500 mb-6">
           {siteConfig.phoneDisplay}
-        </h1>
+        </p>
         <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
           Sizlere hakkımızda pek çok bilgi verdik,{' '}
           <span className="font-bold text-orange-500">{siteConfig.phoneDisplay}</span>{' '}

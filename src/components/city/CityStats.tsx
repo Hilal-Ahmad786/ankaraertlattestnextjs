@@ -10,10 +10,10 @@ interface CityStatsProps {
  */
 export default function CityStats({ cityName }: CityStatsProps) {
     const commitments = [
-        { value: 'Ücretsiz', label: 'Ekspertiz ve Değerlendirme', color: 'text-orange-500' },
-        { value: 'Ücretsiz', label: 'Çekici ile Yerinden Alım', color: 'text-blue-600' },
-        { value: 'Noterde', label: 'Devirle Eş Zamanlı Ödeme', color: 'text-green-600' },
-        { value: '7/24', label: 'Telefon ve WhatsApp Hattı', color: 'text-purple-600' },
+        { value: '30 Dakika', label: 'İçinde Nakit Teklif', color: 'text-orange-500' },
+        { value: 'Aynı Gün', label: 'Anlaşmada Nakit Ödeme', color: 'text-green-600' },
+        { value: 'Çekici', label: 'Masrafı Bize Ait', color: 'text-blue-600' },
+        { value: 'Noter', label: 'Masrafı Bize Ait', color: 'text-purple-600' },
     ];
 
     return (

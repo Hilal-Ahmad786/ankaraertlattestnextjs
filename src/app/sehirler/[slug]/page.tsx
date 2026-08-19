@@ -14,8 +14,10 @@ import UrgentCTABanner from '@/components/sections/UrgentCTABanner';
 import WhyUs from '@/components/sections/WhyUs';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
 import ContactCTA from '@/components/sections/ContactCTA';
-import { localBusinessSchema, breadcrumbSchema } from '@/lib/schema';
+import { localBusinessSchema, breadcrumbSchema, serviceSchema } from '@/lib/schema';
 import { siteConfig } from '@/config/site';
+import { services } from '@/data/services';
+import { getCityContent } from '@/data/city-content';
 
 const BASE_URL = 'https://ankarapert.com.tr';
 
@@ -33,16 +35,19 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   const url = `${BASE_URL}/sehirler/${city.slug}`;
+  const written = getCityContent(city.slug);
+  const metaTitle = written?.metaTitle ?? city.metaTitle;
+  const metaDescription = written?.metaDescription ?? city.metaDescription;
 
   return {
-    title: city.metaTitle,
-    description: city.metaDescription,
+    title: metaTitle,
+    description: metaDescription,
     alternates: {
       canonical: url,
     },
     openGraph: {
-      title: city.metaTitle,
-      description: city.metaDescription,
+      title: metaTitle,
+      description: metaDescription,
       url,
       locale: 'tr_TR',
       type: 'website',
@@ -136,6 +141,32 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
     },
   ];
 
+  // City-scoped Service entities. LocalBusiness alone says "we exist here";
+  // Service says what is actually offered here, which is what the city query asks.
+  const written = getCityContent(city.slug);
+
+  const cityServiceJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `${city.name} Hasarlı Araç Alım Hizmetleri`,
+    itemListElement: services.map((service, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        ...serviceSchema({
+          name: `${city.name} ${service.title}`,
+          description: `${city.name} ve ilçelerinde ${service.title.toLowerCase()} hizmeti.`,
+          url: `/${service.slug}`,
+        }),
+        areaServed: {
+          '@type': 'City',
+          name: city.name,
+          containedInPlace: { '@type': 'Country', name: 'Türkiye' },
+        },
+      },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 pb-0">
       <script
@@ -146,12 +177,16 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(cityServiceJsonLd) }}
+      />
 
       <HeroBanner
         variant="default"
         tagline={`${city.region} Bölgesi • ${city.plateCode}`}
-        title={city.heroTitle}
-        subtitle={city.heroSubtitle}
+        title={written?.heroTitle ?? city.heroTitle}
+        subtitle={written?.heroSubtitle ?? city.heroSubtitle}
         highlight="30 Dakikada Nakit"
         backgroundImage={city.heroImage}
       />
@@ -160,11 +195,19 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
 
       <section className="container mx-auto px-4 pt-10 relative z-20">
         <p className="text-lg leading-relaxed text-center text-gray-700 max-w-4xl mx-auto">
-          {city.name} ve çevresinde kazalı, pert veya hasar kayıtlı aracınızı
-          değerinde satmak için 30 dakikada nakit teklif veriyoruz. Türkiye
-          genelinde{' '}
-          hasarlı araç alan{' '}
-          uzman ekibimiz aynı gün ödeme ve ücretsiz çekici hizmeti sunuyor.
+          {written?.intro ?? (
+            <>
+              {city.name} ve çevresinde kazalı, pert veya hasar kayıtlı aracınızı
+              değerinde satın alıyoruz. Ücretsiz ekspertiz ve çekici hizmetiyle
+              aracınız bulunduğu yerden teslim alınır.
+            </>
+          )}
+        </p>
+        <p className="mt-4 text-base leading-relaxed text-center text-gray-600 max-w-3xl mx-auto">
+          <strong className="text-gray-800">30 dakikada nakit teklif</strong>, anlaşma
+          sağlandığında <strong className="text-gray-800">aynı gün ödeme</strong>.
+          Çekici ve noter masrafları bize aittir; {city.name} içinde aracınız
+          bulunduğu yerden teslim alınır.
         </p>
       </section>
 
@@ -175,10 +218,15 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           <div className="lg:col-span-2 space-y-8">
-            <CityContent content={city.content} cityName={city.name} />
-            <CityDistricts city={city} />
+            <CityContent
+              content={city.content}
+              cityName={city.name}
+              body={written?.body}
+              localPoints={written?.localPoints}
+            />
+            <CityDistricts city={city} districtNotes={written?.districtNotes} />
             <CityVehicleTypes city={city} />
-            <CityFAQs cityName={city.name} />
+            <CityFAQs cityName={city.name} faqs={written?.faqs} />
           </div>
 
           <div className="lg:col-span-1">

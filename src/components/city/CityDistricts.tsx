@@ -2,9 +2,16 @@ import { City } from '@/types';
 
 interface CityDistrictsProps {
     city: City;
+    /**
+     * District name -> a sentence or two specific to that district. Turns the
+     * chip list into indexable content and gives long-tail queries like
+     * "kecioren hasarli arac alan" something to match.
+     */
+    districtNotes?: Record<string, string>;
 }
 
-export default function CityDistricts({ city }: CityDistrictsProps) {
+export default function CityDistricts({ city, districtNotes }: CityDistrictsProps) {
+    const hasNotes = districtNotes && Object.keys(districtNotes).length > 0;
     return (
         <div className="space-y-8">
             {/* Advantages Section - Card Style */}
@@ -37,20 +44,38 @@ export default function CityDistricts({ city }: CityDistrictsProps) {
                     </span>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                    {city.districts.map((district, index) => (
-                        <div
-                            key={index}
-                            className="group flex items-center gap-2 p-3 rounded-lg bg-gray-50 border border-transparent hover:bg-white hover:border-blue-200 hover:shadow-md transition-all cursor-default"
-                        >
-                            <i className="fas fa-map-pin text-gray-400 text-xs group-hover:text-blue-500 transition-colors"></i>
-                            <span className="text-gray-600 text-sm font-medium group-hover:text-gray-900">{district}</span>
-                        </div>
-                    ))}
-                    <div className="flex items-center justify-center p-3 rounded-lg bg-gray-50 border border-gray-100 border-dashed text-gray-400 text-sm italic">
-                        + Tüm mahalleler
+                {hasNotes ? (
+                    <div className="space-y-4">
+                        {city.districts.map((district) => (
+                            <div key={district} className="p-4 rounded-lg bg-gray-50 border border-gray-100">
+                                <h4 className="text-sm font-bold text-gray-800 flex items-center gap-2 mb-1">
+                                    <i className="fas fa-map-pin text-blue-500 text-xs" aria-hidden></i>
+                                    {district}
+                                </h4>
+                                {districtNotes?.[district] && (
+                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                        {districtNotes[district]}
+                                    </p>
+                                )}
+                            </div>
+                        ))}
                     </div>
-                </div>
+                ) : (
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                        {city.districts.map((district, index) => (
+                            <div
+                                key={index}
+                                className="group flex items-center gap-2 p-3 rounded-lg bg-gray-50 border border-transparent hover:bg-white hover:border-blue-200 hover:shadow-md transition-all cursor-default"
+                            >
+                                <i className="fas fa-map-pin text-gray-400 text-xs group-hover:text-blue-500 transition-colors"></i>
+                                <span className="text-gray-600 text-sm font-medium group-hover:text-gray-900">{district}</span>
+                            </div>
+                        ))}
+                        <div className="flex items-center justify-center p-3 rounded-lg bg-gray-50 border border-gray-100 border-dashed text-gray-400 text-sm italic">
+                            + Tüm mahalleler
+                        </div>
+                    </div>
+                )}
                 <p className="text-xs text-gray-400 mt-4 text-center">
                     {city.name} genelinde 7/24 ücretsiz çekici hizmetimiz bulunmaktadır.
                 </p>

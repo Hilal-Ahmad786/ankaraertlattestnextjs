@@ -52,8 +52,8 @@ export default function HeroWithButtons({
                 <div className="text-sm text-gray-300">Yıllık Tecrübe</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-orange-400 mb-2">5000+</div>
-                <div className="text-sm text-gray-300">Mutlu Müşteri</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">Ücretsiz</div>
+                <div className="text-sm text-gray-300">Ücretsiz Çekici</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-orange-400 mb-2">%100</div>

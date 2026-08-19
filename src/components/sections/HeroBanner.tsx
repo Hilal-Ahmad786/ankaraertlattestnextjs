@@ -91,9 +91,11 @@ export default function HeroBanner({
         )}
 
         {/* Subtitle */}
-        <h2 className="text-xl md:text-2xl lg:text-3xl mb-10 text-gray-100 animate-fade-in">
+        {/* Lead paragraph, not a heading — an <h2> here outranked the real
+            section headings in the document outline. */}
+        <p className="text-xl md:text-2xl lg:text-3xl mb-10 text-gray-100 animate-fade-in">
           {subtitle}
-        </h2>
+        </p>
 
         {/* CTA Buttons */}
         <div className="flex justify-center gap-4 flex-wrap animate-slide-up">

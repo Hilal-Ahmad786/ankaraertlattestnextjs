@@ -89,7 +89,7 @@ export default function Header() {
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-0 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all w-[600px] border border-gray-100 overflow-hidden z-50 transform origin-top scale-95 group-hover:scale-100">
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4 border-b pb-3">
-                    <h3 className="font-bold text-gray-800 text-lg">Hizmet Bölgelerimiz</h3>
+                    <span className="font-bold text-gray-800 text-lg">Hizmet Bölgelerimiz</span>
                     <Link href="/sehirler" className="text-sm text-orange-500 hover:text-orange-600 font-medium flex items-center">
                       Tüm Şehirleri Gör <i className="fas fa-arrow-right ml-1"></i>
                     </Link>

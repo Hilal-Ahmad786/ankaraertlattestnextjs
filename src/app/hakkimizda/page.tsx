@@ -81,7 +81,7 @@ export default function HakkimizdaPage() {
               <li className="flex items-start gap-3">
                 <i className="fas fa-check-circle text-orange-500 text-xl mt-1"></i>
                 <span className="text-lg">
-                  <strong>Hızlı İşlem:</strong> 24 saat içinde tüm süreçleri tamamlıyoruz.
+                  <strong>Hızlı İşlem:</strong> Teklif 30 dakikada, ödeme anlaşma günü yapılır.
                 </span>
               </li>
               <li className="flex items-start gap-3">
