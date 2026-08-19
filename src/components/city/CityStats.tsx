@@ -10,10 +10,10 @@ interface CityStatsProps {
  */
 export default function CityStats({ cityName }: CityStatsProps) {
     const commitments = [
-        { value: '30 Dakika', label: 'İçinde Nakit Teklif', color: 'text-orange-500' },
-        { value: 'Aynı Gün', label: 'Anlaşmada Nakit Ödeme', color: 'text-green-600' },
-        { value: 'Çekici', label: 'Masrafı Bize Ait', color: 'text-blue-600' },
-        { value: 'Noter', label: 'Masrafı Bize Ait', color: 'text-purple-600' },
+        { value: '30 Dakika', label: 'İçinde Nakit Teklif', color: 'text-accent-ink' },
+        { value: 'Aynı Gün', label: 'Anlaşmada Nakit Ödeme', color: 'text-brand' },
+        { value: 'Çekici', label: 'Masrafı Bize Ait', color: 'text-accent-ink' },
+        { value: 'Noter', label: 'Masrafı Bize Ait', color: 'text-brand' },
     ];
 
     return (
@@ -21,7 +21,7 @@ export default function CityStats({ cityName }: CityStatsProps) {
             {commitments.map((item) => (
                 <div
                     key={item.label}
-                    className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md transition"
+                    className="bg-white p-4 rounded-3xl shadow-sm border border-gray-100 text-center hover:shadow-md transition"
                 >
                     <div className={`text-2xl font-bold ${item.color} mb-1`}>{item.value}</div>
                     <div className="text-xs text-gray-500 font-medium uppercase tracking-wide">

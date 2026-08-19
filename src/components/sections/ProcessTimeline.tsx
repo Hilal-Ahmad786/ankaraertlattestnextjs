@@ -16,7 +16,7 @@ interface ProcessStep {
     steps,
   }: ProcessTimelineProps) {
     return (
-      <section id="surec" className="process-timeline py-16 bg-light">
+      <section id="surec" className="process-timeline py-20 bg-light">
         <div className="container mx-auto px-4">
           <header className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -32,7 +32,7 @@ interface ProcessStep {
               {steps.map((step, index) => (
                 <div
                   key={index}
-                  className="timeline-step text-center flex-1 relative"
+                  className="timeline-step text-center flex-1 relative rounded-3xl border border-white/70 bg-white/35 p-6 shadow-glass backdrop-blur-2xl"
                 >
                   <div className="timeline-icon mx-auto mb-4">
                     <i className={step.icon}></i>

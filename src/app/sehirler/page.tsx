@@ -48,8 +48,9 @@ export default function CitiesListingPage() {
     return (
         <div className="min-h-screen bg-gray-50 pb-20">
             {/* Hero Section */}
-            <section className="bg-gray-900 text-white py-20 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-gray-900 to-black opacity-90 z-0"></div>
+            <section className="text-white py-24 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#131A1E] via-[#2A3136] to-[#FC6704] opacity-95 z-0"></div>
+                <div className="absolute inset-0 bg-black/20 z-0"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">Hizmet Bölgelerimiz</h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -107,7 +108,7 @@ export default function CitiesListingPage() {
 
                 {/* All Cities by Region */}
                 <section>
-                    <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                    <div className="bg-white rounded-[2rem] p-8 shadow-sm border border-gray-100">
                         <h2 className="text-2xl font-bold text-gray-800 mb-8 border-b pb-4">
                             Bölge Bölge Hizmet Noktalarımız
                         </h2>
@@ -121,7 +122,7 @@ export default function CitiesListingPage() {
                                             <Link
                                                 key={city.id}
                                                 href={`/sehirler/${city.slug}`}
-                                                className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-200 group"
+                                                className="flex items-center gap-3 p-3 rounded-full hover:bg-white/70 transition-colors border border-transparent hover:border-white/70 group"
                                             >
                                                 <span className="bg-gray-100 text-gray-600 font-mono text-sm font-bold w-8 h-8 flex items-center justify-center rounded group-hover:bg-orange-100 group-hover:text-orange-600 transition-colors">
                                                     {city.plateCode}

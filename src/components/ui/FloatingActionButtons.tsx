@@ -53,7 +53,7 @@ export default function FloatingActionButtons({
       {/* WhatsApp Button */}
       <button
         onClick={handleWhatsApp}
-        className="group relative bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 hover:scale-110"
+        className="group relative bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 hover:scale-110 border border-white/40"
         aria-label="WhatsApp ile iletişime geç"
       >
         <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
@@ -70,7 +70,7 @@ export default function FloatingActionButtons({
       {/* Call Button */}
       <button
         onClick={handleCall}
-        className="group relative bg-orange-600 text-white p-4 rounded-full shadow-2xl hover:bg-orange-700 transition-all duration-300 hover:scale-110"
+        className="group relative bg-orange-600 text-white p-4 rounded-full shadow-2xl hover:bg-orange-700 transition-all duration-300 hover:scale-110 border border-white/40"
         aria-label="Telefon ile ara"
       >
         <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">

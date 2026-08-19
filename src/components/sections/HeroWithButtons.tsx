@@ -14,7 +14,7 @@ export default function HeroWithButtons({
   description 
 }: HeroWithButtonsProps) {
   return (
-    <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-orange-900 text-white py-20 md:py-32">
+    <section className="relative bg-gradient-to-br from-[#131A1E] via-[#2A3136] to-[#FC6704] text-white py-20 md:py-32 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -45,7 +45,7 @@ export default function HeroWithButtons({
           <ActionButtons className="justify-center" />
 
           {/* Trust Indicators */}
-          <div className="mt-12 pt-12 border-t border-gray-700">
+          <div className="mt-12 rounded-[2rem] border border-white/20 bg-white/10 p-6 backdrop-blur-2xl">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
                 <div className="text-3xl font-bold text-orange-400 mb-2">15+</div>

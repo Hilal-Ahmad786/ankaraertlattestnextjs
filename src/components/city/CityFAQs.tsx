@@ -45,7 +45,7 @@ export default function CityFAQs({ cityName, faqs: customFaqs }: CityFAQsProps) 
     };
 
     return (
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+        <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 mb-8">
             {/* Emitted regardless of accordion state so crawlers read every Q&A. */}
             <script
                 type="application/ld+json"
@@ -59,7 +59,7 @@ export default function CityFAQs({ cityName, faqs: customFaqs }: CityFAQsProps) 
                 {faqs.map((faq, index) => (
                     <div
                         key={index}
-                        className={`border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 ${openIndex === index ? 'shadow-md border-orange-200' : 'hover:border-orange-200'}`}
+                        className={`border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 ${openIndex === index ? 'shadow-md border-orange-200' : 'hover:border-orange-200'}`}
                     >
                         <button
                             onClick={() => toggleFAQ(index)}

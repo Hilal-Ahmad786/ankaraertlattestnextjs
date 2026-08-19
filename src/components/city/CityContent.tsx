@@ -13,7 +13,7 @@ export default function CityContent({ content, cityName, body, localPoints }: Ci
     const paragraphs = body?.length ? body : [content];
 
     return (
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+        <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
                 <i className="fas fa-info-circle text-orange-500"></i>
                 {cityName} Hasarlı Araç Alım Hizmeti

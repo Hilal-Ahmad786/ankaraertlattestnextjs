@@ -25,7 +25,7 @@ export default function FAQ({
 
   return (
     <section
-      className="sales-guide-section py-16 bg-white"
+      className="sales-guide-section py-20 bg-white"
       itemScope
       itemType="https://schema.org/FAQPage"
     >
@@ -44,7 +44,7 @@ export default function FAQ({
           {items.map((item, index) => (
             <div
               key={index}
-              className="accordion-item bg-gray-50 rounded-lg overflow-hidden shadow-sm"
+              className="accordion-item bg-gray-50 rounded-3xl overflow-hidden shadow-sm"
               itemScope
               itemProp="mainEntity"
               itemType="https://schema.org/Question"
@@ -53,8 +53,8 @@ export default function FAQ({
                 onClick={() => toggleItem(index)}
                 className={`accordion-button w-full text-left p-4 flex items-center justify-between transition-colors ${
                   openIndex === index
-                    ? 'bg-white text-orange-500'
-                    : 'bg-transparent text-primary hover:bg-white'
+                    ? 'bg-white/70 text-orange-500'
+                    : 'bg-transparent text-primary hover:bg-white/60'
                 }`}
                 aria-expanded={openIndex === index}
                 itemProp="name"
@@ -69,7 +69,7 @@ export default function FAQ({
 
               {/* Microdata answer — always in DOM but visually hidden when closed */}
               <div
-                className={`accordion-body bg-white border-t border-gray-200 ${
+                className={`accordion-body bg-white/45 border-t border-white/70 ${
                   openIndex === index ? 'block p-4' : 'hidden'
                 }`}
                 itemScope

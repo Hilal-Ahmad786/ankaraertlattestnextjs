@@ -85,7 +85,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
       <PageHero title={post.title} subtitle={post.subtitle} />
 
-      <article className="py-16 bg-white">
+      <article className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Article metadata */}
           <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-8 pb-8 border-b">
@@ -116,7 +116,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
               prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
               prose-p:text-gray-700 prose-p:leading-relaxed
-              prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
+              prose-a:text-accent-ink prose-a:no-underline hover:prose-a:underline
               prose-strong:text-gray-900 prose-strong:font-semibold
               prose-ul:my-6 prose-li:my-2
               prose-img:rounded-lg"
@@ -124,19 +124,19 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           />
 
           {/* Internal links to related services */}
-          <div className="mt-12 p-6 bg-orange-50 rounded-xl border border-orange-200">
+          <div className="mt-12 p-6 bg-orange-50 rounded-3xl border border-orange-200">
             <h3 className="font-bold text-gray-900 mb-4">İlgili Hizmetlerimiz</h3>
             <div className="flex flex-wrap gap-3">
-              <a href="/kazali-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-lg px-4 py-2 hover:bg-orange-500 hover:text-white transition">
+              <a href="/kazali-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-full px-4 py-2 hover:bg-orange-500 hover:text-white transition">
                 <i className="fas fa-car-crash mr-2"></i>Kazalı Araç Alımı
               </a>
-              <a href="/hasarli-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-lg px-4 py-2 hover:bg-orange-500 hover:text-white transition">
+              <a href="/hasarli-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-full px-4 py-2 hover:bg-orange-500 hover:text-white transition">
                 <i className="fas fa-tools mr-2"></i>Hasarlı Araç Alımı
               </a>
-              <a href="/pert-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-lg px-4 py-2 hover:bg-orange-500 hover:text-white transition">
+              <a href="/pert-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-full px-4 py-2 hover:bg-orange-500 hover:text-white transition">
                 <i className="fas fa-exclamation-triangle mr-2"></i>Pert Araç Alımı
               </a>
-              <a href="/hurda-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-lg px-4 py-2 hover:bg-orange-500 hover:text-white transition">
+              <a href="/hurda-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-full px-4 py-2 hover:bg-orange-500 hover:text-white transition">
                 <i className="fas fa-recycle mr-2"></i>Hurda Araç Alımı
               </a>
             </div>

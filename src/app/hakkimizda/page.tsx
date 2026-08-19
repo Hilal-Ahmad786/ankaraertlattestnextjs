@@ -98,7 +98,7 @@ export default function HakkimizdaPage() {
               </li>
             </ul>
 
-            <div className="bg-orange-50 border-l-4 border-orange-500 p-6 my-8">
+            <div className="bg-orange-50 border border-white/70 p-6 my-8 rounded-3xl shadow-glass">
               <p className="text-lg font-semibold text-primary mb-2">
                 📞 Hemen Bizi Arayın!
               </p>
@@ -118,22 +118,22 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
+            <div className="rounded-3xl border border-white/70 bg-white/45 p-6 shadow-glass backdrop-blur-2xl">
               <div className="text-3xl font-bold text-orange-500 mb-2">Ücretsiz</div>
               <div className="text-gray-700">Ekspertiz ve Değerlendirme</div>
             </div>
-            <div>
+            <div className="rounded-3xl border border-white/70 bg-white/45 p-6 shadow-glass backdrop-blur-2xl">
               <div className="text-3xl font-bold text-orange-500 mb-2">Ücretsiz</div>
               <div className="text-gray-700">Çekici ile Yerinden Alım</div>
             </div>
-            <div>
+            <div className="rounded-3xl border border-white/70 bg-white/45 p-6 shadow-glass backdrop-blur-2xl">
               <div className="text-3xl font-bold text-orange-500 mb-2">24/7</div>
               <div className="text-gray-700">Telefon ve WhatsApp Hattı</div>
             </div>
-            <div>
+            <div className="rounded-3xl border border-white/70 bg-white/45 p-6 shadow-glass backdrop-blur-2xl">
               <div className="text-3xl font-bold text-orange-500 mb-2">Noterde</div>
               <div className="text-gray-700">Devirle Eş Zamanlı Ödeme</div>
             </div>

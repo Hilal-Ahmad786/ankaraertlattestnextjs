@@ -46,7 +46,7 @@ export default function BlogPage() {
             {posts.map((post) => (
               <article 
                 key={post.slug}
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-3xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
                 {/* Category Badge */}
                 <div className="bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-3">

@@ -109,7 +109,8 @@ section {
     transition: color var(--transition-base);
   }
   
-  footer a:hover {
+  /* :where() so footer buttons that set their own colour keep it on hover. */
+  :where(footer a:hover) {
     color: var(--main-orange);
   }
   
@@ -177,7 +178,7 @@ section {
       left: 12%;
       right: 12%;
       height: 3px;
-      background: linear-gradient(90deg, var(--main-orange), #fb923c);
+      background: linear-gradient(90deg, var(--main-orange), #FF8A3D);
       z-index: 0;
     }
   }
@@ -232,6 +233,6 @@ section {
     text-decoration: underline;
   }
   
-  .prose a:hover {
+  :where(.prose a:hover) {
     color: var(--main-blue);
   }

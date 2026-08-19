@@ -21,7 +21,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #7c2d12 100%)',
+          background: 'linear-gradient(135deg, #131a1e 0%, #0b1319 50%, #8a3506 100%)',
           padding: '60px',
           position: 'relative',
         }}
@@ -34,7 +34,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
             left: 0,
             right: 0,
             height: '8px',
-            background: 'linear-gradient(90deg, #f97316, #ea580c)',
+            background: 'linear-gradient(90deg, #fc6704, #C24A02)',
           }}
         />
 
@@ -53,7 +53,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
           style={{
             fontSize: '80px',
             fontWeight: 900,
-            color: '#fb923c',
+            color: '#ff8a3d',
             textAlign: 'center',
             lineHeight: 1,
             marginBottom: '16px',
@@ -79,7 +79,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
         <div
           style={{
             fontSize: '22px',
-            color: '#94a3b8',
+            color: '#9a938c',
             textAlign: 'center',
             marginBottom: '40px',
           }}
@@ -98,7 +98,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
             padding: '10px 28px',
           }}
         >
-          <span style={{ color: '#fb923c', fontSize: '20px', fontWeight: 700, letterSpacing: '0.05em' }}>
+          <span style={{ color: '#ff8a3d', fontSize: '20px', fontWeight: 700, letterSpacing: '0.05em' }}>
             ANKARA PERT — ankarapert.com.tr
           </span>
         </div>

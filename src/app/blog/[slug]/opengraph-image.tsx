@@ -20,7 +20,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
           flexDirection: 'column',
           alignItems: 'flex-start',
           justifyContent: 'flex-end',
-          background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
+          background: 'linear-gradient(135deg, #131a1e 0%, #131A1E 100%)',
           padding: '60px',
           position: 'relative',
         }}
@@ -33,7 +33,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
             left: 0,
             right: 0,
             height: '8px',
-            background: 'linear-gradient(90deg, #f97316, #ea580c)',
+            background: 'linear-gradient(90deg, #fc6704, #C24A02)',
           }}
         />
 
@@ -48,7 +48,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
             padding: '6px 20px',
           }}
         >
-          <span style={{ color: '#fb923c', fontSize: '16px', fontWeight: 700 }}>{category}</span>
+          <span style={{ color: '#ff8a3d', fontSize: '16px', fontWeight: 700 }}>{category}</span>
         </div>
 
         {/* Post title */}
@@ -74,7 +74,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
                 width: '40px',
                 height: '40px',
                 borderRadius: '50%',
-                background: '#f97316',
+                background: '#fc6704',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -83,9 +83,9 @@ export default async function Image({ params }: { params: { slug: string } }) {
             >
               AP
             </div>
-            <span style={{ color: '#94a3b8', fontSize: '18px' }}>Ankara PERT</span>
+            <span style={{ color: '#9a938c', fontSize: '18px' }}>Ankara PERT</span>
           </div>
-          <span style={{ color: '#64748b', fontSize: '18px', fontWeight: 600 }}>ankarapert.com.tr</span>
+          <span style={{ color: '#6b6560', fontSize: '18px', fontWeight: 600 }}>ankarapert.com.tr</span>
         </div>
       </div>
     ),

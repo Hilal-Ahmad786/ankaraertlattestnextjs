@@ -75,7 +75,7 @@ export default function GenelBilgilerPage() {
         subtitle="Araç alım satımı hakkında merak ettikleriniz"
       />
 
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose max-w-none mb-12">
             <h2 className="text-3xl font-bold text-primary mb-6">Nasıl Çalışıyoruz?</h2>
@@ -87,7 +87,7 @@ export default function GenelBilgilerPage() {
               yapan ekibimiz tüm süreci sizin adınıza yönetir.
             </p>
 
-            <div className="bg-gray-50 p-6 rounded-lg mb-8">
+            <div className="bg-gray-50 p-6 rounded-3xl mb-8">
               <h3 className="text-2xl font-bold text-primary mb-4">1. İletişim</h3>
               <p className="text-lg">
                 Telefon veya WhatsApp üzerinden bize ulaşın. Aracınızın markasını, modelini, yılını ve hasarının
@@ -95,7 +95,7 @@ export default function GenelBilgilerPage() {
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg mb-8">
+            <div className="bg-gray-50 p-6 rounded-3xl mb-8">
               <h3 className="text-2xl font-bold text-primary mb-4">2. Ücretsiz Ekspertiz</h3>
               <p className="text-lg">
                 Ekibimiz aracınızın bulunduğu yere gelir. Profesyonel ekspertiz yapılır, hasar raporu çıkarılır.
@@ -103,7 +103,7 @@ export default function GenelBilgilerPage() {
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg mb-8">
+            <div className="bg-gray-50 p-6 rounded-3xl mb-8">
               <h3 className="text-2xl font-bold text-primary mb-4">3. Fiyat Teklifi</h3>
               <p className="text-lg">
                 Ekspertiz sonrası 30 dakika içinde size en iyi fiyat teklifini sunuyoruz. Teklifi beğenirseniz
@@ -111,7 +111,7 @@ export default function GenelBilgilerPage() {
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg mb-8">
+            <div className="bg-gray-50 p-6 rounded-3xl mb-8">
               <h3 className="text-2xl font-bold text-primary mb-4">4. Noter İşlemi & Ödeme</h3>
               <p className="text-lg">
                 Noter huzurunda resmi devir işlemi yapılır. Tüm evraklar tamamlandıktan sonra anında nakit veya

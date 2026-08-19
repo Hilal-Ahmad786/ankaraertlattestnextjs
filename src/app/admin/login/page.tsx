@@ -20,7 +20,7 @@ export default function AdminLoginPage() {
         {passwordConfigured ? (
           <LoginForm />
         ) : (
-          <div className="mt-6 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-gray-800">
+          <div className="mt-6 rounded-lg border border-accent bg-accent-tint p-4 text-sm text-gray-800">
             <p className="font-semibold">Şifre ayarlanmamış</p>
             <p className="mt-1 text-gray-600">
               Giriş yapabilmek için sunucu ortam değişkeni{" "}

@@ -23,12 +23,12 @@ export default function TrustBadges() {
     ];
   
     return (
-      <section className="py-12 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {badges.map((badge, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-500 text-white rounded-full mb-3 shadow-lg">
+              <div key={index} className="text-center rounded-3xl border border-white/70 bg-white/45 p-6 shadow-glass backdrop-blur-2xl">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-white/60 text-orange-500 rounded-2xl mb-3 shadow-glass-sm border border-white/70">
                   <i className={`${badge.icon} text-2xl`}></i>
                 </div>
                 <p className="font-bold text-gray-800 mb-1">{badge.title}</p>

@@ -44,7 +44,7 @@ export default function LoginForm() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           autoFocus
-          className="mt-1 w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 outline-none focus:border-emerald-600"
+          className="mt-1 w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 outline-none focus:border-accent"
         />
       </div>
 
@@ -53,7 +53,7 @@ export default function LoginForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full rounded-lg bg-emerald-600 px-4 py-2 font-semibold text-white transition hover:bg-emerald-700 disabled:opacity-60"
+        className="w-full rounded-lg bg-accent px-4 py-2 font-semibold text-white transition hover:bg-accent-deep disabled:opacity-60"
       >
         {loading ? "Giriş yapılıyor..." : "Giriş Yap"}
       </button>

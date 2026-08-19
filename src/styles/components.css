@@ -41,7 +41,7 @@
   .btn-primary,
   .cta-button,
   .btn.bg-orange-500 {
-    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    background: linear-gradient(135deg, #FC6704 0%, #C24A02 100%);
     color: white;
     box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
   }
@@ -130,7 +130,7 @@
   .floating-phone {
     bottom: 2rem;
     left: 2rem;
-    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    background: linear-gradient(135deg, #FC6704 0%, #C24A02 100%);
     color: white;
     animation: gentle-pulse 3s ease-in-out infinite;
   }
@@ -166,7 +166,7 @@
     width: 64px;
     height: 64px;
     border-radius: var(--radius-xl);
-    background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+    background: linear-gradient(135deg, #FC6704 0%, #FF8A3D 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,7 +181,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    background: linear-gradient(135deg, #FC6704 0%, #C24A02 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,7 +207,7 @@
     padding: var(--space-6);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     transition: all var(--transition-base);
-    border-left: 4px solid #f97316;
+    border-left: 4px solid #FC6704;
     position: relative;
     overflow: hidden;
   }
@@ -218,7 +218,7 @@
     top: var(--space-4);
     right: var(--space-4);
     font-size: 5rem;
-    color: #fb923c;
+    color: #FF8A3D;
     opacity: 0.08;
     font-family: Georgia, serif;
     line-height: 1;
@@ -259,7 +259,7 @@
   
   .accordion-button:hover {
     background: rgba(249, 115, 22, 0.05);
-    color: #f97316;
+    color: #FC6704;
   }
   
   .accordion-body {
@@ -285,7 +285,7 @@
     transform: translateX(-50%);
     width: 64px;
     height: 4px;
-    background: linear-gradient(90deg, #f97316, #fb923c);
+    background: linear-gradient(90deg, #FC6704, #FF8A3D);
     border-radius: var(--radius-full);
   }
   

@@ -16,7 +16,7 @@ export default async function Image() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #7c2d12 100%)',
+          background: 'linear-gradient(135deg, #131a1e 0%, #0b1319 50%, #8a3506 100%)',
           padding: '60px',
           position: 'relative',
         }}
@@ -29,7 +29,7 @@ export default async function Image() {
             left: 0,
             right: 0,
             height: '8px',
-            background: 'linear-gradient(90deg, #f97316, #ea580c)',
+            background: 'linear-gradient(90deg, #fc6704, #C24A02)',
           }}
         />
 
@@ -45,7 +45,7 @@ export default async function Image() {
             padding: '8px 24px',
           }}
         >
-          <span style={{ color: '#fb923c', fontSize: '16px', fontWeight: 700, letterSpacing: '0.1em' }}>
+          <span style={{ color: '#ff8a3d', fontSize: '16px', fontWeight: 700, letterSpacing: '0.1em' }}>
             🚗 ANKARA PERT
           </span>
         </div>
@@ -64,14 +64,14 @@ export default async function Image() {
         >
           Kazalı, Hasarlı, Pert &amp; Hurda
           <br />
-          <span style={{ color: '#fb923c' }}>Araç Alımı</span>
+          <span style={{ color: '#ff8a3d' }}>Araç Alımı</span>
         </div>
 
         {/* Subtitle */}
         <div
           style={{
             fontSize: '24px',
-            color: '#94a3b8',
+            color: '#9a938c',
             textAlign: 'center',
             marginBottom: '40px',
           }}
@@ -89,7 +89,7 @@ export default async function Image() {
                 border: '1px solid rgba(255,255,255,0.15)',
                 borderRadius: '12px',
                 padding: '10px 20px',
-                color: '#e2e8f0',
+                color: '#e4ddd6',
                 fontSize: '18px',
               }}
             >
@@ -104,7 +104,7 @@ export default async function Image() {
             position: 'absolute',
             bottom: '28px',
             right: '48px',
-            color: '#64748b',
+            color: '#6b6560',
             fontSize: '18px',
             fontWeight: 600,
           }}

@@ -84,9 +84,9 @@ export interface BlogPost {
             Kazalı aracınızı satmak stresli bir süreç olabilir, ancak doğru bilgi ve güvenilir bir partner ile sorunsuz ilerleyebilir. Ankara PERT olarak, sürecin her adımında yanınızdayız. Farklı bölgelerde hizmet veren kardeş firmamız <a href="https://hasarliaracalan.com/" target="_blank" rel="noopener noreferrer">Hasarlı Araç Alan</a> üzerinden de bilgi alabilirsiniz.
           </p>
   
-          <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
-            <p class="font-semibold text-blue-800 mb-2">📞 Hemen Teklif Alın</p>
-            <p class="text-blue-700">
+          <div class="bg-accent-tint border-l-4 border-accent p-6 my-8">
+            <p class="font-semibold text-brand mb-2">📞 Hemen Teklif Alın</p>
+            <p class="text-brand">
               Kazalı aracınız için en yüksek teklifi almak ister misiniz? Hemen bizi arayın: <strong>${siteConfig.phoneDisplay}</strong>
             </p>
           </div>
@@ -149,9 +149,9 @@ export interface BlogPost {
             <li>Profesyonel danışmanlık</li>
           </ul>
   
-          <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
-            <p class="font-semibold text-blue-800 mb-2">📞 Pert Aracınız İçin Teklif Alın</p>
-            <p class="text-blue-700">
+          <div class="bg-accent-tint border-l-4 border-accent p-6 my-8">
+            <p class="font-semibold text-brand mb-2">📞 Pert Aracınız İçin Teklif Alın</p>
+            <p class="text-brand">
               Pert raporlu aracınız için anında değerlendirme: <strong>${siteConfig.phoneDisplay}</strong>
             </p>
           </div>
@@ -221,9 +221,9 @@ export interface BlogPost {
             <li>Evraklarınızı teslim alırız</li>
           </ul>
   
-          <div class="bg-green-50 border-l-4 border-green-500 p-6 my-8">
-            <p class="font-semibold text-green-800 mb-2">✅ Avantajlarımız</p>
-            <ul class="text-green-700 list-disc ml-5">
+          <div class="bg-accent-tint border-l-4 border-accent p-6 my-8">
+            <p class="font-semibold text-brand mb-2">✅ Avantajlarımız</p>
+            <ul class="text-brand list-disc ml-5">
               <li>Tüm işlemler bizden - sıfır zahmet</li>
               <li>Aynı gün ödeme</li>
               <li>Ücretsiz çekici</li>
@@ -249,9 +249,9 @@ export interface BlogPost {
             Hurda işlemi tamamlandığında MTV yükümlülüğünüz sona erer.
           </p>
   
-          <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
-            <p class="font-semibold text-blue-800 mb-2">📞 Hemen Başlayın</p>
-            <p class="text-blue-700">
+          <div class="bg-accent-tint border-l-4 border-accent p-6 my-8">
+            <p class="font-semibold text-brand mb-2">📞 Hemen Başlayın</p>
+            <p class="text-brand">
               Hurda aracınız için en yüksek fiyatı almak ve sorunsuz bir süreç için: <strong>${siteConfig.phoneDisplay}</strong>
             </p>
           </div>

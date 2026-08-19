@@ -13,9 +13,9 @@ interface CityVehicleTypesProps {
  */
 export default function CityVehicleTypes({ city }: CityVehicleTypesProps) {
     return (
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+        <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
-                <i className="fas fa-list-check text-blue-500"></i>
+                <i className="fas fa-list-check text-accent-ink"></i>
                 {city.name} Bölgesinde Aldığımız Araçlar
             </h2>
             <p className="text-sm text-gray-500 mb-6">
@@ -27,9 +27,9 @@ export default function CityVehicleTypes({ city }: CityVehicleTypesProps) {
                     <Link
                         key={service.id}
                         href={`/${service.slug}`}
-                        className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-blue-200 hover:bg-white transition"
+                        className="flex items-start gap-3 p-4 bg-gray-50 rounded-2xl border border-gray-100 hover:border-accent hover:bg-white transition"
                     >
-                        <div className="w-10 h-10 shrink-0 bg-white rounded-full flex items-center justify-center text-blue-500 shadow-sm border border-gray-100">
+                        <div className="w-10 h-10 shrink-0 bg-white rounded-full flex items-center justify-center text-accent-ink shadow-sm border border-gray-100">
                             <i className={service.icon}></i>
                         </div>
                         <div>

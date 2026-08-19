@@ -12,17 +12,17 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
             <h3 className="text-white font-bold text-xl mb-4 flex items-center gap-2">
               <Image
-                src="/images/logo-trimmed.png"
-                alt="Ankara Pert Logo"
-                width={140}
-                height={48}
-                className="h-12 w-auto object-contain brightness-0 invert"
+                src="/logo-footer-dark.png"
+                alt="Ankara PERT — kazalı, hasarlı, pert ve hurda araç alımı"
+                width={709}
+                height={102}
+                className="h-10 w-auto max-w-full object-contain"
               />
             </h3>
             <p className="text-sm mb-4">
@@ -33,7 +33,7 @@ export default function Footer() {
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-500 transition border border-white/10"
               >
                 <i className="fab fa-facebook-f"></i>
               </a>
@@ -41,7 +41,7 @@ export default function Footer() {
                 href={siteConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-500 transition border border-white/10"
               >
                 <i className="fab fa-instagram"></i>
               </a>
@@ -174,7 +174,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
+      <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-6">
           <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-sm text-center md:text-left">
             <p className="text-gray-400">
@@ -184,10 +184,10 @@ export default function Footer() {
             {/* Developer Credit */}
             <div className="flex justify-center">
               <a
-                href="https://paksoft.com.tr"
+                href="https://paksofts.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2.5 rounded-full border border-orange-500/50 bg-gradient-to-r from-orange-500/15 via-white/5 to-orange-500/15 px-5 py-2 text-[15px] shadow-[0_0_18px_rgba(249,115,22,0.25)] transition-all duration-300 hover:border-orange-500 hover:shadow-[0_0_28px_rgba(249,115,22,0.45)] hover:scale-105"
+                className="group inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-[15px] shadow-[0_0_18px_rgba(255,94,58,0.18)] transition-all duration-300 hover:border-orange-500 hover:shadow-[0_0_28px_rgba(255,94,58,0.35)] hover:scale-105 backdrop-blur-xl"
               >
                 <span className="text-white/80">Geliştiren</span>
                 <svg

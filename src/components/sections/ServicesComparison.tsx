@@ -8,7 +8,7 @@ export default function ServicesComparison() {
       description: 'Kaza geçirmiş tüm araçlar',
       features: ['Çarpma hasarı', 'Devrilme', 'Ön/Arka hasar'],
       link: '/kazali-arac-alim-satim',
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-accent to-accent-deep',
     },
     {
       title: 'Hasarlı Araç',
@@ -16,7 +16,7 @@ export default function ServicesComparison() {
       description: 'Mekanik/Kaporta hasarlı',
       features: ['Motor arızası', 'Şanzıman', 'Kaporta'],
       link: '/hasarli-arac-alim-satim',
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-brand to-brand-raised',
     },
     {
       title: 'Pert Araç',
@@ -24,7 +24,7 @@ export default function ServicesComparison() {
       description: 'Sigorta pert raporlu',
       features: ['Kasko çıkışlı', 'Pert belgeli', 'Yasal süreç'],
       link: '/pert-arac-alim-satim',
-      color: 'from-orange-500 to-orange-600',
+      color: 'from-accent to-accent-deep',
     },
     {
       title: 'Hurda Araç',
@@ -32,15 +32,15 @@ export default function ServicesComparison() {
       description: 'Kullanım ömrü bitmiş',
       features: ['Hurda belgesi', 'Kilo bazlı', 'Çevre dostu'],
       link: '/hurda-arac-alim-satim',
-      color: 'from-green-500 to-green-600',
+      color: 'from-brand to-brand-raised',
     },
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
             Hangi Araçları Alıyoruz?
           </h2>
           <p className="text-lg text-gray-600">
@@ -53,9 +53,9 @@ export default function ServicesComparison() {
             <Link
               key={index}
               href={service.link}
-              className="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all p-6 hover:-translate-y-2"
+              className="group bg-white rounded-3xl shadow-md hover:shadow-2xl transition-all p-8 hover:-translate-y-2"
             >
-              <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${service.color} text-white rounded-full mb-4 group-hover:scale-110 transition`}>
+              <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${service.color} text-white rounded-2xl mb-4 group-hover:scale-110 transition shadow-glass-sm`}>
                 <i className={`${service.icon} text-2xl`}></i>
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-2">
@@ -67,7 +67,7 @@ export default function ServicesComparison() {
               <ul className="space-y-2">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="text-sm text-gray-600 flex items-center gap-2">
-                    <i className="fas fa-check text-green-500 text-xs"></i>
+                    <i className="fas fa-check text-accent-ink text-xs"></i>
                     {feature}
                   </li>
                 ))}

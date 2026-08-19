@@ -30,7 +30,9 @@ const dateFmt = new Intl.DateTimeFormat("tr-TR", {
  * inevitably produce look-alike tones, so every IP beyond the top 6 gets a
  * neutral gray badge; the "IP #n" number is always the definitive identifier.
  */
-const IP_COLORS = ["#2a78d6", "#e34948", "#008300", "#eda100", "#4a3aa7", "#1baf7a"];
+// Categorical series palette. Kept six distinguishable steps (a chart needs
+// them) but built from brand tones instead of six unrelated hues.
+const IP_COLORS = ["#FC6704", "#131A1E", "#C24A02", "#5A5B5C", "#FF8A3D", "#2A3136"];
 const IP_GRAY = "#9ca3af";
 
 type SP = { period?: string; from?: string; to?: string };
@@ -214,8 +216,8 @@ export default async function AdminClicksPage({
               href={presetHref(p.key)}
               className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
                 p.key === range.period
-                  ? "bg-emerald-600 text-white"
-                  : "border border-gray-200 bg-white text-gray-600 hover:border-emerald-600"
+                  ? "bg-accent text-white"
+                  : "border border-gray-200 bg-white text-gray-600 hover:border-accent"
               }`}
             >
               {p.label}
@@ -235,7 +237,7 @@ export default async function AdminClicksPage({
           <label className="mb-1 block text-xs font-semibold text-gray-600">Bitiş</label>
           <input type="date" name="to" defaultValue={range.toStr} className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900" />
         </div>
-        <button type="submit" className="rounded-lg bg-emerald-600 px-5 py-2 text-sm font-semibold text-white">
+        <button type="submit" className="rounded-lg bg-accent px-5 py-2 text-sm font-semibold text-white">
           Tarih aralığını uygula
         </button>
       </form>
@@ -280,7 +282,7 @@ export default async function AdminClicksPage({
             </div>
             <div className="mt-3 flex gap-4 border-t border-gray-100 pt-3">
               <div>
-                <p className="text-xl font-bold text-emerald-700">{counts[ev].ips}</p>
+                <p className="text-xl font-bold text-accent-ink">{counts[ev].ips}</p>
                 <p className="text-xs text-gray-500">farklı kişi (IP)</p>
               </div>
               <div>
@@ -304,10 +306,10 @@ export default async function AdminClicksPage({
           <p className="text-sm text-gray-600">Toplam tıklama</p>
           <p className="mt-1 text-3xl font-bold text-gray-900">{total}</p>
         </div>
-        <div className="rounded-2xl border-2 border-emerald-600 bg-emerald-50 p-5">
-          <p className="text-sm font-semibold text-emerald-800">Ulaşan farklı kişi</p>
-          <p className="mt-1 text-3xl font-bold text-emerald-700">{uniqueIps}</p>
-          <p className="mt-1 text-xs text-emerald-800/70">
+        <div className="rounded-2xl border-2 border-accent bg-accent-tint p-5">
+          <p className="text-sm font-semibold text-brand">Ulaşan farklı kişi</p>
+          <p className="mt-1 text-3xl font-bold text-accent-ink">{uniqueIps}</p>
+          <p className="mt-1 text-xs text-brand/70">
             iki butonu da kullanan tek sayılır
           </p>
         </div>
@@ -350,10 +352,10 @@ export default async function AdminClicksPage({
       </p>
 
       {/* Per-person clicks — for matching against the real phone call log */}
-      <div className="mt-6 overflow-hidden rounded-2xl border-2 border-emerald-600 bg-white">
-        <div className="border-b border-gray-200 bg-emerald-50 px-5 py-4">
-          <h2 className="font-semibold text-emerald-900">Kişi Bazında Tıklamalar</h2>
-          <p className="mt-1 text-xs text-emerald-800/80">
+      <div className="mt-6 overflow-hidden rounded-2xl border-2 border-accent bg-white">
+        <div className="border-b border-gray-200 bg-accent-tint px-5 py-4">
+          <h2 className="font-semibold text-brand">Kişi Bazında Tıklamalar</h2>
+          <p className="mt-1 text-xs text-brand/80">
             Her kişi (IP) ve buton için tek satır. Telefondaki gerçek arama kayıtlarıyla
             karşılaştırmak için &quot;İlk Tıklama&quot; saatini kullanın — kişinin size ilk
             ulaşmaya çalıştığı andır.

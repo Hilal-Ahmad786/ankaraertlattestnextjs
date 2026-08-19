@@ -1,36 +1,59 @@
-/* 
-  DESIGN PHILOSOPHY: "Trust Through Simplicity"
-  
-  Principles:
-  1. AUTHENTICITY - Real gradients, real shadows, honest design
-  2. CLARITY - Clear hierarchy, readable text, obvious actions
-  3. WARMTH - Friendly colors, welcoming spaces, human touch
-  4. CONFIDENCE - Bold typography, strong CTAs, decisive layout
-*/
-
 :root {
-    /* Primary Palette - Trustworthy & Professional */
-    --color-trust-dark: #0f172a;      /* Deep navy - trust & stability */
-    --color-trust: #1e40af;            /* Royal blue - reliability */
-    --color-trust-light: #3b82f6;      /* Bright blue - approachable */
-    
-    /* Accent Palette - Energy & Action */
-    --color-action: #f97316;           /* Vibrant orange - urgency */
-    --color-action-hover: #ea580c;     /* Darker orange - interaction */
-    --color-action-light: #fb923c;     /* Light orange - highlights */
-    
-    /* Success - WhatsApp Green */
+    /* ------------------------------------------------------------------
+       BRAND PALETTE — taken directly from the logo. Two colours only.
+       Graphite #131A1E and Orange #FC6704 were sampled from the artwork.
+       Nothing else is a brand colour. WhatsApp green is a platform mark,
+       not part of the palette, and appears only on WhatsApp controls.
+       ------------------------------------------------------------------ */
+
+    /* Graphite — primary */
+    --color-trust-dark: #0B1319;   /* deepest: footer, dark panels        */
+    --color-trust:      #131A1E;   /* logo graphite: headings, wordmark   */
+    --color-trust-light:#2A3136;   /* raised dark surfaces                */
+
+    /* Orange — action */
+    --color-action:      #FC6704;  /* logo orange: fills, buttons, icons  */
+    --color-action-hover:#C24A02;  /* pressed / deeper fill               */
+    --color-action-light:#FFE3D4;  /* tint for chips and washes           */
+    /* Orange as TEXT on a light ground. #FC6704 is only 2.9:1 on white,
+       which fails AA, so links and small orange text use this instead
+       (7.2:1). On dark grounds the full-strength orange is used again. */
+    --color-action-ink:  #B5470D;
+
+    /* CTA fills use the brand orange itself — one orange, not two. */
+    --color-cta:       #FC6704;
+    --color-cta-hover: #C24A02;
+
+    /* WhatsApp — semantic, not brand */
     --color-success: #16a34a;
     --color-success-hover: #15803d;
-    
-    /* Neutrals - Clean & Modern */
-    --color-bg: #ffffff;
-    --color-bg-alt: #f8fafc;
-    --color-bg-dark: #0f172a;
-    --color-text: #1e293b;
-    --color-text-light: #64748b;
-    --color-border: #e2e8f0;
-    
+
+    /* Neutrals — warmed very slightly toward the orange so they read as
+       chosen rather than inherited slate. */
+    --color-bg:        #F7F8F9;
+    --color-bg-alt:    #F1F2F3;
+    --color-bg-dark:   #131A1E;
+    --color-text:      #131A1E;
+    --color-text-light:#5A5B5C;
+    --color-border:    rgba(255, 255, 255, 0.66);
+
+    --main-blue: var(--color-trust);
+    --main-orange: var(--color-action);
+    --main-orange-dark: var(--color-action-hover);
+    --container-xl: 80rem;
+    --border-radius: 1rem;
+    --border-radius-lg: 1.5rem;
+    --glass-surface: rgba(255, 255, 255, 0.44);
+    --glass-surface-strong: rgba(255, 255, 255, 0.68);
+    --glass-border: rgba(255, 255, 255, 0.68);
+    --glass-shadow: 0 18px 50px rgba(19, 26, 30, 0.08);
+
+    /* Ambient washes: orange and graphite only — the sky/iris tints that
+       made the page read as a rainbow are gone. */
+    --ambient-warm:  rgba(252, 103, 4, 0.13);
+    --ambient-deep:  rgba(19, 26, 30, 0.07);
+    --ambient-ember: rgba(252, 103, 4, 0.07);
+
     /* Spacing System - 8px base */
     --space-1: 0.25rem;   /* 4px */
     --space-2: 0.5rem;    /* 8px */
@@ -62,13 +85,12 @@
     --radius-2xl: 1.5rem;    /* 24px */
     --radius-full: 9999px;
     
-    /* Shadows - Realistic depth */
-    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-xs: 0 1px 2px 0 rgba(25, 28, 30, 0.04);
+    --shadow-sm: 0 4px 18px rgba(25, 28, 30, 0.05);
+    --shadow-md: 0 10px 30px rgba(25, 28, 30, 0.07);
+    --shadow-lg: 0 18px 50px rgba(25, 28, 30, 0.09);
+    --shadow-xl: 0 28px 70px rgba(25, 28, 30, 0.12);
+    --shadow-2xl: 0 36px 90px rgba(25, 28, 30, 0.18);
     
     /* Transitions - Natural easing */
     --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);

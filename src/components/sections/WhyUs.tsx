@@ -12,7 +12,7 @@ interface WhyUsItem {
   
   export default function WhyUs({ title, subtitle, items }: WhyUsProps) {
     return (
-      <section id="neden-biz" className="why-us-section py-16 bg-white">
+      <section id="neden-biz" className="why-us-section py-20 bg-white">
         <div className="container mx-auto px-4">
           <header className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -27,9 +27,11 @@ interface WhyUsItem {
             {items.map((item, index) => (
               <article
                 key={index}
-                className="pain-card text-center p-6 rounded-lg transition-all hover:shadow-lg"
+                className="pain-card text-center p-8 rounded-3xl transition-all hover:shadow-lg"
               >
-                <i className={`${item.icon} text-4xl mb-4 text-orange-500`}></i>
+                <span className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/70 bg-white/60 text-orange-500 shadow-glass-sm">
+                  <i className={`${item.icon} text-3xl`}></i>
+                </span>
                 <h3 className="text-xl font-semibold mb-3 text-primary">
                   {item.title}
                 </h3>

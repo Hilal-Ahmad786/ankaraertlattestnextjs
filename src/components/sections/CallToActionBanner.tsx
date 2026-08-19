@@ -27,8 +27,9 @@ export default function CallToActionBanner({
   };
 
   return (
-    <section className="relative py-16 bg-gradient-to-br from-orange-600 via-orange-500 to-red-500 text-white text-center overflow-hidden">
+    <section className="relative py-20 text-white text-center overflow-hidden">
       {/* Decorative overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#131A1E] via-[#2A3136] to-[#FC6704]"></div>
       <div className="absolute inset-0 bg-black/20"></div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -42,7 +43,7 @@ export default function CallToActionBanner({
           <a
             href={`tel:${siteConfig.phone}`}
             onClick={handlePhoneClick}
-            className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-bold transition-all hover:scale-105 shadow-xl inline-flex items-center gap-2"
+            className="bg-white/80 text-orange-600 hover:bg-white px-8 py-4 rounded-full text-lg font-bold transition-all hover:scale-105 shadow-xl inline-flex items-center gap-2 backdrop-blur-xl"
           >
             <i className="fas fa-phone-alt"></i>
             {buttonText}
@@ -53,7 +54,7 @@ export default function CallToActionBanner({
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
-              className="bg-green-500 text-white hover:bg-green-600 px-8 py-4 rounded-lg text-lg font-bold transition-all hover:scale-105 shadow-xl inline-flex items-center gap-2"
+              className="bg-green-500 text-white hover:bg-green-600 px-8 py-4 rounded-full text-lg font-bold transition-all hover:scale-105 shadow-xl inline-flex items-center gap-2"
             >
               <i className="fab fa-whatsapp"></i>
               WhatsApp

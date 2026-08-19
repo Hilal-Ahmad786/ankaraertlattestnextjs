@@ -46,13 +46,18 @@ p {
   margin-bottom: var(--space-md);
 }
 
-a {
+/* Base link colour is wrapped in :where() so it carries ZERO specificity.
+   Plain `a:hover` scores (0,1,1) and beat utilities like .text-white (0,1,0),
+   which meant every CTA rendered as an <a> had its label repainted brand
+   orange on hover — orange text on an orange fill, i.e. invisible. With
+   :where() any explicit colour utility on the element now wins. */
+:where(a) {
   color: var(--main-blue);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
-a:hover {
+:where(a:hover) {
   color: var(--main-orange);
 }
 
@@ -188,7 +193,7 @@ button {
 .btn-orange,
 button.bg-orange-600,
 a.bg-orange-600 {
-  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  background: linear-gradient(135deg, #C24A02 0%, #FC6704 100%);
   border: 2px solid transparent;
   border-radius: 16px;
   padding: 16px 32px;
@@ -277,12 +282,12 @@ a.bg-green-500:hover {
 button.bg-white.text-orange-600,
 a.bg-white.text-orange-600 {
   background: white;
-  border: 2px solid #f97316;
+  border: 2px solid #FC6704;
   border-radius: 16px;
   padding: 16px 32px;
   font-weight: 600;
   font-size: 18px;
-  color: #f97316;
+  color: #FC6704;
   box-shadow: 0 8px 24px rgba(249, 115, 22, 0.15);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -298,7 +303,7 @@ a.bg-white.text-orange-600::before {
   left: 0;
   width: 0;
   height: 100%;
-  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  background: linear-gradient(135deg, #C24A02 0%, #FC6704 100%);
   transition: width 0.3s ease;
   z-index: -1;
 }
@@ -373,7 +378,7 @@ header button.bg-green-500 span {
 
 header a.bg-orange-500,
 header button.bg-orange-500 {
-  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%) !important;
+  background: linear-gradient(135deg, #C24A02 0%, #FC6704 100%) !important;
   border: 2px solid transparent !important;
   border-radius: 12px !important;
   padding: 10px 16px !important;
@@ -411,7 +416,7 @@ header a.bg-orange-500:hover,
 header button.bg-orange-500:hover {
   transform: translateY(-2px) !important;
   box-shadow: 0 6px 20px rgba(234, 88, 12, 0.35) !important;
-  background: linear-gradient(135deg, #c2410c 0%, #ea580c 100%) !important;
+  background: linear-gradient(135deg, #c2410c 0%, #C24A02 100%) !important;
 }
 
 header a.bg-orange-500 i,
@@ -456,4 +461,382 @@ header button.bg-orange-500 span {
 
 header a[style*="animation"] {
   animation: headerPulse 2s infinite !important;
+}
+
+/* ===== HORIZON ETHER THEME OVERRIDES ===== */
+
+html,
+body {
+  background:
+    radial-gradient(circle at 8% 6%, var(--ambient-deep) 0, transparent 34rem),
+    radial-gradient(circle at 96% 20%, var(--ambient-warm) 0, transparent 32rem),
+    radial-gradient(circle at 46% 78%, var(--ambient-ember) 0, transparent 42rem),
+    linear-gradient(140deg, #F7F8F9 0%, #F3F4F5 46%, #FBF3EE 100%) !important;
+  color: var(--color-text);
+  font-family: var(--font-site), system-ui, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(19, 26, 30, 0.06), transparent 26rem),
+    radial-gradient(circle at 100% 12%, rgba(252, 103, 4, 0.10), transparent 26rem),
+    radial-gradient(circle at 50% 100%, rgba(252, 103, 4, 0.05), transparent 34rem);
+}
+
+main {
+  position: relative;
+}
+
+/* Section rhythm.
+   The components already encode an alternation: bg-gray-50 / bg-light sections
+   alternate with bg-white ones. Flattening every section to transparent removed
+   that rhythm and left ~5,100px of one continuous wash, so instead:
+     - gray/light sections drop through to the ambient gradient
+     - white sections keep a soft glass band, preserving the alternation */
+section,
+section:nth-of-type(odd),
+section:nth-of-type(even),
+.bg-gray-50,
+.bg-light {
+  background-color: transparent !important;
+}
+
+section.bg-white {
+  background-color: rgba(255, 255, 255, 0.55) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Non-section .bg-white elements still drop through; cards pick up the glass
+   treatment below, which sets `background` and therefore wins over this. */
+.bg-white:not(section) {
+  background-color: transparent !important;
+}
+
+.container {
+  max-width: min(80rem, calc(100vw - 2rem));
+}
+
+/* Card surfaces.
+   Matched by attribute rather than by exact utility combination, so a component
+   written with rounded-3xl / rounded-[20px] / <li> instead of div.rounded-2xl
+   still picks up the theme. rounded-full is excluded — those are pill buttons. */
+.glass-panel,
+.glass-card,
+.card,
+.pain-card,
+.accordion-item,
+.testimonial-card,
+article.bg-white,
+.bg-white[class*="rounded-"]:not([class*="rounded-full"]) {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.38)) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow) !important;
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+
+.glass-card,
+.card,
+.pain-card,
+.accordion-item,
+.testimonial-card,
+article.bg-white,
+.bg-white[class*="rounded-"]:not([class*="rounded-full"]) {
+  border-radius: var(--radius-2xl) !important;
+}
+
+.glass-card:hover,
+.card:hover,
+.pain-card:hover,
+.testimonial-card:hover,
+article.bg-white:hover,
+.bg-white[class*="rounded-"]:not([class*="rounded-full"]):hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.86) !important;
+  box-shadow: 0 24px 68px rgba(25, 28, 30, 0.12) !important;
+}
+
+section h2::after {
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-action), var(--color-action-hover));
+  opacity: 0.9;
+}
+
+.text-primary,
+.text-blue-500,
+.text-blue-600,
+.text-blue-700,
+.text-blue-800,
+.text-blue-900,
+.text-indigo-600,
+.text-purple-500,
+.text-purple-600,
+.text-purple-700,
+.text-emerald-600,
+.text-emerald-700,
+.text-emerald-800,
+.text-emerald-900,
+.text-teal-600,
+.text-yellow-600,
+.text-amber-600 {
+  color: var(--color-trust) !important;
+}
+
+.text-muted,
+.text-gray-600,
+.text-gray-700 {
+  color: var(--color-text-light) !important;
+}
+
+.text-gray-800,
+.text-gray-900 {
+  color: var(--color-text) !important;
+}
+
+/* Neutral ramp.
+   Tailwind's default greys are the slate family and carry a blue cast
+   (gray-900 is #111827). Beside the logo's #131A1E that reads cold and
+   reintroduces a second hue by the back door, so the whole ramp is
+   re-cut from the brand graphite. */
+.bg-gray-900, .bg-slate-900, .bg-neutral-900 { background-color: #131A1E !important; }
+.bg-gray-800, .bg-slate-800 { background-color: #1E262B !important; }
+.bg-gray-700 { background-color: #2A3136 !important; }
+.bg-gray-100 { background-color: #EFEFEF !important; }
+.bg-gray-50,  .bg-slate-50  { background-color: #F7F8F9 !important; }
+
+.text-gray-300 { color: #D2D3D3 !important; }
+.text-gray-400 { color: #9B9C9C !important; }
+.text-gray-500 { color: #6E6F70 !important; }
+
+.border-gray-300 { border-color: #D2D3D3 !important; }
+.border-gray-700 { border-color: #2A3136 !important; }
+.border-gray-800 { border-color: #1E262B !important; }
+
+.from-gray-900 { --tw-gradient-from: #131A1E var(--tw-gradient-from-position) !important; }
+.to-gray-900   { --tw-gradient-to:   #131A1E var(--tw-gradient-to-position) !important; }
+.from-gray-50  { --tw-gradient-from: #F7F8F9 var(--tw-gradient-from-position) !important; }
+
+/* Orange as TEXT on a light ground uses the deeper tone: full-strength
+   #FC6704 is 2.9:1 on white and fails AA. Dark contexts are re-lifted below. */
+.text-orange-300,
+.text-orange-400,
+.text-orange-500,
+.text-orange-600,
+.text-orange-700,
+.text-red-500,
+.text-red-600,
+.hover\:text-orange-500:hover,
+.hover\:text-orange-600:hover,
+.hover\:text-orange-700:hover,
+.hover\:text-orange-400:hover {
+  color: var(--color-action-ink) !important;
+}
+
+/* On dark grounds the full-strength brand orange is legible (6.4:1) and is
+   what the logo itself uses, so restore it there. */
+footer .text-orange-300, footer .text-orange-400, footer .text-orange-500,
+footer .text-orange-600, footer .text-red-500,
+footer .hover\:text-orange-500:hover, footer .hover\:text-orange-400:hover,
+.contact-cta .text-orange-500, .contact-cta .text-orange-600, .contact-cta .text-red-500,
+.bg-gray-900 .text-orange-500, .bg-gray-900 .text-orange-400,
+[class*="from-\[\#131A1E\]"] .text-orange-500,
+section[class*="text-white"] .text-orange-500,
+section[class*="text-white"] .text-red-500 {
+  color: var(--color-action) !important;
+}
+
+.bg-orange-50,
+.bg-orange-100,
+.bg-blue-50,
+.bg-emerald-50,
+.bg-amber-50,
+.bg-yellow-100,
+.bg-green-100,
+.bg-purple-50 {
+  background-color: rgba(252, 103, 4, 0.10) !important;
+}
+
+/* Any remaining non-brand hue fill collapses onto the brand orange.
+   The WhatsApp green controls are deliberately excluded — see below. */
+.bg-blue-500, .bg-blue-600, .bg-blue-700,
+.bg-purple-500, .bg-purple-600,
+.bg-emerald-500, .bg-emerald-600, .bg-emerald-700,
+.bg-indigo-500, .bg-indigo-600,
+.bg-red-500, .bg-red-600,
+.bg-amber-400, .bg-amber-500, .bg-yellow-400, .bg-yellow-500 {
+  background-color: var(--color-action) !important;
+}
+
+.from-blue-500, .from-blue-600, .from-purple-500, .from-purple-600,
+.from-emerald-500, .from-emerald-600, .from-indigo-500, .from-red-500 {
+  --tw-gradient-from: var(--color-action) var(--tw-gradient-from-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+.to-blue-600, .to-purple-600, .to-emerald-600, .to-indigo-600, .to-red-600,
+.to-blue-500, .to-purple-500 {
+  --tw-gradient-to: var(--color-action-hover) var(--tw-gradient-to-position) !important;
+}
+
+.border-blue-500, .border-purple-500, .border-emerald-600,
+.border-amber-300, .border-red-500, .border-blue-600 {
+  border-color: var(--color-action) !important;
+}
+
+.border-gray-100,
+.border-gray-200,
+.border-orange-100 {
+  border-color: rgba(255, 255, 255, 0.68) !important;
+}
+
+.bg-orange-500,
+.bg-orange-600,
+.from-orange-500,
+.from-orange-600,
+.to-orange-500,
+.to-orange-600 {
+  --tw-gradient-from: var(--color-cta) var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(252 103 4 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+  background-color: var(--color-cta) !important;
+}
+
+.bg-green-500,
+.bg-green-600 {
+  background-color: #16a34a !important;
+}
+
+.btn,
+.btn-orange,
+.btn-primary,
+.cta-button,
+a.bg-orange-500,
+a.bg-orange-600,
+button.bg-orange-500,
+button.bg-orange-600 {
+  border-radius: var(--radius-full) !important;
+  background: linear-gradient(135deg, var(--color-cta) 0%, var(--color-cta-hover) 100%) !important;
+  box-shadow: 0 16px 36px rgba(252, 103, 4, 0.28) !important;
+}
+
+.btn-whatsapp,
+.btn-success,
+a.bg-green-500,
+button.bg-green-500 {
+  border-radius: var(--radius-full) !important;
+  box-shadow: 0 16px 36px rgba(22, 163, 74, 0.22) !important;
+}
+
+.btn-white-orange,
+button.bg-white.text-orange-600,
+a.bg-white.text-orange-600 {
+  border-radius: var(--radius-full) !important;
+  background: rgba(255, 255, 255, 0.56) !important;
+  border-color: rgba(255, 255, 255, 0.76) !important;
+  color: var(--color-action) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.timeline-icon {
+  background: rgba(255, 255, 255, 0.58) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--color-action) !important;
+  box-shadow: var(--glass-shadow) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.intro-keyword {
+  border-left: 0 !important;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0.18)) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.prose,
+.blog-content {
+  color: var(--color-text);
+}
+
+/* Navigation panels are deliberately NOT glass.
+   Dropdowns and the mobile menu open over the hero photograph; at 95% white
+   with a 40px backdrop blur the hero headline still ghosted through the city
+   list. Menus are for reading, so these are fully opaque. The class is used
+   instead of `bg-white` on purpose — `bg-white` + a rounded-* utility matches
+   the card glass rule above and would turn the panel translucent again. */
+.nav-panel {
+  background: #ffffff !important;
+  border: 1px solid rgba(25, 28, 30, 0.08) !important;
+  box-shadow: 0 24px 60px rgba(25, 28, 30, 0.18) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.nav-panel .nav-panel-footer {
+  background: #f2f4f6 !important;
+  border-top: 1px solid rgba(25, 28, 30, 0.08) !important;
+}
+
+.nav-panel a:hover,
+.nav-panel .nav-panel-item:hover {
+  background-color: #f2f4f6 !important;
+}
+
+/* Theme-integrated CTA surfaces.
+   Buttons use --color-cta (#FC6704), the colour the existing ad spend has been
+   converting against. Coral (--color-action) stays on accents only. */
+.btn,
+a.bg-orange-500,
+a.bg-orange-600,
+button.bg-orange-500,
+button.bg-orange-600,
+.bg-orange-500.text-white,
+.bg-orange-600.text-white {
+  border: 1px solid rgba(255, 255, 255, 0.46) !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent),
+    linear-gradient(135deg, var(--color-cta) 0%, var(--color-cta-hover) 100%) !important;
+  box-shadow:
+    0 16px 38px rgba(252, 103, 4, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+a.bg-green-500,
+button.bg-green-500,
+.bg-green-500.text-white,
+.bg-green-600.text-white {
+  border: 1px solid rgba(255, 255, 255, 0.42) !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent),
+    linear-gradient(135deg, #22c55e 0%, #15803d 100%) !important;
+  box-shadow:
+    0 16px 38px rgba(22, 163, 74, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.26) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+a.bg-white,
+button.bg-white,
+.bg-white.text-orange-600 {
+  border: 1px solid rgba(255, 255, 255, 0.76) !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.48)) !important;
+  box-shadow:
+    0 14px 34px rgba(25, 28, 30, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
