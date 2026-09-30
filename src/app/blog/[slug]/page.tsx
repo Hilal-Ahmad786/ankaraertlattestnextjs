@@ -26,7 +26,7 @@ export async function generateMetadata({
   const url = `${BASE_URL}/blog/${params.slug}`;
 
   return {
-    title: `${post.title} | Ankara PERT`,
+    title: post.title,
     description: post.subtitle,
     alternates: {
       canonical: url,

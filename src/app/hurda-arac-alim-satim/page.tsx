@@ -2,16 +2,19 @@ import { Metadata } from 'next';
 import HeroBanner from '@/components/sections/HeroBanner';
 import WhyUs from '@/components/sections/WhyUs';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
+import DamageTypesGrid from '@/components/sections/DamageTypesGrid';
 import ContactCTA from '@/components/sections/ContactCTA';
 import FAQ from '@/components/sections/FAQ';
 import { getFAQByCategory } from '@/data/faq';
 import { serviceSchema, breadcrumbSchema } from '@/lib/schema';
+import citiesData from '@/data/cities.json';
+import { City } from '@/types';
 
 const BASE_URL = 'https://www.ankarapert.com.tr';
 const PAGE_URL = `${BASE_URL}/hurda-arac-alim-satim`;
 
 export const metadata: Metadata = {
-  title: 'Hurda Araç Alan | Resmi Belgeli En İyi Fiyat • Ankara PERT',
+  title: 'Hurda Araç Alan | Resmi Belgeli En İyi Fiyat',
   description: 'Hurda araç alan resmi belgeli firma. Çevre dostu, yasal süreçlerle hurda araç alımı.',
   keywords: ['hurda araç alan', 'hurda araç alan yerler', 'hurda araç alan firmalar'],
   alternates: {
@@ -93,6 +96,39 @@ export default function HurdaAracPage() {
     },
   ];
 
+  const damageTypes = [
+    {
+      icon: 'fas fa-hourglass-end',
+      title: 'Ekonomik Ömrünü Tamamlamış',
+      description: 'Onarımı ekonomik olmayan, ekonomik ömrünü tamamlamış araçları hurda olarak alıyoruz.',
+    },
+    {
+      icon: 'fas fa-file-signature',
+      title: 'Çekme Belgeli Hurda',
+      description: 'Trafikten çekilmiş, çekme belgeli araçları resmi hurda belgesiyle satın alıyoruz.',
+    },
+    {
+      icon: 'fas fa-fire',
+      title: 'Yanmış Hurda',
+      description: 'Yanık ve kullanılamaz durumdaki araçları hurda değeri üzerinden değerlendiriyoruz.',
+    },
+    {
+      icon: 'fas fa-puzzle-piece',
+      title: 'Yürümez / Parçalı',
+      description: 'Motor veya şasi olarak parçalanmış, yürümez durumdaki araçları da alıyoruz.',
+    },
+    {
+      icon: 'fas fa-file-alt',
+      title: 'Ruhsatsız / Eksik Evrak',
+      description: 'Ruhsatı kayıp veya eksik evraklı araçlar için de resmi süreç yürütüyoruz.',
+    },
+    {
+      icon: 'fas fa-truck-pickup',
+      title: 'Ticari Hurda Araç',
+      description: 'Hurda kamyon, minibüs ve iş makinelerini de değerlendiriyoruz.',
+    },
+  ];
+
   return (
     <div>
       <script
@@ -140,23 +176,29 @@ export default function HurdaAracPage() {
         steps={processSteps}
       />
 
+      <DamageTypesGrid
+        title="Hangi Hurda Araç Türlerini Satın Alıyoruz?"
+        subtitle="Aracın durumu ne olursa olsun resmi belgeli süreçle değerlendiriyoruz"
+        items={damageTypes}
+      />
+
       <FAQ title="Hurda Araç SSS" items={faqs} />
 
-      {/* Internal links to related city pages */}
+      {/* Internal links to all city pages */}
       <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
             Şehrinizde Hurda Araç Satmak İster Misiniz?
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {['istanbul', 'ankara', 'izmir', 'bursa', 'antalya', 'adana', 'konya', 'gaziantep', 'kayseri', 'mersin'].map((slug) => (
+            {(citiesData as City[]).map((city) => (
               <a
-                key={slug}
-                href={`/sehirler/${slug}`}
-                className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-orange-500 hover:text-orange-600 transition capitalize"
+                key={city.slug}
+                href={`/sehirler/${city.slug}`}
+                className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-orange-500 hover:text-orange-600 transition"
               >
                 <i className="fas fa-map-marker-alt text-orange-400 mr-2"></i>
-                {slug.charAt(0).toUpperCase() + slug.slice(1)}
+                {city.name}
               </a>
             ))}
           </div>

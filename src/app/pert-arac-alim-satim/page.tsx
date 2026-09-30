@@ -2,16 +2,19 @@ import { Metadata } from 'next';
 import HeroBanner from '@/components/sections/HeroBanner';
 import WhyUs from '@/components/sections/WhyUs';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
+import DamageTypesGrid from '@/components/sections/DamageTypesGrid';
 import ContactCTA from '@/components/sections/ContactCTA';
 import FAQ from '@/components/sections/FAQ';
 import { getFAQByCategory } from '@/data/faq';
 import { serviceSchema, breadcrumbSchema } from '@/lib/schema';
+import citiesData from '@/data/cities.json';
+import { City } from '@/types';
 
 const BASE_URL = 'https://www.ankarapert.com.tr';
 const PAGE_URL = `${BASE_URL}/pert-arac-alim-satim`;
 
 export const metadata: Metadata = {
-  title: 'Pert Araç Alan | Kasko Çıkışlı En Yüksek Fiyat • Ankara PERT',
+  title: 'Pert Araç Alan | Kasko Çıkışlı En Yüksek Fiyat',
   description: 'Pert araç alan firmalar arasında lider. Kasko çıkışlı pert araç alımında en iyi fiyat garantisi.',
   keywords: ['pert araç alan', 'pert araç alan yerler', 'pert araç alan firmalar', 'pert araç fiyatları'],
   alternates: {
@@ -93,6 +96,39 @@ export default function PertAracPage() {
     },
   ];
 
+  const damageTypes = [
+    {
+      icon: 'fas fa-file-invoice-dollar',
+      title: 'Sigorta Pert Kaydı',
+      description: 'Sigorta şirketi tarafından pert kayıtlı ilan edilen araçları satın alıyoruz.',
+    },
+    {
+      icon: 'fas fa-car-burst',
+      title: 'Ağır Hasar Pert',
+      description: 'Onarım maliyeti araç değerini aşan ağır hasarlı pert araçları değerlendiriyoruz.',
+    },
+    {
+      icon: 'fas fa-cogs',
+      title: 'Motor/Şanzıman Pert',
+      description: 'Motor veya şanzıman arızası nedeniyle pert olan araçları da alıyoruz.',
+    },
+    {
+      icon: 'fas fa-fire',
+      title: 'Yanık Pert',
+      description: 'Yangın hasarı nedeniyle pert kaydı düşen araçları satın alıyoruz.',
+    },
+    {
+      icon: 'fas fa-water',
+      title: 'Sel Mağduru Pert',
+      description: 'Sel veya su baskını nedeniyle pert olan araçları değerlendiriyoruz.',
+    },
+    {
+      icon: 'fas fa-truck-pickup',
+      title: 'Ticari Pert Araç',
+      description: 'Pert kayıtlı kamyonet ve ticari araçları da satın alıyoruz.',
+    },
+  ];
+
   return (
     <div>
       <script
@@ -139,23 +175,29 @@ export default function PertAracPage() {
         steps={processSteps}
       />
 
+      <DamageTypesGrid
+        title="Hangi Pert Araç Türlerini Satın Alıyoruz?"
+        subtitle="Pert nedeni ne olursa olsun ekspertiz sonrası teklif veriyoruz"
+        items={damageTypes}
+      />
+
       <FAQ title="Pert Araç Hakkında Sorular" items={faqs} />
 
-      {/* Internal links to related city pages */}
+      {/* Internal links to all city pages */}
       <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
             Şehrinizde Pert Araç Satmak İster Misiniz?
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {['istanbul', 'ankara', 'izmir', 'bursa', 'antalya', 'adana', 'konya', 'gaziantep', 'kayseri', 'mersin'].map((slug) => (
+            {(citiesData as City[]).map((city) => (
               <a
-                key={slug}
-                href={`/sehirler/${slug}`}
-                className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-orange-500 hover:text-orange-600 transition capitalize"
+                key={city.slug}
+                href={`/sehirler/${city.slug}`}
+                className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-orange-500 hover:text-orange-600 transition"
               >
                 <i className="fas fa-map-marker-alt text-orange-400 mr-2"></i>
-                {slug.charAt(0).toUpperCase() + slug.slice(1)}
+                {city.name}
               </a>
             ))}
           </div>

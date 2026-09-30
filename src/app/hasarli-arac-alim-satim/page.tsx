@@ -2,16 +2,19 @@ import { Metadata } from 'next';
 import HeroBanner from '@/components/sections/HeroBanner';
 import WhyUs from '@/components/sections/WhyUs';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
+import DamageTypesGrid from '@/components/sections/DamageTypesGrid';
 import ContactCTA from '@/components/sections/ContactCTA';
 import FAQ from '@/components/sections/FAQ';
 import { getFAQByCategory } from '@/data/faq';
 import { serviceSchema, breadcrumbSchema } from '@/lib/schema';
+import citiesData from '@/data/cities.json';
+import { City } from '@/types';
 
 const BASE_URL = 'https://www.ankarapert.com.tr';
 const PAGE_URL = `${BASE_URL}/hasarli-arac-alim-satim`;
 
 export const metadata: Metadata = {
-  title: 'Hasarlı Araç Alan | Anında Nakit Ödeme • Ankara PERT',
+  title: 'Hasarlı Araç Alan | Anında Nakit Ödeme',
   description: 'Hasarlı araç alan güvenilir firma. Ücretsiz ekspertiz, en yüksek fiyat garantisi, 7/24 hizmet.',
   keywords: ['hasarlı araç alan', 'hasarlı araç alan yerler', 'hasarlı araç alan firmalar'],
   alternates: {
@@ -93,6 +96,39 @@ export default function HasarliAracPage() {
     },
   ];
 
+  const damageTypes = [
+    {
+      icon: 'fas fa-oil-can',
+      title: 'Motor Arızalı',
+      description: 'Motor arızası nedeniyle çalışmayan veya ağır yağ/su karışımı yaşamış araçları değerinde satın alıyoruz.',
+    },
+    {
+      icon: 'fas fa-cogs',
+      title: 'Şanzıman Arızalı',
+      description: 'Şanzıman arızası, debriyaj veya vites sorunu olan araçları da ekspertiz sonrası değerlendiriyoruz.',
+    },
+    {
+      icon: 'fas fa-car-side',
+      title: 'Tavan Hasarlı',
+      description: 'Takla, devrilme veya düşen cisim nedeniyle tavan hasarı almış araçları satın alıyoruz.',
+    },
+    {
+      icon: 'fas fa-fire',
+      title: 'Yanık / Yanmış',
+      description: 'Kısmen veya tamamen yanmış araçları da hasar durumuna göre değerlendiriyoruz.',
+    },
+    {
+      icon: 'fas fa-file-signature',
+      title: 'Çekme Belgeli',
+      description: 'Trafikten çekilmiş, çekme belgeli araçları resmi süreçle satın alıyoruz.',
+    },
+    {
+      icon: 'fas fa-truck-pickup',
+      title: 'Ticari Araç',
+      description: 'Kamyonet, minibüs ve panelvan gibi hasarlı ticari araçları da alıyoruz.',
+    },
+  ];
+
   return (
     <div>
       <script
@@ -140,23 +176,29 @@ export default function HasarliAracPage() {
         steps={processSteps}
       />
 
+      <DamageTypesGrid
+        title="Hangi Hasar Türlerini Satın Alıyoruz?"
+        subtitle="Kaporta hasarından mekanik arızaya, her durumdaki aracı değerlendiriyoruz"
+        items={damageTypes}
+      />
+
       <FAQ title="Sık Sorulan Sorular" items={faqs} />
 
-      {/* Internal links to related city pages */}
+      {/* Internal links to all city pages */}
       <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
             Şehrinizde Hasarlı Araç Satmak İster Misiniz?
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {['istanbul', 'ankara', 'izmir', 'bursa', 'antalya', 'adana', 'konya', 'gaziantep', 'kayseri', 'mersin'].map((slug) => (
+            {(citiesData as City[]).map((city) => (
               <a
-                key={slug}
-                href={`/sehirler/${slug}`}
-                className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-orange-500 hover:text-orange-600 transition capitalize"
+                key={city.slug}
+                href={`/sehirler/${city.slug}`}
+                className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-orange-500 hover:text-orange-600 transition"
               >
                 <i className="fas fa-map-marker-alt text-orange-400 mr-2"></i>
-                {slug.charAt(0).toUpperCase() + slug.slice(1)}
+                {city.name}
               </a>
             ))}
           </div>

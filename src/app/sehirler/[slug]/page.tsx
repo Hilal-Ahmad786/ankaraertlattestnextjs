@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const city = cities.find((c) => c.slug === params.slug);
 
   if (!city) {
-    return { title: 'Şehir Bulunamadı | Ankara Pert' };
+    return { title: 'Şehir Bulunamadı' };
   }
 
   const url = `${BASE_URL}/sehirler/${city.slug}`;

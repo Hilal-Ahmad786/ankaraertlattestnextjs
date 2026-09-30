@@ -2,16 +2,19 @@ import { Metadata } from 'next';
 import HeroBanner from '@/components/sections/HeroBanner';
 import WhyUs from '@/components/sections/WhyUs';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
+import DamageTypesGrid from '@/components/sections/DamageTypesGrid';
 import ContactCTA from '@/components/sections/ContactCTA';
 import { serviceSchema, breadcrumbSchema, faqPageSchema } from '@/lib/schema';
 import { getFAQByCategory } from '@/data/faq';
 import FAQ from '@/components/sections/FAQ';
+import citiesData from '@/data/cities.json';
+import { City } from '@/types';
 
 const BASE_URL = 'https://www.ankarapert.com.tr';
 const PAGE_URL = `${BASE_URL}/kazali-arac-alim-satim`;
 
 export const metadata: Metadata = {
-  title: 'Kazalı Araç Alan | 30 Dakikada Nakit Teklif • Ankara PERT',
+  title: 'Kazalı Araç Alan | 30 Dakikada Nakit Teklif',
   description:
     'Kazalı araç alan lider firma! Türkiye\'nin her yerinde 30 dakikada ücretsiz ekspertiz ve anında nakit ödeme.',
   keywords: [
@@ -101,6 +104,39 @@ export default function KazaliAracPage() {
     },
   ];
 
+  const damageTypes = [
+    {
+      icon: 'fas fa-car-crash',
+      title: 'Ön/Arka Çarpışma',
+      description: 'Ön veya arkadan çarpışma sonucu hasar almış kazalı araçları değerinde satın alıyoruz.',
+    },
+    {
+      icon: 'fas fa-compress-arrows-alt',
+      title: 'Yan Darbe',
+      description: 'Yandan darbe alan, kapı ve şasi hasarlı kazalı araçları da ekspertiz sonrası değerlendiriyoruz.',
+    },
+    {
+      icon: 'fas fa-sync-alt',
+      title: 'Takla / Devrilme',
+      description: 'Takla atmış veya devrilmiş araçları, tavan ve şasi hasarına bakılmaksızın satın alıyoruz.',
+    },
+    {
+      icon: 'fas fa-exclamation-circle',
+      title: 'Airbag Patlamış',
+      description: "Airbag'i patlamış, iç donanımı hasar görmüş kazalı araçları da alıyoruz.",
+    },
+    {
+      icon: 'fas fa-ban',
+      title: 'Yürümez Durumda',
+      description: 'Kaza sonrası hareket edemeyen araçları ücretsiz çekici ile yerinden teslim alıyoruz.',
+    },
+    {
+      icon: 'fas fa-truck-pickup',
+      title: 'Ticari Araç',
+      description: 'Kazalı kamyonet, panelvan ve diğer ticari araçları da değerinde satın alıyoruz.',
+    },
+  ];
+
   return (
     <div>
       <script
@@ -149,23 +185,29 @@ export default function KazaliAracPage() {
         steps={processSteps}
       />
 
+      <DamageTypesGrid
+        title="Hangi Kazalı Araç Türlerini Satın Alıyoruz?"
+        subtitle="Çarpışma yönü ve hasar derecesi fark etmeksizin değerlendiriyoruz"
+        items={damageTypes}
+      />
+
       <FAQ title="Kazalı Araç Hakkında Sorular" items={faqs} />
 
-      {/* Internal links to related city pages */}
+      {/* Internal links to all city pages */}
       <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
             Şehrinizde Kazalı Araç Satmak İster Misiniz?
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {['istanbul', 'ankara', 'izmir', 'bursa', 'antalya', 'adana', 'konya', 'gaziantep', 'kayseri', 'mersin'].map((slug) => (
+            {(citiesData as City[]).map((city) => (
               <a
-                key={slug}
-                href={`/sehirler/${slug}`}
-                className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-orange-500 hover:text-orange-600 transition capitalize"
+                key={city.slug}
+                href={`/sehirler/${city.slug}`}
+                className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-orange-500 hover:text-orange-600 transition"
               >
                 <i className="fas fa-map-marker-alt text-orange-400 mr-2"></i>
-                {slug.charAt(0).toUpperCase() + slug.slice(1)}
+                {city.name}
               </a>
             ))}
           </div>

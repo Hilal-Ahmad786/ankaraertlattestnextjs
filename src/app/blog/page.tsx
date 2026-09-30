@@ -6,7 +6,7 @@ import CallToActionBanner from '@/components/sections/CallToActionBanner';
 import { blogPosts, getAllBlogSlugs } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
-  title: 'Blog | Ankara PERT - Kazalı, Hurda ve Pert Araç Rehberi',
+  title: 'Blog - Kazalı, Hurda ve Pert Araç Rehberi',
   description: 'Kazalı araç, pert raporu ve hurda araç hakkında bilmeniz gereken her şey. Uzman tavsiyeleri ve rehberler.',
   alternates: {
     canonical: 'https://www.ankarapert.com.tr/blog',

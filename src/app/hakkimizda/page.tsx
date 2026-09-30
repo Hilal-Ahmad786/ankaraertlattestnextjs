@@ -5,7 +5,7 @@ import { siteConfig } from '@/config/site';
 import TrackedPhoneLink from '@/components/ui/TrackedPhoneLink';
 
 export const metadata: Metadata = {
-  title: 'Hakkımızda | Ankara PERT',
+  title: 'Hakkımızda',
   description: 'Ankara PERT - Türkiye\'nin en güvenilir kazalı, hasarlı, pert ve hurda araç alım merkezi. 15+ yıllık tecrübe, 50.000+ mutlu müşteri.',
   alternates: {
     canonical: 'https://www.ankarapert.com.tr/hakkimizda',

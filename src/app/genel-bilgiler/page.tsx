@@ -9,7 +9,7 @@ const BASE_URL = 'https://www.ankarapert.com.tr';
 const PAGE_URL = `${BASE_URL}/genel-bilgiler`;
 
 export const metadata: Metadata = {
-  title: 'Genel Bilgiler & SSS | Ankara PERT',
+  title: 'Genel Bilgiler & SSS',
   description: 'Kazalı, hasarlı, pert ve hurda araç alımı hakkında sık sorulan sorular ve detaylı bilgiler. Ankara PERT ile nasıl çalışır?',
   alternates: {
     canonical: PAGE_URL,

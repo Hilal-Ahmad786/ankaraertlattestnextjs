@@ -7,7 +7,7 @@ import { City } from '@/types';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-    title: 'Hizmet Bölgelerimiz | Ankara Pert',
+    title: 'Hizmet Bölgelerimiz',
     description: 'Türkiye geneli hasarlı, kazalı, pert ve hurda araç alımı. 30 ilde ayrıntılı hizmet sayfamız var; listede olmayan illerden de başvuru kabul ediyoruz.',
     alternates: {
         canonical: 'https://www.ankarapert.com.tr/sehirler',
