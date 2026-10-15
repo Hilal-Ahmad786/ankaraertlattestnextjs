@@ -258,6 +258,61 @@ export interface BlogPost {
         </div>
       `,
     },
+    'sel-hasarli-arac-istanbul-kocaeli-sakarya-antalya': {
+      title: 'İstanbul, Kocaeli, Sakarya ve Antalya\'da Sel Hasarlı Araç: Ne Yapmalısınız?',
+      subtitle: '14-15 Ekim 2026 sel felaketinde zarar gören araç sahipleri için adım adım rehber',
+      category: 'Sel Hasarlı Araç',
+      date: '15 Ekim 2026',
+      datePublished: '2026-10-15',
+      author: 'Ankara PERT Ekibi',
+      content: `
+        <div class="prose max-w-none">
+          <p class="text-xl text-gray-600 mb-8">
+            14 Ekim 2026'da etkili olan şiddetli sağanak, İstanbul başta olmak üzere Kocaeli, Sakarya ve Antalya'da yüzlerce aracın sel sularına kapılmasına veya su altında kalmasına neden oldu. Sel hasarlı bir aracınız varsa, hasarın boyutunu doğru değerlendirmek ve doğru adımları hızlıca atmak hem güvenliğiniz hem de aracın kalan değeri açısından kritik.
+          </p>
+
+          <h2>Hangi Bölgeler Etkilendi?</h2>
+          <ul>
+            <li><strong>İstanbul:</strong> Sarıyer, Kemerburgaz, Kağıthane ve Eyüpsultan başta olmak üzere birçok ilçede dere taşkınları yaşandı; AFAD ve 112 Acil Çağrı Merkezi'ne 76 araca ilişkin hasar ihbarı ulaştı, aynı dönemde 808 konut ve 280 iş yeri için de bildirim yapıldı.</li>
+            <li><strong>Kocaeli:</strong> Kandıra'nın Taraklı Kışla mevkii dahil birçok noktada sağanak su baskınlarına yol açtı; bazı araçlar taşkın suyuna kapılarak hareket edemez hale geldi.</li>
+            <li><strong>Sakarya:</strong> Adapazarı-Mekece arasındaki D-650 karayolu su altında kaldı, Adatepe mevkiinde çok sayıda araç su birikintilerine takıldı.</li>
+            <li><strong>Antalya:</strong> Demre ilçesinde etkili olan sel nedeniyle araçlar su altında kaldı; AFAD, DSİ, Karayolları ve belediye ekipleri bölgede hasar tespiti yürüttü.</li>
+          </ul>
+
+          <h2>Sel Hasarlı Aracınızla İlk 24 Saatte Ne Yapmalısınız?</h2>
+          <ol>
+            <li><strong>Aracı tekrar çalıştırmayı denemeyin.</strong> Su, motor ve elektronik sistemlere girmişse çalıştırma denemesi hasarı büyütebilir.</li>
+            <li><strong>Fotoğraf ve video ile belgeleyin.</strong> Su seviyesinin aracın neresine kadar çıktığını gösteren görüntüler, sigorta ve ekspertiz süreçlerinde önemlidir.</li>
+            <li><strong>Sigorta şirketinizi bilgilendirin.</strong> Kasko poliçeniz varsa sel/su baskını teminatının kapsamını kontrol edin.</li>
+            <li><strong>Bağımsız ekspertiz yaptırın.</strong> Görünen hasarın yanı sıra motor, şanzıman ve elektronik aksamdaki gizli hasar da değerlendirilmeli.</li>
+          </ol>
+
+          <h2>Sel Hasarlı Araç Neden Farklı Değerlendirilir?</h2>
+          <p>
+            Su baskınına giren bir araçta hasar yalnızca görünen kaporta veya döşemeyle sınırlı kalmaz. Motor yağına, şanzımana ve elektronik kontrol ünitelerine sızan su, kısa vadede çalışır görünse dahi orta-uzun vadede ciddi arızalara yol açabilir. Bu nedenle sel hasarlı araçlar, kazalı araçlardan farklı bir ekspertiz yaklaşımı gerektirir.
+          </p>
+
+          <div class="bg-orange-50 border-l-4 border-orange-500 p-6 my-8">
+            <p class="font-semibold text-orange-800 mb-2">💡 Uzman Tavsiyesi</p>
+            <p class="text-orange-700">
+              Sel hasarlı bir aracı onarıp tekrar satmak yerine, gerçek durumunu bilen bir alıcıya satmak çoğu zaman hem daha hızlı hem de daha az risklidir. Ankara PERT, İstanbul, Kocaeli, Sakarya ve Antalya dahil hizmet verdiğimiz tüm illerde sel hasarlı araçları ücretsiz ekspertiz sonrası değerinde satın alır.
+            </p>
+          </div>
+
+          <h2>Sonuç</h2>
+          <p>
+            Sel felaketinden etkilenen araç sahiplerinin önceliği güvenlik, ikinci önceliği ise hasarın büyümesini önlemek olmalı. Aracınızın bulunduğu ilin hizmet sayfasından (<a href="/sehirler/istanbul">İstanbul</a>, <a href="/sehirler/kocaeli">Kocaeli</a>, <a href="/sehirler/sakarya">Sakarya</a>, <a href="/sehirler/antalya">Antalya</a>) veya doğrudan <a href="/hasarli-arac-alim-satim">hasarlı araç alım sayfamızdan</a> bize ulaşabilirsiniz. Farklı bölgelerde hizmet veren kardeş firmamız <a href="https://hasarliaracalan.com/" target="_blank" rel="noopener noreferrer">Hasarlı Araç Alan</a> üzerinden de bilgi alabilirsiniz.
+          </p>
+
+          <div class="bg-accent-tint border-l-4 border-accent p-6 my-8">
+            <p class="font-semibold text-brand mb-2">📞 Hemen Teklif Alın</p>
+            <p class="text-brand">
+              Sel hasarlı aracınız için ücretsiz ekspertiz ve anında teklif: <strong>${siteConfig.phoneDisplay}</strong>
+            </p>
+          </div>
+        </div>
+      `,
+    },
   };
   
   // Helper function to get all blog slugs
