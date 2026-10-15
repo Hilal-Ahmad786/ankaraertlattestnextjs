@@ -18,7 +18,7 @@ export function organizationSchema() {
       height: 512,
     },
     description: siteConfig.description,
-    telephone: '+905539465206',
+    telephone: '+905525677164',
     email: siteConfig.email,
     sameAs: [siteConfig.social.facebook, siteConfig.social.instagram],
     areaServed: {
@@ -61,7 +61,7 @@ export function localBusinessSchema(cityName?: string, citySlug?: string) {
       : `${BASE_URL}/#localbusiness`,
     name: cityName ? `Ankara PERT - ${cityName}` : 'Ankara PERT',
     url: citySlug ? `${BASE_URL}/sehirler/${citySlug}` : BASE_URL,
-    telephone: '+905539465206',
+    telephone: '+905525677164',
     email: siteConfig.email,
     image: `${BASE_URL}/logo-square.png`,
     logo: `${BASE_URL}/logo-square.png`,
