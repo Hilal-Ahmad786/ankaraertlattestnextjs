@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import citiesData from '@/data/cities.json';
 import { City } from '@/types';
-import CityHero from '@/components/city/CityHero';
 import { getCityMedia } from '@/data/city-media';
 import HeroBanner from '@/components/sections/HeroBanner';
 import CityContent from '@/components/city/CityContent';
@@ -184,19 +183,16 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
         dangerouslySetInnerHTML={{ __html: JSON.stringify(cityServiceJsonLd) }}
       />
 
-      {media ? (
-        <CityHero title={written?.heroTitle ?? city.heroTitle} subtitle={written?.heroSubtitle ?? city.heroSubtitle}
-          tagline={`${city.region} Bölgesi • ${city.plateCode}`} media={media} />
-      ) : (
-        <HeroBanner
-          variant="default"
-          tagline={`${city.region} Bölgesi • ${city.plateCode}`}
-          title={written?.heroTitle ?? city.heroTitle}
-          subtitle={written?.heroSubtitle ?? city.heroSubtitle}
-          highlight="30 Dakikada Nakit"
-          backgroundImage={city.heroImage}
-        />
-      )}
+      {/* Same hero as the homepage and service pages; the top-10 cities use
+          their own photo as the background so each page still looks distinct. */}
+      <HeroBanner
+        variant="default"
+        tagline={`${city.region} Bölgesi • ${city.plateCode}`}
+        title={written?.heroTitle ?? city.heroTitle}
+        subtitle={written?.heroSubtitle ?? city.heroSubtitle}
+        highlight="30 Dakikada Nakit"
+        backgroundImage={media?.src ?? city.heroImage}
+      />
 
       <TrustBadges />
 
