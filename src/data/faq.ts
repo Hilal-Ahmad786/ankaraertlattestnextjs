@@ -9,13 +9,13 @@ export interface FAQItem {
       {
         question: 'Kazalı araç alan yerler nerede bulunur?',
         answer:
-          "Türkiye'nin her büyük şehrinde ve ilçesinde hizmet veriyoruz; 7/24 şube ve saha ekibimizle yanınızdayız.",
+          "Merkezimiz Ankara'dadır ve Türkiye genelinde hizmet veriyoruz. Başvurunuzu 7/24 telefon veya WhatsApp üzerinden alıyor, ekspertiz ve çekiciyi aracınızın bulunduğu yere göre planlıyoruz.",
         category: 'genel',
       },
       {
         question: 'Kazalı araç alan firmalar hangileridir?',
         answer:
-          'Ankara PERT başta olmak üzere, İstanbul, İzmir, Bursa gibi birçok ilde onaylı ekspertiz-ekiplerimiz hizmetinizde.',
+          'Ankara PERT, hasarlı ve kazalı araçları aracı olmadan doğrudan satın alan bir firmadır. Merkezimiz Ankara\'dadır; İstanbul, İzmir ve Bursa başta olmak üzere birçok ilde aracınızı bulunduğu yerde değerlendiriyoruz.',
         category: 'genel',
       },
       {
@@ -59,13 +59,13 @@ export interface FAQItem {
       {
         question: 'Hasarlı araç alan yerler nerede bulunur?',
         answer:
-          "Türkiye'nin her büyük şehrinde ve ilçesinde hizmet veriyoruz; 7/24 şube ve saha ekibimizle yanınızdayız.",
+          "Merkezimiz Ankara'dadır ve Türkiye genelinde hizmet veriyoruz. Başvurunuzu 7/24 telefon veya WhatsApp üzerinden alıyor, ekspertiz ve çekiciyi aracınızın bulunduğu yere göre planlıyoruz.",
         category: 'genel',
       },
       {
         question: 'Hasarlı araç alan firmalar hangileridir?',
         answer:
-          'Ankara PERT başta olmak üzere, İstanbul, İzmir, Bursa gibi birçok ilde onaylı ekspertiz-ekiplerimiz hizmetinizde.',
+          'Ankara PERT, hasarlı ve kazalı araçları aracı olmadan doğrudan satın alan bir firmadır. Merkezimiz Ankara\'dadır; İstanbul, İzmir ve Bursa başta olmak üzere birçok ilde aracınızı bulunduğu yerde değerlendiriyoruz.',
         category: 'genel',
       },
       {
@@ -103,13 +103,13 @@ export interface FAQItem {
       {
         question: 'Pert araç alan yerler nerede bulunur?',
         answer:
-          "Türkiye'nin her büyük şehrinde ve ilçesinde hizmet veriyoruz; 7/24 şube ve saha ekibimizle yanınızdayız.",
+          "Merkezimiz Ankara'dadır ve Türkiye genelinde hizmet veriyoruz. Başvurunuzu 7/24 telefon veya WhatsApp üzerinden alıyor, ekspertiz ve çekiciyi aracınızın bulunduğu yere göre planlıyoruz.",
         category: 'genel',
       },
       {
         question: 'Pert araç alan firmalar hangileridir?',
         answer:
-          'Ankara PERT başta olmak üzere, İstanbul, İzmir, Bursa gibi birçok ilde onaylı ekspertiz-ekiplerimiz hizmetinizde.',
+          'Ankara PERT, hasarlı ve kazalı araçları aracı olmadan doğrudan satın alan bir firmadır. Merkezimiz Ankara\'dadır; İstanbul, İzmir ve Bursa başta olmak üzere birçok ilde aracınızı bulunduğu yerde değerlendiriyoruz.',
         category: 'genel',
       },
       {
@@ -147,13 +147,13 @@ export interface FAQItem {
       {
         question: 'Hurda araç alan yerler nerede bulunur?',
         answer:
-          "Türkiye'nin her büyük şehrinde ve ilçesinde hizmet veriyoruz; 7/24 şube ve saha ekibimizle yanınızdayız.",
+          "Merkezimiz Ankara'dadır ve Türkiye genelinde hizmet veriyoruz. Başvurunuzu 7/24 telefon veya WhatsApp üzerinden alıyor, ekspertiz ve çekiciyi aracınızın bulunduğu yere göre planlıyoruz.",
         category: 'genel',
       },
       {
         question: 'Hurda araç alan firmalar hangileridir?',
         answer:
-          'Ankara PERT başta olmak üzere, İstanbul, İzmir, Bursa gibi birçok ilde onaylı ekspertiz-ekiplerimiz hizmetinizde.',
+          'Ankara PERT, hasarlı ve kazalı araçları aracı olmadan doğrudan satın alan bir firmadır. Merkezimiz Ankara\'dadır; İstanbul, İzmir ve Bursa başta olmak üzere birçok ilde aracınızı bulunduğu yerde değerlendiriyoruz.',
         category: 'genel',
       },
       {
@@ -209,7 +209,7 @@ export interface FAQItem {
       {
         question: 'Hangi şehirlerde hizmet veriyorsunuz?',
         answer:
-          "Türkiye'nin tüm şehirlerinde 7/24 hizmet veriyoruz. Size en yakın ekibimiz randevunuz için iletişime geçecektir.",
+          "Türkiye genelinde hizmet veriyoruz; merkezimiz Ankara'dadır. Başvurunuzu 7/24 alıyoruz; ekspertiz randevusu aracınızın bulunduğu ile ve adrese göre sizinle birlikte planlanır.",
         category: 'hizmet',
       },
     ],
