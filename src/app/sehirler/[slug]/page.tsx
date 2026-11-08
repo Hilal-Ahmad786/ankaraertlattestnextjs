@@ -77,6 +77,9 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
 
   const written = getCityContent(city.slug);
   const media = getCityMedia(city.slug);
+  // Enhanced city treatment (motion, check card, district chips, extra content) now applies
+  // to every city with written content; `media` only decides the custom hero photo.
+  const enhanced = Boolean(written);
   const writtenNearbyLinks = written?.nearbyNote?.citySlugs
     .map((slug) => cities.find((item) => item.slug === slug))
     .filter((item): item is City => Boolean(item))
@@ -175,8 +178,8 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
   };
 
   return (
-    <div className={`city-page min-h-screen bg-gray-50 pb-0 ${media ? 'city-pilot' : ''}`} data-city-treatment={media ? 'media-pilot' : 'cleanup-only'}>
-      {media && <CityRevealScope />}
+    <div className={`city-page min-h-screen bg-gray-50 pb-0 ${enhanced ? 'city-pilot' : ''}`} data-city-treatment={enhanced ? 'enhanced' : 'cleanup-only'}>
+      {enhanced && <CityRevealScope />}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizJsonLd) }}
@@ -201,7 +204,7 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
         backgroundImage={media?.src ?? city.heroImage}
       />
 
-      <TrustBadges cityPage={Boolean(media)} />
+      <TrustBadges cityPage={enhanced} />
 
       <section className="container mx-auto px-4 pt-10 relative z-20">
         <p className="text-lg leading-relaxed text-center text-gray-700 max-w-4xl mx-auto">
@@ -214,8 +217,8 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
           )}
         </p>
         <p className="mt-4 text-base leading-relaxed text-center text-gray-600 max-w-3xl mx-auto">
-          <strong className={media ? 'city-promise-highlight' : 'text-gray-800'}>30 dakikada nakit teklif</strong>, anlaşma
-          sağlandığında <strong className={media ? 'city-promise-highlight' : 'text-gray-800'}>aynı gün ödeme</strong>.
+          <strong className={enhanced ? 'city-promise-highlight' : 'text-gray-800'}>30 dakikada nakit teklif</strong>, anlaşma
+          sağlandığında <strong className={enhanced ? 'city-promise-highlight' : 'text-gray-800'}>aynı gün ödeme</strong>.
           Çekici ve noter masrafları bize aittir; {city.name} içinde aracınız
           bulunduğu yerden teslim alınır.
         </p>
@@ -223,7 +226,7 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
 
       <div className="container mx-auto px-4 py-12 relative z-20">
         <div className="mb-12">
-          <CityStats cityName={city.name} animate={Boolean(media)} />
+          <CityStats cityName={city.name} animate={enhanced} />
         </div>
 
         {/* Full-width section stack: the CTA sits between sections as a band
@@ -233,7 +236,7 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
             <CityContent
               content={city.content}
               cityName={city.name}
-              citySlug={media ? city.slug : undefined}
+              citySlug={enhanced ? city.slug : undefined}
               body={written?.body}
               localPoints={written?.localPoints}
               damageTable={written?.damageTable}
@@ -244,9 +247,9 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
               nearbyCityLinks={writtenNearbyLinks}
             />
             <CitySidebar city={city} />
-            <CityDistricts city={city} districtNotes={written?.districtNotes} pilot={Boolean(media)} />
+            <CityDistricts city={city} districtNotes={written?.districtNotes} pilot={enhanced} />
             <CityCtaBanner variant="tow" cityName={city.name} />
-            <CityVehicleTypes city={city} pilot={Boolean(media)} />
+            <CityVehicleTypes city={city} pilot={enhanced} />
             <CityFAQs cityName={city.name} faqs={written?.faqs} />
             <CityCtaBanner variant="question" cityName={city.name} />
             <CityNearbyCities city={city} nearbyCities={nearbyCities} />
@@ -255,7 +258,7 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
 
       <div className="bg-white border-t border-gray-100">
         <ProcessTimeline
-          animate={Boolean(media)}
+          animate={enhanced}
           title={`${city.name} Araç Alım Süreci`}
           subtitle="4 Kolay Adımda Aracınızı Nakite Çevirin"
           steps={processSteps}

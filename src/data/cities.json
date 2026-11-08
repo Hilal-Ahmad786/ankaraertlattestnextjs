@@ -92,7 +92,10 @@
             "Çiğli",
             "Gaziemir",
             "Balçova",
-            "Narlıdere"
+            "Narlıdere",
+            "Torbalı",
+            "Menemen",
+            "Bayraklı"
         ],
         "advantages": [
             "Ege Bölgesi Geneli Hizmet",
@@ -177,7 +180,10 @@
             "Yüreğir",
             "Sarıçam",
             "Ceyhan",
-            "Kozan"
+            "Kozan",
+            "İmamoğlu",
+            "Karataş",
+            "Pozantı"
         ],
         "advantages": [
             "Bölgeyi Bilen Uzman Ekip",
@@ -260,7 +266,10 @@
             "Eyyübiye",
             "Karaköprü",
             "Siverek",
-            "Viranşehir"
+            "Viranşehir",
+            "Suruç",
+            "Birecik",
+            "Akçakale"
         ],
         "advantages": [
             "Geniş Hizmet Alanı",
@@ -317,7 +326,10 @@
             "Yenişehir",
             "Toroslar",
             "Tarsus",
-            "Erdemli"
+            "Erdemli",
+            "Silifke",
+            "Anamur",
+            "Mut"
         ],
         "advantages": [
             "Liman Kenti Lojistik Ağı",
@@ -343,7 +355,10 @@
             "Kayapınar",
             "Sur",
             "Yenişehir",
-            "Ergani"
+            "Ergani",
+            "Bismil",
+            "Silvan",
+            "Çınar"
         ],
         "advantages": [
             "Bölgesel Güç",
@@ -369,7 +384,10 @@
             "İskenderun",
             "Defne",
             "Dörtyol",
-            "Samandağ"
+            "Samandağ",
+            "Kırıkhan",
+            "Reyhanlı",
+            "Arsuz"
         ],
         "advantages": [
             "Bölgeye Özel Hassasiyet",
@@ -395,7 +413,10 @@
             "Şehzadeler",
             "Akhisar",
             "Turgutlu",
-            "Salihli"
+            "Salihli",
+            "Soma",
+            "Alaşehir",
+            "Saruhanlı"
         ],
         "advantages": [
             "Hızlı Ekspertiz",
@@ -478,7 +499,10 @@
             "Karesi",
             "Bandırma",
             "Edremit",
-            "Gönen"
+            "Gönen",
+            "Ayvalık",
+            "Burhaniye",
+            "Susurluk"
         ],
         "advantages": [
             "Geniş Coğrafi Kapsam",
@@ -503,7 +527,10 @@
             "Onikişubat",
             "Dulkadiroğlu",
             "Elbistan",
-            "Afşin"
+            "Afşin",
+            "Pazarcık",
+            "Türkoğlu",
+            "Göksun"
         ],
         "advantages": [
             "Bölgesel Tecrübe",
@@ -557,7 +584,9 @@
             "Nazilli",
             "Söke",
             "Kuşadası",
-            "Didim"
+            "Didim",
+            "Germencik",
+            "Çine"
         ],
         "advantages": [
             "Turistik Bölge Servisi",
@@ -583,7 +612,10 @@
             "Çorlu",
             "Çerkezköy",
             "Kapaklı",
-            "Ergene"
+            "Ergene",
+            "Malkara",
+            "Şarköy",
+            "Hayrabolu"
         ],
         "advantages": [
             "Trakya Bölge Ağı",
@@ -609,7 +641,10 @@
             "Serdivan",
             "Erenler",
             "Hendek",
-            "Akyazı"
+            "Akyazı",
+            "Karasu",
+            "Sapanca",
+            "Geyve"
         ],
         "advantages": [
             "Hızlı Ekspertiz",
@@ -634,7 +669,10 @@
             "Pamukkale",
             "Merkezefendi",
             "Çivril",
-            "Acıpayam"
+            "Acıpayam",
+            "Sarayköy",
+            "Tavas",
+            "Honaz"
         ],
         "advantages": [
             "Denizli Geneli Hizmet",
@@ -660,7 +698,10 @@
             "Bodrum",
             "Fethiye",
             "Marmaris",
-            "Milas"
+            "Milas",
+            "Dalaman",
+            "Ortaca",
+            "Köyceğiz"
         ],
         "advantages": [
             "Tüm Kıyı Şeridi Hizmeti",
@@ -685,7 +726,10 @@
             "Odunpazarı",
             "Tepebaşı",
             "Sivrihisar",
-            "Çifteler"
+            "Çifteler",
+            "İnönü",
+            "Alpu",
+            "Seyitgazi"
         ],
         "advantages": [
             "Merkezi Konum",
@@ -710,7 +754,10 @@
             "Artuklu",
             "Kızıltepe",
             "Midyat",
-            "Nusaybin"
+            "Nusaybin",
+            "Derik",
+            "Ömerli",
+            "Savur"
         ],
         "advantages": [
             "Bölge Uzmanlığı",
@@ -736,7 +783,10 @@
             "Akçaabat",
             "Araklı",
             "Of",
-            "Yomra"
+            "Yomra",
+            "Vakfıkebir",
+            "Sürmene",
+            "Maçka"
         ],
         "advantages": [
             "Karadeniz Uzmanlığı",
@@ -761,7 +811,10 @@
             "Battalgazi",
             "Yeşilyurt",
             "Doğanşehir",
-            "Akçadağ"
+            "Akçadağ",
+            "Darende",
+            "Hekimhan",
+            "Pütürge"
         ],
         "advantages": [
             "Yerinde Hizmet",
@@ -786,7 +839,10 @@
             "Altınordu",
             "Fatsa",
             "Ünye",
-            "Perşembe"
+            "Perşembe",
+            "Gölköy",
+            "Kumru",
+            "Gülyalı"
         ],
         "advantages": [
             "Sahil Hattı Hizmeti",
@@ -811,7 +867,10 @@
             "Yakutiye",
             "Palandöken",
             "Aziziye",
-            "Horasan"
+            "Horasan",
+            "Oltu",
+            "Pasinler",
+            "İspir"
         ],
         "advantages": [
             "Zorlu Şartlarda Hizmet",
