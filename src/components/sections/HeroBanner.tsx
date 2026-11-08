@@ -97,8 +97,9 @@ export default function HeroBanner({
       {/* Bottom fade so the trust strip below keeps its footing. */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/35"></div>
 
+      {/* Plate chip bottom-left, clear of the floating call/WhatsApp buttons on the right. */}
+      {cityPilot && <span className="city-plate-chip" aria-hidden="true" data-city-reveal>{cityPilot.plateCode} · {cityPilot.name}</span>}
       {cityPilot && <div className="city-hero-decoration" aria-hidden="true">
-        <span className="city-plate-chip" data-city-reveal>{cityPilot.plateCode} · {cityPilot.name}</span>
         <CityHeroLineArt slug={cityPilot.slug} />
       </div>}
 

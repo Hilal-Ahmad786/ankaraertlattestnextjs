@@ -47,12 +47,12 @@ export default function CityDistricts({ city, districtNotes, pilot = false }: Ci
                 </div>
 
                 {hasNotes ? (
-                    <div className="space-y-4">
+                    <div className="grid gap-4 lg:grid-cols-2">
                         {pilot && <nav className="city-district-map" aria-label={`${city.name} ilçelerine git`}>
-                            <p className="city-district-map-label">Şematik ilçe dizini · noktalar coğrafi konum göstermez</p>
+                            <p className="city-district-map-label">İlçe açıklamasına gitmek için seçin</p>
                             <div className="city-district-map-dots">
-                                {city.districts.map((district, index) => <a key={district} href={`#district-${city.slug}-${index}`} aria-label={`${district} ilçe açıklamasına git`} title={district}>
-                                    <span aria-hidden="true" />
+                                {city.districts.map((district, index) => <a key={district} href={`#district-${city.slug}-${index}`} aria-label={`${district} ilçe açıklamasına git`}>
+                                    <span aria-hidden="true" />{district}
                                 </a>)}
                             </div>
                         </nav>}

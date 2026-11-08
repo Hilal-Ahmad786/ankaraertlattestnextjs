@@ -5,7 +5,7 @@ import { City } from '@/types';
 import { getCityMedia } from '@/data/city-media';
 import HeroBanner from '@/components/sections/HeroBanner';
 import CityContent from '@/components/city/CityContent';
-import CitySidebar from '@/components/city/CitySidebar';
+import CitySidebar, { CityNearbyCities } from '@/components/city/CitySidebar';
 import CityDistricts from '@/components/city/CityDistricts';
 import CityFAQs from '@/components/city/CityFAQs';
 import CityStats from '@/components/city/CityStats';
@@ -226,8 +226,9 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
           <CityStats cityName={city.name} animate={Boolean(media)} />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-          <div className="lg:col-span-2 space-y-8">
+        {/* Full-width section stack: the CTA sits between sections as a band
+            instead of a sticky right column that left most of the page empty. */}
+        <div className="space-y-8">
             <CityContent
               content={city.content}
               cityName={city.name}
@@ -241,14 +242,11 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
               nearbyNote={written?.nearbyNote}
               nearbyCityLinks={writtenNearbyLinks}
             />
+            <CitySidebar city={city} />
             <CityDistricts city={city} districtNotes={written?.districtNotes} pilot={Boolean(media)} />
             <CityVehicleTypes city={city} pilot={Boolean(media)} />
             <CityFAQs cityName={city.name} faqs={written?.faqs} />
-          </div>
-
-          <div className="lg:col-span-1">
-            <CitySidebar city={city} nearbyCities={nearbyCities} />
-          </div>
+            <CityNearbyCities city={city} nearbyCities={nearbyCities} />
         </div>
       </div>
 
