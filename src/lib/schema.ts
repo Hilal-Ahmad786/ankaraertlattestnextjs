@@ -17,7 +17,7 @@ export function organizationSchema() {
       width: 512,
       height: 512,
     },
-    description: siteConfig.description,
+    description: 'Kazalı, hasarlı, pert ve hurda araç alımı.',
     telephone: '+905525677164',
     email: siteConfig.email,
     sameAs: [siteConfig.social.facebook, siteConfig.social.instagram],

@@ -47,7 +47,7 @@ export default function CityDistricts({ city, districtNotes }: CityDistrictsProp
                 {hasNotes ? (
                     <div className="space-y-4">
                         {city.districts.map((district) => (
-                            <div key={district} className="p-4 rounded-2xl bg-gray-50 border border-gray-100">
+                            <div key={district} className="city-district-card p-4 rounded-2xl bg-gray-50 border border-gray-100">
                                 <h4 className="text-sm font-bold text-gray-800 flex items-center gap-2 mb-1">
                                     <i className="fas fa-map-pin text-accent-ink text-xs" aria-hidden></i>
                                     {district}
@@ -65,7 +65,7 @@ export default function CityDistricts({ city, districtNotes }: CityDistrictsProp
                         {city.districts.map((district, index) => (
                             <div
                                 key={index}
-                                className="group flex items-center gap-2 p-3 rounded-full bg-gray-50 border border-transparent hover:bg-white hover:border-accent hover:shadow-md transition-all cursor-default"
+                                className="city-district-card group flex items-center gap-2 p-3 rounded-full bg-gray-50 border border-transparent hover:bg-white hover:border-accent hover:shadow-md transition-all cursor-default"
                             >
                                 <i className="fas fa-map-pin text-gray-400 text-xs group-hover:text-accent-ink transition-colors"></i>
                                 <span className="text-gray-600 text-sm font-medium group-hover:text-gray-900">{district}</span>

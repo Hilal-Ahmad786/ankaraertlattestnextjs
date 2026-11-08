@@ -3,7 +3,7 @@
 import { siteConfig } from '@/config/site';
 import { trackCTAClick, trackWhatsAppClick } from '@/lib/gtm';
 
-export default function ContactCTA() {
+export default function ContactCTA({ cityPage = false }: { cityPage?: boolean }) {
   const handleWhatsAppClick = () => {
     trackWhatsAppClick('contact_cta');
     trackCTAClick('WhatsApp CTA', 'contact-section');
@@ -19,14 +19,14 @@ export default function ContactCTA() {
         <h2 className="text-4xl md:text-5xl font-bold mb-2">BİZE ULAŞIN</h2>
         {/* Not a heading: this is a phone number. It was an <h1>, which gave
             every page a second H1 competing with the real one. */}
-        <p className="text-5xl md:text-6xl font-bold text-accent mb-6">
+        <p className={`${cityPage ? 'text-3xl sm:text-5xl break-words' : 'text-5xl'} md:text-6xl font-bold text-accent mb-6`}>
           {siteConfig.phoneDisplay}
         </p>
         <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-          Sizlere hakkımızda pek çok bilgi verdik,{' '}
+          {cityPage ? 'Aracınızın hasar durumu ve satış süreci hakkında görüşmek için bize ulaşın.' : <>Sizlere hakkımızda pek çok bilgi verdik,{' '}
           <span className="font-bold text-accent">{siteConfig.phoneDisplay}</span>{' '}
           numaralı telefonumuzdan bizi aramadan kazalı, hasarlı, pert, hurda, arızalı aracınızı satmayın...{' '}
-          <span className="text-accent font-bold">En iyi teklifi yakalayın…</span>
+          <span className="text-accent font-bold">En iyi teklifi yakalayın…</span></>}
         </p>
         <a
           href={`https://wa.me/${siteConfig.whatsapp}`}

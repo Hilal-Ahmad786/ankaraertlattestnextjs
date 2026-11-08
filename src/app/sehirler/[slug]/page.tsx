@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import citiesData from '@/data/cities.json';
 import { City } from '@/types';
+import CityHero from '@/components/city/CityHero';
+import { getCityMedia } from '@/data/city-media';
 import HeroBanner from '@/components/sections/HeroBanner';
 import CityContent from '@/components/city/CityContent';
 import CitySidebar from '@/components/city/CitySidebar';
@@ -15,7 +17,6 @@ import WhyUs from '@/components/sections/WhyUs';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
 import ContactCTA from '@/components/sections/ContactCTA';
 import { localBusinessSchema, breadcrumbSchema, serviceSchema } from '@/lib/schema';
-import { siteConfig } from '@/config/site';
 import { services } from '@/data/services';
 import { getCityContent } from '@/data/city-content';
 
@@ -55,8 +56,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     },
     twitter: {
       card: 'summary_large_image',
-      title: city.metaTitle,
-      description: city.metaDescription,
+      title: metaTitle,
+      description: metaDescription,
     },
   };
 }
@@ -73,10 +74,13 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
     .filter((c) => c.region === city.region && c.slug !== city.slug)
     .slice(0, 5);
 
+  const written = getCityContent(city.slug);
+  const media = getCityMedia(city.slug);
+
   // Enriched LocalBusiness schema per city
   const localBizJsonLd = {
     ...localBusinessSchema(city.name, city.slug),
-    description: city.metaDescription,
+    description: written?.metaDescription ?? city.metaDescription,
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: `${city.name} Hasarlı Araç Alım Hizmetleri`,
@@ -143,8 +147,6 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
 
   // City-scoped Service entities. LocalBusiness alone says "we exist here";
   // Service says what is actually offered here, which is what the city query asks.
-  const written = getCityContent(city.slug);
-
   const cityServiceJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -168,7 +170,7 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-0">
+    <div className={`city-page min-h-screen bg-gray-50 pb-0 ${media ? 'city-pilot' : ''}`} data-city-treatment={media ? 'media-pilot' : 'cleanup-only'}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizJsonLd) }}
@@ -182,14 +184,19 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
         dangerouslySetInnerHTML={{ __html: JSON.stringify(cityServiceJsonLd) }}
       />
 
-      <HeroBanner
-        variant="default"
-        tagline={`${city.region} Bölgesi • ${city.plateCode}`}
-        title={written?.heroTitle ?? city.heroTitle}
-        subtitle={written?.heroSubtitle ?? city.heroSubtitle}
-        highlight="30 Dakikada Nakit"
-        backgroundImage={city.heroImage}
-      />
+      {media ? (
+        <CityHero title={written?.heroTitle ?? city.heroTitle} subtitle={written?.heroSubtitle ?? city.heroSubtitle}
+          tagline={`${city.region} Bölgesi • ${city.plateCode}`} media={media} />
+      ) : (
+        <HeroBanner
+          variant="default"
+          tagline={`${city.region} Bölgesi • ${city.plateCode}`}
+          title={written?.heroTitle ?? city.heroTitle}
+          subtitle={written?.heroSubtitle ?? city.heroSubtitle}
+          highlight="30 Dakikada Nakit"
+          backgroundImage={city.heroImage}
+        />
+      )}
 
       <TrustBadges />
 
@@ -237,13 +244,14 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
 
       <div className="bg-white border-t border-gray-100">
         <ProcessTimeline
+          animate={Boolean(media)}
           title={`${city.name} Araç Alım Süreci`}
           subtitle="4 Kolay Adımda Aracınızı Nakite Çevirin"
           steps={processSteps}
         />
       </div>
 
-      <UrgentCTABanner />
+      <UrgentCTABanner cityPage />
 
       <WhyUs
         title={`Neden ${city.name} Bölgesinde Bizi Seçmelisiniz?`}
@@ -251,7 +259,7 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
         items={whyUsItems}
       />
 
-      <ContactCTA />
+      <ContactCTA cityPage />
     </div>
   );
 }

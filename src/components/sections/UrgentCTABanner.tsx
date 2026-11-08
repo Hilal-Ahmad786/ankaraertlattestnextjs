@@ -4,10 +4,11 @@ import { useState, useEffect } from 'react';
 import { siteConfig } from '@/config/site';
 import { trackCTAClick, trackPhoneClick } from '@/lib/gtm';
 
-export default function UrgentCTABanner() {
+export default function UrgentCTABanner({ cityPage = false }: { cityPage?: boolean }) {
   const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
+    if (cityPage) return;
     // Reset countdown every day at midnight
     const calculateTimeLeft = () => {
       const now = new Date();
@@ -30,7 +31,7 @@ export default function UrgentCTABanner() {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [cityPage]);
 
   const handleClick = () => {
     trackPhoneClick('urgent_banner');
@@ -43,24 +44,24 @@ export default function UrgentCTABanner() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Urgency Message */}
           <div className="flex items-center gap-3">
-            <div className="animate-pulse">
+            <div className={cityPage ? undefined : "animate-pulse"}>
               <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
               </svg>
             </div>
             <div>
               <p className="font-bold text-sm md:text-base">
-                🔥 Bugün İçin Özel Fırsat!
+                {cityPage ? 'Aracınız İçin Teklif Alın' : '🔥 Bugün İçin Özel Fırsat!'}
               </p>
               <p className="text-xs md:text-sm opacity-90">
-                Bugün arayanlara ekstra %10 bonus fiyat
+                {cityPage ? 'Araç bilgilerini paylaşın, değerlendirme sürecini görüşelim.' : 'Bugün arayanlara ekstra %10 bonus fiyat'}
               </p>
             </div>
           </div>
 
           {/* Countdown Timer */}
           <div className="flex items-center gap-4">
-            <div className="hidden md:flex items-center gap-2 bg-white/55 px-4 py-2 rounded-full border border-white/70 backdrop-blur-sm">
+            {!cityPage && <div className="hidden md:flex items-center gap-2 bg-white/55 px-4 py-2 rounded-full border border-white/70 backdrop-blur-sm">
               <div className="text-center">
                 <div className="text-xl font-bold">{String(timeLeft.hours).padStart(2, '0')}</div>
                 <div className="text-xs opacity-75">Saat</div>
@@ -75,7 +76,7 @@ export default function UrgentCTABanner() {
                 <div className="text-xl font-bold">{String(timeLeft.seconds).padStart(2, '0')}</div>
                 <div className="text-xs opacity-75">Saniye</div>
               </div>
-            </div>
+            </div>}
 
             {/* CTA Button */}
             <a

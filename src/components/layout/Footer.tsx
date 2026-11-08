@@ -26,7 +26,7 @@ export default function Footer() {
               />
             </h3>
             <p className="text-sm mb-4">
-              Kazalı, hasarlı, pert ve hurda araç alımında Türkiye'nın en güvenilir adresi.
+              Kazalı, hasarlı, pert ve hurda araç alımında Türkiye'nin farklı illerinden araç değerlendiren firma.
             </p>
             <div className="flex gap-3">
               <a

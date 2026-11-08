@@ -1,85 +1,62 @@
-'use client';
-
-import { useState } from 'react';
 import { faqPageSchema } from '@/lib/schema';
 
 interface CityFAQsProps {
     cityName: string;
-    /**
-     * Hand-written per-city questions. Without these all 30 city pages
-     * rendered — and marked up — the same five Q&As.
-     */
     faqs?: { question: string; answer: string }[];
 }
 
 export default function CityFAQs({ cityName, faqs: customFaqs }: CityFAQsProps) {
-    const [openIndex, setOpenIndex] = useState<number | null>(0);
-
     const defaultFaqs = [
         {
-            question: `${cityName} ilinde hangi araçları satın alıyorsunuz?`,
-            answer: `Ankara Pert olarak ${cityName} genelinde marka ve model fark etmeksizin her türlü hasarlı, kazalı, pert, hurda ve motor arızalı aracı değerinde satın alıyoruz.`
+            question: `${cityName} ilinde hangi araçları değerlendiriyorsunuz?`,
+            answer: `Ankara PERT, ${cityName} için hasarlı, kazalı, pert, hurda ve motor arızalı araç başvurularını değerlendirir. Teklif aracın durumu incelendikten sonra oluşturulur.`
         },
         {
-            question: `${cityName} bölgesinde ekspertiz ücretli mi?`,
-            answer: `Hayır, ${cityName} ve tüm ilçelerinde sunduğumuz ekspertiz hizmeti tamamen ücretsizdir. Uzman ekibimiz aracınızın bulunduğu yere gelerek inceleme yapar.`
+            question: `${cityName} bölgesinde ekspertiz nasıl planlanır?`,
+            answer: `Aracınızın fotoğraflarını, marka ve model bilgisini, hasar durumunu ve konumunu paylaşabilirsiniz. İnceleme koşullarını ekibimizle görüşerek netleştirebilirsiniz.`
         },
         {
             question: `${cityName} dışından da araç alımı yapıyor musunuz?`,
-            answer: `Evet, ${cityName} merkezli operasyonumuzun yanı sıra çevre illerden ve Türkiye genelinden araç alımı yapmaktayız.`
+            answer: `Evet, Ankara merkezimiz üzerinden Türkiye genelinden araç başvurularını değerlendiriyoruz.`
         },
         {
-            question: `${cityName} noterlerinde satış işlemi ne kadar sürer?`,
-            answer: `Evraklarınız tam ise ${cityName} noterlerinde satış işlemi ortalama 15-20 dakika sürmektedir. Satış anında ödemenizi banka havalesi veya nakit olarak alırsınız.`
+            question: `${cityName} noterlerinde satış ve ödeme nasıl yapılır?`,
+            answer: `Evrak kontrolü ve teklif üzerinde anlaşma sonrasında noter devri planlanır. Ödeme, devir işlemiyle birlikte gerçekleştirilir; işlem süresi evrak ve noter koşullarına bağlıdır.`
         },
         {
-            question: `Aracım ${cityName} içinde yolda kaldı, çekici hizmetiniz var mı?`,
-            answer: `Evet, ${cityName} sınırları içerisindeki araçlarınızı kendi çekicilerimizle ücretsiz olarak teslim alıyoruz. Sizden ek bir nakliye ücreti talep etmiyoruz.`
+            question: `Aracım ${cityName} içinde yolda kaldı, çekici planlayabilir misiniz?`,
+            answer: `Aracın hareket durumu, konumu ve erişim koşulları değerlendirilerek teslim planı oluşturulur. Çekici koşullarını satın alma görüşmesi sırasında netleştirebilirsiniz.`
+        },
+        {
+            question: `${cityName} bölgesinde motor arızalı, çekme belgeli veya yanık araç değerlendiriyor musunuz?`,
+            answer: `Motor arızalı, şanzıman arızalı, çekme belgeli ve yanık araçların hasar ve evrak durumunu inceleyerek satın alma başvurularını değerlendiriyoruz.`
+        },
+        {
+            question: `${cityName} hasarlı araç satışında hangi adımlar izlenir?`,
+            answer: `Araç bilgileri ve hasar durumu incelenir, teklif paylaşılır. Anlaşma sağlanırsa teslim, noter devri ve devirle birlikte ödeme planlanır.`
         }
     ];
-
+    // City-specific FAQs are the sole visible and structured-data source when supplied.
     const faqs = customFaqs?.length ? customFaqs : defaultFaqs;
 
-    const toggleFAQ = (index: number) => {
-        setOpenIndex(openIndex === index ? null : index);
-    };
-
     return (
-        <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 mb-8">
-            {/* Emitted regardless of accordion state so crawlers read every Q&A. */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema(faqs)) }}
-            />
+        <section className="city-faq bg-white rounded-3xl shadow-sm border border-gray-100 p-6 sm:p-8 mb-8">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema(faqs)).replace(/</g, '\\u003c') }} />
             <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-                <i className="fas fa-question-circle text-orange-500"></i>
+                <i className="fas fa-question-circle text-orange-500" aria-hidden="true" />
                 {cityName} Hasarlı Araç Alımı SSS
             </h2>
             <div className="space-y-4">
                 {faqs.map((faq, index) => (
-                    <div
-                        key={index}
-                        className={`border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 ${openIndex === index ? 'shadow-md border-orange-200' : 'hover:border-orange-200'}`}
-                    >
-                        <button
-                            onClick={() => toggleFAQ(index)}
-                            className="w-full flex items-center justify-between p-4 text-left bg-white focus:outline-none"
-                        >
-                            <span className={`font-semibold ${openIndex === index ? 'text-orange-600' : 'text-gray-700'}`}>
-                                {faq.question}
-                            </span>
-                            <i className={`fas fa-chevron-down text-gray-400 transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-orange-500' : ''}`}></i>
-                        </button>
-                        <div
-                            className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}
-                        >
-                            <div className="p-4 pt-0 text-gray-600 border-t border-gray-100 bg-gray-50/50 text-sm leading-relaxed">
-                                {faq.answer}
-                            </div>
-                        </div>
-                    </div>
+                    <details key={faq.question} open={index === 0} className="border border-gray-200 rounded-2xl overflow-hidden open:border-orange-200">
+                        <summary className="flex items-center justify-between gap-4 min-h-12 p-4 cursor-pointer text-gray-800 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-600 focus-visible:-outline-offset-4">
+                            <span>{faq.question}</span>
+                            <i className="city-faq-chevron fas fa-chevron-down shrink-0 text-gray-500" aria-hidden="true" />
+                        </summary>
+                        <div className="p-4 text-gray-600 border-t border-gray-100 bg-gray-50/50 text-sm leading-relaxed">{faq.answer}</div>
+                    </details>
                 ))}
             </div>
-        </div>
+        </section>
     );
 }

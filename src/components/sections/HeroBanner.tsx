@@ -63,6 +63,7 @@ export default function HeroBanner({
           // failed the other (izmir measured 2.6:1). Scaling luminance
           // multiplicatively normalises them all before the scrim is applied.
           className="object-cover scale-105 blur-[2px] saturate-[0.8] brightness-[0.58]"
+          sizes="100vw"
           priority
         />
       </div>
