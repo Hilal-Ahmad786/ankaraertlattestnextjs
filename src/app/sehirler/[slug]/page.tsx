@@ -6,6 +6,7 @@ import { getCityMedia } from '@/data/city-media';
 import HeroBanner from '@/components/sections/HeroBanner';
 import CityContent from '@/components/city/CityContent';
 import CitySidebar, { CityNearbyCities } from '@/components/city/CitySidebar';
+import CityCtaBanner from '@/components/city/CityCtaBanner';
 import CityDistricts from '@/components/city/CityDistricts';
 import CityFAQs from '@/components/city/CityFAQs';
 import CityStats from '@/components/city/CityStats';
@@ -198,7 +199,6 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
         subtitle={written?.heroSubtitle ?? city.heroSubtitle}
         highlight="30 Dakikada Nakit"
         backgroundImage={media?.src ?? city.heroImage}
-        cityPilot={media ? { name: city.name, slug: city.slug, plateCode: city.plateCode } : undefined}
       />
 
       <TrustBadges cityPage={Boolean(media)} />
@@ -229,6 +229,7 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
         {/* Full-width section stack: the CTA sits between sections as a band
             instead of a sticky right column that left most of the page empty. */}
         <div className="space-y-8">
+            <CityCtaBanner variant="photo" cityName={city.name} />
             <CityContent
               content={city.content}
               cityName={city.name}
@@ -244,8 +245,10 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
             />
             <CitySidebar city={city} />
             <CityDistricts city={city} districtNotes={written?.districtNotes} pilot={Boolean(media)} />
+            <CityCtaBanner variant="tow" cityName={city.name} />
             <CityVehicleTypes city={city} pilot={Boolean(media)} />
             <CityFAQs cityName={city.name} faqs={written?.faqs} />
+            <CityCtaBanner variant="question" cityName={city.name} />
             <CityNearbyCities city={city} nearbyCities={nearbyCities} />
         </div>
       </div>

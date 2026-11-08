@@ -44,7 +44,7 @@ export default function CityContent({
                     )}
                     {seasonNote && <aside className="city-season-note"><strong>Mevsime göre dikkat:</strong> {seasonNote}</aside>}
                 </div>
-                {citySlug && <CityRiskMotif slug={citySlug} />}
+                {citySlug && <CityRiskMotif slug={citySlug} cityName={cityName} />}
             </div>
 
             {localPoints && localPoints.length > 0 && (

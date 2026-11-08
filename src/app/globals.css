@@ -1062,3 +1062,67 @@ button.bg-white,
   .city-pilot .city-sidebar-cta[data-revealed='true'] { animation: none !important; }
   .city-pilot .city-hero-line-art path { stroke-dasharray: none; stroke-dashoffset: 0; }
 }
+
+/* ── City pages v2 (2026-11-08): no hero motion, check card, CTA banners ── */
+/* Calmer reveals: soft fade-up only (replaces rotate/scale "tick" effects). */
+@keyframes city-icon-tick { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes city-soft-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Per-city check card beside the main copy */
+.city-check-card { border: 1px solid #fed7aa; border-radius: 1.5rem; background: linear-gradient(180deg, #fff7ed 0%, #ffffff 100%); padding: 1.25rem 1.25rem 1.1rem; box-shadow: 0 10px 30px rgba(194, 65, 12, .08); }
+.city-check-card-head { display: flex; align-items: center; gap: .75rem; padding-bottom: .9rem; border-bottom: 1px solid #fde4cf; }
+.city-check-card-icon { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; flex-shrink: 0; border-radius: .9rem; background: #c2410c; color: #fff; font-size: 1.05rem; }
+.city-check-card-title { margin: 0; color: #1f2937; font-weight: 700; font-size: .95rem; line-height: 1.3; }
+.city-check-card-sub { margin: .15rem 0 0; color: #9a3412; font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.city-check-card-list { list-style: none; margin: .9rem 0 0; padding: 0; display: grid; gap: .6rem; }
+.city-check-card-list li { display: flex; align-items: center; gap: .65rem; padding: .65rem .75rem; border-radius: .85rem; background: #fff; border: 1px solid #f3e8df; color: #374151; font-size: .88rem; font-weight: 600; }
+.city-check-card-tick { display: grid; place-items: center; width: 1.6rem; height: 1.6rem; flex-shrink: 0; border-radius: 50%; background: #ffedd5; }
+.city-check-card-tick svg { width: .95rem; height: .95rem; fill: none; stroke: #c2410c; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 22; stroke-dashoffset: 0; }
+
+/* CTA banners between sections */
+.city-banner { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem 1.25rem; align-items: center; border-radius: 1.5rem; padding: 1.4rem 1.5rem; }
+@media (min-width: 900px) { .city-banner { grid-template-columns: auto minmax(0, 1fr) auto; padding: 1.6rem 2rem; } }
+.city-banner-icon { display: grid; place-items: center; width: 3.25rem; height: 3.25rem; border-radius: 1rem; font-size: 1.35rem; }
+.city-banner-title { margin: 0; font-size: 1.15rem; font-weight: 800; line-height: 1.3; }
+.city-banner-text { margin: .35rem 0 0; font-size: .92rem; line-height: 1.55; max-width: 62ch; }
+.city-banner-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .65rem; }
+@media (min-width: 900px) { .city-banner-actions { grid-column: auto; flex-wrap: nowrap; } }
+.city-banner-btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 3rem; padding: 0 1.35rem; border-radius: 999px; font-weight: 700; font-size: .92rem; text-decoration: none; white-space: nowrap; transition: transform 160ms ease-out, box-shadow 160ms ease-out, background-color 160ms ease-out; }
+.city-banner-btn:focus-visible { outline: 3px solid #1f2937; outline-offset: 2px; }
+.city-banner-btn-phone { background: #f97316; color: #fff; box-shadow: 0 8px 20px rgba(249, 115, 22, .28); }
+.city-banner-btn-phone:hover { background: #ea580c; color: #fff; }
+.city-banner-btn-wa { background: #22c55e; color: #fff; box-shadow: 0 8px 20px rgba(34, 197, 94, .25); }
+.city-banner-btn-wa:hover { background: #16a34a; color: #fff; }
+@media (hover: hover) and (pointer: fine) { .city-banner-btn:hover { transform: translateY(-2px); } }
+/* photo: light green */
+.city-banner-photo { background: #f0fdf4; border: 1px solid #bbf7d0; }
+.city-banner-photo .city-banner-icon { background: #22c55e; color: #fff; }
+.city-banner-photo .city-banner-title { color: #14532d; }
+.city-banner-photo .city-banner-text { color: #166534; }
+/* tow: brand orange */
+.city-banner-tow { background: linear-gradient(120deg, #c2410c 0%, #f97316 100%); color: #fff; box-shadow: 0 18px 40px rgba(194, 65, 12, .22); }
+.city-banner-tow .city-banner-icon { background: rgba(255, 255, 255, .18); color: #fff; }
+.city-banner-tow .city-banner-text { color: rgba(255, 255, 255, .92); }
+.city-banner-tow .city-banner-btn-phone { background: #fff; color: #c2410c; box-shadow: none; }
+.city-banner-tow .city-banner-btn-phone:hover { background: #fff7ed; color: #9a3412; }
+.city-banner-tow .city-banner-btn-wa { box-shadow: none; }
+/* question: white, bordered */
+.city-banner-question { background: #fff; border: 1px solid #e5e7eb; box-shadow: 0 10px 30px rgba(17, 24, 39, .05); }
+.city-banner-question .city-banner-icon { background: #131A1E; color: #fff; }
+.city-banner-question .city-banner-title { color: #111827; }
+.city-banner-question .city-banner-text { color: #4b5563; }
+
+/* One-time reveals on pilot cities only (content is visible without them) */
+@media (prefers-reduced-motion: no-preference) {
+  .city-pilot .city-banner[data-revealed='true'] { animation: city-soft-up 480ms cubic-bezier(.2, .7, .25, 1) both; }
+  .city-pilot .city-banner[data-revealed='true'] .city-banner-icon { animation: city-soft-up 420ms ease-out 160ms both; }
+  .city-pilot .city-check-card[data-revealed='true'] { animation: city-soft-up 480ms cubic-bezier(.2, .7, .25, 1) both; }
+  .city-pilot .city-check-card[data-revealed='true'] li { animation: city-soft-up 380ms ease-out calc(200ms + var(--city-item-index, 0) * 110ms) both; }
+  .city-pilot .city-check-card[data-revealed='true'] .city-check-card-tick svg { stroke-dashoffset: 22; animation: city-check-draw 320ms ease-out calc(380ms + var(--city-item-index, 0) * 110ms) forwards; }
+}
+@media (max-width: 639px) {
+  .city-banner { grid-template-columns: minmax(0, 1fr); gap: .85rem; padding: 1.25rem; }
+  .city-banner-icon { width: 2.75rem; height: 2.75rem; font-size: 1.15rem; }
+  .city-banner-title { font-size: 1.05rem; }
+  .city-banner-btn { flex: 1 1 100%; }
+}
