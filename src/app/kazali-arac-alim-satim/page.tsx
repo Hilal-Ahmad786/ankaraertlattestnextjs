@@ -60,22 +60,22 @@ export default function KazaliAracPage() {
 
   const whyUsItems = [
     {
-      icon: 'fas fa-clock',
+      icon: 'ph-bold ph-clock',
       title: '30 Dakikada Teklif',
       description: 'Ekspertiz sonrası 30 dakika içinde nakit teklif alın.',
     },
     {
-      icon: 'fas fa-search',
+      icon: 'ph-bold ph-magnifying-glass',
       title: 'Ücretsiz Ekspertiz',
       description: 'Yerinde veya noter yanında ekspertiz—KVKK ve sigorta mevzuatına %100 uygun.',
     },
     {
-      icon: 'fas fa-truck-moving',
+      icon: 'ph-bold ph-truck',
       title: 'Ücretsiz Çekici',
       description: 'Aracınızı yerinden alırız—ekspertiz, çekici ve evrak masrafları 0 TL.',
     },
     {
-      icon: 'fas fa-headset',
+      icon: 'ph-bold ph-headset',
       title: '7/24 Destek',
       description: 'Her adımda yanınızdayız—çağrı merkezi ve WhatsApp desteğiyle anında yanıt alın.',
     },
@@ -83,22 +83,22 @@ export default function KazaliAracPage() {
 
   const processSteps = [
     {
-      icon: 'fas fa-phone-volume',
+      icon: 'ph-bold ph-phone-call',
       title: 'Bize Ulaşın',
       description: '7/24 çağrı merkezi | WhatsApp fotoğraf gönder.',
     },
     {
-      icon: 'fas fa-search-location',
+      icon: 'ph-bold ph-map-pin-area',
       title: 'Ücretsiz Ekspertiz',
       description: 'Yerinde inceleme + pert/hasar raporu hazırlığı.',
     },
     {
-      icon: 'fas fa-file-signature',
+      icon: 'ph-bold ph-signature',
       title: 'Teklif & Onay',
       description: 'Piyasa üstü en iyi fiyat; onayınızla süreç başlar.',
     },
     {
-      icon: 'fas fa-hand-holding-usd',
+      icon: 'ph-bold ph-hand-coins',
       title: 'Noter Satışı & Nakit',
       description: 'Noter huzurunda devir → anında nakit/EFT.',
     },
@@ -106,32 +106,32 @@ export default function KazaliAracPage() {
 
   const damageTypes = [
     {
-      icon: 'fas fa-car-crash',
+      icon: 'ph-bold ph-car',
       title: 'Ön/Arka Çarpışma',
       description: 'Ön veya arkadan çarpışma sonucu hasar almış kazalı araçları değerinde satın alıyoruz.',
     },
     {
-      icon: 'fas fa-compress-arrows-alt',
+      icon: 'ph-bold ph-arrows-in',
       title: 'Yan Darbe',
       description: 'Yandan darbe alan, kapı ve şasi hasarlı kazalı araçları da ekspertiz sonrası değerlendiriyoruz.',
     },
     {
-      icon: 'fas fa-sync-alt',
+      icon: 'ph-bold ph-arrows-clockwise',
       title: 'Takla / Devrilme',
       description: 'Takla atmış veya devrilmiş araçları, tavan ve şasi hasarına bakılmaksızın satın alıyoruz.',
     },
     {
-      icon: 'fas fa-exclamation-circle',
+      icon: 'ph-bold ph-warning-circle',
       title: 'Airbag Patlamış',
       description: "Airbag'i patlamış, iç donanımı hasar görmüş kazalı araçları da alıyoruz.",
     },
     {
-      icon: 'fas fa-ban',
+      icon: 'ph-bold ph-prohibit',
       title: 'Yürümez Durumda',
       description: 'Kaza sonrası hareket edemeyen araçları ücretsiz çekici ile yerinden teslim alıyoruz.',
     },
     {
-      icon: 'fas fa-truck-pickup',
+      icon: 'ph-bold ph-truck',
       title: 'Ticari Araç',
       description: 'Kazalı kamyonet, panelvan ve diğer ticari araçları da değerinde satın alıyoruz.',
     },
@@ -206,7 +206,7 @@ export default function KazaliAracPage() {
                 href={`/sehirler/${city.slug}`}
                 className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-orange-500 hover:text-orange-600 transition"
               >
-                <i className="fas fa-map-marker-alt text-orange-400 mr-2"></i>
+                <i className="ph-bold ph-map-pin text-orange-400 mr-2"></i>
                 {city.name}
               </a>
             ))}

@@ -61,37 +61,37 @@ export default function HakkimizdaPage() {
             <h3 className="text-2xl font-bold text-primary mb-4">Neden Bizi Tercih Etmelisiniz?</h3>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start gap-3">
-                <i className="fas fa-check-circle text-orange-500 text-xl mt-1"></i>
+                <i className="ph-bold ph-check-circle text-orange-500 text-xl mt-1"></i>
                 <span className="text-lg">
                   <strong>15+ Yıllık Tecrübe:</strong> Sektördeki uzun yılların deneyimi ile güvenilir hizmet.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <i className="fas fa-check-circle text-orange-500 text-xl mt-1"></i>
+                <i className="ph-bold ph-check-circle text-orange-500 text-xl mt-1"></i>
                 <span className="text-lg">
                   <strong>En Yüksek Fiyat Garantisi:</strong> Piyasa araştırması ile en iyi teklifi sunuyoruz.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <i className="fas fa-check-circle text-orange-500 text-xl mt-1"></i>
+                <i className="ph-bold ph-check-circle text-orange-500 text-xl mt-1"></i>
                 <span className="text-lg">
                   <strong>Ücretsiz Ekspertiz:</strong> Aracınızın değerini yerinde ücretsiz belirliyoruz.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <i className="fas fa-check-circle text-orange-500 text-xl mt-1"></i>
+                <i className="ph-bold ph-check-circle text-orange-500 text-xl mt-1"></i>
                 <span className="text-lg">
                   <strong>Hızlı İşlem:</strong> Teklif 30 dakikada, ödeme anlaşma günü yapılır.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <i className="fas fa-check-circle text-orange-500 text-xl mt-1"></i>
+                <i className="ph-bold ph-check-circle text-orange-500 text-xl mt-1"></i>
                 <span className="text-lg">
                   <strong>Yasal ve Güvenli:</strong> Noter onaylı, resmi evrak ile güvenli işlem.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <i className="fas fa-check-circle text-orange-500 text-xl mt-1"></i>
+                <i className="ph-bold ph-check-circle text-orange-500 text-xl mt-1"></i>
                 <span className="text-lg">
                   <strong>7/24 Destek:</strong> Her zaman ulaşabileceğiniz müşteri hizmetleri.
                 </span>

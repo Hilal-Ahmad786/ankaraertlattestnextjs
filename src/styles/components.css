@@ -24,7 +24,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+    background: none;
     opacity: 0;
     transition: opacity var(--transition-base);
   }
@@ -41,7 +41,7 @@
   .btn-primary,
   .cta-button,
   .btn.bg-orange-500 {
-    background: linear-gradient(135deg, #FC6704 0%, #C24A02 100%);
+    background: #FC6704;
     color: white;
     box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
   }
@@ -56,7 +56,7 @@
   /* Success CTA - Green for WhatsApp */
   .btn-success,
   .btn.bg-green-500 {
-    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    background: #16a34a;
     color: white;
     box-shadow: 0 4px 12px rgba(22, 163, 74, 0.4);
   }
@@ -106,7 +106,7 @@
     position: absolute;
     inset: -8px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    background: none;
     opacity: 0;
     transition: opacity var(--transition-base);
   }
@@ -123,16 +123,16 @@
   .floating-whatsapp {
     bottom: 2rem;
     right: 2rem;
-    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    background: #16a34a;
     color: white;
   }
   
   .floating-phone {
     bottom: 2rem;
     left: 2rem;
-    background: linear-gradient(135deg, #FC6704 0%, #C24A02 100%);
+    background: #FC6704;
     color: white;
-    animation: gentle-pulse 3s ease-in-out infinite;
+    animation: gentle-pulse 3s var(--ease-base) infinite;
   }
   
   @keyframes gentle-pulse {
@@ -166,7 +166,7 @@
     width: 64px;
     height: 64px;
     border-radius: var(--radius-xl);
-    background: linear-gradient(135deg, #FC6704 0%, #FF8A3D 100%);
+    background: #FC6704;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,7 +181,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #FC6704 0%, #C24A02 100%);
+    background: #FC6704;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -220,7 +220,7 @@
     font-size: 5rem;
     color: #FF8A3D;
     opacity: 0.08;
-    font-family: Georgia, serif;
+    font-family: inherit;
     line-height: 1;
   }
   
@@ -285,7 +285,7 @@
     transform: translateX(-50%);
     width: 64px;
     height: 4px;
-    background: linear-gradient(90deg, #FC6704, #FF8A3D);
+    background: #FC6704;
     border-radius: var(--radius-full);
   }
   

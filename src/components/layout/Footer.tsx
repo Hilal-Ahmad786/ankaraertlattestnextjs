@@ -35,7 +35,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-500 transition border border-white/10"
               >
-                <i className="fab fa-facebook-f"></i>
+                <i className="ph-bold ph-facebook-logo"></i>
               </a>
               <a
                 href={siteConfig.social.instagram}
@@ -43,7 +43,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-500 transition border border-white/10"
               >
-                <i className="fab fa-instagram"></i>
+                <i className="ph-bold ph-instagram-logo"></i>
               </a>
             </div>
           </div>
@@ -58,7 +58,7 @@ export default function Footer() {
                     href={`/${service.slug}`}
                     className="text-sm hover:text-orange-500 transition inline-flex items-center gap-2 min-h-[40px] sm:min-h-0 sm:py-0"
                   >
-                    <i className={`fas ${service.icon} text-orange-500`}></i>
+                    <i className={`ph-bold ${service.icon} text-orange-500`}></i>
                     {service.title}
                   </Link>
                 </li>
@@ -135,7 +135,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">İletişim</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <i className="fas fa-phone text-orange-500 mt-1"></i>
+                <i className="ph-bold ph-phone text-orange-500 mt-1"></i>
                 <div>
                   <a
                     href={`tel:${siteConfig.phone}`}
@@ -147,7 +147,7 @@ export default function Footer() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <i className="fab fa-whatsapp text-orange-500 mt-1"></i>
+                <i className="ph-bold ph-whatsapp-logo text-orange-500 mt-1"></i>
                 <div>
                   <a
                     href={`https://wa.me/${siteConfig.whatsapp}`}
@@ -161,7 +161,7 @@ export default function Footer() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <i className="fas fa-envelope text-orange-500 mt-1"></i>
+                <i className="ph-bold ph-envelope-simple text-orange-500 mt-1"></i>
                 <div>
                   <a href={`mailto:${siteConfig.email}`} className="text-sm hover:text-orange-500 transition flex items-center min-h-[40px] sm:min-h-0">
                     {siteConfig.email}
@@ -187,7 +187,7 @@ export default function Footer() {
                 href="https://paksofts.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-[15px] shadow-[0_0_18px_rgba(255,94,58,0.18)] transition-all duration-300 hover:border-orange-500 hover:shadow-[0_0_28px_rgba(255,94,58,0.35)] hover:scale-105 backdrop-blur-xl"
+                className="group inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm shadow-[0_0_18px_rgba(255,94,58,0.18)] transition-all duration-300 hover:border-orange-500 hover:shadow-[0_0_28px_rgba(255,94,58,0.35)] hover:scale-105 backdrop-blur-xl"
               >
                 <span className="text-white/80">Geliştiren</span>
                 <svg
@@ -198,7 +198,7 @@ export default function Footer() {
                 >
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.85 0 3.58-.5 5.08-1.38-.7.13-1.42.21-2.16.21-5.52 0-10-4.48-10-10S9.42 2.83 14.92 2.83c.74 0 1.46.08 2.16.21C15.58 2.5 13.85 2 12 2z" />
                 </svg>
-                <span className="text-base font-extrabold tracking-wide text-orange-500 group-hover:text-orange-400">
+                <span className="text-base font-bold tracking-wide text-orange-500 group-hover:text-orange-400">
                   PakSoft
                 </span>
               </a>

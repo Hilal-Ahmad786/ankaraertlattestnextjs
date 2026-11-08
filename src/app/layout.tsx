@@ -1,8 +1,8 @@
 // src/app/layout.tsx
 import type { Metadata } from 'next';
-import { Figtree } from 'next/font/google';
+import { Manrope } from 'next/font/google';
 import { Suspense } from 'react';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import '@phosphor-icons/web/bold';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -12,15 +12,16 @@ import PageViewTracker from '@/components/analytics/PageViewTracker';
 import { siteConfig } from '@/config/site';
 import CustomerCarePopup from '@/components/ui/CustomerCarePopup';
 import FloatingButtons from '@/components/layout/FloatingButtons';
+import RevealOnScroll from '@/components/ui/RevealOnScroll';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { organizationSchema, webSiteSchema, localBusinessSchema } from '@/lib/schema';
 
 // latin-ext covers Turkish characters (ş, ğ, İ, ı, ç, ö, ü)
-// Figtree, not Plus Jakarta Sans: hasarliege.com already uses Plus Jakarta Sans
-// as its distinguishing typeface, and the flagship should not share it.
-// Same friendly geometric feel, full latin-ext coverage for Turkish.
-const siteFont = Figtree({
+// Manrope: one typeface sitewide (design system). Not Plus Jakarta Sans, which
+// hasarliege.com uses. Weights capped at bold; no italics are loaded.
+const siteFont = Manrope({
   subsets: ['latin', 'latin-ext'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
   variable: '--font-site',
 });
@@ -113,7 +114,8 @@ export default function RootLayout({
           href="https://www.ankarapert.com.tr/rss.xml"
         />
       </head>
-      <body className={siteFont.className}>
+      <body className={`${siteFont.className} ${siteFont.variable}`}>
+        <a href="#main" className="skip-link">İçeriğe geç</a>
         {/* Sitewide structured data — Organization, WebSite, LocalBusiness */}
         <script
           type="application/ld+json"
@@ -135,10 +137,11 @@ export default function RootLayout({
         </Suspense>
 
         <Header />
-        <main>{children}</main>
+        <main id="main" tabIndex={-1}>{children}</main>
         <Footer />
         <FloatingButtons />
         <CustomerCarePopup />
+        <RevealOnScroll />
         <SpeedInsights />
       </body>
     </html>

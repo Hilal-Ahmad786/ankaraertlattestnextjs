@@ -15,7 +15,7 @@ export interface Service {
       id: 'kazali',
       title: 'Kazalı Araç Alımı',
       slug: 'kazali-arac-alim-satim',
-      icon: 'fas fa-car-crash',
+      icon: 'ph-bold ph-car',
       description:
         'Kazalı araç alan lider firma! Türkiye\'nin her yerinde 30 dakikada ücretsiz ekspertiz ve anında nakit ödeme.',
       shortDescription: 'Nakit ödeme ile anında alım',
@@ -44,7 +44,7 @@ export interface Service {
       id: 'hasarli',
       title: 'Hasarlı Araç Alımı',
       slug: 'hasarli-arac-alim-satim',
-      icon: 'fas fa-tools',
+      icon: 'ph-bold ph-wrench',
       description:
         'Hasarlı araç alan güvenilir firma. Uzman ekspertiz ekibi ile hasarlı araç alımında profesyonel hizmet.',
       shortDescription: 'Uzman eksper onayıyla alım',
@@ -73,7 +73,7 @@ export interface Service {
       id: 'pert',
       title: 'Pert Araç Alımı',
       slug: 'pert-arac-alim-satim',
-      icon: 'fas fa-exclamation-triangle',
+      icon: 'ph-bold ph-warning',
       description:
         'Pert araç alan firmalar arasında öncü. Kasko çıkışlı pert araç alımında en iyi fiyat garantisi.',
       shortDescription: 'Kasko çıkışlı pert alımı',
@@ -102,7 +102,7 @@ export interface Service {
       id: 'hurda',
       title: 'Hurda Araç Alımı',
       slug: 'hurda-arac-alim-satim',
-      icon: 'fas fa-recycle',
+      icon: 'ph-bold ph-recycle',
       description:
         'Hurda araç alan resmi belgeli firma. Hurda araç alımında çevre dostu ve yasal süreçler.',
       shortDescription: 'Resmi belgeli hurda alımı',

@@ -14,7 +14,7 @@ export default function HeroWithButtons({
   description 
 }: HeroWithButtonsProps) {
   return (
-    <section className="relative bg-gradient-to-br from-[#131A1E] via-[#2A3136] to-[#FC6704] text-white py-20 md:py-32 overflow-hidden">
+    <section className="relative bg-brand text-white py-20 md:py-32 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -25,7 +25,7 @@ export default function HeroWithButtons({
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="hero-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
             {title}
           </h1>
 

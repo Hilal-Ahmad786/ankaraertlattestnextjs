@@ -68,48 +68,30 @@ export default function HeroBanner({
         />
       </div>
 
-      {/* Scrim.
-          The white wash that used to sit on top of the brand gradient is gone —
-          it lifted the plate back up and left the white h1 at poor contrast.
-          A flat scrim can't serve every variant either — the wreck photos are
-          warm and mid-bright, the city heroes are bright daytime skylines, and
-          darkening enough for the worst case flattened all of them. So the
-          brand gradient stays light and a radial plate does the contrast work
-          only where the copy sits, leaving the photo readable at the edges. */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/28 via-[#2A3136]/20 to-[#FC6704]/16"></div>
+      {/* Scrim: one flat graphite layer (design system bans background
+          gradients). Strong enough for the white h1 on the brightest city
+          skyline; the blur below keeps busy photos from fighting the copy. */}
+      <div className="absolute inset-0 bg-brand/55"></div>
 
       {/* Softens the photo without lifting its luminance. */}
       <div className="absolute inset-0 backdrop-blur-[5px]"></div>
 
-      {/* Radial plate centred on the copy block — guarantees the headline reads
-          on a bright photo without flattening the whole image. */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            'radial-gradient(ellipse 66% 60% at 50% 44%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.26) 58%, rgba(0,0,0,0) 100%)',
-        }}
-      ></div>
-
-      {/* Bottom fade so the trust strip below keeps its footing. */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/35"></div>
-
 
       <div className="relative z-10 container mx-auto px-2 sm:px-4 text-center max-w-4xl py-6 md:py-8">
         {/* Tagline */}
-        <p className="mx-auto mb-4 inline-flex max-w-full rounded-full border border-white/80 bg-[rgba(255,255,255,0.78)] px-4 py-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-accent-ink shadow-glass-sm backdrop-blur-2xl animate-fade-in">
+        <p className="mx-auto mb-4 inline-flex max-w-full rounded-full border border-white/80 bg-[rgba(255,255,255,0.78)] px-4 py-2 text-xs sm:text-sm font-semibold tracking-wide text-accent-ink shadow-glass-sm backdrop-blur-2xl animate-fade-in">
           {tagline}
         </p>
 
         {/* Main Title */}
-        <h1 className="text-[29px] sm:text-4xl md:text-5xl lg:text-[54px] font-bold mb-4 leading-[1.08] tracking-normal text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.55)] animate-slide-up">
+        <h1 className="hero-heading text-2xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.55)] animate-slide-up">
           {title}
         </h1>
 
         {/* Highlight Box - MODERN STYLE */}
         {highlight && (
           <div className="mb-4 animate-scale-in">
-            <span className="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 sm:px-6 py-3 rounded-full font-bold text-base sm:text-lg md:text-xl shadow-glow border border-white/40 hover:scale-105 transition-transform duration-300 backdrop-blur-sm">
+            <span className="inline-block bg-accent text-white px-5 sm:px-6 py-3 rounded-full font-bold text-base sm:text-lg md:text-xl shadow-glow border border-white/40 hover:scale-105 transition-transform duration-300 backdrop-blur-sm">
               {highlight}
             </span>
           </div>
@@ -127,9 +109,9 @@ export default function HeroBanner({
           <a
             href={`tel:${siteConfig.phone}`}
             onClick={handlePhoneClick}
-            className={`bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:text-white border border-white/45 px-5 sm:px-6 py-3 rounded-full font-bold transition-all duration-300 shadow-glow text-sm sm:text-base hover:scale-105 backdrop-blur-xl`}
+            className={`bg-accent hover:bg-accent-deep text-white hover:text-white border border-white/45 px-5 sm:px-6 py-3 rounded-full font-bold transition-all duration-300 shadow-glow text-sm sm:text-base hover:scale-105 backdrop-blur-xl`}
           >
-            <i className="fas fa-phone-alt mr-2"></i> Hemen Teklif Al
+            <i className="ph-bold ph-phone mr-2"></i> Hemen Teklif Al
           </a>
           <a
             href={`https://wa.me/${siteConfig.whatsapp}`}
@@ -138,7 +120,7 @@ export default function HeroBanner({
             onClick={handleWhatsAppClick}
             className={`bg-green-500 text-white hover:text-white px-5 sm:px-6 py-3 rounded-full font-bold hover:bg-green-600 transition-all duration-300 shadow-glass text-sm sm:text-base border border-white/40 hover:scale-105 backdrop-blur-xl`}
           >
-            <i className="fab fa-whatsapp mr-2"></i> WhatsApp
+            <i className="ph-bold ph-whatsapp-logo mr-2"></i> WhatsApp
           </a>
         </div>
 
@@ -147,10 +129,10 @@ export default function HeroBanner({
             glance rather than as a wall of text. */}
         <div className="mt-6 sm:mt-7 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 rounded-[1.5rem] sm:rounded-[1.75rem] border border-white/45 bg-black/20 p-3 sm:p-4 shadow-glass backdrop-blur-2xl">
           {[
-            { icon: 'fas fa-search-dollar', value: 'Ücretsiz', label: 'Ekspertiz ve Değerlendirme' },
-            { icon: 'fas fa-truck-pickup', value: 'Ücretsiz', label: 'Çekici ile Yerinden Alım' },
-            { icon: 'fas fa-file-signature', value: 'Ücretsiz', label: 'Noter Masrafı Bize Ait' },
-            { icon: 'fas fa-money-bill-wave', value: 'Aynı Gün', label: 'Anlaşmada Nakit Ödeme' },
+            { icon: 'ph-bold ph-magnifying-glass', value: 'Ücretsiz', label: 'Ekspertiz ve Değerlendirme' },
+            { icon: 'ph-bold ph-truck', value: 'Ücretsiz', label: 'Çekici ile Yerinden Alım' },
+            { icon: 'ph-bold ph-signature', value: 'Ücretsiz', label: 'Noter Masrafı Bize Ait' },
+            { icon: 'ph-bold ph-money', value: 'Aynı Gün', label: 'Anlaşmada Nakit Ödeme' },
           ].map((item) => (
             <div key={item.label} className="text-center">
               <span

@@ -128,16 +128,16 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             <h3 className="font-bold text-gray-900 mb-4">İlgili Hizmetlerimiz</h3>
             <div className="flex flex-wrap gap-3">
               <a href="/kazali-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-full px-4 py-2 hover:bg-orange-500 hover:text-white transition">
-                <i className="fas fa-car-crash mr-2"></i>Kazalı Araç Alımı
+                <i className="ph-bold ph-car mr-2"></i>Kazalı Araç Alımı
               </a>
               <a href="/hasarli-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-full px-4 py-2 hover:bg-orange-500 hover:text-white transition">
-                <i className="fas fa-tools mr-2"></i>Hasarlı Araç Alımı
+                <i className="ph-bold ph-wrench mr-2"></i>Hasarlı Araç Alımı
               </a>
               <a href="/pert-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-full px-4 py-2 hover:bg-orange-500 hover:text-white transition">
-                <i className="fas fa-exclamation-triangle mr-2"></i>Pert Araç Alımı
+                <i className="ph-bold ph-warning mr-2"></i>Pert Araç Alımı
               </a>
               <a href="/hurda-arac-alim-satim" className="inline-flex items-center text-sm bg-white text-orange-600 border border-orange-300 rounded-full px-4 py-2 hover:bg-orange-500 hover:text-white transition">
-                <i className="fas fa-recycle mr-2"></i>Hurda Araç Alımı
+                <i className="ph-bold ph-recycle mr-2"></i>Hurda Araç Alımı
               </a>
             </div>
           </div>

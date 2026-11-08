@@ -25,7 +25,7 @@ export default function UnifiedFloatingButtons() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleWhatsAppClick}
-          className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 text-white rounded-full shadow-2xl hover:scale-110 transition-all z-50 flex items-center justify-center group border border-white/40"
+          className="fixed bottom-6 right-6 w-16 h-16 bg-green-600 text-white rounded-full shadow-2xl hover:scale-110 transition-all z-50 flex items-center justify-center group border border-white/40"
           aria-label="WhatsApp"
         >
           <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
@@ -41,10 +41,10 @@ export default function UnifiedFloatingButtons() {
         <a
           href={`tel:${siteConfig.phone}`}
           onClick={handlePhoneClick}
-          className="fixed bottom-28 right-6 w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-full shadow-2xl hover:scale-110 transition-all z-50 flex items-center justify-center group border border-white/40"
+          className="fixed bottom-28 right-6 w-16 h-16 bg-accent text-white rounded-full shadow-2xl hover:scale-110 transition-all z-50 flex items-center justify-center group border border-white/40"
           aria-label="Telefon"
         >
-          <i className="fas fa-phone-alt text-xl"></i>
+          <i className="ph-bold ph-phone text-xl"></i>
           <span className="absolute inset-0 rounded-full bg-orange-500 animate-ping opacity-40"></span>
           <span className="absolute right-full mr-3 bg-gray-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
             Hemen Ara
@@ -58,10 +58,10 @@ export default function UnifiedFloatingButtons() {
           <a
             href={`tel:${siteConfig.phone}`}
             onClick={handlePhoneClick}
-            className="flex-1 flex flex-col items-center justify-center py-2 px-2 bg-gradient-to-br from-orange-500 to-orange-600 text-white active:from-orange-600 active:to-orange-700 transition-all border-r border-white/20"
+            className="flex-1 flex flex-col items-center justify-center py-2 px-2 bg-accent text-white active:bg-accent-deep transition-all border-r border-white/20"
           >
             <div className="w-12 h-12 bg-white/25 rounded-full flex items-center justify-center mb-1 shadow-lg backdrop-blur-sm">
-              <i className="fas fa-phone-alt text-xl"></i>
+              <i className="ph-bold ph-phone text-xl"></i>
             </div>
             <span className="text-xs font-bold tracking-wide">HEMEN ARA</span>
           </a>
@@ -71,7 +71,7 @@ export default function UnifiedFloatingButtons() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsAppClick}
-            className="flex-1 flex flex-col items-center justify-center py-3 px-2 bg-gradient-to-br from-green-500 to-green-600 text-white active:from-green-600 active:to-green-700 transition-all"
+            className="flex-1 flex flex-col items-center justify-center py-3 px-2 bg-green-600 text-white active:bg-green-700 transition-all"
           >
             <div className="w-11 h-11 bg-white/25 rounded-full flex items-center justify-center mb-1 shadow-md backdrop-blur-sm">
               <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6">

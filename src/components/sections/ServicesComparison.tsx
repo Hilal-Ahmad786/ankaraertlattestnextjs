@@ -4,35 +4,35 @@ export default function ServicesComparison() {
   const services = [
     {
       title: 'Kazalı Araç',
-      icon: 'fas fa-car-crash',
+      icon: 'ph-bold ph-car',
       description: 'Kaza geçirmiş tüm araçlar',
       features: ['Çarpma hasarı', 'Devrilme', 'Ön/Arka hasar'],
       link: '/kazali-arac-alim-satim',
-      color: 'from-accent to-accent-deep',
+      color: 'bg-accent',
     },
     {
       title: 'Hasarlı Araç',
-      icon: 'fas fa-tools',
+      icon: 'ph-bold ph-wrench',
       description: 'Mekanik/Kaporta hasarlı',
       features: ['Motor arızası', 'Şanzıman', 'Kaporta'],
       link: '/hasarli-arac-alim-satim',
-      color: 'from-brand to-brand-raised',
+      color: 'bg-brand',
     },
     {
       title: 'Pert Araç',
-      icon: 'fas fa-exclamation-triangle',
+      icon: 'ph-bold ph-warning',
       description: 'Sigorta pert raporlu',
       features: ['Kasko çıkışlı', 'Pert belgeli', 'Yasal süreç'],
       link: '/pert-arac-alim-satim',
-      color: 'from-accent to-accent-deep',
+      color: 'bg-accent',
     },
     {
       title: 'Hurda Araç',
-      icon: 'fas fa-recycle',
+      icon: 'ph-bold ph-recycle',
       description: 'Kullanım ömrü bitmiş',
       features: ['Hurda belgesi', 'Kilo bazlı', 'Çevre dostu'],
       link: '/hurda-arac-alim-satim',
-      color: 'from-brand to-brand-raised',
+      color: 'bg-brand',
     },
   ];
 
@@ -55,7 +55,7 @@ export default function ServicesComparison() {
               href={service.link}
               className="group bg-white rounded-3xl shadow-md hover:shadow-2xl transition-all p-8 hover:-translate-y-2"
             >
-              <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${service.color} text-white rounded-2xl mb-4 group-hover:scale-110 transition shadow-glass-sm`}>
+              <div className={`inline-flex items-center justify-center w-16 h-16 ${service.color} text-white rounded-2xl mb-4 group-hover:scale-110 transition shadow-glass-sm`}>
                 <i className={`${service.icon} text-2xl`}></i>
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-2">
@@ -67,7 +67,7 @@ export default function ServicesComparison() {
               <ul className="space-y-2">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="text-sm text-gray-600 flex items-center gap-2">
-                    <i className="fas fa-check text-accent-ink text-xs"></i>
+                    <i className="ph-bold ph-check text-accent-ink text-xs"></i>
                     {feature}
                   </li>
                 ))}

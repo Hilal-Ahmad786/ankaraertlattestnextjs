@@ -52,22 +52,22 @@ export default function HasarliAracPage() {
 
   const whyUsItems = [
     {
-      icon: 'fas fa-user-shield',
+      icon: 'ph-bold ph-user-check',
       title: 'Güvenilir İşlem',
       description: 'Noter onaylı yasal süreç, %100 güvenli alım satım.',
     },
     {
-      icon: 'fas fa-money-bill-wave',
+      icon: 'ph-bold ph-money',
       title: 'En Yüksek Fiyat',
       description: 'Piyasa araştırması ile en iyi teklifi sunuyoruz.',
     },
     {
-      icon: 'fas fa-tachometer-alt',
+      icon: 'ph-bold ph-gauge',
       title: 'Hızlı Süreç',
       description: 'Anlaşma sağlandığında ödeme aynı gün yapılır.',
     },
     {
-      icon: 'fas fa-phone-volume',
+      icon: 'ph-bold ph-phone-call',
       title: 'Anında İletişim',
       description: 'Tek aramayla işlem başlar, hemen teklif alın.',
     },
@@ -75,22 +75,22 @@ export default function HasarliAracPage() {
 
   const processSteps = [
     {
-      icon: 'fas fa-phone-alt',
+      icon: 'ph-bold ph-phone',
       title: 'Hemen Arayın',
       description: 'Ücretsiz danışma, anında fiyat bilgisi.',
     },
     {
-      icon: 'fas fa-search-dollar',
+      icon: 'ph-bold ph-magnifying-glass',
       title: 'Ekspertiz',
       description: 'Profesyonel değerleme, şeffaf rapor.',
     },
     {
-      icon: 'fas fa-handshake',
+      icon: 'ph-bold ph-handshake',
       title: 'Anlaşma',
       description: 'En iyi fiyat, noter onayı.',
     },
     {
-      icon: 'fas fa-money-check-alt',
+      icon: 'ph-bold ph-money',
       title: 'Ödeme',
       description: 'Anında nakit veya EFT.',
     },
@@ -98,32 +98,32 @@ export default function HasarliAracPage() {
 
   const damageTypes = [
     {
-      icon: 'fas fa-oil-can',
+      icon: 'ph-bold ph-gas-can',
       title: 'Motor Arızalı',
       description: 'Motor arızası nedeniyle çalışmayan veya ağır yağ/su karışımı yaşamış araçları değerinde satın alıyoruz.',
     },
     {
-      icon: 'fas fa-cogs',
+      icon: 'ph-bold ph-gear-six',
       title: 'Şanzıman Arızalı',
       description: 'Şanzıman arızası, debriyaj veya vites sorunu olan araçları da ekspertiz sonrası değerlendiriyoruz.',
     },
     {
-      icon: 'fas fa-car-side',
+      icon: 'ph-bold ph-car-profile',
       title: 'Tavan Hasarlı',
       description: 'Takla, devrilme veya düşen cisim nedeniyle tavan hasarı almış araçları satın alıyoruz.',
     },
     {
-      icon: 'fas fa-fire',
+      icon: 'ph-bold ph-fire',
       title: 'Yanık / Yanmış',
       description: 'Kısmen veya tamamen yanmış araçları da hasar durumuna göre değerlendiriyoruz.',
     },
     {
-      icon: 'fas fa-file-signature',
+      icon: 'ph-bold ph-signature',
       title: 'Çekme Belgeli',
       description: 'Trafikten çekilmiş, çekme belgeli araçları resmi süreçle satın alıyoruz.',
     },
     {
-      icon: 'fas fa-truck-pickup',
+      icon: 'ph-bold ph-truck',
       title: 'Ticari Araç',
       description: 'Kamyonet, minibüs ve panelvan gibi hasarlı ticari araçları da alıyoruz.',
     },
@@ -197,7 +197,7 @@ export default function HasarliAracPage() {
                 href={`/sehirler/${city.slug}`}
                 className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-orange-500 hover:text-orange-600 transition"
               >
-                <i className="fas fa-map-marker-alt text-orange-400 mr-2"></i>
+                <i className="ph-bold ph-map-pin text-orange-400 mr-2"></i>
                 {city.name}
               </a>
             ))}

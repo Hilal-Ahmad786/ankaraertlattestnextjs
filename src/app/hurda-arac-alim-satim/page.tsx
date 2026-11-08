@@ -52,22 +52,22 @@ export default function HurdaAracPage() {
 
   const whyUsItems = [
     {
-      icon: 'fas fa-file-alt',
+      icon: 'ph-bold ph-file-text',
       title: 'Resmi Belgeli',
       description: 'Yasal izinli, resmi belgeli hurda araç alımı.',
     },
     {
-      icon: 'fas fa-recycle',
+      icon: 'ph-bold ph-recycle',
       title: 'Çevre Dostu',
       description: 'Çevreye duyarlı geri dönüşüm süreci.',
     },
     {
-      icon: 'fas fa-weight',
+      icon: 'ph-bold ph-scales',
       title: 'Adil Tartı',
       description: 'Kilo bazlı en adil fiyatlandırma.',
     },
     {
-      icon: 'fas fa-truck',
+      icon: 'ph-bold ph-truck',
       title: 'Ücretsiz Taşıma',
       description: 'Aracınızı ücretsiz çekiyoruz.',
     },
@@ -75,22 +75,22 @@ export default function HurdaAracPage() {
 
   const processSteps = [
     {
-      icon: 'fas fa-phone',
+      icon: 'ph-bold ph-phone',
       title: 'İletişim',
       description: 'Aracınızın bilgilerini iletin.',
     },
     {
-      icon: 'fas fa-balance-scale',
+      icon: 'ph-bold ph-scales',
       title: 'Tartım',
       description: 'Yerinde tartı ve değerleme.',
     },
     {
-      icon: 'fas fa-file-invoice',
+      icon: 'ph-bold ph-receipt',
       title: 'Evrak',
       description: 'Resmi hurda belgesi düzenleme.',
     },
     {
-      icon: 'fas fa-dollar-sign',
+      icon: 'ph-bold ph-money',
       title: 'Ödeme',
       description: 'Anında nakit ödeme.',
     },
@@ -98,32 +98,32 @@ export default function HurdaAracPage() {
 
   const damageTypes = [
     {
-      icon: 'fas fa-hourglass-end',
+      icon: 'ph-bold ph-hourglass-high',
       title: 'Ekonomik Ömrünü Tamamlamış',
       description: 'Onarımı ekonomik olmayan, ekonomik ömrünü tamamlamış araçları hurda olarak alıyoruz.',
     },
     {
-      icon: 'fas fa-file-signature',
+      icon: 'ph-bold ph-signature',
       title: 'Çekme Belgeli Hurda',
       description: 'Trafikten çekilmiş, çekme belgeli araçları resmi hurda belgesiyle satın alıyoruz.',
     },
     {
-      icon: 'fas fa-fire',
+      icon: 'ph-bold ph-fire',
       title: 'Yanmış Hurda',
       description: 'Yanık ve kullanılamaz durumdaki araçları hurda değeri üzerinden değerlendiriyoruz.',
     },
     {
-      icon: 'fas fa-puzzle-piece',
+      icon: 'ph-bold ph-puzzle-piece',
       title: 'Yürümez / Parçalı',
       description: 'Motor veya şasi olarak parçalanmış, yürümez durumdaki araçları da alıyoruz.',
     },
     {
-      icon: 'fas fa-file-alt',
+      icon: 'ph-bold ph-file-text',
       title: 'Ruhsatsız / Eksik Evrak',
       description: 'Ruhsatı kayıp veya eksik evraklı araçlar için de resmi süreç yürütüyoruz.',
     },
     {
-      icon: 'fas fa-truck-pickup',
+      icon: 'ph-bold ph-truck',
       title: 'Ticari Hurda Araç',
       description: 'Hurda kamyon, minibüs ve iş makinelerini de değerlendiriyoruz.',
     },
@@ -197,7 +197,7 @@ export default function HurdaAracPage() {
                 href={`/sehirler/${city.slug}`}
                 className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-orange-500 hover:text-orange-600 transition"
               >
-                <i className="fas fa-map-marker-alt text-orange-400 mr-2"></i>
+                <i className="ph-bold ph-map-pin text-orange-400 mr-2"></i>
                 {city.name}
               </a>
             ))}

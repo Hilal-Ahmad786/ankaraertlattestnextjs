@@ -52,22 +52,22 @@ export default function PertAracPage() {
 
   const whyUsItems = [
     {
-      icon: 'fas fa-certificate',
+      icon: 'ph-bold ph-certificate',
       title: 'Kasko Çıkışlı',
       description: 'Sigorta çıkışlı pert araçlar için özel hizmet.',
     },
     {
-      icon: 'fas fa-chart-line',
+      icon: 'ph-bold ph-chart-line-up',
       title: 'En İyi Fiyat',
       description: 'Pert araç değerinin en üst seviyesini ödüyoruz.',
     },
     {
-      icon: 'fas fa-file-contract',
+      icon: 'ph-bold ph-file-text',
       title: 'Yasal Süreç',
       description: 'Noter onaylı, resmi evrakla güvenli işlem.',
     },
     {
-      icon: 'fas fa-headphones-alt',
+      icon: 'ph-bold ph-headphones',
       title: '7/24 Destek',
       description: 'Her an ulaşabileceğiniz müşteri hizmetleri.',
     },
@@ -75,22 +75,22 @@ export default function PertAracPage() {
 
   const processSteps = [
     {
-      icon: 'fas fa-mobile-alt',
+      icon: 'ph-bold ph-device-mobile',
       title: 'Bizi Arayın',
       description: 'Pert belgesi ile hemen başvuru yapın.',
     },
     {
-      icon: 'fas fa-calculator',
+      icon: 'ph-bold ph-calculator',
       title: 'Değerleme',
       description: 'Kasko raporu üzerinden fiyat belirleme.',
     },
     {
-      icon: 'fas fa-file-signature',
+      icon: 'ph-bold ph-signature',
       title: 'Noter İşlemi',
       description: 'Resmi devir ve evrak tamamlama.',
     },
     {
-      icon: 'fas fa-hand-holding-usd',
+      icon: 'ph-bold ph-hand-coins',
       title: 'Anında Ödeme',
       description: 'Nakit veya EFT ile ödeme.',
     },
@@ -98,32 +98,32 @@ export default function PertAracPage() {
 
   const damageTypes = [
     {
-      icon: 'fas fa-file-invoice-dollar',
+      icon: 'ph-bold ph-receipt',
       title: 'Sigorta Pert Kaydı',
       description: 'Sigorta şirketi tarafından pert kayıtlı ilan edilen araçları satın alıyoruz.',
     },
     {
-      icon: 'fas fa-car-burst',
+      icon: 'ph-bold ph-car',
       title: 'Ağır Hasar Pert',
       description: 'Onarım maliyeti araç değerini aşan ağır hasarlı pert araçları değerlendiriyoruz.',
     },
     {
-      icon: 'fas fa-cogs',
+      icon: 'ph-bold ph-gear-six',
       title: 'Motor/Şanzıman Pert',
       description: 'Motor veya şanzıman arızası nedeniyle pert olan araçları da alıyoruz.',
     },
     {
-      icon: 'fas fa-fire',
+      icon: 'ph-bold ph-fire',
       title: 'Yanık Pert',
       description: 'Yangın hasarı nedeniyle pert kaydı düşen araçları satın alıyoruz.',
     },
     {
-      icon: 'fas fa-water',
+      icon: 'ph-bold ph-drop',
       title: 'Sel Mağduru Pert',
       description: 'Sel veya su baskını nedeniyle pert olan araçları değerlendiriyoruz.',
     },
     {
-      icon: 'fas fa-truck-pickup',
+      icon: 'ph-bold ph-truck',
       title: 'Ticari Pert Araç',
       description: 'Pert kayıtlı kamyonet ve ticari araçları da satın alıyoruz.',
     },
@@ -196,7 +196,7 @@ export default function PertAracPage() {
                 href={`/sehirler/${city.slug}`}
                 className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-orange-500 hover:text-orange-600 transition"
               >
-                <i className="fas fa-map-marker-alt text-orange-400 mr-2"></i>
+                <i className="ph-bold ph-map-pin text-orange-400 mr-2"></i>
                 {city.name}
               </a>
             ))}

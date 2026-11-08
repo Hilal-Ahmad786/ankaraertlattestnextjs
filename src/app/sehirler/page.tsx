@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import citiesData from '@/data/cities.json';
 import { City } from '@/types';
+import Image from 'next/image';
+import { getCityMedia } from '@/data/city-media';
 
 // Force static rendering
 export const dynamic = 'force-static';
@@ -46,13 +48,13 @@ export default function CitiesListingPage() {
     const regions = Object.keys(citiesByRegion).sort();
 
     return (
-        <div className="min-h-screen bg-gray-50 pb-20">
+        <div className="min-h-dvh bg-gray-50 pb-20">
             {/* Hero Section */}
             <section className="text-white py-14 sm:py-20 lg:py-24 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#131A1E] via-[#2A3136] to-[#FC6704] opacity-95 z-0"></div>
+                <div className="absolute inset-0 bg-brand opacity-95 z-0"></div>
                 <div className="absolute inset-0 bg-black/20 z-0"></div>
                 <div className="container mx-auto px-4 relative z-10 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">Hizmet Bölgelerimiz</h1>
+                    <h1 className="hero-heading text-4xl md:text-5xl font-bold mb-4 tracking-tight">Hizmet Bölgelerimiz</h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                         Türkiye'nin dört bir yanında{' '}
                         hasarlı araç alan{' '}
@@ -66,26 +68,32 @@ export default function CitiesListingPage() {
                 {popularCities.length > 0 && (
                     <section>
                         <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 flex items-center gap-2">
-                            <i className="fas fa-star text-orange-500"></i>
+                            <i className="ph-bold ph-star text-orange-500"></i>
                             Popüler Şehirler
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {popularCities.map((city) => (
+                            {popularCities.map((city) => {
+                                const media = getCityMedia(city.slug);
+                                return (
                                 <Link
                                     key={city.id}
                                     href={`/sehirler/${city.slug}`}
                                     className="group relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
                                 >
-                                    {/* Background Image Placeholder since real images might be missing */}
-                                    <div className="absolute inset-0 bg-gray-800" />
-
-                                    {/* Overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent group-hover:via-black/40 transition-all"></div>
+                                    {/* City photo where one exists, otherwise the flat brand surface. */}
+                                    {media ? (
+                                        <>
+                                            <Image src={media.src} alt="" fill sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="object-cover" />
+                                            <div className="absolute inset-0 bg-brand/60 group-hover:bg-brand/50 transition-colors duration-300"></div>
+                                        </>
+                                    ) : (
+                                        <div className="absolute inset-0 bg-brand group-hover:bg-brand-raised transition-colors duration-300" />
+                                    )}
 
                                     <div className="absolute bottom-0 left-0 p-6 w-full">
                                         <div className="flex justify-between items-end">
                                             <div>
-                                                <span className="text-orange-400 font-semibold text-sm mb-1 block uppercase tracking-wider">
+                                                <span className="text-orange-400 font-semibold text-sm mb-1 block tracking-wide">
                                                     {city.plateCode}
                                                 </span>
                                                 <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-orange-400 transition-colors">
@@ -96,12 +104,13 @@ export default function CitiesListingPage() {
                                                 </p>
                                             </div>
                                             <div className="bg-orange-500 text-white w-10 h-10 rounded-full flex items-center justify-center transform scale-0 group-hover:scale-100 transition-transform duration-300">
-                                                <i className="fas fa-arrow-right"></i>
+                                                <i className="ph-bold ph-arrow-right"></i>
                                             </div>
                                         </div>
                                     </div>
                                 </Link>
-                            ))}
+                                );
+                            })}
                         </div>
                     </section>
                 )}

@@ -14,22 +14,22 @@ export const siteConfig = {
     {
       title: 'Kazalı Araç Alımı',
       slug: 'kazali-arac-alim-satim',
-      icon: 'fa-car-crash',
+      icon: 'ph-car',
     },
     {
       title: 'Hasarlı Araç Alımı',
       slug: 'hasarli-arac-alim-satim',
-      icon: 'fa-tools',
+      icon: 'ph-wrench',
     },
     {
       title: 'Pert Araç Alımı',
       slug: 'pert-arac-alim-satim',
-      icon: 'fa-exclamation-triangle',
+      icon: 'ph-warning',
     },
     {
       title: 'Hurda Araç Alımı',
       slug: 'hurda-arac-alim-satim',
-      icon: 'fa-recycle',
+      icon: 'ph-recycle',
     },
   ],
 };

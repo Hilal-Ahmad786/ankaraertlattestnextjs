@@ -29,7 +29,7 @@ export default function CallToActionBanner({
   return (
     <section className="relative py-12 sm:py-16 lg:py-20 text-white text-center overflow-hidden">
       {/* Decorative overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#131A1E] via-[#2A3136] to-[#FC6704]"></div>
+      <div className="absolute inset-0 bg-brand"></div>
       <div className="absolute inset-0 bg-black/20"></div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -45,7 +45,7 @@ export default function CallToActionBanner({
             onClick={handlePhoneClick}
             className="bg-white/80 text-orange-600 hover:bg-white px-8 py-4 rounded-full text-lg font-bold transition-all hover:scale-105 shadow-xl inline-flex items-center gap-2 backdrop-blur-xl"
           >
-            <i className="fas fa-phone-alt"></i>
+            <i className="ph-bold ph-phone"></i>
             {buttonText}
           </a>
           {showWhatsApp && (
@@ -56,7 +56,7 @@ export default function CallToActionBanner({
               onClick={handleWhatsAppClick}
               className="bg-green-500 text-white hover:bg-green-600 px-8 py-4 rounded-full text-lg font-bold transition-all hover:scale-105 shadow-xl inline-flex items-center gap-2"
             >
-              <i className="fab fa-whatsapp"></i>
+              <i className="ph-bold ph-whatsapp-logo"></i>
               WhatsApp
             </a>
           )}

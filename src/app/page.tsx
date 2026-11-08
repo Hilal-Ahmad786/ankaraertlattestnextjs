@@ -34,22 +34,22 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const whyUsItems = [
     {
-      icon: 'fas fa-clock',
+      icon: 'ph-bold ph-clock',
       title: '30 Dakikada Teklif',
       description: 'Ekspertiz sonrası 30 dakika içinde nakit teklif alın.',
     },
     {
-      icon: 'fas fa-search',
+      icon: 'ph-bold ph-magnifying-glass',
       title: 'Ücretsiz Ekspertiz',
       description: 'Yerinde veya noter yanında ekspertiz—%100 ücretsiz ve yasal.',
     },
     {
-      icon: 'fas fa-truck-moving',
+      icon: 'ph-bold ph-truck',
       title: 'Ücretsiz Çekici',
       description: 'Aracınızı ücretsiz çekiciyle alırız—ekspertiz ve evrak masrafsız.',
     },
     {
-      icon: 'fas fa-headset',
+      icon: 'ph-bold ph-headset',
       title: '7/24 Destek',
       description: 'Her adımda yanınızdayız—çağrı merkezi ve WhatsApp ile anında yanıt.',
     },
@@ -57,22 +57,22 @@ export default function HomePage() {
 
   const processSteps = [
     {
-      icon: 'fas fa-phone-volume',
+      icon: 'ph-bold ph-phone-call',
       title: 'Bize Ulaşın',
       description: '7/24 çağrı merkezi | WhatsApp fotoğraf gönder.',
     },
     {
-      icon: 'fas fa-search-location',
+      icon: 'ph-bold ph-map-pin-area',
       title: 'Ücretsiz Ekspertiz',
       description: 'Yerinde inceleme + pert/hasar raporu hazırlığı.',
     },
     {
-      icon: 'fas fa-file-signature',
+      icon: 'ph-bold ph-signature',
       title: 'Teklif & Onay',
       description: 'Piyasa üstü en iyi fiyat; onayınızla süreç başlar.',
     },
     {
-      icon: 'fas fa-hand-holding-usd',
+      icon: 'ph-bold ph-hand-coins',
       title: 'Noter Satışı & Nakit',
       description: 'Noter huzurunda devir → anında nakit/EFT.',
     },

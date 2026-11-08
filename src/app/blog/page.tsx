@@ -49,7 +49,7 @@ export default function BlogPage() {
                 className="bg-white rounded-3xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
                 {/* Category Badge */}
-                <div className="bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-3">
+                <div className="bg-accent px-6 py-3">
                   <span className="text-white text-sm font-semibold">
                     {post.category}
                   </span>

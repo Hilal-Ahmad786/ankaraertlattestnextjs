@@ -19,7 +19,7 @@ export default function TrustSignals() {
   }, []);
 
   return (
-    <section className="py-10 sm:py-14 lg:py-16 bg-gradient-to-r from-gray-50 to-accent-tint">
+    <section className="py-10 sm:py-14 lg:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Main Trust Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
@@ -73,7 +73,7 @@ export default function TrustSignals() {
         </div>
 
         {/* Social Proof Banner */}
-        <div className="bg-gradient-to-r from-[#2A3136] to-[#131A1E] rounded-[2rem] p-6 text-white shadow-glass">
+        <div className="bg-brand rounded-[2rem] p-6 text-white shadow-glass">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <div className="hidden md:block w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
@@ -94,7 +94,7 @@ export default function TrustSignals() {
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 border-2 border-white flex items-center justify-center text-sm font-bold">
+                  <div key={i} className="w-10 h-10 rounded-full bg-accent border-2 border-white flex items-center justify-center text-sm font-bold">
                     {String.fromCharCode(65 + i)}
                   </div>
                 ))}
@@ -108,7 +108,7 @@ export default function TrustSignals() {
 
         {/* Recent Activity Ticker */}
         <div className="mt-6 bg-white rounded-3xl shadow-lg overflow-hidden">
-          <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 text-sm font-semibold">
+          <div className="bg-green-600 text-white px-4 py-2 text-sm font-semibold">
             ✅ Son İşlemler (Gerçek Zamanlı)
           </div>
           <div className="divide-y divide-gray-100">
@@ -188,7 +188,7 @@ function RecentActivity({
     <div className="p-4 hover:bg-white/60 transition-colors">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+          <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
             {action.charAt(0)}
           </div>
           <div>

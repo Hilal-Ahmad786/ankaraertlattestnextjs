@@ -61,7 +61,7 @@ export default function FAQ({
               >
                 <span className="font-semibold pr-4">{item.question}</span>
                 <i
-                  className={`fas fa-chevron-down transition-transform ${
+                  className={`ph-bold ph-caret-down transition-transform ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 ></i>

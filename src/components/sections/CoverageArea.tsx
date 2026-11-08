@@ -40,7 +40,7 @@ export default function CoverageArea() {
                 className="group flex min-h-[88px] flex-col items-center justify-center gap-1 rounded-2xl border border-white/60 bg-white/45 p-3 sm:p-4 text-center transition hover:-translate-y-0.5 hover:bg-white hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 <i
-                  className="fas fa-map-marker-alt text-orange-500 text-lg sm:text-xl transition-transform group-hover:scale-110"
+                  className="ph-bold ph-map-pin text-orange-500 text-lg sm:text-xl transition-transform group-hover:scale-110"
                   aria-hidden="true"
                 ></i>
                 <span className="text-sm sm:text-base font-semibold text-gray-800">
@@ -60,7 +60,7 @@ export default function CoverageArea() {
             className="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/50 px-5 py-2.5 text-sm sm:text-base font-semibold text-accent-ink transition hover:bg-white hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             Türkiye&apos;nin tüm illeri ve ilçeleri
-            <i className="fas fa-arrow-right text-xs" aria-hidden="true"></i>
+            <i className="ph-bold ph-arrow-right text-xs" aria-hidden="true"></i>
           </Link>
         </div>
       </div>

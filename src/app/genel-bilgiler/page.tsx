@@ -122,28 +122,28 @@ export default function GenelBilgilerPage() {
             <h2 className="text-3xl font-bold text-primary mb-6 mt-12">Hangi Araçları Alıyoruz?</h2>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <i className="fas fa-car-crash text-orange-500 text-xl mt-1"></i>
+                <i className="ph-bold ph-car text-orange-500 text-xl mt-1"></i>
                 <span className="text-lg">
                   <strong><a href="/kazali-arac-alim-satim" className="text-orange-600 hover:underline">Kazalı Araçlar:</a></strong>{' '}
                   Trafik kazası geçirmiş, çarpma, devrilme gibi hasarı olan araçlar.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <i className="fas fa-tools text-orange-500 text-xl mt-1"></i>
+                <i className="ph-bold ph-wrench text-orange-500 text-xl mt-1"></i>
                 <span className="text-lg">
                   <strong><a href="/hasarli-arac-alim-satim" className="text-orange-600 hover:underline">Hasarlı Araçlar:</a></strong>{' '}
                   Mekanik veya kaporta hasarı bulunan araçlar.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <i className="fas fa-exclamation-triangle text-orange-500 text-xl mt-1"></i>
+                <i className="ph-bold ph-warning text-orange-500 text-xl mt-1"></i>
                 <span className="text-lg">
                   <strong><a href="/pert-arac-alim-satim" className="text-orange-600 hover:underline">Pert Araçlar:</a></strong>{' '}
                   Sigorta şirketi tarafından pert raporu çıkmış araçlar.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <i className="fas fa-recycle text-orange-500 text-xl mt-1"></i>
+                <i className="ph-bold ph-recycle text-orange-500 text-xl mt-1"></i>
                 <span className="text-lg">
                   <strong><a href="/hurda-arac-alim-satim" className="text-orange-600 hover:underline">Hurda Araçlar:</a></strong>{' '}
                   Kullanım ömrünü tamamlamış, hurda belgesi alacak araçlar.

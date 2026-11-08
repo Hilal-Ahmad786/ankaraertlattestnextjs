@@ -3,22 +3,22 @@ import type { CSSProperties } from 'react';
 export default function TrustBadges({ cityPage = false }: { cityPage?: boolean }) {
     const badges = [
       {
-        icon: 'fas fa-shield-alt',
+        icon: 'ph-bold ph-shield-check',
         title: 'Güvenli İşlem',
         description: 'Noter onaylı yasal süreç',
       },
       {
-        icon: 'fas fa-medal',
+        icon: 'ph-bold ph-medal',
         title: '15+ Yıl Tecrübe',
         description: 'Sektörde uzman ekip',
       },
       {
-        icon: 'fas fa-truck-pickup',
+        icon: 'ph-bold ph-truck',
         title: 'Çekici ve Noter Masrafı Bize Ait',
         description: 'Aracınız bulunduğu yerden alınır',
       },
       {
-        icon: 'fas fa-hand-holding-usd',
+        icon: 'ph-bold ph-hand-coins',
         title: 'En Yüksek Fiyat',
         description: 'Piyasa üstü teklif garantisi',
       },
