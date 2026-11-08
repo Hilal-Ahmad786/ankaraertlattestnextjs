@@ -1,11 +1,9 @@
-import type { CSSProperties } from 'react';
-
 /**
- * Per-city "what we check" card shown beside the main city copy (all 30 cities).
- * Replaces the earlier abstract line drawings: concrete checkpoints read better
- * than decoration and repeat what the page text already says about this city.
+ * Per-city "Ekspertizde öne çıkan kontroller" items (three per city), shown in
+ * the city page body aside. Kept short and concrete; they repeat what each
+ * city's copy already says.
  */
-const checks: Record<string, [string, string, string]> = {
+export const cityChecks: Record<string, [string, string, string]> = {
   kayseri: ['Rot, aks ve salıncak', 'Soğutma sistemi ve radyatör', 'Kasa ve yük bölümü'],
   bursa: ['Motor ve şanzıman çalışması', 'Kaporta ve parça durumu', 'Sahil kaynaklı korozyon'],
   antalya: ['Hararet ve motor soğutması', 'Su teması ve elektronik', 'Filo kullanım geçmişi'],
@@ -37,27 +35,3 @@ const checks: Record<string, [string, string, string]> = {
   ordu: ['Rot, aks ve salıncak', 'Kasa ve makaslar', 'Su çizgisi ve korozyon'],
   erzurum: ['Motor bloğu ve soğutma', 'Akü ve marş sistemi', 'Gövde altı ve korozyon'],
 };
-
-export function CityRiskMotif({ slug, cityName }: { slug: string; cityName?: string }) {
-  const items = checks[slug];
-  if (!items) return null;
-  return (
-    <aside className="city-check-card" data-city-reveal aria-label={`${cityName ?? ''} ekspertizinde öne çıkan kontroller`.trim()}>
-      <div className="city-check-card-head">
-        <span className="city-check-card-icon" aria-hidden="true"><i className="fas fa-clipboard-check"></i></span>
-        <div>
-          <p className="city-check-card-title">Ekspertizde öne çıkan kontroller</p>
-          <p className="city-check-card-sub">{cityName ? `${cityName} için temsili liste` : 'Temsili liste'}</p>
-        </div>
-      </div>
-      <ol className="city-check-card-list">
-        {items.map((item, index) => (
-          <li key={item} style={{ '--city-item-index': index } as CSSProperties}>
-            <span className="city-check-card-tick" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" /></svg></span>
-            {item}
-          </li>
-        ))}
-      </ol>
-    </aside>
-  );
-}

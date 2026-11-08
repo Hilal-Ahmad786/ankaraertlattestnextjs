@@ -4,19 +4,9 @@ import citiesData from '@/data/cities.json';
 import { City } from '@/types';
 import { getCityMedia } from '@/data/city-media';
 import HeroBanner from '@/components/sections/HeroBanner';
-import CityContent from '@/components/city/CityContent';
-import CitySidebar, { CityNearbyCities } from '@/components/city/CitySidebar';
+import CitySidebar, { CitySummaryBox } from '@/components/city/CitySidebar';
+import { CityIntro, CityBody, CityDamage, CityPrep, CityDistrictList, CityVehicles, CityProcess, CityFaqList, CityNearby } from '@/components/city/CityPageSections';
 import CityCtaBanner from '@/components/city/CityCtaBanner';
-import CityDistricts from '@/components/city/CityDistricts';
-import CityFAQs from '@/components/city/CityFAQs';
-import CityStats from '@/components/city/CityStats';
-import CityVehicleTypes from '@/components/city/CityVehicleTypes';
-import CityRevealScope from '@/components/city/CityRevealScope';
-import TrustBadges from '@/components/sections/TrustBadges';
-import UrgentCTABanner from '@/components/sections/UrgentCTABanner';
-import WhyUs from '@/components/sections/WhyUs';
-import ProcessTimeline from '@/components/sections/ProcessTimeline';
-import ContactCTA from '@/components/sections/ContactCTA';
 import { localBusinessSchema, breadcrumbSchema, serviceSchema } from '@/lib/schema';
 import { services } from '@/data/services';
 import { getCityContent } from '@/data/city-content';
@@ -77,9 +67,6 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
 
   const written = getCityContent(city.slug);
   const media = getCityMedia(city.slug);
-  // Enhanced city treatment (motion, check card, district chips, extra content) now applies
-  // to every city with written content; `media` only decides the custom hero photo.
-  const enhanced = Boolean(written);
   const writtenNearbyLinks = written?.nearbyNote?.citySlugs
     .map((slug) => cities.find((item) => item.slug === slug))
     .filter((item): item is City => Boolean(item))
@@ -107,51 +94,7 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
     { name: city.name, url: `${BASE_URL}/sehirler/${city.slug}` },
   ]);
 
-  const whyUsItems = [
-    {
-      icon: 'fas fa-clock',
-      title: '30 Dakikada Teklif',
-      description: `${city.name} genelinde ekspertiz sonrası 30 dakika içinde nakit teklif.`,
-    },
-    {
-      icon: 'fas fa-search',
-      title: 'Ücretsiz Ekspertiz',
-      description: `${city.name} adresinizde ücretsiz ve detaylı araç incelemesi.`,
-    },
-    {
-      icon: 'fas fa-truck-moving',
-      title: 'Ücretsiz Çekici',
-      description: `Aracınızı ${city.name} içindeki konumundan ücretsiz teslim alıyoruz.`,
-    },
-    {
-      icon: 'fas fa-headset',
-      title: '7/24 Destek',
-      description: `${city.region} bölgesi için özel müşteri temsilcisi desteği.`,
-    },
-  ];
 
-  const processSteps = [
-    {
-      icon: 'fas fa-phone-volume',
-      title: 'Bize Ulaşın',
-      description: `${city.name} için 7/24 çağrı merkezi veya WhatsApp hattımız.`,
-    },
-    {
-      icon: 'fas fa-search-location',
-      title: 'Yerinde Ekspertiz',
-      description: `${city.name} ili sınırları içinde adresinize geliyoruz.`,
-    },
-    {
-      icon: 'fas fa-file-signature',
-      title: 'Anında Teklif',
-      description: `${city.plateCode} plakalı araçlar için özel fiyatlandırma.`,
-    },
-    {
-      icon: 'fas fa-hand-holding-usd',
-      title: 'Nakit Ödeme',
-      description: `${city.name} noterlerinde anında satış ve ödeme.`,
-    },
-  ];
 
   // City-scoped Service entities. LocalBusiness alone says "we exist here";
   // Service says what is actually offered here, which is what the city query asks.
@@ -178,8 +121,7 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
   };
 
   return (
-    <div className={`city-page min-h-screen bg-gray-50 pb-0 ${enhanced ? 'city-pilot' : ''}`} data-city-treatment={enhanced ? 'enhanced' : 'cleanup-only'}>
-      {enhanced && <CityRevealScope />}
+    <div className="city-page cp">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizJsonLd) }}
@@ -193,8 +135,7 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
         dangerouslySetInnerHTML={{ __html: JSON.stringify(cityServiceJsonLd) }}
       />
 
-      {/* Same hero as the homepage and service pages; the top-10 cities use
-          their own photo as the background so each page still looks distinct. */}
+      {/* Site-wide hero; the ten cities with their own photo use it as background. */}
       <HeroBanner
         variant="default"
         tagline={`${city.region} Bölgesi • ${city.plateCode}`}
@@ -204,76 +145,21 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
         backgroundImage={media?.src ?? city.heroImage}
       />
 
-      <TrustBadges cityPage={enhanced} />
+      <CityIntro city={city} written={written} summary={<CitySummaryBox city={city} districtCount={city.districts.length} />} />
+      <CityBody city={city} written={written} />
+      <CityDamage cityName={city.name} rows={written?.damageTable} />
+      <CityCtaBanner variant="photo" cityName={city.name} />
+      <CityPrep cityItem={written?.cityChecklistItem} example={written?.exampleCase} />
+      <CitySidebar city={city} />
+      <CityDistrictList city={city} notes={written?.districtNotes} />
+      <CityCtaBanner variant="tow" cityName={city.name} />
+      <CityVehicles cityName={city.name} />
+      <CityProcess city={city} />
+      <CityFaqList cityName={city.name} faqs={written?.faqs} />
+      <CityCtaBanner variant="question" cityName={city.name} />
+      <CityNearby city={city} nearby={written?.nearbyNote ? { text: written.nearbyNote.text, links: writtenNearbyLinks } : undefined} regionCities={nearbyCities} />
 
-      <section className="container mx-auto px-4 pt-10 relative z-20">
-        <p className="text-lg leading-relaxed text-center text-gray-700 max-w-4xl mx-auto">
-          {written?.intro ?? (
-            <>
-              {city.name} ve çevresinde kazalı, pert veya hasar kayıtlı aracınızı
-              değerinde satın alıyoruz. Ücretsiz ekspertiz ve çekici hizmetiyle
-              aracınız bulunduğu yerden teslim alınır.
-            </>
-          )}
-        </p>
-        <p className="mt-4 text-base leading-relaxed text-center text-gray-600 max-w-3xl mx-auto">
-          <strong className={enhanced ? 'city-promise-highlight' : 'text-gray-800'}>30 dakikada nakit teklif</strong>, anlaşma
-          sağlandığında <strong className={enhanced ? 'city-promise-highlight' : 'text-gray-800'}>aynı gün ödeme</strong>.
-          Çekici ve noter masrafları bize aittir; {city.name} içinde aracınız
-          bulunduğu yerden teslim alınır.
-        </p>
-      </section>
-
-      <div className="container mx-auto px-4 py-12 relative z-20">
-        <div className="mb-12">
-          <CityStats cityName={city.name} animate={enhanced} />
-        </div>
-
-        {/* Full-width section stack: the CTA sits between sections as a band
-            instead of a sticky right column that left most of the page empty. */}
-        <div className="space-y-8">
-            <CityCtaBanner variant="photo" cityName={city.name} />
-            <CityContent
-              content={city.content}
-              cityName={city.name}
-              citySlug={enhanced ? city.slug : undefined}
-              body={written?.body}
-              localPoints={written?.localPoints}
-              damageTable={written?.damageTable}
-              cityChecklistItem={written?.cityChecklistItem}
-              exampleCase={written?.exampleCase}
-              seasonNote={written?.seasonNote}
-              nearbyNote={written?.nearbyNote}
-              nearbyCityLinks={writtenNearbyLinks}
-            />
-            <CitySidebar city={city} />
-            <CityDistricts city={city} districtNotes={written?.districtNotes} pilot={enhanced} />
-            <CityCtaBanner variant="tow" cityName={city.name} />
-            <CityVehicleTypes city={city} pilot={enhanced} />
-            <CityFAQs cityName={city.name} faqs={written?.faqs} />
-            <CityCtaBanner variant="question" cityName={city.name} />
-            <CityNearbyCities city={city} nearbyCities={nearbyCities} />
-        </div>
-      </div>
-
-      <div className="bg-white border-t border-gray-100">
-        <ProcessTimeline
-          animate={enhanced}
-          title={`${city.name} Araç Alım Süreci`}
-          subtitle="4 Kolay Adımda Aracınızı Nakite Çevirin"
-          steps={processSteps}
-        />
-      </div>
-
-      <UrgentCTABanner cityPage />
-
-      <WhyUs
-        title={`Neden ${city.name} Bölgesinde Bizi Seçmelisiniz?`}
-        subtitle="Güvenilir, Hızlı ve Profesyonel Hizmet"
-        items={whyUsItems}
-      />
-
-      <ContactCTA cityPage />
+      <CitySidebar city={city} final />
     </div>
   );
 }

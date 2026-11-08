@@ -1,78 +1,65 @@
 'use client';
 
-import Link from 'next/link';
 import { siteConfig } from '@/config/site';
 import { City } from '@/types';
 import { trackCTAClick, trackPhoneClick, trackWhatsAppClick } from '@/lib/gtm';
 
-/**
- * Full-width CTA band placed between city sections (formerly a sticky right
- * column). Tracking event names are unchanged so existing GTM triggers keep working.
- * A div, not a section: a global `section { background: transparent }` rule would erase the dark band.
- */
-export default function CitySidebar({ city }: { city: City }) {
-    const handlePhoneClick = () => {
-        trackPhoneClick('city_sidebar');
-        trackCTAClick('Sidebar Phone', 'city-sidebar');
-    };
-    const handleWhatsAppClick = () => {
-        trackWhatsAppClick('city_sidebar');
-        trackCTAClick('Sidebar WhatsApp', 'city-sidebar');
-    };
+const phoneHref = `tel:${siteConfig.phone}`;
+const waHref = `https://wa.me/${siteConfig.whatsapp}`;
 
+/**
+ * Full-width price band between sections. Tracking names are unchanged
+ * ("city_sidebar") so existing GTM triggers keep working.
+ */
+export default function CitySidebar({ city, final = false }: { city: City; final?: boolean }) {
+    const where = final ? 'city_final' : 'city_sidebar';
+    const phone = () => { trackPhoneClick(where); trackCTAClick(final ? 'City final phone' : 'Sidebar Phone', final ? 'city_final' : 'city-sidebar'); };
+    const whatsapp = () => { trackWhatsAppClick(where); trackCTAClick(final ? 'City final WhatsApp' : 'Sidebar WhatsApp', final ? 'city_final' : 'city-sidebar'); };
     return (
-        <div role="region" aria-label={`${city.name} için hemen fiyat alın`} className="city-sidebar-cta city-cta-band bg-[#131A1E] text-white rounded-3xl p-6 sm:p-8 shadow-xl" data-city-reveal>
-            <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-                <div className="text-center md:text-left">
-                    <h2 className="text-xl sm:text-2xl font-bold">Hemen Fiyat Alın</h2>
-                    <p className="mt-1 text-gray-300 text-sm sm:text-base">
-                        {city.name} bölgesinde 30 dakikada ekspertiz ve nakit ödeme.
-                    </p>
-                </div>
-                <div className="flex flex-col gap-3 sm:flex-row sm:justify-center md:shrink-0">
-                    <a
-                        href={`tel:${siteConfig.phone}`}
-                        onClick={handlePhoneClick}
-                        className="city-sidebar-action inline-flex min-h-12 items-center justify-center bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-full font-bold transition shadow-lg"
-                    >
-                        <i className="fas fa-phone-alt mr-2" aria-hidden="true"></i>
-                        HEMEN ARA
-                    </a>
-                    <a
-                        href={`https://wa.me/${siteConfig.whatsapp}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={handleWhatsAppClick}
-                        className="city-sidebar-action inline-flex min-h-12 items-center justify-center bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-full font-bold transition shadow-lg"
-                    >
-                        <i className="fab fa-whatsapp mr-2" aria-hidden="true"></i>
-                        WHATSAPP TEKLİF
-                    </a>
+        <div className="cp-band cp-band--dark" role="region" aria-label={`${city.name} için fiyat alın`}>
+            <div className="cp-wrap cp-price">
+                {final ? (
+                    <div>
+                        <p className="cp-price-title">Aracınızı satmaya hazır olduğunuzda bize ulaşın</p>
+                        <p className="cp-price-text">Başvurunuzu 7/24 telefon veya WhatsApp üzerinden alıyoruz.</p>
+                        <a href={phoneHref} onClick={phone} className="cp-price-phone">{siteConfig.phoneDisplay}</a>
+                    </div>
+                ) : (
+                    <div>
+                        <p className="cp-price-title">{city.name}’deki aracınız için fiyat alın</p>
+                        <p className="cp-price-text">Ekspertizden sonra 30 dakika içinde teklif. Çekici ve noter masrafları bize aittir.</p>
+                    </div>
+                )}
+                <div className="cp-actions">
+                    <a href={phoneHref} onClick={phone} className="cp-btn cp-btn--primary">Hemen Ara</a>
+                    <a href={waHref} target="_blank" rel="noopener noreferrer" onClick={whatsapp} className="cp-btn cp-btn--wa">WhatsApp’tan Yaz</a>
                 </div>
             </div>
         </div>
     );
 }
 
-/** Same-region city links, shown as a full-width strip after the FAQ. */
-export function CityNearbyCities({ city, nearbyCities }: { city: City; nearbyCities: City[] }) {
-    if (nearbyCities.length === 0) return null;
+/** Intro "Özet" box: plain facts plus the first call to action. */
+export function CitySummaryBox({ city, districtCount }: { city: City; districtCount: number }) {
+    const phone = () => { trackPhoneClick('city_summary'); trackCTAClick('City summary phone', 'city_summary'); };
+    const whatsapp = () => { trackWhatsAppClick('city_summary'); trackCTAClick('City summary WhatsApp', 'city_summary'); };
+    const rows: [string, string][] = [
+        ['Bölge', `${city.region} · ${city.plateCode} plaka`],
+        ['Hizmet verilen ilçe', `${districtCount} ilçe ve merkez`],
+        ['Teklif', 'Ekspertizden sonra 30 dakika içinde'],
+        ['Ödeme', 'Anlaşmada aynı gün, noter devriyle'],
+        ['Çekici ve noter', 'Masrafı bize ait'],
+    ];
     return (
-        <nav aria-label={`${city.region} bölgesindeki diğer iller`} className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 sm:p-8">
-            <h2 className="text-lg font-bold text-gray-800 mb-4">{city.region} Bölgesindeki Diğer İller</h2>
-            <ul className="flex flex-wrap gap-2">
-                {nearbyCities.map((nearbyCity) => (
-                    <li key={nearbyCity.id}>
-                        <Link
-                            href={`/sehirler/${nearbyCity.slug}`}
-                            className="inline-flex min-h-10 items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-4 text-sm text-gray-700 transition hover:border-orange-400 hover:text-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-600"
-                        >
-                            <span className="h-1.5 w-1.5 rounded-full bg-orange-500" aria-hidden="true"></span>
-                            {nearbyCity.name}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </nav>
+        <aside className="cp-summary" aria-labelledby="cp-summary-title">
+            <h2 id="cp-summary-title" className="cp-summary-title">Özet</h2>
+            <dl>
+                {rows.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}
+            </dl>
+            <div className="cp-actions cp-actions--stack">
+                <a href={phoneHref} onClick={phone} className="cp-btn cp-btn--primary">Hemen Ara</a>
+                <a href={waHref} target="_blank" rel="noopener noreferrer" onClick={whatsapp} className="cp-btn cp-btn--ghost">WhatsApp’tan fotoğraf gönderin</a>
+            </div>
+        </aside>
     );
 }
