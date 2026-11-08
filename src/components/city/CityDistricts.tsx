@@ -1,7 +1,9 @@
+import type { CSSProperties } from 'react';
 import { City } from '@/types';
 
 interface CityDistrictsProps {
     city: City;
+    pilot?: boolean;
     /**
      * District name -> a sentence or two specific to that district. Turns the
      * chip list into indexable content and gives long-tail queries like
@@ -10,7 +12,7 @@ interface CityDistrictsProps {
     districtNotes?: Record<string, string>;
 }
 
-export default function CityDistricts({ city, districtNotes }: CityDistrictsProps) {
+export default function CityDistricts({ city, districtNotes, pilot = false }: CityDistrictsProps) {
     const hasNotes = districtNotes && Object.keys(districtNotes).length > 0;
     return (
         <div className="space-y-8">
@@ -46,8 +48,16 @@ export default function CityDistricts({ city, districtNotes }: CityDistrictsProp
 
                 {hasNotes ? (
                     <div className="space-y-4">
-                        {city.districts.map((district) => (
-                            <div key={district} className="city-district-card p-4 rounded-2xl bg-gray-50 border border-gray-100">
+                        {pilot && <nav className="city-district-map" aria-label={`${city.name} ilçelerine git`}>
+                            <p className="city-district-map-label">Şematik ilçe dizini · noktalar coğrafi konum göstermez</p>
+                            <div className="city-district-map-dots">
+                                {city.districts.map((district, index) => <a key={district} href={`#district-${city.slug}-${index}`} aria-label={`${district} ilçe açıklamasına git`} title={district}>
+                                    <span aria-hidden="true" />
+                                </a>)}
+                            </div>
+                        </nav>}
+                        {city.districts.map((district, index) => (
+                            <div key={district} id={pilot ? `district-${city.slug}-${index}` : undefined} tabIndex={pilot ? -1 : undefined} data-city-reveal={pilot ? '' : undefined} style={pilot ? { '--city-item-index': index } as CSSProperties : undefined} className={`city-district-card p-4 rounded-2xl bg-gray-50 border border-gray-100 ${pilot ? 'city-district-entry' : ''}`}>
                                 <h4 className="text-sm font-bold text-gray-800 flex items-center gap-2 mb-1">
                                     <i className="fas fa-map-pin text-accent-ink text-xs" aria-hidden></i>
                                     {district}
@@ -57,6 +67,7 @@ export default function CityDistricts({ city, districtNotes }: CityDistrictsProp
                                         {districtNotes[district]}
                                     </p>
                                 )}
+                                {pilot && <span className="city-district-entry-dot" aria-hidden="true" />}
                             </div>
                         ))}
                     </div>

@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import { siteConfig } from '@/config/site';
 import { trackCTAClick, trackPhoneClick, trackWhatsAppClick } from '@/lib/gtm';
+import { CityHeroLineArt } from '@/components/city/CityMotifs';
 
 interface HeroBannerProps {
   variant?: 'default' | 'kazali' | 'hasarli' | 'pert' | 'hurda';
@@ -12,6 +13,7 @@ interface HeroBannerProps {
   subtitle: string;
   highlight?: string;
   backgroundImage?: string; // New prop for custom background
+  cityPilot?: { name: string; slug: string; plateCode: string };
 }
 
 export default function HeroBanner({
@@ -21,6 +23,7 @@ export default function HeroBanner({
   subtitle,
   highlight,
   backgroundImage,
+  cityPilot,
 }: HeroBannerProps) {
   const handlePhoneClick = () => {
     trackPhoneClick('hero');
@@ -51,9 +54,9 @@ export default function HeroBanner({
   };
 
   return (
-    <section className="relative -mt-24 min-h-[600px] sm:min-h-[560px] md:min-h-[590px] flex items-center justify-center overflow-hidden px-3 sm:px-4 pt-24 md:pt-28">
+    <section className={`relative -mt-24 min-h-[600px] sm:min-h-[560px] md:min-h-[590px] flex items-center justify-center overflow-hidden px-3 sm:px-4 pt-24 md:pt-28 ${cityPilot ? 'city-hero' : ''}`}>
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className={`absolute inset-0 ${cityPilot ? 'city-photo-frame' : ''}`}>
         <Image
           src={getBackgroundImage()}
           alt={title}
@@ -94,6 +97,11 @@ export default function HeroBanner({
       {/* Bottom fade so the trust strip below keeps its footing. */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/35"></div>
 
+      {cityPilot && <div className="city-hero-decoration" aria-hidden="true">
+        <span className="city-plate-chip" data-city-reveal>{cityPilot.plateCode} · {cityPilot.name}</span>
+        <CityHeroLineArt slug={cityPilot.slug} />
+      </div>}
+
       <div className="relative z-10 container mx-auto px-2 sm:px-4 text-center max-w-4xl py-6 md:py-8">
         {/* Tagline */}
         <p className="mx-auto mb-4 inline-flex max-w-full rounded-full border border-white/80 bg-[rgba(255,255,255,0.78)] px-4 py-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-accent-ink shadow-glass-sm backdrop-blur-2xl animate-fade-in">
@@ -126,7 +134,7 @@ export default function HeroBanner({
           <a
             href={`tel:${siteConfig.phone}`}
             onClick={handlePhoneClick}
-            className="bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:text-white border border-white/45 px-5 sm:px-6 py-3 rounded-full font-bold transition-all duration-300 shadow-glow text-sm sm:text-base hover:scale-105 backdrop-blur-xl"
+            className={`bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:text-white border border-white/45 px-5 sm:px-6 py-3 rounded-full font-bold transition-all duration-300 shadow-glow text-sm sm:text-base hover:scale-105 backdrop-blur-xl ${cityPilot ? 'city-hero-cta' : ''}`}
           >
             <i className="fas fa-phone-alt mr-2"></i> Hemen Teklif Al
           </a>
@@ -135,7 +143,7 @@ export default function HeroBanner({
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsAppClick}
-            className="bg-green-500 text-white hover:text-white px-5 sm:px-6 py-3 rounded-full font-bold hover:bg-green-600 transition-all duration-300 shadow-glass text-sm sm:text-base border border-white/40 hover:scale-105 backdrop-blur-xl"
+            className={`bg-green-500 text-white hover:text-white px-5 sm:px-6 py-3 rounded-full font-bold hover:bg-green-600 transition-all duration-300 shadow-glass text-sm sm:text-base border border-white/40 hover:scale-105 backdrop-blur-xl ${cityPilot ? 'city-hero-cta' : ''}`}
           >
             <i className="fab fa-whatsapp mr-2"></i> WhatsApp
           </a>
@@ -151,7 +159,7 @@ export default function HeroBanner({
             { icon: 'fas fa-file-signature', value: 'Ücretsiz', label: 'Noter Masrafı Bize Ait' },
             { icon: 'fas fa-money-bill-wave', value: 'Aynı Gün', label: 'Anlaşmada Nakit Ödeme' },
           ].map((item) => (
-            <div key={item.label} className="text-center">
+            <div key={item.label} className="text-center" data-city-reveal={cityPilot ? '' : undefined}>
               <span
                 className="mx-auto mb-2 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-white/62 text-orange-500 ring-1 ring-white/70"
                 aria-hidden="true"

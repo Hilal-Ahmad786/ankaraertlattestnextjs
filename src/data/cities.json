@@ -24,7 +24,10 @@
             "Fatih",
             "Bakırköy",
             "Bahçelievler",
-            "Ümraniye"
+            "Ümraniye",
+            "Esenyurt",
+            "Beylikdüzü",
+            "Sultanbeyli"
         ],
         "advantages": [
             "İstanbul İçi Ücretsiz Çekici",
@@ -56,7 +59,10 @@
             "Sincan",
             "Altındağ",
             "Balgat",
-            "Çayyolu"
+            "Çayyolu",
+            "Pursaklar",
+            "Gölbaşı",
+            "Polatlı"
         ],
         "advantages": [
             "Ankara Merkezli Kurumsal Firma",
@@ -141,7 +147,10 @@
             "Konyaaltı",
             "Alanya",
             "Manavgat",
-            "Serik"
+            "Serik",
+            "Kemer",
+            "Kumluca",
+            "Kaş"
         ],
         "advantages": [
             "Turistik Bölge Hizmet Ağı",
@@ -194,7 +203,10 @@
             "Meram",
             "Karatay",
             "Ereğli",
-            "Akşehir"
+            "Akşehir",
+            "Beyşehir",
+            "Seydişehir",
+            "Cihanbeyli"
         ],
         "advantages": [
             "Konya Geneli Yaygın Ağ",
@@ -219,7 +231,10 @@
             "Şehitkamil",
             "Şahinbey",
             "Nizip",
-            "Oğuzeli"
+            "Oğuzeli",
+            "İslahiye",
+            "Nurdağı",
+            "Araban"
         ],
         "advantages": [
             "Güneydoğu Bölge Merkezi",
@@ -272,7 +287,10 @@
             "Darıca",
             "Gölcük",
             "Körfez",
-            "Derince"
+            "Derince",
+            "Kartepe",
+            "Başiskele",
+            "Çayırova"
         ],
         "advantages": [
             "Sanayi Bölgesi Avantajı",
@@ -402,7 +420,10 @@
             "Melikgazi",
             "Kocasinan",
             "Talas",
-            "Develi"
+            "Develi",
+            "İncesu",
+            "Hacılar",
+            "Bünyan"
         ],
         "advantages": [
             "Kayseri Ticaret Geleneği",
@@ -428,7 +449,10 @@
             "Atakum",
             "Canik",
             "Çarşamba",
-            "Bafra"
+            "Bafra",
+            "Tekkeköy",
+            "Vezirköprü",
+            "Havza"
         ],
         "advantages": [
             "Karadeniz Bölge Ağı",
@@ -504,7 +528,10 @@
             "İpekyolu",
             "Tuşba",
             "Edremit",
-            "Erciş"
+            "Erciş",
+            "Gevaş",
+            "Muradiye",
+            "Özalp"
         ],
         "advantages": [
             "Doğu Anadolu Ağı",

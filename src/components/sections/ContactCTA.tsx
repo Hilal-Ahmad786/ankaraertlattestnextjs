@@ -12,7 +12,7 @@ export default function ContactCTA({ cityPage = false }: { cityPage?: boolean })
   return (
     <section className="py-12 sm:py-16 lg:py-20 contact-cta text-center text-white">
       <div className="container mx-auto px-4">
-        <div className="rounded-[2rem] border border-white/10 bg-gradient-to-r from-[#131A1E] to-[#131A1E] px-6 py-14 shadow-2xl">
+        <div className={`rounded-[2rem] border border-white/10 bg-gradient-to-r from-[#131A1E] to-[#131A1E] px-6 py-14 shadow-2xl ${cityPage ? 'city-contact-cta' : ''}`} data-city-reveal={cityPage ? '' : undefined}>
         <p className="text-orange-500 font-semibold mb-2 tracking-wide">
           7 / 24 BİZE ULAŞIN... FARKI KEŞFEDİN...
         </p>
@@ -33,7 +33,7 @@ export default function ContactCTA({ cityPage = false }: { cityPage?: boolean })
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleWhatsAppClick}
-          className="btn bg-green-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-600 transition shadow-lg inline-flex items-center gap-2"
+          className={`btn bg-green-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-600 transition shadow-lg inline-flex items-center gap-2 ${cityPage ? 'city-cta-button' : ''}`}
         >
           <i className="fab fa-whatsapp text-2xl"></i> WHATSAPP
         </a>

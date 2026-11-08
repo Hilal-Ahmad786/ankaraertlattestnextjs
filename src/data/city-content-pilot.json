@@ -1,0 +1,533 @@
+{
+  "cities": {
+    "kayseri": {
+      "damageTable": [
+        {
+          "type": "Buzda kayma ve kaldırım teması",
+          "whatWeCheck": "Rot, aks, salıncak ve jant çevresinde darbe izi ile teker açılarını inceleriz.",
+          "effectOnOffer": "Yürüyen aksam ve düzeltme ihtiyacı, parçaların yeniden kullanılabilirliğine göre değerlendirilir."
+        },
+        {
+          "type": "Ağır yükle kullanılmış ticari araç",
+          "whatWeCheck": "Debriyaj, makas, kasa bağlantıları ve yük bölümündeki deformasyonlara bakarız.",
+          "effectOnOffer": "Mekanik durum ve kasa onarımı için gereken işlemler birlikte hesaba katılır."
+        },
+        {
+          "type": "Donma kaynaklı soğutma hasarı",
+          "whatWeCheck": "Soğutma sistemi, radyatör ve motor çevresindeki çatlak veya kaçak belirtilerini kontrol ederiz.",
+          "effectOnOffer": "Hasarın motorla ilişkisi ve gerekli parça değişimleri teklif değerlendirmesini etkiler."
+        },
+        {
+          "type": "Panelvan kasa hasarı",
+          "whatWeCheck": "Kasa tabanını, kapıları, bağlantıları ve yükleme bölümünün kapanmasını inceleriz.",
+          "effectOnOffer": "Kasanın kullanılabilirliği ve onarım gereksinimi araçla birlikte değerlendirilir."
+        }
+      ],
+      "cityChecklistItem": "Erciyes yönündeki karlı yollardan sonra araç altındaki çamur ve karı temizleyip fotoğraflayın; akü kutup başlarının durumu ile varsa uyarı ışıklarını not edin.",
+      "exampleCase": "İncesu’da kullanılan bir hafif ticari aracın kışın soğutma sistemi arızalandığını düşünelim. Araç çalıştırılmadan önce görünen kaçaklar, gösterge uyarıları ve motor çevresindeki izler paylaşılır. Yerinde incelemede soğutma parçaları ve motorun genel durumu birlikte değerlendirilir. Kapalı bir servis alanında veya iş yerinde bulunuyorsa çekicinin yanaşacağı yer önceden konuşulur. Bu temsili örnek, teklif öncesinde hangi bilgilerin işe yaradığını anlatır; gerçek bir müşteri işlemi değildir. Yetkili kişi, bilinen arıza geçmişini de paylaşır; teklif mevcut durum ve teslim koşulları incelendikten sonra netleştirilir.",
+      "seasonNote": "Kışın don ve buz, özellikle soğutma sistemi ile alt takımın kontrolünü önemli kılar. Erciyes yolu gibi eğimli güzergâhlardan sonra araçta yeni ses, sıvı kaçağı veya gösterge uyarısı varsa bu bilgiyi başvuruda paylaşın.",
+      "additionalFaqs": [
+        {
+          "question": "OSB’de kullanılan şirket aracını fatura ile satabilir miyim?",
+          "answer": "Şirket adına kayıtlı araç başvurularını, ruhsat ve şirket yetkilisinin işlem belgeleri incelenerek değerlendirebiliriz. Fatura veya yetki belgesi gereksinimi şirketin ve aracın kayıt durumuna göre netleştirilir; başvuruda araç sahibinin türünü belirtmeniz yeterlidir."
+        },
+        {
+          "question": "Erciyes dönüşü motor arızası oluşan araç değerlendirilebilir mi?",
+          "answer": "Evet, motor arızalı araç için de başvuru iletebilirsiniz. Aracın çalışıp çalışmadığını, gösterge uyarılarını ve görünen hasarı paylaşın; motor, soğutma sistemi ve diğer parçalar incelemede değerlendirilir."
+        },
+        {
+          "question": "Yürümeyen kamyonet için çekici planlanabilir mi?",
+          "answer": "Aracın bulunduğu yerin ve yükleme alanının koşulları uygunsa teslim planı yapılabilir. Konum, aracın hareket durumu ve çekicinin yaklaşabileceği alanı önceden paylaşın; erişim koşullarını görüşmede netleştirelim."
+        }
+      ],
+      "districtNotes": {
+        "İncesu": "İncesu’daki sanayi ve depo çevresinde kullanılan ticari araçlarda yük bölümü ile kasa bağlantılarını ayrıca kontrol ederiz. Aracın iş yerinde mi yoksa serviste mi beklediğini belirtmeniz, inceleme ve teslim için uygun alanı konuşmamıza yardımcı olur.",
+        "Hacılar": "Hacılar’ın eğimli yollarında yaşanan darbelerde alt takımın gözle kontrolü önemlidir. Araçta direksiyon çekmesi, yeni ses veya lastik aşınması varsa başvuru sırasında bu belirtileri de paylaşın.",
+        "Bünyan": "Bünyan çevresinde kışın soğukta beklemiş araçlarda akü ve soğutma sistemi bilgisi incelemeyi kolaylaştırır. Araç uzun süredir çalışmıyorsa bunu belirtin; çalıştırmadan önce değerlendirme adımını birlikte planlayalım."
+      },
+      "nearbyNote": {
+        "text": "Kayseri dışında kalan bir aracınız için de mevcut şehir sayfalarımızı inceleyebilirsiniz:",
+        "citySlugs": [
+          "konya",
+          "gaziantep"
+        ]
+      }
+    },
+    "bursa": {
+      "damageTable": [
+        {
+          "type": "Yüksek parça değeri olan modeller",
+          "whatWeCheck": "Sökülebilir ve hasarsız parçaları, motor-şanzıman durumunu ve gövde hasarını inceleriz.",
+          "effectOnOffer": "Kullanılabilir parçalar kadar söküm ve onarım gereksinimi de değerlendirmeye girer."
+        },
+        {
+          "type": "Motoru veya şanzımanı sağlam pert araç",
+          "whatWeCheck": "Motorun çalışması, şanzıman davranışı ve darbenin bu bölümlere etkisini kontrol ederiz.",
+          "effectOnOffer": "Sağlam bileşenler ile hasarlı gövdeyi ayrı değerlendiririz."
+        },
+        {
+          "type": "Vardiya dönüşü yaşanan çarpışmalar",
+          "whatWeCheck": "Kaporta, yürüyen aksam ve güvenlik sistemlerinde görünen hasarları inceleriz.",
+          "effectOnOffer": "Hasarın onarım kapsamı ve aracın bulunduğu yerde yükleme imkânı belirleyicidir."
+        },
+        {
+          "type": "Uzun süre açıkta bekleme",
+          "whatWeCheck": "Nem, yüzey korozyonu, lastik ve akü durumunu araçtaki hasarla birlikte gözden geçiririz.",
+          "effectOnOffer": "Bekleme koşullarından doğan ek ihtiyaçlar inceleme notlarına eklenir."
+        }
+      ],
+      "cityChecklistItem": "Mudanya veya Gemlik kıyısında uzun süre beklemiş araçlarda nem ve yüzey korozyonu olabilecek bölgeleri, kapı altlarını ve bagaj çevresini fotoğraflayın.",
+      "exampleCase": "Kestel’de vardiya saatinde yaşanan bir çarpışmadan sonra araç servise bırakılmış olsun. Araç sahibi motorun çalıştığını, ancak ön bölümde darbe ve uyarı ışıkları bulunduğunu paylaşır. İncelemede motor ve şanzımanın durumu, gövde parçaları ve güvenlik sistemleri ayrı ayrı kontrol edilir. Servis alanında çekicinin yükleme yapabileceği yer de görüşülür. Bu temsili örnekte teklif, yalnızca aracın eski modeline değil, kullanılabilir parçalar ve gereken işlemlere göre değerlendirilir. Servis girişinin kuralları ve aracın ruhsat bilgisi teslim öncesi ayrıca doğrulanır; uygun teklif araç incelendikten sonra paylaşılır.",
+      "seasonNote": "Bursa’da kışın soğuk ve yağış, açık alanda bekleyen araçlarda akü, lastik ve gövde durumunu etkileyebilir. Kıyı ilçelerinde uzun süre bekleme varsa nem veya korozyon izlerini de inceleme için belirtin.",
+      "additionalFaqs": [
+        {
+          "question": "Hasar kaydı fazla olan aracı değerlendirebilir misiniz?",
+          "answer": "Başvuru iletebilirsiniz. Hasar kaydı tek başına aracın bugünkü durumunu açıklamaz; mevcut hasar, onarım izleri, çalışan parçalar ve evrak bilgileri birlikte incelenir. Varsa geçmiş onarım belgeleri de paylaşmanız değerlendirmeyi kolaylaştırır."
+        },
+        {
+          "question": "Yazlıkta uzun süre bekleyen aracın akü ve lastik durumu önemli mi?",
+          "answer": "Evet, bekleme süresi ve mevcut durum incelemede dikkate alınır. Aracın ne zamandır çalışmadığını, lastiklerin durumunu ve aküyle ilgili bilinen bir arızayı paylaşın; aracı çalıştırmanız gerekip gerekmediğini görüşmede netleştirelim."
+        },
+        {
+          "question": "Hasarlı servis minibüsü için başvuru yapabilir miyim?",
+          "answer": "Ticari araç başvurularını araç türü, hasar ve evrak durumuna göre değerlendiriyoruz. Ruhsattaki araç sınıfını, koltuk düzeninde değişiklik olup olmadığını ve aracın bulunduğu konumu paylaşmanız yeterlidir."
+        }
+      ],
+      "districtNotes": {
+        "Kestel": "Kestel’de sanayi ve tarım araçları farklı ihtiyaçlarla kullanılır. Kamyonet veya pikap başvurusunda kasa hasarını, yükleme bölümünü ve arka süspansiyon belirtilerini birlikte paylaşın.",
+        "Gürsu": "Gürsu’da bahçe yollarında kullanılan araçlarda jant ve alt takım darbeleri görülebilir. Görünen hasarın yanında araçta oluşan ses veya direksiyon değişikliğini de bildirin."
+      },
+      "nearbyNote": {
+        "text": "Bursa dışında kalan bir aracınız için de mevcut şehir sayfalarımızı inceleyebilirsiniz:",
+        "citySlugs": [
+          "istanbul",
+          "kocaeli"
+        ]
+      }
+    },
+    "antalya": {
+      "damageTable": [
+        {
+          "type": "Hararet ve motor arızası",
+          "whatWeCheck": "Soğutma suyu kaybı, gösterge uyarıları ve motor çevresindeki belirtileri inceleriz.",
+          "effectOnOffer": "Motorun çalışması ve olası onarım kapsamı teklif değerlendirmesine yansır."
+        },
+        {
+          "type": "Kiralık filo kullanımından yıpranma",
+          "whatWeCheck": "Kilometreyi, kaporta izlerini, iç mekânı ve bakım kayıtları varsa bunları kontrol ederiz.",
+          "effectOnOffer": "Birden fazla aracın durumu ayrı incelenir; başvuruda araç adedini belirtebilirsiniz."
+        },
+        {
+          "type": "Ani yağış ve su birikmesi",
+          "whatWeCheck": "Su seviyesinin izlerini, elektronik uyarıları ve motor bölgesini çalıştırmadan değerlendiririz.",
+          "effectOnOffer": "Su temasının kapsamı ve etkilenmiş parçalar inceleme sırasında belirlenir."
+        },
+        {
+          "type": "Turistik bölgede park hasarı",
+          "whatWeCheck": "Tampon, kapı, ayna ve park manevrasında zarar görebilen gövde bölümlerine bakarız.",
+          "effectOnOffer": "Hasarın yeri, onarım ihtiyacı ve aracın mevcut kullanım durumu birlikte ele alınır."
+        }
+      ],
+      "cityChecklistItem": "Araç su birikintisinde kaldıysa çalıştırma denemesi yapmayın; su seviyesi, gösterge uyarıları ve aracın bulunduğu yeri fotoğraflayıp paylaşın.",
+      "exampleCase": "Kemer’de sezon boyunca kullanılan bir araç park sırasında yan bölümünden hasar almış olsun. Araç sahibi kapı ve ayna hasarını, araç içindeki uyarı ışıklarını ve servisin bulunduğu adresi paylaşır. İncelemede kaporta hasarı, elektronik uyarılar ve aracın güvenli şekilde yüklenebileceği alan kontrol edilir. Teklif öncesi, aracın kiralık veya filo kullanımı gibi geçmiş bilgileri de varsa değerlendirmeye eklenir. Bu temsili örnek belirli bir işletmeyi ya da gerçekleşmiş satış işlemini anlatmaz. Aracın bulunduğu yere erişim ve sezon yoğunluğu teslim planını etkileyebilir; kesin değerlendirme yerinde incelemeyle tamamlanır.",
+      "seasonNote": "Yazın yoğun kullanımdan sonra hararet uyarısı veya soğutma suyu eksilmesi yaşandıysa aracı yeniden çalıştırmadan durumu bildirin. Yağışlı mevsimde su teması şüphesi de motor ve elektronik incelemesini etkileyebilir.",
+      "additionalFaqs": [
+        {
+          "question": "Sezon ortasında filodan tek bir aracı satabilir miyim?",
+          "answer": "Tek araç için de başvuru iletebilirsiniz. Araç filo kullanımındaysa ruhsat sahibi bilgisi ile kullanım ve hasar geçmişini paylaşın; işlemin kapsamı aracın kayıt ve evrak durumuna göre belirlenir."
+        },
+        {
+          "question": "Sahil bölgesinde beklemiş araçtaki korozyon nasıl incelenir?",
+          "answer": "Görünen yüzey korozyonunu, kapı altlarını ve gövde bağlantılarını aracın diğer hasarlarıyla birlikte kontrol ederiz. Fotoğraflar ilk değerlendirmeye yardımcı olabilir; kapsam yerinde incelemede netleşir."
+        },
+        {
+          "question": "Tuzlu hava korozyonu araç değerlendirmesinde nasıl ele alınır?",
+          "answer": "Görünen pas ve korozyon izlerini, özellikle gövde altı ile bağlantı noktalarında kontrol ederiz. Hasarın yayılımı ve mekanik parçalara etkisi araç incelemesinde değerlendirilir."
+        }
+      ],
+      "districtNotes": {
+        "Kemer": "Kemer’de turizm sezonunda kullanılan araçlar farklı yoğunlukta yolcu ve bagaj yükü taşıyabilir. Araç filo ya da bireysel kullanımdaysa bunu, varsa düzenli bakım bilgisini ve mevcut hasarı başvuruda belirtin.",
+        "Kumluca": "Kumluca’da tarımsal kullanım gören araçlarda kasa, yük bölümü ve yürüyen aksamın durumu incelemeye yardımcı olur. Araçta ürün taşımadan kalan deformasyon varsa fotoğrafını ekleyebilirsiniz.",
+        "Kaş": "Kaş’ın kıyı ve eğimli yol koşullarında park erişimi ile çekicinin yaklaşabileceği alan önemlidir. Araç dar bir sokakta veya yokuşta bekliyorsa konum ve çevre fotoğrafı paylaşın."
+      },
+      "nearbyNote": {
+        "text": "Antalya dışında kalan bir aracınız için de mevcut şehir sayfalarımızı inceleyebilirsiniz:",
+        "citySlugs": [
+          "konya",
+          "mersin"
+        ]
+      }
+    },
+    "gaziantep": {
+      "damageTable": [
+        {
+          "type": "Esnaf kamyonetinde yoğun kullanım",
+          "whatWeCheck": "Debriyaj, motor, kasa bağlantıları ve yük alanında görünen yıpranmayı inceleriz.",
+          "effectOnOffer": "Ticari kullanım izleri ve gerekli mekanik işlemler birlikte değerlendirilir."
+        },
+        {
+          "type": "Servis minibüsü hasarı",
+          "whatWeCheck": "Kaporta, koltuk düzeni, kapı mekanizması ve yolcu alanındaki hasarı kontrol ederiz.",
+          "effectOnOffer": "Ruhsattaki sınıf ve mevcut donanım, aracın değerlendirilmesine yardımcı olur."
+        },
+        {
+          "type": "Darbe sonrası şasi ve kasa kontrolü",
+          "whatWeCheck": "Pikap şasisi, kasa bağlantıları ve darbe alanındaki ölçü farklılıklarını inceleriz.",
+          "effectOnOffer": "Düzeltme veya parça değişimi ihtiyacı incelenerek teklife yansıtılır."
+        },
+        {
+          "type": "Uzun süre serviste bekleme",
+          "whatWeCheck": "Akü, lastikler, motorun mevcut durumu ve beklerken oluşan ek izleri gözden geçiririz.",
+          "effectOnOffer": "İlk çarpışma hasarıyla bekleme sürecindeki durum ayrı not edilir."
+        }
+      ],
+      "cityChecklistItem": "İş aracıysa kasa içindeki malzemeleri boşaltın ve ruhsattaki araç sınıfını kontrol edin; özel donanım veya koltuk düzeni değişikliğini bize bildirin.",
+      "exampleCase": "Şehitkamil’de teslimat için kullanılan bir panelvan, yüklüyken arka bölümünden darbe almış olsun. Araç sahibi kasa tabanındaki eğilmeyi, arka kapının kapanmadığını ve aracın bir serviste beklediğini anlatır. İncelemede kapı ve kasa bağlantıları, arka aks çevresi ve aracın yük boşaltıldıktan sonra güvenli biçimde alınabileceği alan kontrol edilir. Hasarın yalnızca dış görünüşle sınırlı olup olmadığı bu bilgilerle anlaşılmaz; yerinde inceleme gerekir. Bu temsili durum gerçek müşteri kaydı değildir. Yetkili kişi aracın kayıt bilgisini ve iş yeri erişim koşullarını ayrıca paylaşır; inceleme kapsamı bu bilgilerle tamamlanır.",
+      "seasonNote": "Yazın yüksek sıcaklık, yoğun kullanılan araçlarda hararet belirtilerini görünür kılabilir. Kışın uzun süre bekleyen iş araçlarında ise akü ve lastik durumu da teslim ve inceleme planında dikkate alınır.",
+      "additionalFaqs": [
+        {
+          "question": "Servis minibüsünün koltuk düzeni değerlendirmeyi etkiler mi?",
+          "answer": "Aracın ruhsattaki sınıfı ve mevcut koltuk düzeni incelemede dikkate alınır. Sonradan değişiklik yapıldıysa, bu değişikliğin araç belgelerinde nasıl gösterildiğini paylaşın; gerekli evrakı görüşmede netleştirelim."
+        },
+        {
+          "question": "Hasarlı kamyonet serviste bekliyorsa bulunduğu yerden inceleme yapılabilir mi?",
+          "answer": "Aracın bulunduğu servis ve erişim koşulları uygunsa inceleme ile teslim planı bulunduğu konuma göre görüşülür. Servis adı, adresi, aracın hareket durumu ve yükleme alanını paylaşmanız yeterlidir."
+        },
+        {
+          "question": "Pikapta şasi hasarı varsa yine başvuru yapabilir miyim?",
+          "answer": "Evet, şasi veya kasa hasarı bulunan araç için başvuru iletebilirsiniz. Darbenin yeri, aracın yürüyüp yürümediği ve varsa ekspertiz ya da onarım belgeleri ilk değerlendirmeye yardımcı olur."
+        }
+      ],
+      "districtNotes": {
+        "İslahiye": "İslahiye’de iş ve tarım amaçlı kullanılan araçlarda kasa, yükleme bölümü ve mekanik yıpranmayı birlikte inceleriz. Hasar eskiyse ve farklı tarihlerde oluştuysa her bölümü kısaca not edin.",
+        "Nurdağı": "Nurdağı’nda uzun süre açık alanda kalmış araçlarda gövde ve lastik durumu da mevcut hasarla beraber değerlendirilir. Araç çalışmıyorsa bunu belirtin; başvuru için çalıştırmanız gerekmez.",
+        "Araban": "Araban çevresindeki kırsal bağlantılarda kullanılan pikaplarda şasi ve kasa bağlantıları darbe sonrası kontrol edilir. Aracın yola çıkamaması hâlinde bulunduğu yerin çekici erişimine uygunluğunu paylaşın."
+      },
+      "nearbyNote": {
+        "text": "Gaziantep dışında kalan bir aracınız için de mevcut şehir sayfalarımızı inceleyebilirsiniz:",
+        "citySlugs": [
+          "sanliurfa",
+          "adana"
+        ]
+      }
+    },
+    "kocaeli": {
+      "damageTable": [
+        {
+          "type": "Arkadan darbe ve şasi şüphesi",
+          "whatWeCheck": "Arka paneli, bagaj tabanını, şasi doğrultusunu ve teker çevresini kontrol ederiz.",
+          "effectOnOffer": "Ölçüm ve düzeltme ihtiyacı, kullanılabilir parçalarla birlikte değerlendirilir."
+        },
+        {
+          "type": "Lojistik kamyonetinde yük hasarı",
+          "whatWeCheck": "Kasa, kapı, taban ve yük sabitleme noktalarındaki deformasyonu inceleriz.",
+          "effectOnOffer": "Ticari kullanım sonrası gereken gövde ve mekanik işlerin kapsamı dikkate alınır."
+        },
+        {
+          "type": "Su birikmesi ve sel teması",
+          "whatWeCheck": "Su izi, elektronik uyarılar ve motor bölgesindeki belirtileri gözden geçiririz.",
+          "effectOnOffer": "Temasın seviyesi ile etkilenmiş bileşenler yerinde değerlendirilir."
+        },
+        {
+          "type": "Fabrika otoparkında park hasarı",
+          "whatWeCheck": "Aracın hasar bölgesini, otopark erişimini ve çekicinin yaklaşabileceği alanı kontrol ederiz.",
+          "effectOnOffer": "Yükleme koşulları ve servis ya da iş yeri izinleri teslim planına etki eder."
+        }
+      ],
+      "cityChecklistItem": "Fabrika veya kapalı otoparkta bekleyen araç için giriş yüksekliği, güvenlik prosedürü ve yetkili kişi bilgisini önceden hazırlayın.",
+      "exampleCase": "Gebze’de lojistik işinde kullanılan bir kamyonet, yükleme alanında arkadan darbe almış olsun. Araç sahibi kasa kapısının kapanmadığını ve arka tekerde ses bulunduğunu bildirir. İncelemede kasa tabanı, şasi doğrultusu ve yürüyen aksam kontrol edilir; tesis güvenlik prosedürü ile çekicinin yükleme alanına erişimi de görüşülür. Hasarın kapsamı ve teslim koşulları netleşmeden belirli bir teklif varsayılmaz. Bu temsili örnek bir müşteri vakası değildir. Araç sahibinin veya tesis yetkilisinin erişim izni alınır; teklif ancak mevcut hasar ve teslim koşulları görüldükten sonra belirlenir.",
+      "seasonNote": "Yağışlı dönemlerde su birikintisi ve sel teması şüphesi varsa aracın çalıştırılma durumunu not edin. Kışın buzlanma sonrası alınan darbelerde şasi, tampon ve yürüyen aksam da kontrol edilmelidir.",
+      "additionalFaqs": [
+        {
+          "question": "Şasi hasarı şüphesi olan araç için başvurabilir miyim?",
+          "answer": "Evet. Darbenin hangi bölümde olduğu, aracın yürüyüp yürümediği ve daha önce ölçüm yapılıp yapılmadığı gibi bilgileri paylaşın. Şasi ve gövde durumu incelemede değerlendirilir; trafikte kullanıma uygunluk hakkında burada hukuki veya teknik onay veremeyiz."
+        },
+        {
+          "question": "Leasing ile kullanılan aracın satışı nasıl değerlendirilir?",
+          "answer": "Leasing veya finansman kaydı bulunan araçlarda kayıt sahibi ve yetkili tarafın işlem koşulları belirleyicidir. Aracın başvurusunu değerlendirebiliriz; satış yetkisi ve gerekli belgeler ilgili kuruluşla doğrulanmalıdır."
+        },
+        {
+          "question": "Arkadan çarpma sonrası bagaj tabanı ve şasi kontrol edilir mi?",
+          "answer": "Evet, darbenin ulaştığı arka panel, bagaj tabanı ve şasi çevresi gözden geçirilir. Daha önce ölçüm veya onarım yapıldıysa sonucu paylaşın; mevcut durumu incelemede ayrıca değerlendiririz."
+        }
+      ],
+      "districtNotes": {
+        "Kartepe": "Kartepe’nin eğimli ve kışın buzlanabilen yollarında alınan darbelerde alt takım ve şasi çevresini birlikte incelemek gerekir. Araçta yeni ses veya direksiyon çekmesi varsa başvuruda belirtin.",
+        "Başiskele": "Başiskele’de sanayi ve yerleşim alanlarında farklı erişim koşulları bulunur. Araç fabrika sahasında veya kapalı otoparkta bekliyorsa giriş izni, yükleme noktası ve sorumlu kişiyi önceden paylaşın.",
+        "Çayırova": "Çayırova’da lojistik ve sanayi trafiğinde kullanılan kamyonetlerde kasa ve yükleme ekipmanı yıpranması önem taşıyabilir. Hasar fotoğraflarına kasa içini ve bağlantıları da ekleyin."
+      },
+      "nearbyNote": {
+        "text": "Kocaeli dışında kalan bir aracınız için de mevcut şehir sayfalarımızı inceleyebilirsiniz:",
+        "citySlugs": [
+          "istanbul",
+          "sakarya"
+        ]
+      }
+    },
+    "samsun": {
+      "damageTable": [
+        {
+          "type": "Su almış motor şüphesi",
+          "whatWeCheck": "Su seviyesi izlerini, hava girişini ve motor bölümündeki görünür belirtileri çalıştırmadan inceleriz.",
+          "effectOnOffer": "Motor ve elektronik aksamın etkilenme kapsamı değerlendirmeye girer."
+        },
+        {
+          "type": "Elektronik ve iç döşeme teması",
+          "whatWeCheck": "Islaklık izi, uyarı ışıkları, koltuk altı ve kablo bağlantılarını kontrol ederiz.",
+          "effectOnOffer": "Kuruma, parça ve elektrik sistemi gereksinimleri ayrı not edilir."
+        },
+        {
+          "type": "Nem ve yüzey korozyonu",
+          "whatWeCheck": "Kapı altı, taban ve bagaj bölümündeki nem veya pas izlerini gözden geçiririz.",
+          "effectOnOffer": "Hasarın yayılımı ve onarım ihtiyacı değerlendirmeyi etkiler."
+        },
+        {
+          "type": "Tarım pikabında kasa yıpranması",
+          "whatWeCheck": "Kasa tabanı, bağlantılar, makas ve arka aks çevresine bakarız.",
+          "effectOnOffer": "Yük kullanımından kaynaklı mekanik ve gövde durumu birlikte ele alınır."
+        }
+      ],
+      "cityChecklistItem": "Sel veya su teması sonrası aracı çalıştırmadan önce su seviyesini, kabin içindeki ıslaklığı ve gösterge uyarılarını fotoğraflayın.",
+      "exampleCase": "Tekkeköy’de yoğun yağış sonrasında bir pikap su birikintisinde kalmış olsun. Araç sahibi motoru çalıştırmadığını, kabin tabanında ıslaklık ve gösterge panelinde uyarı bulunduğunu paylaşır. İncelemede motor hava girişi, elektronik aksam, iç döşeme ve aracın bulunduğu yerin çekiciye uygunluğu değerlendirilir. Su seviyesi ve temas süresi bilinmiyorsa bu belirsizlik not edilir; yalnızca dış görünüşe bakarak kapsam çıkarılmaz. Bu örnek temsili bir senaryodur. Araçla ilgili servis kayıtları varsa inceleme sırasında paylaşılır; su temasının kapsamı dış görünüşten tek başına kesinleştirilemez.",
+      "seasonNote": "Samsun’da yağışlı dönemlerde su teması ve kabin nemi kontrol edilmelidir. Suya maruz kalmış aracı çalıştırmamak, inceleme öncesi mevcut belirtilerin korunmasına yardımcı olur; bilgiyi başvuruda paylaşın.",
+      "additionalFaqs": [
+        {
+          "question": "Selden sonra aracı çalıştırmayı denemeli miyim?",
+          "answer": "Su motor veya elektrik aksamına ulaşmış olabilir düşüncesi varsa aracı çalıştırmayın. Su seviyesini ve görünen uyarıları not edip çekici ya da servis değerlendirmesi için bilgi alın; araç durumunu başvuru sırasında paylaşabilirsiniz."
+        },
+        {
+          "question": "Kasko sel hasarını karşılamazsa ne yapabilirim?",
+          "answer": "Sigorta kapsamı poliçenize ve hasar tespitine bağlıdır; bu konuda sigorta şirketinizden bilgi alın. Biz aracın mevcut durumunu ve varsa hasar belgelerini inceleyerek satın alma başvurusunu ayrıca değerlendirebiliriz."
+        },
+        {
+          "question": "Tarlada kalan pikap için teslim planı nasıl yapılır?",
+          "answer": "Konumun ve zeminin çekici erişimine uygunluğu değerlendirilir. Tarla yolu, zemin durumu, aracın hareket edip etmediği ve çekicinin yaklaşabileceği noktayı paylaşın; uygun teslim koşullarını birlikte görüşelim."
+        }
+      ],
+      "districtNotes": {
+        "Tekkeköy": "Tekkeköy’de sanayi ve depo çevresinde kullanılan araçlarda kasa, kapı ve yük bölümü hasarı görülebilir. Araç iş yerinde bekliyorsa giriş prosedürü ve çekicinin erişebileceği alanı belirtin.",
+        "Vezirköprü": "Vezirköprü çevresinde tarımsal kullanım gören pikaplarda makas, kasa tabanı ve arka aks çevresini incelemek yararlı olur. Araç uzun süre açıkta kaldıysa bekleme süresini de paylaşın.",
+        "Havza": "Havza’nın kış şartlarında uzun süre kullanılmayan araçlarda akü ve soğutma sistemi belirtileri önem kazanabilir. Aracı çalıştırmadan önce bildiğiniz arıza ışıklarını ve bekleme süresini not edin."
+      },
+      "nearbyNote": {
+        "text": "Samsun dışında kalan bir aracınız için de mevcut şehir sayfalarımızı inceleyebilirsiniz:",
+        "citySlugs": [
+          "ordu",
+          "trabzon"
+        ]
+      }
+    },
+    "konya": {
+      "damageTable": [
+        {
+          "type": "Önden darbe ve motor bölümü",
+          "whatWeCheck": "Ön paneli, radyatör çevresini, motor bağlantılarını ve hava yastığı uyarılarını inceleriz.",
+          "effectOnOffer": "Motor, gövde ve güvenlik donanımındaki hasar kapsamı birlikte değerlendirilir."
+        },
+        {
+          "type": "Sis veya buzlanmada alınan darbe",
+          "whatWeCheck": "Tampon, far, şasi doğrultusu ve teker hizasındaki hasar belirtilerine bakarız.",
+          "effectOnOffer": "Düzeltme ve parça değişimi ihtiyacı inceleme notlarına girer."
+        },
+        {
+          "type": "Tarım pikabında yoğun kullanım",
+          "whatWeCheck": "Kasa tabanı, makas, debriyaj ve yürüyen aksamı kontrol ederiz.",
+          "effectOnOffer": "Yük ve yol koşullarına bağlı yıpranma araç durumuyla birlikte ele alınır."
+        },
+        {
+          "type": "Uzun yol sonrası mekanik arıza",
+          "whatWeCheck": "Motor arıza belirtileri, sıvı izleri ve aracın çalışıp çalışmadığını öğreniriz.",
+          "effectOnOffer": "Arızalı bileşenler ile diğer kullanılabilir parçalar ayrı değerlendirilir."
+        }
+      ],
+      "cityChecklistItem": "Uzun yolda arıza sonrası araç durduysa yeniden çalıştırmadan önce uyarı ışıklarını, sıvı kaçağı olup olmadığını ve bulunduğu konumu kaydedin.",
+      "exampleCase": "Beyşehir’den Konya yönüne gelen bir araç, uzun yol sonrasında motor arızası nedeniyle durdurulmuş olsun. Sürücü aracın çalışmadığını, gösterge uyarısını ve araç çevresinde sıvı izi bulunduğunu paylaşır. İncelemede motor bölümü, darbe veya sızıntı belirtileri ve çekicinin güvenli biçimde yanaşabileceği alan ele alınır. Araç yoldan çıkarılmışsa mevcut park konumu da teslim planına eklenir. Bu temsili örnek, gerçek bir arıza kaydı ya da müşteri sonucu değildir. Araç sahibinin verdiği arıza bilgisi incelemeye yön verir; teklif mevcut durum ve teslim imkânı görüldükten sonra netleşir.",
+      "seasonNote": "Kışın sis ve buzlanma, özellikle uzun ve açık güzergâhlarda görüş ile fren mesafesini etkileyebilir. Darbe sonrası yeni uyarı ışığı veya sıvı kaçağı varsa aracı yeniden çalıştırmadan bilgi verin.",
+      "additionalFaqs": [
+        {
+          "question": "Uzun yolda motor arızası yaşayan araç için başvuru yapabilir miyim?",
+          "answer": "Evet, motor arızası bulunan araçlar için başvuru iletebilirsiniz. Aracın çalışıp çalışmadığını, arıza ışıklarını ve bilinen bakım ya da onarım bilgisini paylaşın; motor ve diğer parçalar incelemede değerlendirilir."
+        },
+        {
+          "question": "Hafif hasarlı fakat kilometresi yüksek araç nasıl değerlendirilir?",
+          "answer": "Kilometre tek başına değerlendirme ölçütü değildir. Hasarın kapsamı, motor ve yürüyen aksam durumu, bakım bilgisi ve kullanılabilir parçalar birlikte incelenir."
+        },
+        {
+          "question": "Ereğli’den teslimde ekspertiz yeri nasıl belirlenir?",
+          "answer": "Aracın bulunduğu adres ve erişim koşullarına göre inceleme noktası görüşülür. Araç serviste, iş yerinde veya yol kenarında bekliyorsa konumu ve yükleme alanını başvuruda belirtin."
+        }
+      ],
+      "districtNotes": {
+        "Beyşehir": "Beyşehir çevresindeki uzun bağlantı yollarında arıza yaşayan araçlar farklı noktalarda bekleyebilir. Konum bilgisini mümkün olduğunca açık paylaşın; yol kenarında bulunuyorsa güvenli yükleme alanı ayrıca görüşülür.",
+        "Seydişehir": "Seydişehir’de tarım ve sanayi amaçlı kullanılan araçlarda yük bölümünün yanı sıra makas ve arka aksı da inceleriz. Hasarın yük taşırken mi yoksa park hâlindeyken mi oluştuğunu belirtin.",
+        "Cihanbeyli": "Cihanbeyli’nin açık ve uzun güzergâhlarında durdurulmuş araçlarda çekicinin yaklaşabileceği güvenli alan önemlidir. Aracın yönünü, bulunduğu yol kesimini ve hareket durumunu görüşmede aktarın."
+      },
+      "nearbyNote": {
+        "text": "Konya dışında kalan bir aracınız için de mevcut şehir sayfalarımızı inceleyebilirsiniz:",
+        "citySlugs": [
+          "ankara",
+          "kayseri"
+        ]
+      }
+    },
+    "van": {
+      "damageTable": [
+        {
+          "type": "Soğukta donma ve blok çatlağı şüphesi",
+          "whatWeCheck": "Motor çevresindeki çatlak, soğutma sıvısı izi ve çalıştırma durumunu inceleriz.",
+          "effectOnOffer": "Motor hasarının kapsamı ve değişmesi gereken parçalar değerlendirmeye girer."
+        },
+        {
+          "type": "Karda uzun süre kalma",
+          "whatWeCheck": "Araç altındaki kar ve buz, lastikler, akü ve kapı çevresindeki erişimi kontrol ederiz.",
+          "effectOnOffer": "Aracın güvenli şekilde açılması ve yüklenmesi teslim planını etkiler."
+        },
+        {
+          "type": "Yol tuzu ve gövde korozyonu",
+          "whatWeCheck": "Alt takım, bağlantı noktaları ve kapı altlarında korozyon izlerine bakarız.",
+          "effectOnOffer": "Korozyonun yayılımı ve mekanik parçalara etkisi araç durumuna eklenir."
+        },
+        {
+          "type": "Uzun süre çalışmayan araç",
+          "whatWeCheck": "Akü, lastikler, sıvı izleri ve aracın mevcut çalıştırılma bilgisini alırız.",
+          "effectOnOffer": "Bekleme süresinde oluşan ek ihtiyaçlar hasar incelemesinden ayrı not edilir."
+        }
+      ],
+      "cityChecklistItem": "Kış boyunca karda beklediyse akü ve lastik durumunu, aracın bulunduğu zemini ve karın erişimi engelleyip engellemediğini paylaşın.",
+      "exampleCase": "Gevaş’ta kışın uzun süre kullanılmamış bir araçta motor bloğu çevresinde çatlak şüphesi oluşmuş olsun. Araç sahibi motoru çalıştırmaz; soğutma sıvısı izlerini, akü durumunu ve aracın kar altındaki konumunu fotoğraflar. İncelemede motor çevresi, alt takım ve lastiklerin zemine temas durumu kontrol edilir. Çekicinin yaklaşabilmesi için yol ve alan koşulları ayrıca konuşulur. Bu temsili örnek, yerel bir müşteri vakası veya kesin arıza tanısı değildir. Araç çevresindeki kar ve buzun güvenli biçimde kaldırılması gerekebilir; bu koşullar teslim görüşmesinde ayrıca değerlendirilir.",
+      "seasonNote": "Van’da kışın don, kar ve yol tuzu motor soğutma sistemi ile alt takım kontrollerini önemli kılar. Uzun süre çalışmayan araçta ilk çalıştırma denemesi yapmadan önce bilinen belirtileri paylaşın.",
+      "additionalFaqs": [
+        {
+          "question": "Kışın çalışmayan aracın akü ve lastik durumu teklifi etkiler mi?",
+          "answer": "Aracın mevcut durumu incelemede dikkate alınır. Akünün bitik olması veya lastiklerin zemine yapışması teslim planını etkileyebilir; bilinen durumları ve aracın ne zamandır çalışmadığını paylaşın."
+        },
+        {
+          "question": "Fotoğrafla verilen ön teklif ne kadar bağlayıcıdır?",
+          "answer": "Fotoğrafa dayalı değerlendirme ön bilgi sağlar; aracın tüm mekanik ve gövde durumunu göstermeyebilir. Nihai teklif, kapsam ve teslim koşulları incelendikten sonra netleştirilir."
+        },
+        {
+          "question": "Uzun süre kar altında kalmış aracı nasıl hazırlamalıyım?",
+          "answer": "Aracı zorlayarak çalıştırmayın veya buzdan çıkarmaya çalışmayın. Görünen durumu, konumunu ve erişim yolunu fotoğraflayın; güvenli yükleme koşullarını görüşmede değerlendirelim."
+        }
+      ],
+      "districtNotes": {
+        "Gevaş": "Gevaş’ta kışın kar altında kalan araçlarda erişim ve zemin durumu, inceleme kadar teslim planı için de önem taşır. Aracın çevresindeki karı kaldırmadan önce konumu ve yol koşullarını paylaşın.",
+        "Muradiye": "Muradiye çevresinde soğukta uzun süre bekleyen araçlarda akü ve soğutma sistemi belirtileri görülebilir. Araç çalışmıyorsa bunu belirtin; değerlendirme için zorla çalıştırmanız gerekmez.",
+        "Özalp": "Özalp’te uzun bağlantı yollarında duran araçlar için konumun doğru tarif edilmesi ve çekicinin güvenli yaklaşımı önemlidir. Yol kenarında bekliyorsa yakındaki belirgin noktayı ve erişim durumunu bildirin."
+      },
+      "nearbyNote": {
+        "text": "Van dışında kalan bir aracınız için de mevcut şehir sayfalarımızı inceleyebilirsiniz:",
+        "citySlugs": [
+          "erzurum",
+          "diyarbakir"
+        ]
+      }
+    },
+    "istanbul": {
+      "damageTable": [
+        {
+          "type": "Servis veya kapalı otoparkta bekleyen araç",
+          "whatWeCheck": "Otopark yüksekliği, rampa, erişim izni ve aracın yüklenebileceği noktayı öğreniriz.",
+          "effectOnOffer": "Yükleme koşulları ve gerekli çıkış belgeleri teslim planını belirler."
+        },
+        {
+          "type": "Yediemin alanındaki araç",
+          "whatWeCheck": "Aracın mevcut durumunu, çıkış için istenen belgeleri ve otopark koşullarını doğrularız.",
+          "effectOnOffer": "Ücret ve teslim sorumlulukları işlem öncesinde ayrıca netleştirilir."
+        },
+        {
+          "type": "Su baskını sonrası hasar",
+          "whatWeCheck": "Su seviyesi izleri, kabin, elektronik uyarılar ve motor çevresini çalıştırmadan inceleriz.",
+          "effectOnOffer": "Su temasının etkilediği bileşenler araç durumuna göre değerlendirilir."
+        },
+        {
+          "type": "Dar sokakta çekici erişimi",
+          "whatWeCheck": "Sokağın genişliği, park düzeni ve yükleme için kullanılabilecek yakın noktayı görüşürüz.",
+          "effectOnOffer": "Erişim kısıtları uygun araç ve teslim planı seçimini etkiler."
+        }
+      ],
+      "cityChecklistItem": "Yedieminde bekleyen araç için çıkış belgesi ve otopark hesabını önceden öğrenin; site otoparkında yönetimin araç çıkarma iznini alın.",
+      "exampleCase": "Beyoğlu’nda dar sokakta park hâlindeyken hasar alan bir araç düşünelim. Araç sahibi, çekicinin sokağa giremeyebileceğini ve aracın yürümeyebileceğini bildirir. Önce yükleme için kullanılabilecek yakın alan, sokak erişimi ve aracın bulunduğu kat veya otopark koşulları görüşülür. Yediemin ya da servis alanındaysa çıkış için gerekli belgeler ayrıca sorulur. Bu temsili örnek, belirli bir çekim güzergâhı veya gerçekleşmiş işlem iddiası taşımaz. Yükleme noktası belirlenirken araç sahibi ve otopark yetkilisinin erişim izni doğrulanır; teslim kapsamı sonrasında netleştirilir.",
+      "seasonNote": "Sonbahar yağışları ve yoğun kent trafiği, su teması ile park hâlinde oluşan hasarların incelenmesini gündeme getirebilir. Kapalı otoparkta bekleyen araçlarda giriş yüksekliği, rampa ve izin koşullarını önceden paylaşın.",
+      "additionalFaqs": [
+        {
+          "question": "Yediemin otoparkında bekleyen aracın teslimi nasıl planlanır?",
+          "answer": "Önce otoparktan araç çıkarma koşullarını ve istenen belgeleri otopark yönetimiyle doğrulayın. Aracın mevcut durumunu ve konumunu paylaşın; inceleme ve teslim adımlarını erişim koşullarına göre görüşelim. Otopark ücretleri ve sorumlulukları işlem öncesinde netleştirilir."
+        },
+        {
+          "question": "Köprü veya otoyol borcu olan araç satılabilir mi?",
+          "answer": "Borç ve araç devrine ilişkin durum, aracın kaydı ve ilgili kurumların uygulamalarına göre değişebilir. Güncel borç ve satış koşullarını yetkili kurumdan doğrulayın; biz araç ve evrak bilgilerini başvuru kapsamında inceleyebiliriz."
+        },
+        {
+          "question": "Dar sokakta veya kapalı otoparkta kalan aracı nasıl alırsınız?",
+          "answer": "Önce sokağın genişliğini, otopark giriş yüksekliğini, rampayı ve aracın bulunduğu noktayı öğreniriz. Çekicinin yaklaşabileceği uygun yükleme yerini ve gerekli izinleri görüşerek teslim planını oluştururuz."
+        }
+      ],
+      "districtNotes": {
+        "Esenyurt": "Esenyurt’taki kapalı site otoparklarında giriş yüksekliği ve rampa eğimi araç teslimini etkileyebilir. Otoparkın ölçülerini ve yönetimden alınması gereken izni önceden paylaşın.",
+        "Beylikdüzü": "Beylikdüzü’nde sahil çevresi ve site otoparklarında araç farklı katlarda bekleyebilir. Çekicinin gireceği alanı, aracın bulunduğu katı ve yönetim prosedürünü birlikte netleştirin.",
+        "Sultanbeyli": "Sultanbeyli’de otoyol bağlantısında yaşanan hasarlarda araç servis ya da otoparka taşınmış olabilir. Mevcut adresi, araç hareket durumunu ve çekicinin yanaşabileceği alanı belirtin."
+      },
+      "nearbyNote": {
+        "text": "İstanbul dışında kalan bir aracınız için de mevcut şehir sayfalarımızı inceleyebilirsiniz:",
+        "citySlugs": [
+          "bursa",
+          "kocaeli"
+        ]
+      }
+    },
+    "ankara": {
+      "damageTable": [
+        {
+          "type": "Filo ve şirket araçları",
+          "whatWeCheck": "Araç listesini, ruhsat sahiplerini, hasar durumunu ve her aracın konumunu ayrı inceleriz.",
+          "effectOnOffer": "Toplu başvuruda her araç için durum ve evrak ayrı netleştirilir."
+        },
+        {
+          "type": "Ostim ve İvedik iş araçları",
+          "whatWeCheck": "Kamyonet kasası, motor, debriyaj ve yoğun kullanımdan kaynaklı izlere bakarız.",
+          "effectOnOffer": "Ticari donanımın ve onarım ihtiyacının kapsamı değerlendirmeye girer."
+        },
+        {
+          "type": "Yokuşta veya dar sokakta çekim",
+          "whatWeCheck": "Aracın yönünü, hareket kabiliyetini ve çekicinin yanaşabileceği güvenli noktayı belirleriz.",
+          "effectOnOffer": "Erişim ve yükleme koşulları teslim planını etkiler."
+        },
+        {
+          "type": "Kış buzlanmasında alınan darbe",
+          "whatWeCheck": "Alt takım, lastik, tampon ve teker hizasındaki görünür hasarı kontrol ederiz.",
+          "effectOnOffer": "Darbe alan parçalar ve düzeltme ihtiyacı araçla birlikte incelenir."
+        }
+      ],
+      "cityChecklistItem": "Kurumsal araçsa ruhsatları, araç listesini ve her aracın bulunduğu adresi ayrı hazırlayın; Ostim veya İvedik’te iş yeri giriş prosedürünü de belirtin.",
+      "exampleCase": "Gölbaşı’nda bir şirket filosuna ait sedan, kışın buzlanma sırasında kaldırıma çarpmış olsun. Yetkili kişi aracın ruhsatını, hasar fotoğraflarını ve bulunduğu otopark bilgisini paylaşır. İncelemede teker hizası, alt takım ve gövde hasarı gözden geçirilir; şirket adına işlem yapılacaksa gerekli yetki belgeleri ayrıca doğrulanır. Aynı filoda başka araçlar varsa her biri ayrı kayıtla değerlendirilir. Bu temsili örnek toplu alım taahhüdü veya gerçek müşteri çalışması değildir. Şirket aracıysa yetkili kişinin işlem belgeleri ayrıca doğrulanır; her araç için hasar ve teslim koşulları ayrı ele alınır.",
+      "seasonNote": "Ankara’da kış buzlanması özellikle sabah ve akşam saatlerinde alt takım veya gövde darbelerine yol açabilir. İş aracı için bakım ve hasar geçmişini, dar sokak veya yokuşta bekleyen araç için erişim bilgisini başvuruda paylaşın.",
+      "additionalFaqs": [
+        {
+          "question": "Kurumsal filo araçlarını toplu olarak değerlendirebilir misiniz?",
+          "answer": "Filo başvurularını araç listesi, ruhsat sahipliği, hasar durumu ve teslim konumlarına göre inceleyebiliriz. Her araç için temel bilgileri ayrı paylaşın; toplu işlem kapsamı ve gerekli şirket yetki belgeleri görüşmede netleştirilir."
+        },
+        {
+          "question": "Ekspertiz için hangi saatlerde gelebilirsiniz?",
+          "answer": "İnceleme zamanı, aracın bulunduğu yerin erişim kuralları ve ekip planına göre birlikte belirlenir. İş yeri veya kapalı otoparkta bekleyen araçlarda giriş izni ve sorumlu kişi bilgisini önceden paylaşın."
+        },
+        {
+          "question": "Hurda belgeli araç ile pert araç arasındaki fark nedir?",
+          "answer": "Bu ifadeler araç kaydı ve işlem türü açısından farklı durumları anlatabilir. Aracınızın belge ve tescil statüsünü e-Devlet veya ilgili resmi kurum üzerinden doğrulayın; belgeyi başvuru sırasında paylaşarak hangi işlemlerin mümkün olduğunu değerlendirelim."
+        }
+      ],
+      "districtNotes": {
+        "Pursaklar": "Pursaklar’da havalimanı ve çevre yolu bağlantılarında hasar alan araçlar servis veya otoparka taşınmış olabilir. Araç şu an nerede bekliyor ve çekici hangi noktadan yaklaşabilir, bu bilgileri paylaşın.",
+        "Gölbaşı": "Gölbaşı’nda filo ve şirket araçlarının farklı tesislerde bulunması teslimi ayrı ayrı planlamayı gerektirebilir. Araç listesiyle birlikte her ruhsat sahibini ve bulunduğu adresi belirtin.",
+        "Polatlı": "Polatlı yönündeki uzun yol ve kırsal bağlantılarda arızalı araçlar yerleşim merkezinden uzakta kalabilir. Konum bilgisini ve aracın güvenli alanda olup olmadığını net biçimde paylaşın."
+      },
+      "nearbyNote": {
+        "text": "Ankara dışında kalan bir aracınız için de mevcut şehir sayfalarımızı inceleyebilirsiniz:",
+        "citySlugs": [
+          "konya",
+          "kayseri"
+        ]
+      }
+    }
+  }
+}

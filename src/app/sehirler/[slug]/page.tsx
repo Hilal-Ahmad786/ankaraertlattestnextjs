@@ -10,6 +10,7 @@ import CityDistricts from '@/components/city/CityDistricts';
 import CityFAQs from '@/components/city/CityFAQs';
 import CityStats from '@/components/city/CityStats';
 import CityVehicleTypes from '@/components/city/CityVehicleTypes';
+import CityRevealScope from '@/components/city/CityRevealScope';
 import TrustBadges from '@/components/sections/TrustBadges';
 import UrgentCTABanner from '@/components/sections/UrgentCTABanner';
 import WhyUs from '@/components/sections/WhyUs';
@@ -75,6 +76,10 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
 
   const written = getCityContent(city.slug);
   const media = getCityMedia(city.slug);
+  const writtenNearbyLinks = written?.nearbyNote?.citySlugs
+    .map((slug) => cities.find((item) => item.slug === slug))
+    .filter((item): item is City => Boolean(item))
+    .map((item) => ({ name: item.name, slug: item.slug })) ?? [];
 
   // Enriched LocalBusiness schema per city
   const localBizJsonLd = {
@@ -170,6 +175,7 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
 
   return (
     <div className={`city-page min-h-screen bg-gray-50 pb-0 ${media ? 'city-pilot' : ''}`} data-city-treatment={media ? 'media-pilot' : 'cleanup-only'}>
+      {media && <CityRevealScope />}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizJsonLd) }}
@@ -192,9 +198,10 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
         subtitle={written?.heroSubtitle ?? city.heroSubtitle}
         highlight="30 Dakikada Nakit"
         backgroundImage={media?.src ?? city.heroImage}
+        cityPilot={media ? { name: city.name, slug: city.slug, plateCode: city.plateCode } : undefined}
       />
 
-      <TrustBadges />
+      <TrustBadges cityPage={Boolean(media)} />
 
       <section className="container mx-auto px-4 pt-10 relative z-20">
         <p className="text-lg leading-relaxed text-center text-gray-700 max-w-4xl mx-auto">
@@ -207,8 +214,8 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
           )}
         </p>
         <p className="mt-4 text-base leading-relaxed text-center text-gray-600 max-w-3xl mx-auto">
-          <strong className="text-gray-800">30 dakikada nakit teklif</strong>, anlaşma
-          sağlandığında <strong className="text-gray-800">aynı gün ödeme</strong>.
+          <strong className={media ? 'city-promise-highlight' : 'text-gray-800'}>30 dakikada nakit teklif</strong>, anlaşma
+          sağlandığında <strong className={media ? 'city-promise-highlight' : 'text-gray-800'}>aynı gün ödeme</strong>.
           Çekici ve noter masrafları bize aittir; {city.name} içinde aracınız
           bulunduğu yerden teslim alınır.
         </p>
@@ -216,7 +223,7 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
 
       <div className="container mx-auto px-4 py-12 relative z-20">
         <div className="mb-12">
-          <CityStats cityName={city.name} />
+          <CityStats cityName={city.name} animate={Boolean(media)} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
@@ -224,11 +231,18 @@ export default function CityDetailPage({ params }: { params: { slug: string } })
             <CityContent
               content={city.content}
               cityName={city.name}
+              citySlug={media ? city.slug : undefined}
               body={written?.body}
               localPoints={written?.localPoints}
+              damageTable={written?.damageTable}
+              cityChecklistItem={written?.cityChecklistItem}
+              exampleCase={written?.exampleCase}
+              seasonNote={written?.seasonNote}
+              nearbyNote={written?.nearbyNote}
+              nearbyCityLinks={writtenNearbyLinks}
             />
-            <CityDistricts city={city} districtNotes={written?.districtNotes} />
-            <CityVehicleTypes city={city} />
+            <CityDistricts city={city} districtNotes={written?.districtNotes} pilot={Boolean(media)} />
+            <CityVehicleTypes city={city} pilot={Boolean(media)} />
             <CityFAQs cityName={city.name} faqs={written?.faqs} />
           </div>
 

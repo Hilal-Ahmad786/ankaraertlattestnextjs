@@ -17,10 +17,22 @@ import batch3 from "./city-content-3.json";
 import batch4 from "./city-content-4.json";
 import batch5 from "./city-content-5.json";
 import batch6 from "./city-content-6.json";
+import cityPilot from "./city-content-pilot.json";
 
 export interface CityFaq {
   question: string;
   answer: string;
+}
+
+export interface CityDamageRow {
+  type: string;
+  whatWeCheck: string;
+  effectOnOffer: string;
+}
+
+export interface CityNearbyNote {
+  text: string;
+  citySlugs: [string, string];
 }
 
 export interface CityContent {
@@ -38,9 +50,25 @@ export interface CityContent {
   districtNotes: Record<string, string>;
   /** Three per-city questions; answers lead with a direct reply. */
   faqs: CityFaq[];
+  damageTable?: CityDamageRow[];
+  sellChecklist?: string[];
+  exampleCase?: string;
+  seasonNote?: string;
+  nearbyNote?: CityNearbyNote;
+  cityChecklistItem?: string;
 }
 
 type Batch = { cities: Record<string, CityContent> };
+type PilotEntry = {
+  damageTable: CityDamageRow[];
+  cityChecklistItem: string;
+  exampleCase: string;
+  seasonNote: string;
+  additionalFaqs: CityFaq[];
+  districtNotes: Record<string, string>;
+  nearbyNote: CityNearbyNote;
+};
+type PilotBatch = { cities: Record<string, PilotEntry> };
 
 const SOURCES: Batch[] = [
   batch1 as Batch,
@@ -61,7 +89,17 @@ export const CITY_CONTENT: Record<string, CityContent> = Object.assign(
  * back to the generic copy in cities.json rather than rendering blanks.
  */
 export function getCityContent(slug: string): CityContent | undefined {
-  return CITY_CONTENT[slug];
+  const base = CITY_CONTENT[slug];
+  if (!base) return undefined;
+  const additions = (cityPilot as unknown as PilotBatch).cities[slug];
+  if (!additions) return base;
+  const { additionalFaqs, districtNotes, ...fields } = additions;
+  return {
+    ...base,
+    ...fields,
+    districtNotes: { ...base.districtNotes, ...districtNotes },
+    faqs: [...base.faqs, ...additionalFaqs],
+  };
 }
 
 /** Cities still awaiting written content — useful for progress checks. */

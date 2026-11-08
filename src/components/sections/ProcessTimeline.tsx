@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import CityProcessRule from '@/components/city/CityProcessRule';
 
 interface ProcessStep {
@@ -37,9 +38,12 @@ interface ProcessStep {
               {steps.map((step, index) => (
                 <div
                   key={index}
-                  className="timeline-step text-center flex-1 relative rounded-3xl border border-white/70 bg-white/35 p-6 shadow-glass backdrop-blur-2xl"
+                  data-city-reveal={animate ? '' : undefined}
+                  data-city-process-step={animate ? index : undefined}
+                  style={animate ? { '--city-item-index': index } as CSSProperties : undefined}
+                  className={`timeline-step text-center flex-1 relative rounded-3xl border border-white/70 bg-white/35 p-6 shadow-glass backdrop-blur-2xl ${animate ? 'city-process-step' : ''}`}
                 >
-                  <div className="timeline-icon mx-auto mb-4">
+                  <div className={`timeline-icon mx-auto mb-4 ${animate ? 'city-process-icon' : ''}`}>
                     <i className={step.icon}></i>
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-primary">

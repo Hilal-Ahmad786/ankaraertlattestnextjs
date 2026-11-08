@@ -48,12 +48,12 @@ export default function CityFAQs({ cityName, faqs: customFaqs }: CityFAQsProps) 
             </h2>
             <div className="space-y-4">
                 {faqs.map((faq, index) => (
-                    <details key={faq.question} open={index === 0} className="border border-gray-200 rounded-2xl overflow-hidden open:border-orange-200">
+                    <details key={faq.question} open={index === 0} data-city-reveal className="city-faq-item border border-gray-200 rounded-2xl open:border-orange-200">
                         <summary className="flex items-center justify-between gap-4 min-h-12 p-4 cursor-pointer text-gray-800 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-600 focus-visible:-outline-offset-4">
                             <span>{faq.question}</span>
                             <i className="city-faq-chevron fas fa-chevron-down shrink-0 text-gray-500" aria-hidden="true" />
                         </summary>
-                        <div className="p-4 text-gray-600 border-t border-gray-100 bg-gray-50/50 text-sm leading-relaxed">{faq.answer}</div>
+                        <div className="city-faq-answer-grid"><div className="city-faq-answer p-4 text-gray-600 border-t border-gray-100 bg-gray-50/50 text-sm leading-relaxed">{faq.answer}</div></div>
                     </details>
                 ))}
             </div>

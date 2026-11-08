@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import type { CSSProperties } from 'react';
 import { City } from '@/types';
 import { services } from '@/data/services';
 
 interface CityVehicleTypesProps {
     city: City;
+    pilot?: boolean;
 }
 
 /**
@@ -11,7 +13,7 @@ interface CityVehicleTypesProps {
  * transactions permanently stamped "2 saat önce". This lists the vehicle
  * conditions actually bought, linking to each service page.
  */
-export default function CityVehicleTypes({ city }: CityVehicleTypesProps) {
+export default function CityVehicleTypes({ city, pilot = false }: CityVehicleTypesProps) {
     return (
         <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
@@ -23,11 +25,13 @@ export default function CityVehicleTypes({ city }: CityVehicleTypesProps) {
                 başvuru alıyoruz. Aracınızın durumu listede yoksa da bize yazabilirsiniz.
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
-                {services.map((service) => (
+                {services.map((service, index) => (
                     <Link
                         key={service.id}
                         href={`/${service.slug}`}
-                        className="flex items-start gap-3 p-4 bg-gray-50 rounded-2xl border border-gray-100 hover:border-accent hover:bg-white transition"
+                        data-city-reveal={pilot ? '' : undefined}
+                        style={pilot ? { '--city-item-index': index } as CSSProperties : undefined}
+                        className={`flex items-start gap-3 p-4 bg-gray-50 rounded-2xl border border-gray-100 hover:border-accent hover:bg-white transition ${pilot ? 'city-vehicle-card' : ''}`}
                     >
                         <div className="w-10 h-10 shrink-0 bg-white rounded-full flex items-center justify-center text-accent-ink shadow-sm border border-gray-100">
                             <i className={service.icon}></i>

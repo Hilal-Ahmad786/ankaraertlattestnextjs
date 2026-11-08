@@ -40,7 +40,7 @@ export default function UrgentCTABanner({ cityPage = false }: { cityPage?: boole
 
   return (
     <div className="sticky top-[88px] z-40 px-4 py-2">
-      <div className="container mx-auto rounded-[2rem] border border-white/70 bg-white/52 px-4 py-3 text-gray-900 shadow-glass backdrop-blur-2xl">
+      <div className={`container mx-auto rounded-[2rem] border border-white/70 bg-white/52 px-4 py-3 text-gray-900 shadow-glass backdrop-blur-2xl ${cityPage ? 'city-urgent-cta' : ''}`} data-city-reveal={cityPage ? '' : undefined}>
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Urgency Message */}
           <div className="flex items-center gap-3">
@@ -82,7 +82,7 @@ export default function UrgentCTABanner({ cityPage = false }: { cityPage?: boole
             <a
               href={`tel:${siteConfig.phone}`}
               onClick={handleClick}
-              className="bg-orange-500 text-white px-6 py-3 rounded-full font-bold hover:bg-orange-600 transition-all shadow-lg hover:scale-105 whitespace-nowrap flex items-center gap-2"
+              className={`city-cta-button bg-orange-500 text-white px-6 py-3 rounded-full font-bold hover:bg-orange-600 transition-all shadow-lg hover:scale-105 whitespace-nowrap flex items-center gap-2 ${cityPage ? 'city-urgent-button' : ''}`}
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
