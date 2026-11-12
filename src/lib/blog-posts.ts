@@ -1,5 +1,6 @@
 // lib/blog-posts.ts
 import { siteConfig } from '../config/site';
+import { mdPosts } from '@/data/blog-md.generated';
 
 export interface BlogPost {
     title: string;
@@ -316,6 +317,22 @@ export interface BlogPost {
   };
   
   // Helper function to get all blog slugs
+
+  // Daily Markdown posts from content/blog/*.md (see scripts/build-blog.mjs).
+  const TR_MONTHS = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+  for (const p of mdPosts) {
+    const [y, m, d] = p.date.split('-').map(Number);
+    blogPosts[p.slug] = {
+      title: p.title,
+      subtitle: p.description,
+      category: p.category,
+      date: `${d} ${TR_MONTHS[m - 1]} ${y}`,
+      datePublished: p.date,
+      author: 'Ankara PERT',
+      content: `<div class="md-post">${p.html}</div>`,
+    };
+  }
+
   export function getAllBlogSlugs(): string[] {
     return Object.keys(blogPosts);
   }

@@ -10,7 +10,10 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
-    "seo:indexnow": "node scripts/indexnow.mjs"
+    "seo:indexnow": "node scripts/indexnow.mjs",
+    "predev": "node scripts/build-blog.mjs",
+    "prebuild": "node scripts/build-blog.mjs",
+    "blog": "node scripts/build-blog.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
