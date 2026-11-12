@@ -116,17 +116,6 @@ export default function Footer() {
                   Genel Bilgiler
                 </Link>
               </li>
-              <li>
-                <a
-                  href="https://hasarliaracalan.com/"
-                  target="_blank"
-                  rel="noopener"
-                  title="Hasarlı Araç Alan - Hasarlı Araç Alım Satım"
-                  className="text-sm hover:text-orange-500 transition inline-flex items-center min-h-[40px] sm:min-h-0"
-                >
-                  Hasarlı Araç Alan
-                </a>
-              </li>
             </ul>
           </div>
 

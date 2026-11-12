@@ -81,7 +81,7 @@ export interface BlogPost {
   
           <h2>Sonuç</h2>
           <p>
-            Kazalı aracınızı satmak stresli bir süreç olabilir, ancak doğru bilgi ve güvenilir bir partner ile sorunsuz ilerleyebilir. Ankara PERT olarak, sürecin her adımında yanınızdayız. Farklı bölgelerde hizmet veren kardeş firmamız <a href="https://hasarliaracalan.com/" target="_blank" rel="noopener noreferrer">Hasarlı Araç Alan</a> üzerinden de bilgi alabilirsiniz.
+            Kazalı aracınızı satmak stresli bir süreç olabilir, ancak doğru bilgi ve güvenilir bir partner ile sorunsuz ilerleyebilir. Ankara PERT olarak, sürecin her adımında yanınızdayız.
           </p>
   
           <div class="bg-accent-tint border-l-4 border-accent p-6 my-8">
@@ -301,7 +301,7 @@ export interface BlogPost {
 
           <h2>Sonuç</h2>
           <p>
-            Sel felaketinden etkilenen araç sahiplerinin önceliği güvenlik, ikinci önceliği ise hasarın büyümesini önlemek olmalı. Aracınızın bulunduğu ilin hizmet sayfasından (<a href="/sehirler/istanbul">İstanbul</a>, <a href="/sehirler/kocaeli">Kocaeli</a>, <a href="/sehirler/sakarya">Sakarya</a>, <a href="/sehirler/antalya">Antalya</a>) veya doğrudan <a href="/hasarli-arac-alim-satim">hasarlı araç alım sayfamızdan</a> bize ulaşabilirsiniz. Farklı bölgelerde hizmet veren kardeş firmamız <a href="https://hasarliaracalan.com/" target="_blank" rel="noopener noreferrer">Hasarlı Araç Alan</a> üzerinden de bilgi alabilirsiniz.
+            Sel felaketinden etkilenen araç sahiplerinin önceliği güvenlik, ikinci önceliği ise hasarın büyümesini önlemek olmalı. Aracınızın bulunduğu ilin hizmet sayfasından (<a href="/sehirler/istanbul">İstanbul</a>, <a href="/sehirler/kocaeli">Kocaeli</a>, <a href="/sehirler/sakarya">Sakarya</a>, <a href="/sehirler/antalya">Antalya</a>) veya doğrudan <a href="/hasarli-arac-alim-satim">hasarlı araç alım sayfamızdan</a> bize ulaşabilirsiniz.
           </p>
 
           <div class="bg-accent-tint border-l-4 border-accent p-6 my-8">
