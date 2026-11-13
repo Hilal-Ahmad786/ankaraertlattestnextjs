@@ -1361,3 +1361,6 @@ a[class*="rounded-xl"][class*="bg-"]:not([class*="translate"]):active {
 .md-post table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
 .md-post th { background: #f3f4f6; text-align: left; font-weight: 700; color: #111827; }
 .md-post th, .md-post td { border: 1px solid #e5e7eb; padding: 0.6rem 0.8rem; vertical-align: top; }
+.md-post figure { margin: 1.6rem 0; }
+.md-post img { width: 100%; height: auto; border-radius: 12px; display: block; }
+.md-post figcaption { font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem; text-align: center; }

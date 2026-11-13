@@ -329,7 +329,7 @@ export interface BlogPost {
       date: `${d} ${TR_MONTHS[m - 1]} ${y}`,
       datePublished: p.date,
       author: 'Ankara PERT',
-      content: `<div class="md-post">${p.html}</div>`,
+      content: `<div class="md-post">${p.image ? `<figure><img src="${p.image}" alt="${p.title}" decoding="async" /></figure>` : ''}${p.html}</div>`,
     };
   }
 

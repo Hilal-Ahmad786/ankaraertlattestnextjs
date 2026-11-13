@@ -10,7 +10,8 @@
 //   image: /images/blog/ornek.jpg   # isteğe bağlı
 //   ---
 //   ## Başlık
-//   Paragraf, **kalın**, *italik*, [bağlantı](/hasarli-arac-alim), listeler (- / 1.), tablolar, > alıntı.
+//   Paragraf, **kalın**, *italik*, [bağlantı](/hasarli-arac-alim), listeler (- / 1.), tablolar, > alıntı,
+//   görsel: ![açıklama](/images/blog/dosya.webp) — dosyayı public/images/blog/ içine koyun.
 //
 // Runs automatically before `dev` and `build` (package.json predev/prebuild).
 import fs from 'node:fs';
@@ -22,7 +23,9 @@ const OUT = path.join(ROOT, 'src', 'data', 'blog-md.generated.ts');
 const today = new Date().toISOString().slice(0, 10);
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const img = (alt, src) => `<img src="${src}" alt="${alt}" loading="lazy" decoding="async" />`;
 const inline = (s) => esc(s)
+  .replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, (_, alt, src) => img(alt, src))
   .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
   .replace(/(^|[^*])\*(?!\s)(.+?)\*(?!\*)/g, '$1<em>$2</em>')
   .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, t, href) => {
@@ -38,6 +41,7 @@ function mdToHtml(md) {
     const line = lines[i];
     if (!line.trim()) { i++; continue; }
     let m;
+    if ((m = line.match(/^!\[([^\]]*)\]\(([^)\s]+)\)\s*$/))) { out.push(`<figure>${img(esc(m[1]), m[2])}${m[1] ? `<figcaption>${esc(m[1])}</figcaption>` : ''}</figure>`); i++; continue; }
     if ((m = line.match(/^(#{2,4})\s+(.*)$/))) { const n = m[1].length; out.push(`<h${n}>${inline(m[2].trim())}</h${n}>`); i++; continue; }
     if (/^\s*[-*]\s+/.test(line)) {
       const items = [];
