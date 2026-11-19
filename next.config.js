@@ -26,6 +26,11 @@ const nextConfig = {
   async redirects() {
     return [
       { source: '/test-tracking', destination: '/', permanent: true },
+      // Old static-site addresses Google still knows (e.g. /index.html → 404).
+      { source: '/index.html', destination: '/', permanent: true },
+      { source: '/index.htm', destination: '/', permanent: true },
+      { source: '/index.php', destination: '/', permanent: true },
+      { source: '/:path*/index.html', destination: '/:path*', permanent: true },
     ];
   },
 };
