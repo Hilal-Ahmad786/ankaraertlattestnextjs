@@ -1,66 +1,29 @@
 # robots.txt for Ankara PERT
 # https://www.ankarapert.com.tr
 
-# === SEARCH ENGINES ===
+# === ALL CRAWLERS (search engines + AI crawlers explicitly allowed) ===
+# One shared group: a named group (e.g. Googlebot) would otherwise ignore
+# the Disallow rules below.
 User-agent: *
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Slurp
+User-agent: DuckDuckBot
+User-agent: YandexBot
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: PerplexityBot
+User-agent: Amazonbot
+User-agent: FacebookBot
+User-agent: Applebot
+User-agent: CCBot
+User-agent: omgili
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /test-tracking/
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-# === AI CRAWLERS — explicitly allowed ===
-# OpenAI / ChatGPT
-User-agent: GPTBot
-Allow: /
-
-# Anthropic / Claude
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-# Google AI (Gemini, AI Overviews)
-User-agent: Google-Extended
-Allow: /
-
-# Perplexity
-User-agent: PerplexityBot
-Allow: /
-
-# Amazon / Alexa
-User-agent: Amazonbot
-Allow: /
-
-# Meta AI
-User-agent: FacebookBot
-Allow: /
-
-# Apple
-User-agent: Applebot
-Allow: /
-
-# Common AI training crawlers
-User-agent: CCBot
-Allow: /
-
-User-agent: omgili
-Allow: /
 
 # === SITEMAP ===
 Sitemap: https://www.ankarapert.com.tr/sitemap.xml
